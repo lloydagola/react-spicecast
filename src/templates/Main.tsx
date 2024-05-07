@@ -1,5 +1,5 @@
 import {ReactNode} from 'react';
-import { AudioPlayer } from '../components/audioPlayer/AudioPlayer';
+import { AudioPlayer } from '../components/AudioPlayer/AudioPlayer';
 
 export default function Main({children}:{children: ReactNode }){
 
