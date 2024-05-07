@@ -1,8 +1,7 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Main from './templates/Main';
+import Main from './layouts/Main';
 
 function App() {
   return (
