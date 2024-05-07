@@ -1,36 +1,23 @@
-const audioPlayerStyle = {
+import { CSSProperties } from "react";
+
+const audioPlayerStyle: CSSProperties = {
     backgroundColor: '#333',
     border: '1px solid #333',
     display: 'flex',
     position: 'fixed',
     bottom: '0',
-    zIndex: '10000000',
-    cursor: 'pointer',
-    alignItems: 'center',
-    flexDirection: 'row',
-    width: '90%',
-    color: '#fff',
-    padding: '0 5%',
-    caretColor: 'transparent',    
-}
-
-export function AudioPlayer() {
-
-    return <section style={{
-    backgroundColor: '#333',
-    border: '1px solid #333',
-    display: 'flex',
-    position: 'fixed',
-    bottom: '0',
-    zIndex: '10000000',
-    cursor: 'pointer',
+    zIndex: '10000000',    
     alignItems: 'center',
     flexDirection: 'row',
     width: '100%',
     color: '#fff',
     padding: '16px 0',
     caretColor: 'transparent',    
-}}> 
+}
+
+export function AudioPlayer() {
+
+    return <section style={audioPlayerStyle}> 
       <figure style={{width:'100%'}}>
         <figcaption>Listen to the T-Rex:</figcaption>
         <audio controls src="./chill.mp3" style={{width:'100%', margin:'auto'}}></audio>
