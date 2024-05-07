@@ -2,9 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Main from './templates/Main';
+
 function App() {
   return (
-    <div className="App">
+    <Main>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,7 +21,7 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </Main>
   );
 }
 
