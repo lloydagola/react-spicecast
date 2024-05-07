@@ -28,7 +28,7 @@ export function AudioPlayer() {
     flexDirection: 'row',
     width: '100%',
     color: '#fff',
-    padding: '0 5%',
+    padding: '16px 0',
     caretColor: 'transparent',    
 }}> 
       <figure>
