@@ -26,7 +26,7 @@ export function AudioPlayer() {
     cursor: 'pointer',
     alignItems: 'center',
     flexDirection: 'row',
-    width: '90%',
+    width: '100%',
     color: '#fff',
     padding: '0 5%',
     caretColor: 'transparent',    
