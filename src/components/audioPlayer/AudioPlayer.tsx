@@ -31,9 +31,9 @@ export function AudioPlayer() {
     padding: '16px 0',
     caretColor: 'transparent',    
 }}> 
-      <figure>
+      <figure style={{width:'100%'}}>
         <figcaption>Listen to the T-Rex:</figcaption>
-        <audio controls src="./chill.mp3" ></audio>
+        <audio controls src="./chill.mp3" style={{width:'100%', margin:'auto'}}></audio>
         <a href="/media/cc0-audio/t-rex-roar.mp3"> Download audio </a>
       </figure> 
     </section>;
