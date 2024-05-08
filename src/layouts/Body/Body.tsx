@@ -1,31 +1,14 @@
-import { ReactNode } from 'react';
-
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 
 export type TBodyTypes = {drawerWidth:number}
 
-export function Body({ drawerWidth }: TBodyTypes): JSX.Element {
+export default function Body({ drawerWidth }: TBodyTypes): JSX.Element {
     return <Box
                 component="main"
                 sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-            >
-                <Toolbar />
-                <header className="App-header">
-                    <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                    </p>
-                    <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >
-                    Learn React
-                    </a>
-                </header>
+            >               
                 <Typography paragraph mt='200px'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
