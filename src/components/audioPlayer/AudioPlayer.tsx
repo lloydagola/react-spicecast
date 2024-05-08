@@ -11,7 +11,7 @@ import { StyledAudioPlayer, StyledTrackTitle, StyledPlayerControls } from './Aud
 export default function AudioPlayer():JSX.Element{
     const player = useRef<HTMLAudioElement>(null);
 
-    const [value, setValue] = useState(0)
+    const [progressValue, setProgressValue] = useState(0)
     const [currentTime, setCurrentTime] = useState('0')
     const [trackDuration, setTrackDuration] = useState('0')
 
@@ -47,10 +47,7 @@ export default function AudioPlayer():JSX.Element{
         return current_time;
     }
     
-    const handlePlay = () => {
-
-        console.log("current", player?.current)
-
+    const handlePlay = ():void => {
         if (player?.current?.paused === false) {
             player?.current?.pause();
             
@@ -60,8 +57,11 @@ export default function AudioPlayer():JSX.Element{
         }
     }
 
-    const handleStop = () => {
-    player?.current?.load();
+    const handleStop = ():void => {
+        if(player.current){
+            setProgressValue(0);
+            player.current.load();
+        }
     }
 
     useEffect(() => {
@@ -80,11 +80,11 @@ export default function AudioPlayer():JSX.Element{
             player.current.ontimeupdate = e => {
                 if(player.current){
                     setCurrentTime(calculateCurrentValue(player.current.currentTime));
-                    setValue(updateProgressBar());
+                    setProgressValue(updateProgressBar());
                 }
             }
         }
-    }, [value]);
+    }, [progressValue]);
 
     return <StyledAudioPlayer id="audio-player">   
                 <audio  ref={player}>
@@ -103,7 +103,7 @@ export default function AudioPlayer():JSX.Element{
                     <SkipNextIcon fontSize='large'/>
                 </StyledPlayerControls>
                 <p>{player?.current?.currentTime}</p>
-                <progress id="seek-obj" value={value} max="1" />        
+                <progress id="seek-obj" value={progressValue} max="1" />        
                 <p>{trackDuration}</p>
             </StyledAudioPlayer> 
 }
