@@ -9,12 +9,13 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-
-
-//import InboxIcon from '@mui/icons-material/MoveToInbox';
-//import MailIcon from '@mui/icons-material/Mail';  
-//import MenuIcon from '@mui/icons-material/Menu';
-
+import AutoAwesomeMotionOutlinedIcon from '@mui/icons-material/AutoAwesomeMotionOutlined';
+import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import HistoryOutlinedIcon from '@mui/icons-material/HistoryOutlined';
+import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
+import UpdateOutlinedIcon from '@mui/icons-material/UpdateOutlined';
+import WhatshotSharpIcon from '@mui/icons-material/WhatshotSharp';
 
 import { drawerWidth } from '../Main/Main';
 
@@ -32,11 +33,13 @@ export function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: TNavType
             <Toolbar />
             <Divider />
             <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
+                {['Feed', 'New Shows'].map((text, index) => (
+                    <ListItem key={text} >
                         <ListItemButton>
                             <ListItemIcon>
-                                {index % 2 === 0 ? <IconButton /> : <IconButton />}
+                               
+                               {text === 'Feed' ? <AutoAwesomeMotionOutlinedIcon /> : <ExploreOutlinedIcon />}
+                                
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItemButton>
@@ -45,17 +48,31 @@ export function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: TNavType
             </List>
             <Divider />
             <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
+                {['Favorites', 'History', 'Listen Later', 'Playlists'].map((text, index) => (
+                    <ListItem key={text} >
                         <ListItemButton>
                             <ListItemIcon>
-                                {index % 2 === 0 ? <IconButton /> : <IconButton />}
+                               {
+                                text === 'Favorites' ? <FavoriteBorderOutlinedIcon /> 
+                                : text==='History' ? <HistoryOutlinedIcon/> 
+                                : text==='Listen Later' ? <UpdateOutlinedIcon/> 
+                                : <FormatListBulletedOutlinedIcon />
+                                }
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItemButton>
                     </ListItem>
                 ))}
             </List>
+            <Divider />
+           <ListItem >
+                        <ListItemButton>
+                            <ListItemIcon>
+                               <WhatshotSharpIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Trending" />
+                        </ListItemButton>
+                    </ListItem>
         </div>
     );
 
