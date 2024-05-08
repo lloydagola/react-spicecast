@@ -1,27 +1,37 @@
-import { CSSProperties } from "react";
+import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
+import SkipNextIcon from '@mui/icons-material/SkipNext';
+import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+import StopIcon from '@mui/icons-material/Stop';
 
-const audioPlayerStyle: CSSProperties = {
-    backgroundColor: '#333',
-    border: '1px solid #333',
-    display: 'flex',
-    position: 'fixed',
-    bottom: '0',
-    zIndex: '10000000',    
-    alignItems: 'center',
-    flexDirection: 'row',
-    width: '100%',
-    color: '#fff',
-    padding: '16px 0',
-    caretColor: 'transparent',    
+import './styles.css';
+
+export default function AudioPlayer(){
+
+    return <section id="audio-player" className="audio-player">   
+                <audio >
+                    Your browser does not support the
+                    <code>audio</code> element.
+                    <source src="${BASE_URL}/${audioState.nowPlaying.path}`}" type="audio/mpeg"/>
+                    <source src="http://localhost:4000/music/Xilent/we are dust/01 From Dust.mp3" type="audio/mpeg"/>
+                </audio>
+                <img src='https://avatars.githubusercontent.com/u/31162324?v=4' alt='thumb'/>
+                <div className="audio-title">
+                    <h4>audioState.nowPlaying.parent.title - audioState.nowPlaying.title</h4>
+                </div>
+                <div className="player-controls">
+                    <PlayCircleFilledIcon/>
+                    <SkipPreviousIcon/>
+                    <StopIcon/>
+                    <SkipNextIcon/>
+                </div>
+                <p>currentTime</p>
+                <progress id="seek-obj" value=".75" max="1" />        
+                <p>trackDuration</p>
+            </section> 
+
 }
 
-export function AudioPlayer() {
+ 
 
-    return <section style={audioPlayerStyle}> 
-      <figure style={{width:'100%'}}>
-        <figcaption>Listen to the T-Rex:</figcaption>
-        <audio controls src="./chill.mp3" style={{width:'100%', margin:'auto'}}></audio>
-        <a href="/media/cc0-audio/t-rex-roar.mp3"> Download audio </a>
-      </figure> 
-    </section>;
-}
+
+
