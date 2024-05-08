@@ -9,7 +9,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import { drawerWidth } from './Main';
+import { drawerWidth } from '../Main/Main';
 
 type TNavTypes = {
     setIsClosing: Dispatch<SetStateAction<boolean>>;

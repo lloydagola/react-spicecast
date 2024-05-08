@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 
 import './App.css';
 
-import Main from './layouts/Main';
+import Main from './layouts/Main/Main';
 
 function App() {
   return (
