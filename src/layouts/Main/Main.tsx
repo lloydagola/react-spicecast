@@ -5,15 +5,21 @@ import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-
 import IconButton from '@mui/material/IconButton';
-//import InboxIcon from '@mui/icons-material/MoveToInbox';
-//import MailIcon from '@mui/icons-material/Mail';
-//import MenuIcon from '@mui/icons-material/Menu';
 
 import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
 import { Navigation } from '../Navigation/Navigation';
 import { Body } from '../Body/Body';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import AutoAwesomeMotionOutlinedIcon from '@mui/icons-material/AutoAwesomeMotionOutlined';
+import AddIcon from '@mui/icons-material/Add';
+import RadioIcon from '@mui/icons-material/Radio';
+import LocalActivityIcon from '@mui/icons-material/LocalActivity';
+import CategoryIcon from '@mui/icons-material/Category';
 
 
 export const drawerWidth = 240;
@@ -50,7 +56,7 @@ export default function Layout({window}: IPropTypes) {
           zIndex: {md: '100000'}
         }}
       >
-        <Toolbar>
+        <Toolbar sx={{justifyContent:'center'}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -60,9 +66,28 @@ export default function Layout({window}: IPropTypes) {
           >
             <IconButton />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+          <Typography variant="h6" noWrap component="div" marginRight='80px'>
+             Spice Cast
           </Typography>
+          <Box display='flex' color='white'>
+            <List sx={{display:'flex', flexDirection:'row'}}>
+                  {['Post', 'Categories', 'Events', 'Radio'].map((text, index) => (
+                      <ListItem key={text} >
+                          <ListItemButton>
+                              <ListItemIcon color='white'>                                
+                                {
+                                  text === 'Post' ? <AddIcon /> :
+                                  text ==='Categories' ? <CategoryIcon/> :
+                                  text ==='Events' ? <LocalActivityIcon/> :
+                                  <RadioIcon/> 
+                                }                                  
+                              </ListItemIcon>
+                              <ListItemText primary={text} />
+                          </ListItemButton>
+                      </ListItem>
+                  ))}
+              </List> 
+          </Box>
         </Toolbar>
       </AppBar>
       
