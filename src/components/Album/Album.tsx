@@ -2,13 +2,10 @@ import styled from "@emotion/styled";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import "./style.css";
 
 type TAlbumTypes = {
     i:number
 }
-
-
 
 const StyledAlbumGrid = styled(Grid)(({theme}) => ({
     display: "flex",
@@ -33,10 +30,38 @@ const StyledAlbumGrid = styled(Grid)(({theme}) => ({
     p : {
         margin: "0 0 12px 0",
         color:"#fff",
+    },
+
+    ".single-album .album-filter" : {
+        height: "260px",
+        width: "100%",
+        position: "absolute",
+        zIndex: "5",
+        opacity: "0",
+        backgroundColor:"tomato",
+        transition: ".2s ease-in",
+    },
+
+    ".album-horizontal-line" : {
+        width: "32px",
+        transition: ".2s",
+        backgroundColor: "white",
+        height: "4px",
+    },
+
+    "&.single-album:hover .album-horizontal-line" : {
+        width: "60px"
+    },
+
+    "&.single-album:hover img" : {
+        transform: "scale(1.2)",         
+    } ,
+
+    "&.single-album:hover .album-filter" : {
+        opacity: ".5",
+        transition: ".2s ease-in",
     }
-
-
-}))
+}));
 
 export default function Album({i}:TAlbumTypes)  {
 
@@ -49,7 +74,7 @@ export default function Album({i}:TAlbumTypes)  {
         <div className = "album-text">
             <Typography variant="h5">Still Waiting</Typography>
             <Typography>Lloyd Agola</Typography>
-            <div className="horizontal-line album-horizontal-line white-background"/>                                            
+            <div className="horizontal-line album-horizontal-line"/>                                            
         </div>  
     </StyledAlbumGrid>
 }
