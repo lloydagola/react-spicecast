@@ -23,12 +23,10 @@ interface IPropTypes {
    * Remove this when copying and pasting into your project.
    */
   window?: () => Window;
-  children: ReactNode;
 }
 
 
-export default function Layout({window, children}: IPropTypes) {
-
+export default function Layout({window}: IPropTypes) {
   
   const [isClosing, setIsClosing] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -67,7 +65,7 @@ export default function Layout({window, children}: IPropTypes) {
       </AppBar>
       
       <Navigation setIsClosing={setIsClosing} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>
-      <Body drawerWidth={drawerWidth}>{children}</Body>      
+      <Body drawerWidth={drawerWidth} />      
       <AudioPlayer/>
     </Box>
   );
