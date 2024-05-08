@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 
 type TAlbumTypes = {
     i:number
-}
+};
 
 const StyledAlbumGrid = styled(Grid)(({theme}) => ({
     display: "flex",
@@ -32,7 +32,7 @@ const StyledAlbumGrid = styled(Grid)(({theme}) => ({
         color:"#fff",
     },
 
-    ".single-album .album-filter" : {
+    ".album-filter" : {
         height: "260px",
         width: "100%",
         position: "absolute",
@@ -49,15 +49,15 @@ const StyledAlbumGrid = styled(Grid)(({theme}) => ({
         height: "4px",
     },
 
-    "&.single-album:hover .album-horizontal-line" : {
+    "&:hover .album-horizontal-line" : {
         width: "60px"
     },
 
-    "&.single-album:hover img" : {
+    "&:hover img" : {
         transform: "scale(1.2)",         
     } ,
 
-    "&.single-album:hover .album-filter" : {
+    "&:hover .album-filter" : {
         opacity: ".5",
         transition: ".2s ease-in",
     }
@@ -65,16 +65,16 @@ const StyledAlbumGrid = styled(Grid)(({theme}) => ({
 
 export default function Album({i}:TAlbumTypes)  {
 
-    return <StyledAlbumGrid flexDirection="column" item className="single-album"> 
-        <Box overflow="hidden" height="260px">
-            <Box className="album-filter"/>
-            <img src={`./images/th-${i}.jpg`} alt='album thumbnail'/> 
-        </Box>  
-        <div className="album-buttons"/>        
-        <div className = "album-text">
-            <Typography variant="h5">Still Waiting</Typography>
-            <Typography>Lloyd Agola</Typography>
-            <div className="horizontal-line album-horizontal-line"/>                                            
-        </div>  
-    </StyledAlbumGrid>
+    return <StyledAlbumGrid flexDirection="column" item> 
+                <Box overflow="hidden" height="260px">
+                    <Box className="album-filter"/>
+                    <img src={`./images/th-${i}.jpg`} alt='album thumbnail'/> 
+                </Box>  
+                <div className="album-buttons"/>        
+                <div className = "album-text">
+                    <Typography variant="h5">Still Waiting</Typography>
+                    <Typography>Lloyd Agola</Typography>
+                    <div className="horizontal-line album-horizontal-line"/>                                            
+                </div>  
+            </StyledAlbumGrid>
 }
