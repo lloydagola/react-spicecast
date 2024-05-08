@@ -1,10 +1,10 @@
 import './styles.css';
-import SingleAlbum from '../Album/Album.tsx';
+import Album from 'src/components/Album/Album.tsx';
 
 function renderAlbums(){
     const albums = [];
     for(let i=0; i < 16; i++ ){
-        albums.push(<SingleAlbum key={i} i={i}/>)
+        albums.push(<Album key={i} i={i}/>)
     }
 
     return albums;

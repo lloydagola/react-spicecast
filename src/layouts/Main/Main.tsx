@@ -18,10 +18,10 @@ import CategoryIcon from '@mui/icons-material/Category';
 import IconButton from '@mui/material/IconButton';
 
 
-import Navigation from '../Navigation/Navigation';
-import Body  from '../Body/Body';
-import Sidebar from '../Sidebar/Sidebar';
-import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
+import Navigation from 'src/layouts/Navigation/Navigation';
+import Body  from 'src/layouts/Body/Body';
+import Sidebar from 'src/layouts/Sidebar/Sidebar';
+import AudioPlayer from 'src/components/AudioPlayer/AudioPlayer';
 
 
 export const drawerWidth = 240;

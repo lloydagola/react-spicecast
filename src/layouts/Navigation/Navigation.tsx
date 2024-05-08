@@ -17,8 +17,8 @@ import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBullet
 import UpdateOutlinedIcon from '@mui/icons-material/UpdateOutlined';
 import WhatshotSharpIcon from '@mui/icons-material/WhatshotSharp';
 
-import { drawerWidth } from '../Main/Main';
-import { Profile } from '../../components/Profile/Profile';
+import { drawerWidth } from 'src/layouts/Main/Main';
+import { Profile } from 'src/components//Profile/Profile';
 
 type TNavTypes = {
     setIsClosing: Dispatch<SetStateAction<boolean>>;
