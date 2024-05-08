@@ -45,7 +45,7 @@ export default function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: 
                     </ListItem>
                 ))}
             </List>
-            <Divider />
+            <Divider sx={{color:'#fff'}}/>
             <List>
                 {['Favorites', 'History', 'Listen Later', 'Playlists'].map((text, index) => (
                     <ListItem key={text} >
@@ -63,11 +63,11 @@ export default function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: 
                     </ListItem>
                 ))}
             </List>
-            <Divider />
+            <Divider color='#fff' sx={{color:'#fff'}}/>
            <ListItem >
                         <ListItemButton>
                             <ListItemIcon>
-                               <WhatshotSharpIcon />
+                               <WhatshotSharpIcon sx={{color:'#fff'}}/>
                             </ListItemIcon>
                             <ListItemText primary="Trending" />
                         </ListItemButton>
