@@ -73,20 +73,12 @@ export default function AudioPlayer():JSX.Element{
     }
 
     const seek = (e:React.MouseEvent<HTMLProgressElement>) => {
-        console.log(progressBarRef.current);
-        console.log(e)
         if(progressBarRef.current && player.current){
             const percent = e.nativeEvent.offsetX / progressBarRef.current.offsetWidth;
             player.current.currentTime = percent * player.current.duration;
             setProgressValue(percent / 100);
         }        
-    }
-
-    useEffect(() => {
-        if(player.current)
-            console.log(player.current.duration)
-    }, [])
-    
+    }    
 
     useEffect(() => {
         if(player.current){
