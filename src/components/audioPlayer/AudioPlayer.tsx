@@ -15,7 +15,13 @@ export default function AudioPlayer():JSX.Element{
     const [currentTime, setCurrentTime] = useState('0')
     const [trackDuration, setTrackDuration] = useState('0')
 
-    //const updateProgressBar = () => player?.current?.currentTime / player?.current?.duration;
+    const updateProgressBar = ():number => {
+        if(player.current){
+            return player.current.currentTime / player.current.duration;
+        }
+
+        return 0;
+    }
 
     const calculateTotalValue = (trackDuration:number):string => {
         if(player.current && player.current.duration){
@@ -64,8 +70,7 @@ export default function AudioPlayer():JSX.Element{
             player.current.ontimeupdate = e => {
                 if(player.current){
                     setCurrentTime(calculateCurrentValue(player.current.currentTime))
-                    //setValue(updateProgressBar())
-
+                    setValue(updateProgressBar());
                 }
             }
         }
@@ -88,7 +93,7 @@ export default function AudioPlayer():JSX.Element{
                     <SkipNextIcon fontSize='large'/>
                 </StyledPlayerControls>
                 <p>{player?.current?.currentTime}</p>
-                <progress id="seek-obj" value=".75" max="1" />        
+                <progress id="seek-obj" value={value} max="1" />        
                 <p>{trackDuration}</p>
             </StyledAudioPlayer> 
 }
