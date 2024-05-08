@@ -15,11 +15,10 @@ export default function AudioPlayer():JSX.Element{
     const progressBarRef = useRef<HTMLProgressElement>(null)
 
     const [progressValue, setProgressValue] = useState(0);
-    const [currentTime, setCurrentTime] = useState('0');
-    const [trackDuration, setTrackDuration] = useState('0');
+    const [currentTime, setCurrentTime] = useState('00:00');
+    const [trackDuration, setTrackDuration] = useState('00:00');
     const [playState, setPlayState] = useState(false);
-
-    //const togglePlayButton = playState => playState === 'playing' ? 'fas fa-pause pause-icon' : 'far fa-play-circle play-icon'
+    
 
     const updateProgressBar = ():number => {
         if(player.current){
@@ -32,7 +31,7 @@ export default function AudioPlayer():JSX.Element{
     const calculateTotalValue = (trackDuration:number = 0):string => {
         if(player.current && player.current.duration){
             let minutes = Math.floor( trackDuration / 60),
-              seconds_int = player?.current?.duration - minutes * 60,
+              seconds_int = player.current.duration - minutes * 60,
               seconds_str = seconds_int < 10 ? '0' + seconds_int.toString() : seconds_int.toString(),
               seconds = seconds_str.substr(0, 2),
               time = minutes + ':' + seconds     
@@ -40,17 +39,27 @@ export default function AudioPlayer():JSX.Element{
             return time;
         }
 
-        return '0';
+        return '00:00';
     }
       
     const calculateCurrentValue = (currentTime:number):string => {
-        let current_hour = (currentTime / 3600) % 24,
-          current_minute = (currentTime / 60) % 60,
-          current_seconds_long = currentTime % 60,
-          current_seconds = parseInt(current_seconds_long.toFixed()),
-          current_time = (current_minute < 10 ? "0" + current_minute : current_minute) + ":" + (current_seconds < 10 ? "0" + current_seconds : current_seconds);
-                
-        return current_time;
+
+        if(player.current){
+            const show_hours = (player.current.duration / 60)/60 > 1
+
+            let current_hour = parseInt(Math.floor((currentTime / 3600) % 24).toFixed()),
+                formatted_hour = current_hour < 10 ? "0" + current_hour : current_hour,
+                current_minute = parseInt(Math.floor((currentTime / 60) % 60).toFixed()),
+                current_seconds_long = (currentTime % 60),
+                current_seconds = parseInt(current_seconds_long.toFixed()),
+                formatted_time = (current_minute < 10 ? "0" + current_minute : current_minute) + ":" + (current_seconds < 10 ? "0" + current_seconds : current_seconds),
+                _formatted_time = `${show_hours ? formatted_hour : ''} ${current_minute < 10 ? "0" + current_minute : current_minute} : ${current_seconds < 10 ? "0" + current_seconds : current_seconds}`;
+                    
+            return formatted_time;
+        }
+
+        return "00:00"
+        
     }
     
     const handlePlay = ():void => {
@@ -100,7 +109,7 @@ export default function AudioPlayer():JSX.Element{
                 <audio  ref={player}>
                     Your browser does not support the
                     <code>audio</code> element.
-                    <source src="./chill.mp3" type="audio/mpeg"/>
+                    <source src="./music/hearts.mp3" type="audio/mpeg"/>
                 </audio>
                 <img src='./images/th-15.jpg' alt='thumb'/>
                 <StyledTrackTitle>
@@ -116,7 +125,7 @@ export default function AudioPlayer():JSX.Element{
                     <StopIcon fontSize='large' onClick={() => handleStop()}/>
                     <SkipNextIcon fontSize='large'/>
                 </StyledPlayerControls>
-                <p>{player?.current?.currentTime}</p>
+                <p>{currentTime}</p>
                 <progress id="seek-obj" value={progressValue || 0} max="1" ref={progressBarRef} onClick={seek}/>        
                 <p>{trackDuration}</p>
             </StyledAudioPlayer> 
