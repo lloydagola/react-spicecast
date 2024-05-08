@@ -8,7 +8,6 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import AutoAwesomeMotionOutlinedIcon from '@mui/icons-material/AutoAwesomeMotionOutlined';
 import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
@@ -18,19 +17,21 @@ import UpdateOutlinedIcon from '@mui/icons-material/UpdateOutlined';
 import WhatshotSharpIcon from '@mui/icons-material/WhatshotSharp';
 
 import { drawerWidth } from '../Main/Main';
+import { Profile } from '../../components/Profile/Profile';
 
 type TNavTypes = {
     setIsClosing: Dispatch<SetStateAction<boolean>>;
     setMobileOpen: Dispatch<SetStateAction<boolean>>;
     mobileOpen: boolean;
 };
+
 export function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: TNavTypes): JSX.Element {
 
 
 
     const drawer = (
         <div>
-            <Toolbar />
+            <Toolbar><Profile/></Toolbar>
             <Divider />
             <List>
                 {['Feed', 'New Shows'].map((text, index) => (
