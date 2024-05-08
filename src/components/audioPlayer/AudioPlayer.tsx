@@ -23,7 +23,7 @@ export default function AudioPlayer():JSX.Element{
         return 0;
     }
 
-    const calculateTotalValue = (trackDuration:number):string => {
+    const calculateTotalValue = (trackDuration:number = 0):string => {
         if(player.current && player.current.duration){
             let minutes = Math.floor( trackDuration / 60),
               seconds_int = player?.current?.duration - minutes * 60,
@@ -65,16 +65,26 @@ export default function AudioPlayer():JSX.Element{
     }
 
     useEffect(() => {
-        if(player.current && player.current.duration){
-            player.current.onloadedmetadata = () => setTrackDuration(calculateTotalValue(player?.current?.duration || 0));                 
+        if(player.current)
+            console.log(player.current.duration)
+    }, [])
+    
+
+    useEffect(() => {
+        if(player.current){
+            player.current.onloadedmetadata = () => {
+                if(player.current){
+                    setTrackDuration(calculateTotalValue(player.current.duration));
+                }
+            };                 
             player.current.ontimeupdate = e => {
                 if(player.current){
-                    setCurrentTime(calculateCurrentValue(player.current.currentTime))
+                    setCurrentTime(calculateCurrentValue(player.current.currentTime));
                     setValue(updateProgressBar());
                 }
             }
         }
-    }, [value])
+    }, [value]);
 
     return <StyledAudioPlayer id="audio-player">   
                 <audio  ref={player}>
