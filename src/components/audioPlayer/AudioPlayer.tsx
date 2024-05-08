@@ -5,7 +5,7 @@ import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import StopIcon from '@mui/icons-material/Stop';
 import { StyledAudioPlayer, StyledTrackTitle, StyledPlayerControls } from './AudioPlayer.styles';
 
-function AudioPlayer():JSX.Element{
+export default function AudioPlayer():JSX.Element{
 
     return <StyledAudioPlayer id="audio-player">   
                 <audio >
@@ -30,7 +30,7 @@ function AudioPlayer():JSX.Element{
             </StyledAudioPlayer> 
 }
 
-export default AudioPlayer;
+ 
 
  
 
