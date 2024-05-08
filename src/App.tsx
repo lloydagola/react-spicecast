@@ -1,4 +1,7 @@
-import logo from './logo.svg';
+
+
+import Button from '@mui/material/Button';
+
 import './App.css';
 
 import Main from './layouts/Main';
@@ -7,7 +10,7 @@ function App() {
   return (
     <Main>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Button variant="contained">Contained</Button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
