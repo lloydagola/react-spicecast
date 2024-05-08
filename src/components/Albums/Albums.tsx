@@ -7,14 +7,14 @@ import Album from 'src/components/Album/Album';
 function renderAlbums(){
     const albums = [];
     for(let i=0; i < 16; i++ ){
-        albums.push(<Grid item><Album key={i} i={i}/></Grid>)
+        albums.push(<Album key={i} i={i}/>)
     }
 
     return albums;
 }
 
 
-export default function Albums() {
+export default function Albums(): JSX.Element {
 
     return <Box mb={18} mt={18}>
                 <Typography component="h1" color="white" fontSize={44} fontWeight="700" ml={8}>Albums</Typography>
