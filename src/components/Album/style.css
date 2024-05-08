@@ -1,0 +1,79 @@
+.single-album{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.single-album a{
+    text-decoration: none;
+    margin: 0;
+}
+
+.album-art{
+    overflow: hidden;
+    height: 200px;
+}
+
+
+.single-album img{ 
+    transition: transform .5s;
+    width: 100%;
+}
+
+.single-album .album-filter{
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+    background:tomato;
+    transition: .2s ease-in;
+}
+
+
+
+.album-text > h2{
+    padding: 0;
+}
+
+.album-text h4 {
+    text-overflow: ellipsis;
+    width: calc(100%);
+    overflow: hidden;
+    margin: 6px 0 0 0;
+}
+
+.album-text p{
+    margin: 0 0 12px 0;
+    color:#aaa;
+}
+
+.album-horizontal-line{
+    width: 32px;
+    transition: .2s;
+}
+
+.single-album:hover .album-horizontal-line{
+    width: 60px;
+}
+
+
+
+
+/*ipad*/
+@media screen and (min-width:768px){
+       
+    .single-album:hover img{
+        transform: scale(1.2);
+         
+    }     
+    
+    .single-album:hover .album-filter{
+        opacity: .5;
+        transition: .2s ease-in;
+    }
+}
+
+

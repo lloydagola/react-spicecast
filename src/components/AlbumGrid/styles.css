@@ -1,0 +1,16 @@
+.album-grid{
+    margin-bottom: 60px;
+}
+
+.album-grid >h2{
+    color: #fff;
+    margin-left: 16px;
+}
+
+.album-grid-container{
+    display: grid;
+    grid-gap: 1px;       
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+    margin:auto;
+}
