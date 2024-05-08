@@ -25,12 +25,9 @@ type TNavTypes = {
     mobileOpen: boolean;
 };
 
-export function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: TNavTypes): JSX.Element {
-
-
-
+export default function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: TNavTypes): JSX.Element {
     const drawer = (
-        <div>
+        <Box mt={5} borderRight='1px solid #fff'>
             <Toolbar><Profile/></Toolbar>
             <Divider />
             <List>
@@ -39,7 +36,7 @@ export function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: TNavType
                         <ListItemButton>
                             <ListItemIcon>
                                
-                               {text === 'Feed' ? <AutoAwesomeMotionOutlinedIcon /> : <ExploreOutlinedIcon />}
+                               {text === 'Feed' ? <AutoAwesomeMotionOutlinedIcon  sx={{color:'#fff'}}/> : <ExploreOutlinedIcon  sx={{color:'#fff'}}/>}
                                 
                             </ListItemIcon>
                             <ListItemText primary={text} />
@@ -54,10 +51,10 @@ export function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: TNavType
                         <ListItemButton>
                             <ListItemIcon>
                                {
-                                text === 'Favorites' ? <FavoriteBorderOutlinedIcon /> 
-                                : text==='History' ? <HistoryOutlinedIcon/> 
-                                : text==='Listen Later' ? <UpdateOutlinedIcon/> 
-                                : <FormatListBulletedOutlinedIcon />
+                                text === 'Favorites' ? <FavoriteBorderOutlinedIcon  sx={{color:'#fff'}} /> 
+                                : text==='History' ? <HistoryOutlinedIcon  sx={{color:'#fff'}}/> 
+                                : text==='Listen Later' ? <UpdateOutlinedIcon  sx={{color:'#fff'}}/> 
+                                : <FormatListBulletedOutlinedIcon  sx={{color:'#fff'}} />
                                 }
                             </ListItemIcon>
                             <ListItemText primary={text} />
@@ -73,8 +70,8 @@ export function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: TNavType
                             </ListItemIcon>
                             <ListItemText primary="Trending" />
                         </ListItemButton>
-                    </ListItem>
-        </div>
+            </ListItem>
+        </Box>
     );
 
     // Remove this const when copying and pasting into your project.
@@ -90,7 +87,7 @@ export function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: TNavType
 
     return <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }}}
         aria-label="mailbox folders"
     >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -105,7 +102,7 @@ export function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: TNavType
             }}
             sx={{
                 display: { xs: 'block', sm: 'none' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor:'#222', color:'#fff' },                
             }}
         >
             {drawer}
@@ -114,7 +111,7 @@ export function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: TNavType
             variant="permanent"
             sx={{
                 display: { xs: 'none', sm: 'block' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, marginTop:'66px' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, marginTop:'66px', backgroundColor:'#222', color:'#fff' },
             }}
             open
         >

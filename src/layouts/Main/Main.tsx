@@ -1,25 +1,27 @@
-import {ReactNode, useState} from 'react';
+import { useState } from 'react';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-
-import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
-import { Navigation } from '../Navigation/Navigation';
-import { Body } from '../Body/Body';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import AutoAwesomeMotionOutlinedIcon from '@mui/icons-material/AutoAwesomeMotionOutlined';
+
 import AddIcon from '@mui/icons-material/Add';
 import RadioIcon from '@mui/icons-material/Radio';
 import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 import CategoryIcon from '@mui/icons-material/Category';
+import IconButton from '@mui/material/IconButton';
+
+
+import Navigation from '../Navigation/Navigation';
+import Body  from '../Body/Body';
+import Sidebar from '../Sidebar/Sidebar';
+import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
 
 
 export const drawerWidth = 240;
@@ -46,14 +48,15 @@ export default function Layout({window}: IPropTypes) {
 
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', backgroundColor:'#222', color:'#fff' }} >
       <CssBaseline />
       <AppBar
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)`, md:'100%' },
           ml: { sm: `${drawerWidth}px` },
-          zIndex: {md: '100000'}
+          zIndex: {md: '100000'},
+          backgroundColor:'#222'
         }}
       >
         <Toolbar sx={{justifyContent:'center'}}>
@@ -69,17 +72,17 @@ export default function Layout({window}: IPropTypes) {
           <Typography variant="h6" noWrap component="div" marginRight='80px'>
              Spice Cast
           </Typography>
-          <Box display='flex' color='white'>
+          <Box display='flex'>
             <List sx={{display:'flex', flexDirection:'row'}}>
                   {['Post', 'Categories', 'Events', 'Radio'].map((text, index) => (
                       <ListItem key={text} >
                           <ListItemButton>
-                              <ListItemIcon color='white'>                                
+                              <ListItemIcon>                                
                                 {
-                                  text === 'Post' ? <AddIcon /> :
-                                  text ==='Categories' ? <CategoryIcon/> :
-                                  text ==='Events' ? <LocalActivityIcon/> :
-                                  <RadioIcon/> 
+                                  text === 'Post' ? <AddIcon sx={{color:'#fff'}}/> :
+                                  text ==='Categories' ? <CategoryIcon  sx={{color:'#fff'}}/> :
+                                  text ==='Events' ? <LocalActivityIcon  sx={{color:'#fff'}}/> :
+                                  <RadioIcon  sx={{color:'#fff'}}/> 
                                 }                                  
                               </ListItemIcon>
                               <ListItemText primary={text} />
@@ -94,6 +97,7 @@ export default function Layout({window}: IPropTypes) {
       <Navigation setIsClosing={setIsClosing} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>
       <Body drawerWidth={drawerWidth} />  
       <AudioPlayer/>   
+      <Sidebar drawerWidth={drawerWidth}/>
     </Box>
   );
 }
