@@ -5,15 +5,20 @@ import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import StopIcon from '@mui/icons-material/Stop';
+import PauseIcon from '@mui/icons-material/Pause';
+
 import { StyledAudioPlayer, StyledTrackTitle, StyledPlayerControls } from './AudioPlayer.styles';
 
 
 export default function AudioPlayer():JSX.Element{
     const player = useRef<HTMLAudioElement>(null);
 
-    const [progressValue, setProgressValue] = useState(0)
-    const [currentTime, setCurrentTime] = useState('0')
-    const [trackDuration, setTrackDuration] = useState('0')
+    const [progressValue, setProgressValue] = useState(0);
+    const [currentTime, setCurrentTime] = useState('0');
+    const [trackDuration, setTrackDuration] = useState('0');
+    const [playState, setPlayState] = useState(false);
+
+    //const togglePlayButton = playState => playState === 'playing' ? 'fas fa-pause pause-icon' : 'far fa-play-circle play-icon'
 
     const updateProgressBar = ():number => {
         if(player.current){
@@ -50,16 +55,18 @@ export default function AudioPlayer():JSX.Element{
     const handlePlay = ():void => {
         if (player?.current?.paused === false) {
             player?.current?.pause();
-            
+            setPlayState(false);           
         }
         else {
             player?.current?.play();  
+            setPlayState(true);
         }
     }
 
     const handleStop = ():void => {
         if(player.current){
             setProgressValue(0);
+            setPlayState(false);
             player.current.load();
         }
     }
@@ -97,13 +104,17 @@ export default function AudioPlayer():JSX.Element{
                     <h4>Lloyd Aagola - Still Waiting</h4>
                 </StyledTrackTitle>
                 <StyledPlayerControls>
-                    <PlayCircleFilledIcon fontSize='large' onClick={() => handlePlay()}/>
+                    {
+                        playState 
+                        ? <PauseIcon fontSize='large' onClick={() => handlePlay()}/>
+                        : <PlayCircleFilledIcon fontSize='large' onClick={() => handlePlay()}/> 
+                    }
                     <SkipPreviousIcon fontSize='large'/>
                     <StopIcon fontSize='large' onClick={() => handleStop()}/>
                     <SkipNextIcon fontSize='large'/>
                 </StyledPlayerControls>
                 <p>{player?.current?.currentTime}</p>
-                <progress id="seek-obj" value={progressValue} max="1" />        
+                <progress id="seek-obj" value={progressValue || 0} max="1" />        
                 <p>{trackDuration}</p>
             </StyledAudioPlayer> 
 }
