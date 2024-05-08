@@ -31,7 +31,7 @@ export const StyledAudioPlayer = styled.section(({ theme }) => ({
         appearance: "none",
         backgroundColor: "white",
         color: "blue",
-        height: "2px",
+        height: "8px",
     },
 
     'p': {
