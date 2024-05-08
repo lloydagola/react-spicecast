@@ -11,9 +11,10 @@ import IconButton from '@mui/material/IconButton';
 //import MailIcon from '@mui/icons-material/Mail';
 //import MenuIcon from '@mui/icons-material/Menu';
 
-import { AudioPlayer } from '../../components/AudioPlayer/AudioPlayer';
+import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
 import { Navigation } from '../Navigation/Navigation';
 import { Body } from '../Body/Body';
+
 
 export const drawerWidth = 240;
 
@@ -66,8 +67,8 @@ export default function Layout({window}: IPropTypes) {
       </AppBar>
       
       <Navigation setIsClosing={setIsClosing} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>
-      <Body drawerWidth={drawerWidth} />      
-      <AudioPlayer/>
+      <Body drawerWidth={drawerWidth} />  
+      <AudioPlayer/>   
     </Box>
   );
 }
