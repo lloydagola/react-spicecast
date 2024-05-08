@@ -50,6 +50,11 @@
     color:#aaa;
 }
 
+.white-background{
+    background-color: white;
+    height: 4px;
+}
+
 .album-horizontal-line{
     width: 32px;
     transition: .2s;
