@@ -13,7 +13,7 @@ export default function Album({i}:TAlbumTypes)  {
         </div>  
         <div className="album-buttons"/>        
         <div className = "album-text">
-            <h4>Title</h4>
+            <h4>Still Waiting</h4>
             <p>Lloyd Agola</p>
             <div className="horizontal-line album-horizontal-line white-background"/>                                            
         </div>  
