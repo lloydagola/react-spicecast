@@ -12,6 +12,7 @@ import { StyledAudioPlayer, StyledTrackTitle, StyledPlayerControls } from './Aud
 
 export default function AudioPlayer():JSX.Element{
     const player = useRef<HTMLAudioElement>(null);
+    const progressBarRef = useRef<HTMLProgressElement>(null)
 
     const [progressValue, setProgressValue] = useState(0);
     const [currentTime, setCurrentTime] = useState('0');
@@ -71,6 +72,16 @@ export default function AudioPlayer():JSX.Element{
         }
     }
 
+    const seek = (e:React.MouseEvent<HTMLProgressElement>) => {
+        console.log(progressBarRef.current);
+        console.log(e)
+        if(progressBarRef.current && player.current){
+            const percent = e.nativeEvent.offsetX / progressBarRef.current.offsetWidth;
+            player.current.currentTime = percent * player.current.duration;
+            setProgressValue(percent / 100);
+        }        
+    }
+
     useEffect(() => {
         if(player.current)
             console.log(player.current.duration)
@@ -114,7 +125,7 @@ export default function AudioPlayer():JSX.Element{
                     <SkipNextIcon fontSize='large'/>
                 </StyledPlayerControls>
                 <p>{player?.current?.currentTime}</p>
-                <progress id="seek-obj" value={progressValue || 0} max="1" />        
+                <progress id="seek-obj" value={progressValue || 0} max="1" ref={progressBarRef} onClick={seek}/>        
                 <p>{trackDuration}</p>
             </StyledAudioPlayer> 
 }
