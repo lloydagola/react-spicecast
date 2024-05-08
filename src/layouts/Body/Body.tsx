@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import AlbumGrid from 'src/components/AlbumGrid/AlbumGrid';
+import AlbumGrid from 'src/components/Albums/Albums';
 
 
 export type TBodyTypes = {drawerWidth:number}
