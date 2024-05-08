@@ -27,7 +27,7 @@ type TNavTypes = {
 
 export default function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: TNavTypes): JSX.Element {
     const drawer = (
-        <Box mt={5} borderRight='1px solid #fff'>
+        <Box pt={5} borderRight='1px solid #fff'>
             <Toolbar><Profile/></Toolbar>
             <Divider />
             <List>
