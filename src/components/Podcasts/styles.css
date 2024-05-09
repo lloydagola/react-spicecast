@@ -1,0 +1,25 @@
+.podcast-grid{
+    margin-bottom: 60px;
+}
+
+.podcast-grid >h2{
+    color: #fff;
+    margin-left: 16px;
+}
+
+.podcast-grid-container{
+    display: grid;
+    margin:auto;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 200px); 
+    grid-gap: 1px;   
+}
+
+
+@media screen and (min-width:1600px){
+    .podcast-grid{
+        margin-bottom: 96px;
+    }
+
+}
+
