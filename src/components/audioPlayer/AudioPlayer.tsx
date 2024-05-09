@@ -9,6 +9,8 @@ import PauseIcon from '@mui/icons-material/Pause';
 
 import { StyledAudioPlayer, StyledTrackTitle, StyledPlayerControls } from './AudioPlayer.styles';
 
+const RADIO_SRC = "https://streams.radio.co/sd1bcd1376/listen#.mp3";
+const TRACK_SRC = "./music/hearts.mp3";
 
 export default function AudioPlayer():JSX.Element{
     const player = useRef<HTMLAudioElement>(null);
@@ -109,7 +111,7 @@ export default function AudioPlayer():JSX.Element{
                 <audio  ref={player}>
                     Your browser does not support the
                     <code>audio</code> element.
-                    <source src="./music/hearts.mp3" type="audio/mpeg"/>
+                    <source src={TRACK_SRC} type="audio/mpeg"/>
                 </audio>
                 <img src='./images/th-15.jpg' alt='thumb'/>
                 <StyledTrackTitle>
