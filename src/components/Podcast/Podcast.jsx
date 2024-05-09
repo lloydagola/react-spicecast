@@ -1,6 +1,10 @@
-import React from "react";
-import "./style.css";
+import Typography from '@mui/material/Typography';
 //import PlaylistView from "../PlaylistView/PlaylistView";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import "./style.css";
+import PlaylistView from '../PlaylistView/PlaylistView';
 
 
 
@@ -12,24 +16,19 @@ export default function Podcast ({podcast}){
                 <div className = "podcast-text">
                     <h4>{podcast.title}</h4>
                     <div className="horizontal-line podcast-horizontal-line white-background"/>
-                    
+                    <Typography mt={2}>Lily Claw | Emma Watts</Typography>
                 </div> 
                 <div className="filter"/>
                 <img src = {`./images/th-${podcast.index}.jpg`} alt="podcast thumbnail"/>                                            
-            </div>    
-            
-        <div className="podcast-vertical-widget">
-            <p className="podcast-vertical-text">
-                <b>0{podcast.index}</b>                           
-            </p>
-            <div className="vertical-line white"/>
+            </div>  
+
+            <PlaylistView />  
+               
             <div className="social-links"> 
-                <i className="fab fa-facebook-f"/>
-                <i className="fab fa-instagram"/>
-                <i className="fab fa-twitter"/>
-            </div>             
-            <div className="vertical-line white"/>
-        </div>                       
+                <FacebookIcon fontSize="small" sx={{color:'#fff', margin:'8px'}}/>
+                <InstagramIcon fontSize="small" sx={{color:'#fff', margin:'8px'}}/>
+                <GitHubIcon fontSize="small" sx={{color:'#fff', margin:'8px'}}/> 
+            </div>                 
     </div>
 }
                    

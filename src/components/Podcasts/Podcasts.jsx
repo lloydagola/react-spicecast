@@ -1,4 +1,3 @@
-import React, { useContext, useEffect } from 'react';
 import Podcast from '../Podcast/Podcast';
 import './styles.css';
 
@@ -8,10 +7,7 @@ function renderPodcasts (){
     return albumdata.map((podcast, index) => <Podcast key={index} podcast={podcast}/>)
 } 
 
-
-
-
-const Podcasts = (props) => {
+export default function Podcasts (props){
 
     return <section className ="podcast-grid">
                     <h2>{props.title}</h2>
@@ -19,7 +15,4 @@ const Podcasts = (props) => {
                         {renderPodcasts()}        
                     </div>
                 </section>
-}
-        
-
-export default Podcasts;
+};
