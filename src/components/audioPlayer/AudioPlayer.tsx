@@ -10,6 +10,7 @@ import PauseIcon from '@mui/icons-material/Pause';
 import { StyledAudioPlayer, StyledTrackTitle, StyledPlayerControls } from './AudioPlayer.styles';
 
 const RADIO_SRC = "https://streams.radio.co/sd1bcd1376/listen#.mp3";
+const RADIO_SRC2 = "http://208.64.184.36/sf1033";
 const TRACK_SRC = "./music/hearts.mp3";
 
 export default function AudioPlayer():JSX.Element{
