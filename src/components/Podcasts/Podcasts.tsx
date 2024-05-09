@@ -4,10 +4,11 @@ import Typography from '@mui/material/Typography';
 
 import Podcast from '../Podcast/Podcast';
 
-import albumdata from 'src/_mocks_/data/albums.json'
+import albumdata from 'src/_mocks_/data/albums.json';
+import { TPodcast } from 'src/types/types';
 
-function renderPodcasts (){
-    return albumdata.map((podcast, index) => <Grid item><Podcast key={index} podcast={podcast}/></Grid> )
+function renderPodcasts ():JSX.Element[]{
+    return albumdata.map((podcast:TPodcast, index:number) => <Grid item><Podcast key={index} podcast={podcast}/></Grid> )
 } 
 
 export default function Podcasts (): JSX.Element{
