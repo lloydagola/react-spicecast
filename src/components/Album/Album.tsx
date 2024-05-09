@@ -3,8 +3,14 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
-type TAlbumTypes = {
-    i:number
+type TalbumType = {
+    title: string;
+    artist: string;
+    index: number;
+}
+
+type TAlbumPropTypes = {
+    album:TalbumType
 };
 
 const StyledAlbumGrid = styled(Grid)(({theme}) => ({
@@ -63,17 +69,19 @@ const StyledAlbumGrid = styled(Grid)(({theme}) => ({
     }
 }));
 
-export default function Album({i}:TAlbumTypes)  {
 
-    return <StyledAlbumGrid flexDirection="column" item> 
+
+export default function Album({album}:TAlbumPropTypes)  {
+
+    return <StyledAlbumGrid item flexDirection="column" > 
                 <Box overflow="hidden" height="260px">
                     <Box className="album-filter"/>
-                    <img src={`./images/th-${i}.jpg`} alt='album thumbnail'/> 
+                    <img src={`./images/th-${album.index}.jpg`} alt='album thumbnail'/> 
                 </Box>  
                 <div className="album-buttons"/>        
                 <div className = "album-text">
-                    <Typography variant="h5">Still Waiting</Typography>
-                    <Typography>Lloyd Agola</Typography>
+                    <Typography variant="h5">{album.title}</Typography>
+                    <Typography>{album.artist}</Typography>
                     <div className="horizontal-line album-horizontal-line"/>                                            
                 </div>  
             </StyledAlbumGrid>

@@ -4,15 +4,7 @@ import Typography  from "@mui/material/Typography";
 
 import Album from 'src/components/Album/Album';
 
-function renderAlbums(){
-    const albums = [];
-    for(let i=0; i < 16; i++ ){
-        albums.push(<Album key={i} i={i}/>)
-    }
-
-    return albums;
-}
-
+import albumsdata from 'src/_mocks_/data/albums.json'
 
 export default function Albums(): JSX.Element {
 
@@ -27,7 +19,7 @@ export default function Albums(): JSX.Element {
                         justifyContent: "center",
                         margin:"auto",
                     }}>
-                    {renderAlbums()}        
+                    {albumsdata.map((album, index) => <Album key={index} album={album} />)}        
                 </Grid>
             </Box>
 }
