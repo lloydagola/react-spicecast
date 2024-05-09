@@ -33,7 +33,7 @@ export default function Podcast ({podcast}:TPodcastProps): JSX.Element{
        
     return <Grid container height="240px" alignItems='center' overflow='hidden' position='relative' className="single-podcast" sx={podcastStyles}> 
             <Box className="image-view" overflow='hidden' position='relative' height='100%'>
-                <Box position='absolute' zIndex={100} mt={1} ml={1}>
+                <Box position='absolute' zIndex={100} mt={2} ml={2}>
                     <Typography variant='h4' fontSize={20} fontWeight={900} textOverflow='ellipsis' overflow='hidden'>{podcast.title}</Typography>                    
                 </Box> 
                 <Box  
@@ -49,10 +49,10 @@ export default function Podcast ({podcast}:TPodcastProps): JSX.Element{
 
             <PlaylistView />  
 
-            <div className='contributors'>
+            <Box className='contributors' bottom='67px' m='8px' position='absolute' zIndex='100'>
                 <Typography mt={2}>Lily Claw | Emma Watts</Typography>
                 <Box className="horizontal-line podcast-horizontal-line white-background" width='32px' height='4px' sx={{transition: '.2s ease-in-out', backgroundColor: '#fff'}} />
-            </div>
+            </Box>
                
             <Box position="absolute" zIndex="100" display="flex" flexDirection="column" right="0"> 
                 <FacebookIcon fontSize="small" sx={{color:'#fff', margin:'8px'}}/>
