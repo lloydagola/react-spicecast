@@ -15,14 +15,18 @@ export default function Podcast ({podcast}){
             <div className="image-view">
                 <div className = "podcast-text">
                     <h4>{podcast.title}</h4>
-                    <div className="horizontal-line podcast-horizontal-line white-background"/>
-                    <Typography mt={2}>Lily Claw | Emma Watts</Typography>
+                    
                 </div> 
                 <div className="filter"/>
                 <img src = {`./images/th-${podcast.index}.jpg`} alt="podcast thumbnail"/>                                            
             </div>  
 
             <PlaylistView />  
+
+            <div className='contributors'>
+                <Typography mt={2}>Lily Claw | Emma Watts</Typography>
+                <div className="horizontal-line podcast-horizontal-line white-background"/>
+            </div>
                
             <div className="social-links"> 
                 <FacebookIcon fontSize="small" sx={{color:'#fff', margin:'8px'}}/>

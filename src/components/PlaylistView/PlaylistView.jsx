@@ -1,5 +1,6 @@
-import './styles.css'; 
 import PlayCircleFilledWhiteOutlinedIcon from '@mui/icons-material/PlayCircleFilledWhiteOutlined';
+import Typography from '@mui/material/Typography/Typography'
+import './styles.css'; 
 
 
 
@@ -8,7 +9,7 @@ export default function PlaylistView (){
     return <div className="playlist-view">
                 <div className="podcast-play">
                     <PlayCircleFilledWhiteOutlinedIcon sx={{color:'#222'}}/>
-                    <p className="playing">As it happened</p>                       
+                    <Typography fontWeight={600} className="playing">As it happened</Typography>                      
                 </div>  
             </div>
 };

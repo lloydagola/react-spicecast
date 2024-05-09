@@ -70,7 +70,7 @@ h4 ~ h4 {
     background-color: #fff;
 }
 
-.single-podcast:hover .image-view .podcast-horizontal-line{
+.single-podcast:hover .podcast-horizontal-line{
     width: 60px;
 }
 

@@ -1,6 +1,6 @@
 
 .playlist-view{
-    max-width: 90%;
+    max-width: 95%;
     flex-direction: column;
     background-color: #fff;
     margin-bottom: 24px;
@@ -15,6 +15,13 @@
     z-index: 2;
     bottom: 0;
 
+}
+
+.contributors{
+    bottom: 67px;
+    margin:8px;
+    position: absolute;
+    z-index: 100;
 }
 
 .playing{
@@ -89,7 +96,7 @@
 
 @media screen and (min-width:1200px){
    .playlist-view{
-        max-width: 70%;   
+        max-width: 80%;   
         margin-bottom: 16px;
     }
 
