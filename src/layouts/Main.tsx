@@ -18,7 +18,7 @@ import CategoryIcon from '@mui/icons-material/Category';
 import IconButton from '@mui/material/IconButton';
 
 
-import Navigation from 'src/layouts/components/SidebarLeft/SidebarLeft';
+import SidebarLeft from 'src/layouts/components/SidebarLeft/SidebarLeft';
 import Body  from 'src/layouts/components/Body/Body';
 import SidebarRight from 'src/layouts/components/SidebarRight/SidebarRight';
 import AudioPlayer from 'src/layouts/components/AudioPlayer/AudioPlayer';
@@ -93,7 +93,7 @@ export default function Layout({window}: IPropTypes) {
         </Toolbar>
       </AppBar>
       
-      <Navigation setIsClosing={setIsClosing} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>
+      <SidebarLeft setIsClosing={setIsClosing} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>
       <Body drawerWidth={drawerWidth} />  
       <AudioPlayer/>   
       <SidebarRight drawerWidth={drawerWidth}/>
