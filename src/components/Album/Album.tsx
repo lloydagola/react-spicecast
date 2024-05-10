@@ -48,14 +48,14 @@ const StyledAlbumGrid = styled(Grid)(({theme}) => ({
         transition: ".2s ease-in",
     },
 
-    ".album-horizontal-line" : {
+    ".horizontal-line" : {
         width: "32px",
         transition: ".2s",
         backgroundColor: "white",
         height: "4px",
     },
 
-    "&:hover .album-horizontal-line" : {
+    "&:hover .horizontal-line" : {
         width: "60px"
     },
 
@@ -77,12 +77,11 @@ export default function Album({album}:TAlbumPropTypes)  {
                 <Box overflow="hidden" height="260px">
                     <Box className="album-filter"/>
                     <img src={`./images/th-${album.index}.jpg`} alt='album thumbnail'/> 
-                </Box>  
-                <div className="album-buttons"/>        
-                <div className = "album-text">
+                </Box>         
+                <Box sx={{backgroundColor:'#111'}}>
                     <Typography variant="h5">{album.title}</Typography>
                     <Typography>{album.artist}</Typography>
-                    <div className="horizontal-line album-horizontal-line"/>                                            
-                </div>  
+                    <Box className="horizontal-line"/>                                            
+                </Box>  
             </StyledAlbumGrid>
 }
