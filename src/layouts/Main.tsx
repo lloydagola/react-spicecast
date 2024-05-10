@@ -66,26 +66,6 @@ function Hero1() {
       </Box>
   )
 }
-function Hero2() {
-  
-  const heroStyles = {
-    width:'100vw', 
-    height:'65vh', 
-    display:'flex',
-    flexDirection:'column', 
-    justifyContent:'center', 
-    alignItems:'center', 
-    backgroundImage:"url('./images/hero-7.jpg')",
-    backgroundAttachment:'fixed'
-  };
-
-  return (
-    <Box component='section' sx={heroStyles}>
-        <Typography variant='h1' fontWeight={900} fontSize={140}>Hello Spicy</Typography>
-        <Typography variant='h2' fontWeight={400} fontSize={80}>The Spice To Life</Typography>
-      </Box>
-  )
-}
 
 function useInViewPort<T extends HTMLElement>(ref: React.RefObject<T>, options?: IntersectionObserverInit) {
   const [ inViewport, setInViewport ] = useState(false);
