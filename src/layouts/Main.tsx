@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { RefObject, useEffect, useRef, useState } from 'react';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -22,6 +22,7 @@ import SidebarLeft from 'src/layouts/components/SidebarLeft/SidebarLeft';
 import Body  from 'src/layouts/components/Body/Body';
 import SidebarRight from 'src/layouts/components/SidebarRight/SidebarRight';
 import AudioPlayer from 'src/layouts/components/AudioPlayer/AudioPlayer';
+import zIndex from '@mui/material/styles/zIndex';
 
 
 export const drawerWidth = 240;
@@ -50,6 +51,8 @@ function Hero1() {
     'img':{
       width: "100%",
       marginTop: "241px",
+      position: 'fixed',
+      zIndex: '0'
     }
   };
   
@@ -84,6 +87,25 @@ function Hero2() {
   )
 }
 
+function useInViewPort<T extends HTMLElement>(ref: React.RefObject<T>, options?: IntersectionObserverInit) {
+  const [ inViewport, setInViewport ] = useState(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver(([ entry ]) => {
+      setInViewport(entry.isIntersecting);
+    }, options);
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [ options, ref ]);
+  return inViewport;
+};
+
 
 
 export default function Layout({window}: IPropTypes) {
@@ -97,9 +119,13 @@ export default function Layout({window}: IPropTypes) {
     }
   };
 
+  const targetRef = useRef<HTMLDivElement>(null);
+  const inViewport = useInViewPort(targetRef, { threshold: 0.1 });
 
+  console.log({inViewport});
+  
   return (
-    <Box sx={{ display: 'flex', flexDirection:'column', backgroundColor:'#000', color:'#fff', 'header': {boxShadow:'unset',} }} >
+    <Box sx={{ display: 'flex', flexDirection:'column', backgroundColor:'#000', color:'#fff', 'header': {boxShadow:'unset'} }} >
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -107,7 +133,8 @@ export default function Layout({window}: IPropTypes) {
           width: { sm: `calc(100% - ${drawerWidth}px)`, md:'100%' },
           ml: { sm: `${drawerWidth}px` },
           zIndex: {md: '100000'},
-          backgroundColor:'rgba(0,0,0,0)',          
+          backgroundColor: inViewport ? 'rgba(0,0,0,1)' : 'rgba(0,0,0,0)',     
+          transition: '.5s ease-in-out'     
         }}
       >
         <Toolbar sx={{justifyContent:'center'}}>
@@ -147,11 +174,14 @@ export default function Layout({window}: IPropTypes) {
 
       <Hero1/>
 
-      <Box sx={{ display: 'flex', backgroundColor:'#000', color:'#fff' }} >
-        <SidebarLeft setIsClosing={setIsClosing} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>
-        <Body drawerWidth={drawerWidth} />  
-        <SidebarRight drawerWidth={drawerWidth}/>
-      </Box>
+        <Box ref={targetRef} sx={{ display: 'flex', backgroundColor:'#000', color:'#fff', zIndex:'1' }} >
+          
+      <div ref={targetRef} ></div>
+          <SidebarLeft setIsClosing={setIsClosing} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>
+          <Body drawerWidth={drawerWidth} />  
+          <SidebarRight drawerWidth={drawerWidth}/>
+        </Box>
+
       <AudioPlayer/>   
       
     </Box>
