@@ -46,6 +46,17 @@ export default function Layout({window}: IPropTypes) {
     }
   };
 
+  const heroStyles = {
+    width:'100vw', 
+    height:'65vh', 
+    display:'flex', 
+    flexDirection:'column', 
+    justifyContent:'center', 
+    alignItems:'center', 
+    backgroundImage:"url('./images/hero-7.jpg')",
+    backgroundAttachment:'fixed'
+  };
+
   return (
     <Box sx={{ display: 'flex', flexDirection:'column', backgroundColor:'#000', color:'#fff' }} >
       <CssBaseline />
@@ -55,7 +66,7 @@ export default function Layout({window}: IPropTypes) {
           width: { sm: `calc(100% - ${drawerWidth}px)`, md:'100%' },
           ml: { sm: `${drawerWidth}px` },
           zIndex: {md: '100000'},
-          backgroundColor:'#222'
+          backgroundColor:'rgba(0,0,0,0.9)'
         }}
       >
         <Toolbar sx={{justifyContent:'center'}}>
@@ -91,7 +102,12 @@ export default function Layout({window}: IPropTypes) {
               </List> 
           </Box>
         </Toolbar>
-      </AppBar>      
+      </AppBar>
+
+      <Box component='section' sx={heroStyles}>
+        <Typography variant='h1' fontWeight={900} fontSize={140}>Hello Spicy</Typography>
+        <Typography variant='h2' fontWeight={400} fontSize={80}>The Spice To Life</Typography>
+      </Box>
 
       <Box sx={{ display: 'flex', backgroundColor:'#000', color:'#fff' }} >
         <SidebarLeft setIsClosing={setIsClosing} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>
