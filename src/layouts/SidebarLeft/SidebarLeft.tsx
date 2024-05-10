@@ -26,7 +26,7 @@ type TNavTypes = {
     mobileOpen: boolean;
 };
 
-export default function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: TNavTypes): JSX.Element {
+export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }: TNavTypes): JSX.Element {
     const drawer = (
         <Box pt={5} >
             <Toolbar><Profile/></Toolbar>

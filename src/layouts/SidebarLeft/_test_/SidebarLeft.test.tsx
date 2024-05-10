@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import Navigation from '../Navigation';
+import SidebarLeft from '../SidebarLeft';
 
 
 test.todo('renders the navigation')
