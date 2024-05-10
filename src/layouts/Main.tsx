@@ -77,7 +77,7 @@ export default function Layout({window}: IPropTypes) {
           >
             <IconButton />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" marginRight='80px' fontWeight={900} sx={{textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)'}}>
+          <Typography variant="h6" noWrap component="div" marginRight='80px' fontSize={36} fontWeight={900} sx={{textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)'}}>
              Spice Cast
           </Typography>
           <Box display='flex'>
@@ -87,13 +87,13 @@ export default function Layout({window}: IPropTypes) {
                           <ListItemButton>
                               <ListItemIcon>                                
                                 {
-                                  text === 'Post' ? <AddIcon sx={{color:'#fff'}}/> :
+                                  text === 'Post' ? <AddIcon sx={{color:'#fff', }}/> :
                                   text ==='Categories' ? <CategoryIcon  sx={{color:'#fff'}}/> :
                                   text ==='Events' ? <LocalActivityIcon  sx={{color:'#fff'}}/> :
                                   <RadioIcon  sx={{color:'#fff'}}/> 
                                 }                                  
                               </ListItemIcon>
-                              <ListItemText primary={text} />
+                              <Typography fontSize={22} fontWeight={600} sx={{textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)'}}>{text}</Typography>
                           </ListItemButton>
                       </ListItem>
                   ))}
