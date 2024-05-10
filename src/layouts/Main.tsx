@@ -99,7 +99,7 @@ export default function Layout({window}: IPropTypes) {
 
 
   return (
-    <Box sx={{ display: 'flex', flexDirection:'column', backgroundColor:'#000', color:'#fff' }} >
+    <Box sx={{ display: 'flex', flexDirection:'column', backgroundColor:'#000', color:'#fff', 'header': {boxShadow:'unset',} }} >
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -107,7 +107,7 @@ export default function Layout({window}: IPropTypes) {
           width: { sm: `calc(100% - ${drawerWidth}px)`, md:'100%' },
           ml: { sm: `${drawerWidth}px` },
           zIndex: {md: '100000'},
-          backgroundColor:'rgba(0,0,0,0)'
+          backgroundColor:'rgba(0,0,0,0)',          
         }}
       >
         <Toolbar sx={{justifyContent:'center'}}>
