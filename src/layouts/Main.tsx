@@ -1,4 +1,4 @@
-import { RefObject, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -9,7 +9,6 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 
 import AddIcon from '@mui/icons-material/Add';
 import RadioIcon from '@mui/icons-material/Radio';
@@ -51,8 +50,6 @@ export default function Layout({window}: IPropTypes) {
 
   const targetRef = useRef<HTMLDivElement>(null);
   const inViewport = useInViewPort(targetRef, { threshold: 0.1 });
-
-  console.log({inViewport});
   
   return (
     <Box sx={{ display: 'flex', flexDirection:'column', backgroundColor:'#000', color:'#fff', 'header': {boxShadow: inViewport ? '1px solid #fff' : 'unset'} }} >
@@ -104,11 +101,11 @@ export default function Layout({window}: IPropTypes) {
 
       <Hero/>
 
-        <Box ref={targetRef} sx={{ display: 'flex', backgroundColor:'#000', color:'#fff', zIndex:'1' }} > 
-          <SidebarLeft setIsClosing={setIsClosing} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>
-          <Body drawerWidth={drawerWidth} />  
-          <SidebarRight drawerWidth={drawerWidth}/>
-        </Box>
+      <Box ref={targetRef} sx={{ display: 'flex', backgroundColor:'#000', color:'#fff', zIndex:'1' }} > 
+        <SidebarLeft setIsClosing={setIsClosing} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>
+        <Body drawerWidth={drawerWidth} />  
+        <SidebarRight drawerWidth={drawerWidth}/>
+      </Box>       
 
       <AudioPlayer/>   
       
