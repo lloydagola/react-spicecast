@@ -16,7 +16,8 @@ export default function Hero() {
       zIndex: '0'
     },
     '& img:nth-child(1)':{
-      width:'70%'
+      width:'70%',
+      position: 'fixed'
     },
     '& img:nth-child(2)':{
       width:'100%'
