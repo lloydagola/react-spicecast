@@ -17,10 +17,10 @@ export default function Hero() {
     },
     '& img:nth-child(1)':{
       width:'70%',
-      position: 'fixed'
     },
     '& img:nth-child(2)':{
-      width:'100%'
+      width:'100%',
+      position: 'fixed'
     },
   };
 
