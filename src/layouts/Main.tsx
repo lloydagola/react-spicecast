@@ -125,7 +125,7 @@ export default function Layout({window}: IPropTypes) {
   console.log({inViewport});
   
   return (
-    <Box sx={{ display: 'flex', flexDirection:'column', backgroundColor:'#000', color:'#fff', 'header': {boxShadow:'unset'} }} >
+    <Box sx={{ display: 'flex', flexDirection:'column', backgroundColor:'#000', color:'#fff', 'header': {boxShadow: inViewport ? '1px solid #fff' : 'unset'} }} >
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -133,8 +133,8 @@ export default function Layout({window}: IPropTypes) {
           width: { sm: `calc(100% - ${drawerWidth}px)`, md:'100%' },
           ml: { sm: `${drawerWidth}px` },
           zIndex: {md: '100000'},
-          backgroundColor: inViewport ? 'rgba(0,0,0,1)' : 'rgba(0,0,0,0)',     
-          transition: '.5s ease-in-out'     
+          backgroundColor: inViewport ? 'rgba(0,0,0,1)' : 'rgba(0,0,0,0)', 
+          transition: '.2s ease-in-out'     
         }}
       >
         <Toolbar sx={{justifyContent:'center'}}>
