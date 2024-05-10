@@ -47,7 +47,7 @@ export default function Layout({window}: IPropTypes) {
   };
 
   return (
-    <Box sx={{ display: 'flex', backgroundColor:'#000', color:'#fff' }} >
+    <Box sx={{ display: 'flex', flexDirection:'column', backgroundColor:'#000', color:'#fff' }} >
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -91,12 +91,15 @@ export default function Layout({window}: IPropTypes) {
               </List> 
           </Box>
         </Toolbar>
-      </AppBar>
-      
-      <SidebarLeft setIsClosing={setIsClosing} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>
-      <Body drawerWidth={drawerWidth} />  
+      </AppBar>      
+
+      <Box sx={{ display: 'flex', backgroundColor:'#000', color:'#fff' }} >
+        <SidebarLeft setIsClosing={setIsClosing} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>
+        <Body drawerWidth={drawerWidth} />  
+        <SidebarRight drawerWidth={drawerWidth}/>
+      </Box>
       <AudioPlayer/>   
-      <SidebarRight drawerWidth={drawerWidth}/>
+      
     </Box>
   );
 }

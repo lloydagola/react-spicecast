@@ -113,7 +113,7 @@ export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }:
             variant="permanent"
             sx={{
                 display: { xs: 'none', sm: 'block' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, marginTop:'66px', backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, marginTop:'66px', backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222', position:'unset' },
             }}
             open
         >
