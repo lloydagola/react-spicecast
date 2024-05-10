@@ -60,8 +60,8 @@ function Hero1() {
     <Box component='section' sx={heroStyles}>
         <img src='./images/hero-12.png' alt='foreground' />
         <Box position='absolute' textAlign='center'>
-          <Typography variant='h1' fontWeight={900} fontSize={140}>SpiceCast</Typography>
-          <Typography variant='h2' fontWeight={400} fontSize={80}>The Spice To Life</Typography>
+          <Typography variant='h1' fontWeight={900} fontSize={140} sx={{textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)'}}>SpiceCast</Typography>
+          <Typography variant='h2' fontWeight={400} fontSize={80} sx={{textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)'}}>The Spice To Life</Typography>
         </Box>
       </Box>
   )
@@ -147,7 +147,7 @@ export default function Layout({window}: IPropTypes) {
           >
             <IconButton />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" marginRight='80px'>
+          <Typography variant="h6" noWrap component="div" marginRight='80px' fontWeight={900} sx={{textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)'}}>
              Spice Cast
           </Typography>
           <Box display='flex'>
