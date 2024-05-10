@@ -133,7 +133,7 @@ export default function Layout({window}: IPropTypes) {
           width: { sm: `calc(100% - ${drawerWidth}px)`, md:'100%' },
           ml: { sm: `${drawerWidth}px` },
           zIndex: {md: '100000'},
-          backgroundColor: inViewport ? 'rgba(0,0,0,1)' : 'rgba(0,0,0,0)', 
+          backgroundColor: inViewport ? 'rgba(0,0,0,0.9)' : 'rgba(0,0,0,0)', 
           transition: '.2s ease-in-out'     
         }}
       >
