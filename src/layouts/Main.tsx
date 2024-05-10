@@ -15,6 +15,7 @@ import RadioIcon from '@mui/icons-material/Radio';
 import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 import CategoryIcon from '@mui/icons-material/Category';
 import IconButton from '@mui/material/IconButton';
+import StreamIcon from '@mui/icons-material/Stream';
 
 
 import SidebarLeft from 'src/layouts/components/SidebarLeft/SidebarLeft';
@@ -66,7 +67,17 @@ export default function Layout() {
           >
             <IconButton />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" marginRight='80px' fontSize={36} fontWeight={900} sx={{textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)'}}>
+          <ListItemIcon><StreamIcon sx={{color:'#fff',  fontSize:'3rem' }}/></ListItemIcon>
+          <Typography 
+            variant="h6" 
+            noWrap 
+            component="div" 
+            marginRight='80px' 
+            fontSize={36} 
+            fontWeight={900} 
+            sx={{
+              textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)'
+            }}>
              Spice Cast
           </Typography>
           <Box display='flex'>
