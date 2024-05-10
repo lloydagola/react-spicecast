@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
 export const StyledAudioPlayer = styled.section(({ theme }) => ({
-    backgroundColor: "#333",
-    border: "1px solid #333",
+    backgroundColor: "#111",
+    borderTop: "1px solid #222",
     display: "flex",
     position: "fixed",
     bottom: "0",

@@ -11,8 +11,8 @@ export default function Body({ drawerWidth }: TBodyTypes): JSX.Element {
                 component="main"
                 sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
             >               
-                <RadioStations/>
                 <Albums/>
+                <RadioStations/>
                 <Podcasts/>
             </Box>;
 }

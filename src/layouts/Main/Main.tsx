@@ -48,7 +48,7 @@ export default function Layout({window}: IPropTypes) {
 
 
   return (
-    <Box sx={{ display: 'flex', backgroundColor:'#222', color:'#fff' }} >
+    <Box sx={{ display: 'flex', backgroundColor:'#000', color:'#fff' }} >
       <CssBaseline />
       <AppBar
         position="fixed"

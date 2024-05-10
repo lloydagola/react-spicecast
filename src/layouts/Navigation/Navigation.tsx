@@ -28,7 +28,7 @@ type TNavTypes = {
 
 export default function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: TNavTypes): JSX.Element {
     const drawer = (
-        <Box pt={5} borderRight='1px solid #fff'>
+        <Box pt={5} >
             <Toolbar><Profile/></Toolbar>
             <Divider />
             <List>
@@ -88,8 +88,9 @@ export default function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: 
 
     return <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }}}
+        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, }}
         aria-label="mailbox folders"
+        
     >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
@@ -103,7 +104,7 @@ export default function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: 
             }}
             sx={{
                 display: { xs: 'block', sm: 'none' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor:'#222', color:'#fff' },                
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222' },                
             }}
         >
             {drawer}
@@ -112,7 +113,7 @@ export default function Navigation({ setIsClosing, setMobileOpen, mobileOpen }: 
             variant="permanent"
             sx={{
                 display: { xs: 'none', sm: 'block' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, marginTop:'66px', backgroundColor:'#222', color:'#fff' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, marginTop:'66px', backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222' },
             }}
             open
         >
