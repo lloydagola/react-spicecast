@@ -104,9 +104,7 @@ export default function Layout({window}: IPropTypes) {
 
       <Hero/>
 
-        <Box ref={targetRef} sx={{ display: 'flex', backgroundColor:'#000', color:'#fff', zIndex:'1' }} >
-          
-      <div ref={targetRef} ></div>
+        <Box ref={targetRef} sx={{ display: 'flex', backgroundColor:'#000', color:'#fff', zIndex:'1' }} > 
           <SidebarLeft setIsClosing={setIsClosing} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>
           <Body drawerWidth={drawerWidth} />  
           <SidebarRight drawerWidth={drawerWidth}/>
