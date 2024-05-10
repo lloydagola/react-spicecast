@@ -8,7 +8,7 @@ import albumsdata from 'src/_mocks_/data/albums.json'
 
 export default function Albums(): JSX.Element {
 
-    return <Box mb={18} mt={18}>
+    return <Box mb={18} mt={6}>
                 <Typography component="h1" color="white" fontSize={44} fontWeight="700" ml={8}>Albums</Typography>
                 <Grid 
                     container
