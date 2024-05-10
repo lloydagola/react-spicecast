@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
+import { Dispatch, SetStateAction, useRef } from 'react';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
@@ -89,7 +89,7 @@ export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }:
 
     const handleDrawerTransitionEnd = () => {
         setIsClosing(false);
-    };      
+    };       
 
     return <Box
         component="nav"

@@ -28,17 +28,7 @@ import useInViewPort  from 'src/hooks/useInViewPort';
 
 export const drawerWidth = 240;
 
-interface IPropTypes {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * Remove this when copying and pasting into your project.
-   */
-  window?: () => Window;
-}
-
-
-export default function Layout({window}: IPropTypes) {
-  
+export default function Layout() {
   const [isClosing, setIsClosing] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -48,11 +38,13 @@ export default function Layout({window}: IPropTypes) {
     }
   };
 
+
   const targetRef = useRef<HTMLDivElement>(null);
   const inViewport = useInViewPort(targetRef, { threshold: 0.1 });
   
+  
   return (
-    <Box sx={{ display: 'flex', flexDirection:'column', backgroundColor:'#000', color:'#fff', 'header': {boxShadow: inViewport ? '1px solid #fff' : 'unset'} }} >
+    <Box sx={{ display: 'flex', flexDirection:'column',color:'#fff', 'header': {boxShadow: inViewport ? '1px solid #fff' : 'unset'} }} >
       <CssBaseline />
       <AppBar
         position="fixed"
