@@ -9,7 +9,7 @@ export type TBodyTypes = {drawerWidth:number}
 export default function Body({ drawerWidth }: TBodyTypes): JSX.Element {
     return <Box
                 component="main"
-                sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+                sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` }, marginTop: {md: 12} }}
             >               
                 <Albums/>
                 <RadioStations/>
