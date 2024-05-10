@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
@@ -19,6 +19,7 @@ import WhatshotSharpIcon from '@mui/icons-material/WhatshotSharp';
 
 import { drawerWidth } from 'src/layouts/Main';
 import { Profile } from 'src/components//Profile/Profile';
+import useInViewPort from 'src/hooks/useInViewPort';
 
 type TNavTypes = {
     setIsClosing: Dispatch<SetStateAction<boolean>>;
@@ -27,6 +28,10 @@ type TNavTypes = {
 };
 
 export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }: TNavTypes): JSX.Element {
+    const sidebarRef = useRef<HTMLDivElement>(null);
+    const isInView = useInViewPort(sidebarRef, {threshold: 0.25});
+
+
     const drawer = (
         <Box pt={5} >
             <Toolbar><Profile/></Toolbar>
@@ -86,10 +91,18 @@ export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }:
         setIsClosing(false);
     };
 
+    useEffect(() => {
+      console.log({isInView})
+    
+      
+    }, [isInView])
+    
+
     return <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }, }}
+        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }}}
         aria-label="mailbox folders"
+        ref={sidebarRef}
         
     >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -113,7 +126,7 @@ export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }:
             variant="permanent"
             sx={{
                 display: { xs: 'none', sm: 'block' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, marginTop:'66px', backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222', position:'unset' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, paddingTop:'60px', backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222', position:isInView ? 'fixed' : 'unset' },
             }}
             open
         >

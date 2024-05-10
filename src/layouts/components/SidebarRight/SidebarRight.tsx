@@ -12,7 +12,7 @@ import CategoryIcon from '@mui/icons-material/Category';
 
 export default function SidebarRight({drawerWidth}:{drawerWidth:number}) {
   return (
-    <Box display='flex' width={drawerWidth} pt={15} borderLeft='1px solid #222' sx={{backgroundColor:'#000'}}>
+    <Box display='flex' width={drawerWidth} borderLeft='1px solid #222' sx={{backgroundColor:'#000', marginTop: {md: 12}}}>
             <List sx={{display:'flex', flexDirection:'column'}}>
                   {['Post', 'Categories', 'Events', 'Radio'].map((text, index) => (
                       <ListItem key={text} >
