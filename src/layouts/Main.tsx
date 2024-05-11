@@ -15,6 +15,7 @@ import RadioIcon from '@mui/icons-material/Radio';
 import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 import CategoryIcon from '@mui/icons-material/Category';
 import IconButton from '@mui/material/IconButton';
+import StreamIcon from '@mui/icons-material/Stream';
 
 
 import SidebarLeft from 'src/layouts/components/SidebarLeft/SidebarLeft';
@@ -28,17 +29,7 @@ import useInViewPort  from 'src/hooks/useInViewPort';
 
 export const drawerWidth = 240;
 
-interface IPropTypes {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * Remove this when copying and pasting into your project.
-   */
-  window?: () => Window;
-}
-
-
-export default function Layout({window}: IPropTypes) {
-  
+export default function Layout() {
   const [isClosing, setIsClosing] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -48,11 +39,13 @@ export default function Layout({window}: IPropTypes) {
     }
   };
 
+
   const targetRef = useRef<HTMLDivElement>(null);
   const inViewport = useInViewPort(targetRef, { threshold: 0.1 });
   
+  
   return (
-    <Box sx={{ display: 'flex', flexDirection:'column', backgroundColor:'#000', color:'#fff', 'header': {boxShadow: inViewport ? '1px solid #fff' : 'unset'} }} >
+    <Box sx={{ display: 'flex', flexDirection:'column',color:'#fff', 'header': {boxShadow: inViewport ? '1px solid #fff' : 'unset'} }} >
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -74,7 +67,17 @@ export default function Layout({window}: IPropTypes) {
           >
             <IconButton />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" marginRight='80px' fontSize={36} fontWeight={900} sx={{textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)'}}>
+          <ListItemIcon><StreamIcon sx={{color:'#fff',  fontSize:'3rem' }}/></ListItemIcon>
+          <Typography 
+            variant="h6" 
+            noWrap 
+            component="div" 
+            marginRight='80px' 
+            fontSize={36} 
+            fontWeight={900} 
+            sx={{
+              textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)'
+            }}>
              Spice Cast
           </Typography>
           <Box display='flex'>
