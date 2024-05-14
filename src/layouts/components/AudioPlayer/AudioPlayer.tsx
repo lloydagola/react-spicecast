@@ -68,7 +68,7 @@ export default function AudioPlayer():JSX.Element{
     
     const play = ():void => {
         console.log(title);
-        if (isPlaying) {
+        if (!player.current?.paused || isPlaying) {
             player.current?.pause();
             handlePause && handlePause();       
         }
