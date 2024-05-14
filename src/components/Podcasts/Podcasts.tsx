@@ -18,7 +18,8 @@ export default function Podcasts (): JSX.Element{
                 <Grid container m='auto' gap={1} justifyContent='center'>
                     {
                         podcasts
-                        .map((podcast:TPodcast, index:number) => <Grid item><Podcast key={index} podcast={podcast}/></Grid>)}        
+                        .map((podcast:TPodcast, index:number) => <Grid item><Podcast key={index} podcast={podcast}/></Grid>)
+                    }        
                 </Grid>
             </Box>
 };
