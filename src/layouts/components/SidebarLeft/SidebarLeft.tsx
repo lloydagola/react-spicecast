@@ -38,7 +38,7 @@ export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }:
             <Divider />
             <List>
                 {['Feed', 'New Shows'].map((text, index) => (
-                    <ListItem key={text} >
+                    <ListItem key={index} >
                         <ListItemButton>
                             <ListItemIcon>
                                
@@ -53,7 +53,7 @@ export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }:
             <Divider sx={{color:'#fff'}}/>
             <List>
                 {['Favorites', 'History', 'Listen Later', 'Playlists'].map((text, index) => (
-                    <ListItem key={text} >
+                    <ListItem key={index} >
                         <ListItemButton>
                             <ListItemIcon>
                                {
