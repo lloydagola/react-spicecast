@@ -83,7 +83,7 @@ export default function Layout() {
           <Box display='flex'>
             <List sx={{display:'flex', flexDirection:'row'}}>
                   {['Post', 'Categories', 'Events', 'Radio'].map((text, index) => (
-                      <ListItem key={text} >
+                      <ListItem key={index} >
                           <ListItemButton>
                               <ListItemIcon>                                
                                 {
