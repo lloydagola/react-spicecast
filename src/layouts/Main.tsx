@@ -65,7 +65,7 @@ export default function Layout() {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <IconButton />
+            {/* <IconButton /> */}
           </IconButton>
           <ListItemIcon><StreamIcon sx={{color:'#fff',  fontSize:'3rem' }}/></ListItemIcon>
           <Typography 
