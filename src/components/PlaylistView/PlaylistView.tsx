@@ -19,13 +19,13 @@ const playListViewStyles = {
 //handlePlay={() => handlePlay({nowPlaying: radioStation.title, thumbnail:radioStation.thumbnail, streamUrl:radioStation.streamUrl})}
 
 export default function PlaylistView ({track}: {track?:any}){    
-    const {audioData:{audioState:{isPlaying, nowPlaying}}, handlePlay, handlePause} = useContext(AudioContext); 
+    const {audioData:{audioState:{isPlaying, title}}, handlePlay, handlePause} = useContext(AudioContext); 
 
 
     return <Box maxWidth='95%' className="playlist-view" sx={playListViewStyles}>
                 <Box className="podcast-play" display='flex' flexDirection='row' alignItems='center' p='4px'>
                     {
-                        isPlaying && track.title === nowPlaying
+                        isPlaying && track.title === title
                         ? <PauseIcon fontSize='large' sx={{color:'#222'}} onClick={() => handlePause && handlePause()}/>
                         : <PlayCircleFilledWhiteOutlinedIcon fontSize='large' sx={{color:'#222'}} onClick={() => handlePlay(track)}/>
                     }                    
