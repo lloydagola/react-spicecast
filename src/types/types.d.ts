@@ -16,7 +16,7 @@ export type TAlbum = {
 
 export type TRadioStation = {
     title: string;
-    thumbnail: string;
+    streamUrl: string;
     genre?: string;
-    index: number;
+    thumbnail?: string;
 };
