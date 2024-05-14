@@ -11,7 +11,7 @@ import { TPodcast } from 'src/types/types';
 
 export default function Podcasts (): JSX.Element{
 
-    const {podcasts} = useContext(AudioContext);
+    const {audioData: {podcasts}} = useContext(AudioContext);
 
     return <Box component='section' mb='60px'>
                 <Typography variant='h2' color='white' m='32px'>Podcasts</Typography>

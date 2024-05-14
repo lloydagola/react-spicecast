@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -6,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 import PlaylistView from 'src/components/PlaylistView/PlaylistView';
-
+import {AudioContext} from 'src/contexts/AudioContext';
 import { TRadioStation } from 'src/types/types';
 
 
@@ -30,7 +31,8 @@ const radioStationStyles = {
     }
 
 export default function RadioStation ({radioStation}:TRadioStationProps): JSX.Element{
-       
+       const { handlePlay } = useContext(AudioContext);
+
     return <Grid item sm={12} md={3} height="200px" alignItems='center' overflow='hidden' position='relative' sx={radioStationStyles}> 
             <Box className="image-view" overflow='hidden' position='relative' height='100%'>
                 <Box position='absolute' zIndex={100} mt={4} ml={1} >
@@ -47,7 +49,7 @@ export default function RadioStation ({radioStation}:TRadioStationProps): JSX.El
                 <img src = {radioStation.thumbnail} alt="podcast thumbnail" style={{transition:'transform .5s'}}/>                                            
             </Box>  
 
-            <PlaylistView />  
+            <PlaylistView track={radioStation} handlePlay={() => handlePlay({nowPlaying: radioStation.title, thumbnail:radioStation.thumbnail, url:radioStation.streamUrl})}/>  
 
             <Box className='contributors' bottom='67px' m='8px' position='absolute' zIndex='100'>
                 <Typography mt={2}>Lily Claw | Emma Watts</Typography>

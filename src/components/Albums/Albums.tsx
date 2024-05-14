@@ -9,7 +9,7 @@ import { AudioContext } from 'src/contexts/AudioContext';
 
 export default function Albums(): JSX.Element {
 
-    const {albums} = useContext(AudioContext);
+    const {audioData: {albums}} = useContext(AudioContext);
 
     return <Box mb={18} mt={6}>
                 <Typography component="h1" color="white" fontSize={44} fontWeight="700" ml={8}>Albums</Typography>

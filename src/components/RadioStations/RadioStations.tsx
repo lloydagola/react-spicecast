@@ -13,7 +13,7 @@ import { TRadioStation } from 'src/types/types';
 
 export default function RadioStations (): JSX.Element{
 
-    const {radioStations} = useContext(AudioContext);
+    const {audioData:{radioStations}} = useContext(AudioContext);
 
     const radioStationStyles = {
         backgroundImage:"url('/images/hero-11.jpg')",
