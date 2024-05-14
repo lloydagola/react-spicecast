@@ -40,9 +40,9 @@ const initialState ={
             albums:[], 
             podcasts:[]
     },
-    handlePlay: function(){},
-    handlePause: function(){},
-    handleStop: function(){},
+    handlePlay: function():void{},
+    handlePause: function():void{},
+    handleStop: function():void{},
 }
 
 function audioReducer(prevState:TAudioData, action:any):TAudioData{
