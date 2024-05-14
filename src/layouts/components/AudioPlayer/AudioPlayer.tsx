@@ -99,7 +99,6 @@ export default function AudioPlayer():JSX.Element{
       player.current?.play();
     }, [streamUrl]);
 
-
     useEffect(() => {
       if(isPlaying){
         player.current?.play(); 
@@ -107,9 +106,7 @@ export default function AudioPlayer():JSX.Element{
       }
         player.current?.pause(); 
     
-    }, [isPlaying]);
-    
-    
+    }, [isPlaying]); 
 
     useEffect(() => {
         if(player.current){
