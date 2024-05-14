@@ -37,14 +37,13 @@ function audioReducer(prevState:TAudioData, action:any):TAudioData{
           ...prevState.audioState,
           isPlaying: true,
           nowPlaying: action.data.nowPlaying,
-          streamUrl: action.data.streamUrl,
+          streamUrl: action.data.url,
           thumbnail: action.data.thumbnail
         }
       }
     }
     case EAudio.PAUSE:
     case EAudio.STOP: {
-      console.log('playing...');
       return { 
         ...prevState,
         audioState : {
@@ -61,6 +60,7 @@ function App() {
   const [audioData, dispatch] = useReducer(audioReducer, initialAudioData);
 
   function handlePlay(track:any):void{
+    console.log("handlePlay", track)
     dispatch({type: EAudio.PLAY, data:track});
   }
   function handlePause():void{

@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography/Typography';
 
 const playListViewStyles = {
     backgroundColor: '#fff',
-    overflowX: 'hidden',   
+    overflowX: 'hidden',
     position: 'absolute',
     zIndex: '100',
     bottom: '0', 

@@ -14,13 +14,13 @@
   {
     "title": "SpiceFM",
     "genre": "Pop",
-    "streamUrl":"https://streams.radio.co/sd1bcd1376/listen#.mp3",    
+    "streamUrl":"/music/chill.mp3",    
     "thumbnail":"/images/th-3.jpg"
   },
   {
     "title": "Kool Aid Radio",
     "genre": "Pop",
-    "streamUrl":"https://streams.radio.co/sd1bcd1376/listen#.mp3",    
+    "streamUrl":"/music/hearts.mp3",    
     "thumbnail":"/images/th-4.jpg"
   },
   {

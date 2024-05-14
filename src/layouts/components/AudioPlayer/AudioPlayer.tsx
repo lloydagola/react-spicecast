@@ -21,7 +21,7 @@ export default function AudioPlayer():JSX.Element{
     const [trackDuration, setTrackDuration] = useState('00:00');
     const [playState, setPlayState] = useState(false);
 
-    const {audioData:{audioState:{isPlaying, nowPlaying, streamUrl, thumbnail}}, handlePlay, handleStop} = useContext(AudioContext);
+    const {audioData:{audioState:{isPlaying, nowPlaying, streamUrl, thumbnail}}, handlePlay, handleStop, handlePause} = useContext(AudioContext);
     
 
     const updateProgressBar = ():number => {
@@ -69,7 +69,8 @@ export default function AudioPlayer():JSX.Element{
     const play = ():void => {
         if (player?.current?.paused === false && isPlaying) {
             player?.current?.pause();
-            setPlayState(false);           
+            setPlayState(false);    
+            handlePause && handlePause();       
         }
         else {
             player?.current?.play();  
@@ -101,6 +102,14 @@ export default function AudioPlayer():JSX.Element{
     }    
 
     useEffect(() => {
+      console.log("toggle play...");
+
+    
+      
+    }, [isPlaying, streamUrl])
+    
+
+    useEffect(() => {
         if(player.current){
             player.current.onloadedmetadata = () => {
                 if(player.current){
@@ -120,7 +129,7 @@ export default function AudioPlayer():JSX.Element{
                 <audio  ref={player}>
                     Your browser does not support the
                     <code>audio</code> element.
-                    <source src={streamUrl || TRACK_SRC} type="audio/mpeg"/>
+                    <source src={streamUrl} type="audio/mpeg"/>
                 </audio>
                 <img src={thumbnail || './images/th-15.jpg'} alt='thumb'/>
                 <StyledTrackTitle>
@@ -128,7 +137,7 @@ export default function AudioPlayer():JSX.Element{
                 </StyledTrackTitle>
                 <StyledPlayerControls>
                     {
-                        playState 
+                        isPlaying 
                         ? <PauseIcon fontSize='large' onClick={() => play()}/>
                         : <PlayCircleFilledIcon fontSize='large' onClick={() => play()}/> 
                     }
