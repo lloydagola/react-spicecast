@@ -1,8 +1,11 @@
+import { AudioContextProvider } from './contexts/AudioContext';
 import Main from './layouts/Main';
 
 function App() {
   return (
-    <Main/>
+    <AudioContextProvider value={"test"}>
+      <Main/>
+    </AudioContextProvider>
   );
 }
 
