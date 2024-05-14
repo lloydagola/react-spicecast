@@ -49,7 +49,7 @@ export default function RadioStation ({radioStation}:TRadioStationProps): JSX.El
                 <img src = {radioStation.thumbnail} alt="podcast thumbnail" style={{transition:'transform .5s'}}/>                                            
             </Box>  
 
-            <PlaylistView track={radioStation} handlePlay={() => handlePlay({nowPlaying: radioStation.title, thumbnail:radioStation.thumbnail, url:radioStation.streamUrl})}/>  
+            <PlaylistView track={radioStation}/>  
 
             <Box className='contributors' bottom='67px' m='8px' position='absolute' zIndex='100'>
                 <Typography mt={2}>Lily Claw | Emma Watts</Typography>

@@ -67,13 +67,12 @@ export default function AudioPlayer():JSX.Element{
     }
     
     const play = ():void => {
-        if (player?.current?.paused === false && isPlaying) {
+        if (player?.current?.paused === false) {
             player?.current?.pause();
             setPlayState(false);    
             handlePause && handlePause();       
         }
-        else {
-            player?.current?.play();  
+        else {            
             setPlayState(true);
             handlePlay({
                 isPlaying: true,
@@ -102,11 +101,13 @@ export default function AudioPlayer():JSX.Element{
     }    
 
     useEffect(() => {
-      console.log("toggle play...");
+      console.log("toggle play...", streamUrl);
 
-    
+      //player?.current?.play();  
+      //handlePlay();
+        
       
-    }, [isPlaying, streamUrl])
+    }, [streamUrl])
     
 
     useEffect(() => {

@@ -8,11 +8,6 @@ import podcasts from 'src/_mocks_/data/podcasts.json';
 import { TAudioData } from './types/types';
 
 
-enum EAudio{
-  PLAY= 'PLAY',
-  STOP= 'STOP',
-  PAUSE= 'PAUSE',
-}
   
 const initialAudioData = {
     audioState: { 
@@ -28,52 +23,11 @@ const initialAudioData = {
     albums
 };
 
-function audioReducer(prevState:TAudioData, action:any):TAudioData{
-  switch(action.type){
-    case EAudio.PLAY: {
-      return { 
-        ...prevState,
-        audioState : {
-          ...prevState.audioState,
-          isPlaying: true,
-          nowPlaying: action.data.nowPlaying,
-          streamUrl: action.data.url,
-          thumbnail: action.data.thumbnail
-        }
-      }
-    }
-    case EAudio.PAUSE:
-    case EAudio.STOP: {
-      return { 
-        ...prevState,
-        audioState : {
-          ...prevState.audioState,
-          isPlaying: false
-        }
-      }
-    }
-    default: return prevState;
-  }
-};
 
 function App() {
-  const [audioData, dispatch] = useReducer(audioReducer, initialAudioData);
-
-  function handlePlay(track:any):void{
-    console.log("handlePlay", track)
-    dispatch({type: EAudio.PLAY, data:track});
-  }
-  function handlePause():void{
-    dispatch({type: EAudio.PAUSE});
-  }
-  function handleStop():void{
-    dispatch({type: EAudio.STOP});
-  }
-
-  
-
+ 
   return (
-    <AudioContextProvider value={{audioData, handlePlay,handlePause,handleStop}}>
+    <AudioContextProvider>
       <Main/>
     </AudioContextProvider>
   );
