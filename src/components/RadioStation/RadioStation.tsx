@@ -4,7 +4,8 @@ import Grid from '@mui/material/Grid';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import PlaylistView from '../PlaylistView/PlaylistView';
+
+import PlaylistView from 'src/components/PlaylistView/PlaylistView';
 
 import { TRadioStation } from 'src/types/types';
 

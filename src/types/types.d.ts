@@ -20,3 +20,9 @@ export type TRadioStation = {
     genre?: string;
     thumbnail?: string;
 };
+
+export type TAudioContext = {
+    podcasts: TPodcast[];
+    albums: TAlbum[];
+    radioStations: TRadioStation[];
+}
