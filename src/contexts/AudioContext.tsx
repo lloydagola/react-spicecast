@@ -15,7 +15,7 @@ const initialAudioData = {
     audioState: { 
         trackType: 'radioStation',
         isPlaying: false,
-        nowPlaying:"LunarFM",
+        title:"LunarFM",
         streamUrl:"http://208.64.184.36/sf1033",
         thumbnail:"/images/th-2.jpg",
         duration:""
@@ -31,7 +31,7 @@ const initialState ={
         audioState: { 
                 trackType: 'radioStation',
                 isPlaying: false,
-                nowPlaying:"LunarFM",
+                title:"LunarFM",
                 streamUrl:"http://208.64.184.36/sf1033",
                 thumbnail:"/images/th-2.jpg",
                 duration:""
@@ -56,7 +56,7 @@ function audioReducer(prevState:TAudioData, action:any):TAudioData{
         audioState : {
           ...prevState.audioState,
           isPlaying: true,
-          nowPlaying: action.data.title,
+          title: action.data.title,
           streamUrl: action.data.streamUrl,
           thumbnail: action.data.thumbnail
         }

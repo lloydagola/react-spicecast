@@ -21,7 +21,7 @@ export default function AudioPlayer():JSX.Element{
     const [trackDuration, setTrackDuration] = useState('00:00');
     const [playState, setPlayState] = useState(false);
 
-    const {audioData:{audioState:{isPlaying, nowPlaying, streamUrl, thumbnail}}, handlePlay, handleStop, handlePause} = useContext(AudioContext);
+    const {audioData:{audioState:{isPlaying, title, streamUrl, thumbnail}}, handlePlay, handleStop, handlePause} = useContext(AudioContext);
     
 
     const updateProgressBar = ():number => {
@@ -67,16 +67,14 @@ export default function AudioPlayer():JSX.Element{
     }
     
     const play = ():void => {
-        if (player?.current?.paused === false) {
-            player?.current?.pause();
-            setPlayState(false);    
+        console.log(title);
+        if (isPlaying) {
+            player.current?.pause();
             handlePause && handlePause();       
         }
         else {            
-            setPlayState(true);
             handlePlay({
-                isPlaying: true,
-                nowPlaying,
+                title,
                 streamUrl,
                 thumbnail
             });
@@ -101,13 +99,13 @@ export default function AudioPlayer():JSX.Element{
     }    
 
     useEffect(() => {
-      console.log("toggle play...", streamUrl);
+      console.log("toggle play...", streamUrl, isPlaying);
 
       //player?.current?.play();  
       //handlePlay();
         
       
-    }, [streamUrl])
+    }, [streamUrl, isPlaying])
     
 
     useEffect(() => {
@@ -134,7 +132,7 @@ export default function AudioPlayer():JSX.Element{
                 </audio>
                 <img src={thumbnail || './images/th-15.jpg'} alt='thumb'/>
                 <StyledTrackTitle>
-                    <h4>{nowPlaying}</h4>
+                    <h4>{title}</h4>
                 </StyledTrackTitle>
                 <StyledPlayerControls>
                     {

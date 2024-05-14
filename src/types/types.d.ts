@@ -27,7 +27,7 @@ type TAudioType = "podcast" | "album" | "radioStation";
 type TAudioState = {
     trackType: string;
     isPlaying: boolean;
-    nowPlaying: string;
+    title: string;
     streamUrl: string;
     thumbnail?: string;
     duration?: string;
