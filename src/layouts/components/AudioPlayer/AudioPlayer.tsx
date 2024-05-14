@@ -1,5 +1,5 @@
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, useContext } from 'react';
 
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
@@ -8,9 +8,8 @@ import StopIcon from '@mui/icons-material/Stop';
 import PauseIcon from '@mui/icons-material/Pause';
 
 import { StyledAudioPlayer, StyledTrackTitle, StyledPlayerControls } from './AudioPlayer.styles';
+import { AudioContext } from 'src/contexts/AudioContext';
 
-const RADIO_SRC = "https://streams.radio.co/sd1bcd1376/listen#.mp3";
-const RADIO_SRC2 = "http://208.64.184.36/sf1033";
 const TRACK_SRC = "./music/hearts.mp3";
 
 export default function AudioPlayer():JSX.Element{
@@ -21,6 +20,8 @@ export default function AudioPlayer():JSX.Element{
     const [currentTime, setCurrentTime] = useState('00:00');
     const [trackDuration, setTrackDuration] = useState('00:00');
     const [playState, setPlayState] = useState(false);
+
+    const {audioData:{audioState:{isPlaying, nowPlaying, streamUrl, thumbnail}}, handlePlay, handleStop} = useContext(AudioContext);
     
 
     const updateProgressBar = ():number => {
@@ -65,21 +66,28 @@ export default function AudioPlayer():JSX.Element{
         
     }
     
-    const handlePlay = ():void => {
-        if (player?.current?.paused === false) {
+    const play = ():void => {
+        if (player?.current?.paused === false && isPlaying) {
             player?.current?.pause();
             setPlayState(false);           
         }
         else {
             player?.current?.play();  
             setPlayState(true);
+            handlePlay({
+                isPlaying: true,
+                nowPlaying,
+                streamUrl,
+                thumbnail
+            });
         }
     }
 
-    const handleStop = ():void => {
+    const stop = ():void => {
         if(player.current){
             setProgressValue(0);
             setPlayState(false);
+            handleStop && handleStop();
             player.current.load();
         }
     }
@@ -112,20 +120,20 @@ export default function AudioPlayer():JSX.Element{
                 <audio  ref={player}>
                     Your browser does not support the
                     <code>audio</code> element.
-                    <source src={TRACK_SRC} type="audio/mpeg"/>
+                    <source src={streamUrl || TRACK_SRC} type="audio/mpeg"/>
                 </audio>
-                <img src='./images/th-15.jpg' alt='thumb'/>
+                <img src={thumbnail || './images/th-15.jpg'} alt='thumb'/>
                 <StyledTrackTitle>
-                    <h4>Lloyd Aagola - Still Waiting</h4>
+                    <h4>{nowPlaying}</h4>
                 </StyledTrackTitle>
                 <StyledPlayerControls>
                     {
                         playState 
-                        ? <PauseIcon fontSize='large' onClick={() => handlePlay()}/>
-                        : <PlayCircleFilledIcon fontSize='large' onClick={() => handlePlay()}/> 
+                        ? <PauseIcon fontSize='large' onClick={() => play()}/>
+                        : <PlayCircleFilledIcon fontSize='large' onClick={() => play()}/> 
                     }
                     <SkipPreviousIcon fontSize='large'/>
-                    <StopIcon fontSize='large' onClick={() => handleStop()}/>
+                    <StopIcon fontSize='large' onClick={() => stop()}/>
                     <SkipNextIcon fontSize='large'/>
                 </StyledPlayerControls>
                 <p>{currentTime}</p>
