@@ -13,11 +13,11 @@ const playListViewStyles = {
 }
 
 
-export default function PlaylistView (){    
+export default function PlaylistView ({handlePlay, track}: {handlePlay:any, track?:any}){    
 
     return <Box maxWidth='95%' className="playlist-view" sx={playListViewStyles}>
                 <Box className="podcast-play" display='flex' flexDirection='row' alignItems='center' p='4px'>
-                    <PlayCircleFilledWhiteOutlinedIcon sx={{color:'#222'}}/>
+                    <PlayCircleFilledWhiteOutlinedIcon sx={{color:'#222'}} onClick={() => handlePlay(track)}/>
                     <Typography fontWeight={600} className="playing" color="#333" overflow='hidden' textOverflow='ellipsis' whiteSpace='nowrap' p='8px'>Ep. 109</Typography>                      
                 </Box>  
             </Box>
