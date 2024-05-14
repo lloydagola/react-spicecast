@@ -99,13 +99,20 @@ export default function AudioPlayer():JSX.Element{
     }    
 
     useEffect(() => {
-      console.log("toggle play...", streamUrl, isPlaying);
+      player.current?.load();
+      player.current?.play();
+    }, [streamUrl]);
 
-      //player?.current?.play();  
-      //handlePlay();
-        
-      
-    }, [streamUrl, isPlaying])
+
+    useEffect(() => {
+      if(isPlaying){
+        player.current?.play(); 
+        return;
+      }
+        player.current?.pause(); 
+    
+    }, [isPlaying]);
+    
     
 
     useEffect(() => {
