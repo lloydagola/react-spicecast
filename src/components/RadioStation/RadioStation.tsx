@@ -1,20 +1,19 @@
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-//import PlaylistView from "../PlaylistView/PlaylistView";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PlaylistView from '../PlaylistView/PlaylistView';
 
-import { TPodcast } from 'src/types/types';
+import { TRadioStation } from 'src/types/types';
 
 
-type TPodcastProps = {
-    podcast: TPodcast
+type TRadioStationProps = {
+    radioStation: TRadioStation
 }
 
-const podcastStyles = {
+const radioStationStyles = {
         cursor:'pointer',
         '&: hover':{
             img:{
@@ -29,12 +28,12 @@ const podcastStyles = {
         }
     }
 
-export default function RadioStation ({podcast}:TPodcastProps): JSX.Element{
+export default function RadioStation ({radioStation}:TRadioStationProps): JSX.Element{
        
-    return <Grid item sm={12} md={3} height="200px" alignItems='center' overflow='hidden' position='relative' sx={podcastStyles}> 
+    return <Grid item sm={12} md={3} height="200px" alignItems='center' overflow='hidden' position='relative' sx={radioStationStyles}> 
             <Box className="image-view" overflow='hidden' position='relative' height='100%'>
                 <Box position='absolute' zIndex={100} mt={4} ml={1} >
-                    <Typography variant='h4' fontSize={26} fontWeight={900} textOverflow='ellipsis' overflow='hidden'>{podcast.title}</Typography>                    
+                    <Typography variant='h4' fontSize={26} fontWeight={900} textOverflow='ellipsis' overflow='hidden'>{radioStation.title}</Typography>                    
                 </Box> 
                 <Box  
                     className='filter'
@@ -44,7 +43,7 @@ export default function RadioStation ({podcast}:TPodcastProps): JSX.Element{
                     zIndex='1' 
                     sx={{backgroundColor:'rgba(0, 0, 0, 0.4)', transition: '.5s ease-in-out'}} 
                 />
-                <img src = {`./images/th-${podcast.index}.jpg`} alt="podcast thumbnail" style={{transition:'transform .5s'}}/>                                            
+                <img src = {radioStation.thumbnail} alt="podcast thumbnail" style={{transition:'transform .5s'}}/>                                            
             </Box>  
 
             <PlaylistView />  
