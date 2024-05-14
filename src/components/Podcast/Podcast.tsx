@@ -47,7 +47,7 @@ export default function Podcast ({podcast}:TPodcastProps): JSX.Element{
                 <img src = {`./images/th-${podcast.index}.jpg`} alt="podcast thumbnail" style={{height:'100%', transition:'transform .5s'}}/>                                            
             </Box>  
 
-            <PlaylistView />  
+            {/* <PlaylistView /> */}  
 
             <Box className='contributors' bottom='67px' m='8px' position='absolute' zIndex='100'>
                 <Typography mt={2}>Lily Claw | Emma Watts</Typography>
