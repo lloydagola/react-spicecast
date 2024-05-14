@@ -7,6 +7,7 @@ type TalbumType = {
     title: string;
     artist: string;
     index: number;
+    thumbnail:string;
 }
 
 type TAlbumPropTypes = {
@@ -76,7 +77,7 @@ export default function Album({album}:TAlbumPropTypes)  {
     return <StyledAlbumGrid item flexDirection="column" > 
                 <Box overflow="hidden" height="260px">
                     <Box className="album-filter"/>
-                    <img src={`./images/th-${album.index}.jpg`} alt='album thumbnail'/> 
+                    <img src={album.thumbnail} alt='album thumbnail'/> 
                 </Box>         
                 <Box sx={{backgroundColor:'#111'}}>
                     <Typography variant="h5">{album.title}</Typography>

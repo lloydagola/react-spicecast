@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 
 import Podcast from '../Podcast/Podcast';
 
-import albumdata from 'src/_mocks_/data/albums.json';
+import albumdata from 'src/_mocks_/data/podcasts.json';
 import { TPodcast } from 'src/types/types';
 
 function renderPodcasts ():JSX.Element[]{

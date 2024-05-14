@@ -89,11 +89,5 @@
     "artist": "Paul Snap",
     "index": 15,
     "thumbnail":"/images/album-15.jpg"
-  },
-   {
-    "title": "Still Waiting",
-    "artist": "Lloyd Agola",
-    "index": 16,
-    "thumbnail":"/images/album-16.jpg"
-  }
+  }   
 ]
