@@ -45,9 +45,6 @@ const initialState ={
     handleStop: function(){},
 }
 
-// value={{audioData, handlePlay,handlePause,handleStop}}
-
-
 function audioReducer(prevState:TAudioData, action:any):TAudioData{
   switch(action.type){
     case EAudio.PLAY: {

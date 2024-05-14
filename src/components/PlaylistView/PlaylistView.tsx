@@ -14,9 +14,7 @@ const playListViewStyles = {
     bottom: '0', 
     marginBottom: '16px',
     maxWidth: '80%', 
-}
-
-//handlePlay={() => handlePlay({nowPlaying: radioStation.title, thumbnail:radioStation.thumbnail, streamUrl:radioStation.streamUrl})}
+};
 
 export default function PlaylistView ({track}: {track?:any}){    
     const {audioData:{audioState:{isPlaying, title}}, handlePlay, handlePause} = useContext(AudioContext); 

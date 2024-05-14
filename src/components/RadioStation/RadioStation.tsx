@@ -7,7 +7,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 import PlaylistView from 'src/components/PlaylistView/PlaylistView';
-import {AudioContext} from 'src/contexts/AudioContext';
 import { TRadioStation } from 'src/types/types';
 
 
@@ -31,7 +30,6 @@ const radioStationStyles = {
     }
 
 export default function RadioStation ({radioStation}:TRadioStationProps): JSX.Element{
-       const { handlePlay } = useContext(AudioContext);
 
     return <Grid item sm={12} md={3} height="200px" alignItems='center' overflow='hidden' position='relative' sx={radioStationStyles}> 
             <Box className="image-view" overflow='hidden' position='relative' height='100%'>

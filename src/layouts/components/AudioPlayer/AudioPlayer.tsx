@@ -10,8 +10,6 @@ import PauseIcon from '@mui/icons-material/Pause';
 import { StyledAudioPlayer, StyledTrackTitle, StyledPlayerControls } from './AudioPlayer.styles';
 import { AudioContext } from 'src/contexts/AudioContext';
 
-const TRACK_SRC = "./music/hearts.mp3";
-
 export default function AudioPlayer():JSX.Element{
     const player = useRef<HTMLAudioElement>(null);
     const progressBarRef = useRef<HTMLProgressElement>(null)
@@ -19,7 +17,6 @@ export default function AudioPlayer():JSX.Element{
     const [progressValue, setProgressValue] = useState(0);
     const [currentTime, setCurrentTime] = useState('00:00');
     const [trackDuration, setTrackDuration] = useState('00:00');
-    const [playState, setPlayState] = useState(false);
 
     const {audioData:{audioState:{isPlaying, title, streamUrl, thumbnail}}, handlePlay, handleStop, handlePause} = useContext(AudioContext);
     
@@ -84,7 +81,6 @@ export default function AudioPlayer():JSX.Element{
     const stop = ():void => {
         if(player.current){
             setProgressValue(0);
-            setPlayState(false);
             handleStop && handleStop();
             player.current.load();
         }
