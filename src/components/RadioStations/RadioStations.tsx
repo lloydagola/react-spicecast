@@ -20,7 +20,6 @@ export default function RadioStations (): JSX.Element{
                 <Grid container gap={1} justifyContent='center' mb='60px'>
                     {
                         radioStationsData
-                        .slice(0, 9)
                         .map((radioStation:TRadioStation, index:number) =><RadioStation key={index} radioStation={radioStation}/> )
                     }        
                 </Grid>
