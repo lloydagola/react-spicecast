@@ -21,8 +21,28 @@ export type TRadioStation = {
     thumbnail?: string;
 };
 
-export type TAudioContext = {
+
+type TAudioType = "podcast" | "album" | "radioStation";
+
+type TAudioState = {
+    trackType: string;
+    isPlaying: boolean;
+    nowPlaying: string;
+    streamUrl: string;
+    thumbnail?: string;
+    duration?: string;
+};
+
+export type TAudioData = {
+    audioState: TAudioState;
     podcasts: TPodcast[];
     albums: TAlbum[];
     radioStations: TRadioStation[];
+};
+
+export type TAudioContext = {
+    audioData:TAudioData;
+    handlePlay: (track?:any) => void;
+    handlePause?: () => void;
+    handleStop?: () => void;
 }
