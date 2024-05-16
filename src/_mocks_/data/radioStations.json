@@ -1,98 +1,56 @@
 [ 
   {
-    "title": "The Only One",
-    "artist": "David Orchard",
-    "index": 1,
+    "title": "HiLoFM",
+    "genre": "Pop",
+    "streamUrl":"https://streams.radio.co/sd1bcd1376/listen#.mp3",    
     "thumbnail":"/images/th-1.jpg"
   },
   {
-    "title": "Who Deserved to Stay",
-    "artist": "Kenny Bell",
-    "index": 2,
+    "title": "LunarFM",
+    "genre": "Pop",
+    "streamUrl":"http://208.64.184.36/sf1033",    
     "thumbnail":"/images/th-2.jpg"
   },
   {
-    "title": "Family Portrait Revisited",
-    "artist": "Kermit Beller",
-    "index": 3,
+    "title": "SpiceFM",
+    "genre": "Pop",
+    "streamUrl":"/music/chill.mp3",    
     "thumbnail":"/images/th-3.jpg"
   },
   {
-    "title": "Kool Aid",
-    "artist": "Lauren Starr",
-    "index": 4,
+    "title": "Kool Aid Radio",
+    "genre": "Pop",
+    "streamUrl":"/music/hearts.mp3",    
     "thumbnail":"/images/th-4.jpg"
   },
   {
-    "title": "Still Waiting",
-    "artist": "Tammy Curezd",
-    "index": 5,
+    "title": "Rebel Radio",
+    "genre": "Pop",
+    "streamUrl":"https://streams.radio.co/sd1bcd1376/listen#.mp3",    
     "thumbnail":"/images/th-5.jpg"
   },
   {
-    "title": "Still Waiting",
-    "artist": "Yana Bolder",
-    "index": 6,
+    "title": "FlyLo Radio",
+    "genre": "Pop",
+    "streamUrl":"https://streams.radio.co/sd1bcd1376/listen#.mp3",    
     "thumbnail":"/images/th-6.jpg"
   },
   {
-    "title": "Still Waiting",
-    "artist": "Tony Hefner ",
-    "index": 7,
+    "title": "DragonFM",
+    "genre": "Pop",
+    "streamUrl":"https://streams.radio.co/sd1bcd1376/listen#.mp3",    
     "thumbnail":"/images/th-7.jpg"
   },
   {
-    "title": "Still Waiting",
-    "artist": "Esther French ",
-    "index": 8,
+    "title": "Perspective Radio",
+    "genre": "Pop",
+    "streamUrl":"https://streams.radio.co/sd1bcd1376/listen#.mp3",    
     "thumbnail":"/images/th-8.jpg"
   },
   {
-    "title": "Still Waiting",
-    "artist": "Tamara Lafleur ",
-    "index": 9,
+    "title": "Hindsight Radio",
+    "genre": "Pop",
+    "streamUrl":"https://streams.radio.co/sd1bcd1376/listen#.mp3",    
     "thumbnail":"/images/th-9.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artist": "Mark Radioboy ",
-    "index": 10,
-    "thumbnail":"/images/th-10.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artist": "Joost Dj ",
-    "index": 11,
-    "thumbnail":"/images/th-11.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artist": "Tom De Blanche ",
-    "index": 12,
-    "thumbnail":"/images/th-12.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artist": "Francesco Mervin",
-    "index": 13,
-    "thumbnail":"/images/th-13.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artist": "Melissa Lancaster",
-    "index": 14,
-    "thumbnail":"/images/th-14.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artist": "Paul Snap",
-    "index": 15,
-    "thumbnail":"/images/th-15.jpg"
-  },
-   {
-    "title": "Still Waiting",
-    "artist": "Lloyd Agola",
-    "index": 16,
-    "thumbnail":"/images/th-16.jpg"
   }
 ]

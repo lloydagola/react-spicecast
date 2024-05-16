@@ -1,7 +1,6 @@
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-//import PlaylistView from "../PlaylistView/PlaylistView";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -44,10 +43,10 @@ export default function Podcast ({podcast}:TPodcastProps): JSX.Element{
                     zIndex='1' 
                     sx={{backgroundColor:'rgba(0, 0, 0, 0.4)', transition: '.5s ease-in-out'}} 
                 />
-                <img src = {`./images/th-${podcast.index}.jpg`} alt="podcast thumbnail" style={{height:'100%', transition:'transform .5s'}}/>                                            
+                <img src = {podcast.thumbnail} alt="podcast thumbnail" style={{height:'100%', transition:'transform .5s'}}/>                                            
             </Box>  
 
-            <PlaylistView />  
+            {/* <PlaylistView /> */}  
 
             <Box className='contributors' bottom='67px' m='8px' position='absolute' zIndex='100'>
                 <Typography mt={2}>Lily Claw | Emma Watts</Typography>

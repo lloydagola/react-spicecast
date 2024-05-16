@@ -1,5 +1,5 @@
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, useContext } from 'react';
 
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
@@ -8,10 +8,7 @@ import StopIcon from '@mui/icons-material/Stop';
 import PauseIcon from '@mui/icons-material/Pause';
 
 import { StyledAudioPlayer, StyledTrackTitle, StyledPlayerControls } from './AudioPlayer.styles';
-
-const RADIO_SRC = "https://streams.radio.co/sd1bcd1376/listen#.mp3";
-const RADIO_SRC2 = "http://208.64.184.36/sf1033";
-const TRACK_SRC = "./music/hearts.mp3";
+import { AudioContext } from 'src/contexts/AudioContext';
 
 export default function AudioPlayer():JSX.Element{
     const player = useRef<HTMLAudioElement>(null);
@@ -20,7 +17,8 @@ export default function AudioPlayer():JSX.Element{
     const [progressValue, setProgressValue] = useState(0);
     const [currentTime, setCurrentTime] = useState('00:00');
     const [trackDuration, setTrackDuration] = useState('00:00');
-    const [playState, setPlayState] = useState(false);
+
+    const {audioData:{audioState:{isPlaying, title, streamUrl, thumbnail}}, handlePlay, handleStop, handlePause} = useContext(AudioContext);
     
 
     const updateProgressBar = ():number => {
@@ -65,21 +63,25 @@ export default function AudioPlayer():JSX.Element{
         
     }
     
-    const handlePlay = ():void => {
-        if (player?.current?.paused === false) {
-            player?.current?.pause();
-            setPlayState(false);           
+    const play = ():void => {
+        console.log(title);
+        if (!player.current?.paused || isPlaying) {
+            player.current?.pause();
+            handlePause && handlePause();       
         }
-        else {
-            player?.current?.play();  
-            setPlayState(true);
+        else {            
+            handlePlay({
+                title,
+                streamUrl,
+                thumbnail
+            });
         }
     }
 
-    const handleStop = ():void => {
+    const stop = ():void => {
         if(player.current){
             setProgressValue(0);
-            setPlayState(false);
+            handleStop && handleStop();
             player.current.load();
         }
     }
@@ -91,6 +93,20 @@ export default function AudioPlayer():JSX.Element{
             setProgressValue(percent / 100);
         }        
     }    
+
+    useEffect(() => {
+      player.current?.load();
+      player.current?.play();
+    }, [streamUrl]);
+
+    useEffect(() => {
+      if(isPlaying){
+        player.current?.play(); 
+        return;
+      }
+        player.current?.pause(); 
+    
+    }, [isPlaying]); 
 
     useEffect(() => {
         if(player.current){
@@ -112,20 +128,20 @@ export default function AudioPlayer():JSX.Element{
                 <audio  ref={player}>
                     Your browser does not support the
                     <code>audio</code> element.
-                    <source src={TRACK_SRC} type="audio/mpeg"/>
+                    <source src={streamUrl} type="audio/mpeg"/>
                 </audio>
-                <img src='./images/th-15.jpg' alt='thumb'/>
+                <img src={thumbnail || './images/th-15.jpg'} alt='thumb'/>
                 <StyledTrackTitle>
-                    <h4>Lloyd Aagola - Still Waiting</h4>
+                    <h4>{title}</h4>
                 </StyledTrackTitle>
                 <StyledPlayerControls>
                     {
-                        playState 
-                        ? <PauseIcon fontSize='large' onClick={() => handlePlay()}/>
-                        : <PlayCircleFilledIcon fontSize='large' onClick={() => handlePlay()}/> 
+                        isPlaying 
+                        ? <PauseIcon fontSize='large' onClick={() => play()}/>
+                        : <PlayCircleFilledIcon fontSize='large' onClick={() => play()}/> 
                     }
                     <SkipPreviousIcon fontSize='large'/>
-                    <StopIcon fontSize='large' onClick={() => handleStop()}/>
+                    <StopIcon fontSize='large' onClick={() => stop()}/>
                     <SkipNextIcon fontSize='large'/>
                 </StyledPlayerControls>
                 <p>{currentTime}</p>

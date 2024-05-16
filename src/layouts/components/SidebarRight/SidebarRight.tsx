@@ -15,7 +15,7 @@ export default function SidebarRight({drawerWidth}:{drawerWidth:number}) {
     <Box display='flex' width={drawerWidth} borderLeft='1px solid #222' sx={{backgroundColor:'#000', marginTop: {md: 12}}}>
             <List sx={{display:'flex', flexDirection:'column'}}>
                   {['Post', 'Categories', 'Events', 'Radio'].map((text, index) => (
-                      <ListItem key={text} >
+                      <ListItem key={index} >
                           <ListItemButton>
                               <ListItemIcon>                                
                                 {

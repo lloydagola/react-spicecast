@@ -1,12 +1,15 @@
+import { useContext } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography  from "@mui/material/Typography";
 
 import Album from 'src/components/Album/Album';
 
-import albumsdata from 'src/_mocks_/data/albums.json'
+import { AudioContext } from 'src/contexts/AudioContext';
 
 export default function Albums(): JSX.Element {
+
+    const {audioData: {albums}} = useContext(AudioContext);
 
     return <Box mb={18} mt={6}>
                 <Typography component="h1" color="white" fontSize={44} fontWeight="700" ml={8}>Albums</Typography>
@@ -19,7 +22,7 @@ export default function Albums(): JSX.Element {
                         justifyContent: "center",
                         margin:"auto",
                     }}>
-                    {albumsdata.map((album, index) => <Album key={index} album={album} />)}        
+                    {albums.map((album, index) => <Album key={index} album={album} />)}        
                 </Grid>
             </Box>
 }
