@@ -43,7 +43,7 @@ export default function Podcast ({podcast}:TPodcastProps): JSX.Element{
                     zIndex='1' 
                     sx={{backgroundColor:'rgba(0, 0, 0, 0.4)', transition: '.5s ease-in-out'}} 
                 />
-                <img src = {`./images/th-${podcast.index}.jpg`} alt="podcast thumbnail" style={{height:'100%', transition:'transform .5s'}}/>                                            
+                <img src = {podcast.thumbnail} alt="podcast thumbnail" style={{height:'100%', transition:'transform .5s'}}/>                                            
             </Box>  
 
             {/* <PlaylistView /> */}  

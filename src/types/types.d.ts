@@ -3,7 +3,6 @@ export type TPodcast = {
     artist: string;
     thumbnail: string;
     genre?:string;
-    index: number;
 };
 
 export type TAlbum = {
