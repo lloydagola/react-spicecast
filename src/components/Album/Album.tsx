@@ -2,16 +2,11 @@ import styled from "@emotion/styled";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import { TAlbum } from "src/types/types";
 
-type TalbumType = {
-    title: string;
-    artist: string;
-    index: number;
-    thumbnail:string;
-}
 
 type TAlbumPropTypes = {
-    album:TalbumType
+    album:TAlbum
 };
 
 const StyledAlbumGrid = styled(Grid)(({theme}) => ({
@@ -81,7 +76,7 @@ export default function Album({album}:TAlbumPropTypes)  {
                 </Box>         
                 <Box sx={{backgroundColor:'#111'}}>
                     <Typography variant="h5">{album.title}</Typography>
-                    <Typography>{album.artist}</Typography>
+                    <Typography>{album.artists.join(", ")}</Typography>
                     <Box className="horizontal-line"/>                                            
                 </Box>  
             </StyledAlbumGrid>
