@@ -120,8 +120,6 @@ export default function AudioPlayer(): JSX.Element {
         }
     }, [progressValue]);
 
-    console.log({something: isFirstRender.current})
-
     return <StyledAudioPlayer id="audio-player">
         <audio ref={player}>
             Your browser does not support the
