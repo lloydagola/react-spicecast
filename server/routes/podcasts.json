@@ -2,77 +2,77 @@
  
   {
     "title": "The Only One",
-    "artist": "David Orchard",
+    "hosts": ["David Orchard"],
     "thumbnail":"/images/album-1.jpg"
   },
   {
     "title": "Who Deserved to Stay",
-    "artist": "Kenny Bell",
+    "hosts": ["Kenny Bell"],
     "thumbnail":"/images/album-2.jpg"
   },
   {
     "title": "Family Portrait Revisited",
-    "artist": "Kermit Beller",
+    "hosts": ["Kermit Beller"],
     "thumbnail":"/images/album-3.jpg"
   },
   {
     "title": "Kool Aid",
-    "artist": "Lauren Starr",
+    "hosts": ["Lauren Starr"],
     "thumbnail":"/images/album-4.jpg"
   },
   {
     "title": "Still Waiting",
-    "artist": "Tammy Curezd",
+    "hosts": ["Tammy Curezd"],
     "thumbnail":"/images/album-5.jpg"
   },
   {
     "title": "Still Waiting",
-    "artist": "Yana Bolder",
+    "hosts": ["Yana Bolder"],
     "thumbnail":"/images/album-6.jpg"
   },
   {
     "title": "Still Waiting",
-    "artist": "Tony Hefner ",
+    "hosts": ["Tony Hefner "],
     "thumbnail":"/images/album-7.jpg"
   },
   {
     "title": "Still Waiting",
-    "artist": "Esther French ",
+    "hosts": ["Esther French "],
     "thumbnail":"/images/album-8.jpg"
   },
   {
     "title": "Still Waiting",
-    "artist": "Tamara Lafleur ",
+    "hosts": ["Tamara Lafleur "],
     "thumbnail":"/images/album-9.jpg"
   },
   {
     "title": "Still Waiting",
-    "artist": "Mark Radioboy ",
+    "hosts": ["Mark Radioboy "],
     "thumbnail":"/images/album-10.jpg"
   },
   {
     "title": "Still Waiting",
-    "artist": "Joost Dj ",
+    "hosts": ["Joost Dj "],
     "thumbnail":"/images/album-11.jpg"
   },
   {
     "title": "Still Waiting",
-    "artist": "Tom De Blanche ",
+    "hosts": ["Tom De Blanche "],
     "thumbnail":"/images/album-12.jpg"
   },
   {
     "title": "Still Waiting",
-    "artist": "Francesco Mervin",
+    "hosts": ["Francesco Mervin"],
     "thumbnail":"/images/album-13.jpg"
   },
   {
     "title": "Still Waiting",
-    "artist": "Melissa Lancaster",
+    "hosts": ["Melissa Lancaster"],
     "thumbnail":"/images/album-14.jpg"
   },
   {
     "title": "Still Waiting",
-    "artist": "Paul Snap",
+    "hosts": ["Paul Snap"],
     "thumbnail":"/images/album-15.jpg"
   }   
 ]
