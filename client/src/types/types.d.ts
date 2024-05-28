@@ -1,16 +1,15 @@
 export type TPodcast = {
     title: string;
-    artist: string;
+    hosts: string[];
     thumbnail: string;
     genre?:string;
 };
 
 export type TAlbum = {
     title: string;
-    artist: string;
+    artists: string[];
     thumbnail: string;
     genre?:string;
-    index: number;
 };
 
 export type TRadioStation = {
