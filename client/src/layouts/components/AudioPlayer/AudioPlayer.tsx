@@ -94,9 +94,19 @@ export default function AudioPlayer():JSX.Element{
         }        
     }    
 
+    const isFirstRender = useRef(true)
+
+    useEffect(() => {
+        console.log({isFirstRender})
+    
+        return () => {
+        isFirstRender.current = true
+        }
+    }, [])
+
     useEffect(() => {
       player.current?.load();
-      player.current?.play();
+      !isFirstRender && player.current?.play();
     }, [streamUrl]);
 
     useEffect(() => {
