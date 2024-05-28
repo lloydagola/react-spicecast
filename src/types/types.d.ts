@@ -1,6 +1,6 @@
 export type TPodcast = {
     title: string;
-    artists: string[];
+    hosts: string[];
     thumbnail: string;
     genre?:string;
 };
