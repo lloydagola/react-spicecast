@@ -3,7 +3,7 @@ import Home from '../pages/Home/Home';
 import Podcasts from '../pages/Podcasts/Podcasts';
 import Albums from '../pages/Albums/Albums';
 import RadioStations from '../pages/RadioStations/RadioStations';
-import AppTemplate from '../AppTemplate';
+import AppTemplate from '../layouts/AppTemplate';
 
 export const router = createBrowserRouter([
   {

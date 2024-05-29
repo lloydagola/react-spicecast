@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import { TopBar } from './layouts/components/TopBar/TopBar';
+import { TopBar } from './components/TopBar/TopBar';
 import { useState, useRef } from 'react';
-import useInViewPort from './hooks/useInViewPort';
+import useInViewPort from '../hooks/useInViewPort';
 
 
 export default function AppTemplate(): JSX.Element {

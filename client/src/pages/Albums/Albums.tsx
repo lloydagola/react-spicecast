@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Albums from 'src/components/Albums/Albums';
-import MainLayout from 'src/layouts/Main';
+import MainLayout from 'src/layouts/MainLayout';
 
 
 import { drawerWidth } from 'src/utils/constants';

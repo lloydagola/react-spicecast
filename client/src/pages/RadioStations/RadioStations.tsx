@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import MainLayout from 'src/layouts/Main';
+import MainLayout from 'src/layouts/MainLayout';
 import RadioStations from 'src/components/RadioStations/RadioStations';
 
 

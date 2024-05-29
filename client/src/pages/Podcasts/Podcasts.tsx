@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Podcasts from 'src/components/Podcasts/Podcasts';
-import MainLayout from 'src/layouts/Main';
+import MainLayout from 'src/layouts/MainLayout';
 
 
 import { drawerWidth } from 'src/utils/constants';
