@@ -16,8 +16,8 @@ export default function Podcasts (): JSX.Element{
         try {
           (async function() {    
             const response = await fetch(`${API_ENDPOINT_URL}/podcasts/test`);
-            const podcastData = await response.json();  
-            console.log({podcastData});
+            const podcastData = await response.json(); 
+            
             setPodcasts(podcastData);      
         })();            
         } catch (error) {
