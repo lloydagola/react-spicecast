@@ -1,12 +1,12 @@
 import { AudioContextProvider } from './contexts/AudioContext';
-import Main from './layouts/Main';
+import Home from './pages/Home/Home';
 
 
 function App() {
  
   return (
     <AudioContextProvider>
-      <Main/>
+      <Home/>
     </AudioContextProvider>
   );
 }
