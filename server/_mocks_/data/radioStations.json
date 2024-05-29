@@ -1,0 +1,56 @@
+[ 
+  {
+    "title": "HiLoFM",
+    "genre": "Pop",
+    "streamUrl":"https://streams.radio.co/sd1bcd1376/listen#.mp3",    
+    "thumbnail":"/images/th-1.jpg"
+  },
+  {
+    "title": "LunarFM",
+    "genre": "Pop",
+    "streamUrl":"http://208.64.184.36/sf1033",    
+    "thumbnail":"/images/th-2.jpg"
+  },
+  {
+    "title": "SpiceFM",
+    "genre": "Pop",
+    "streamUrl":"/music/chill.mp3",    
+    "thumbnail":"/images/th-3.jpg"
+  },
+  {
+    "title": "Kool Aid Radio",
+    "genre": "Pop",
+    "streamUrl":"/music/hearts.mp3",    
+    "thumbnail":"/images/th-4.jpg"
+  },
+  {
+    "title": "Rebel Radio",
+    "genre": "Pop",
+    "streamUrl":"https://streams.radio.co/sd1bcd1376/listen#.mp3",    
+    "thumbnail":"/images/th-5.jpg"
+  },
+  {
+    "title": "FlyLo Radio",
+    "genre": "Pop",
+    "streamUrl":"https://streams.radio.co/sd1bcd1376/listen#.mp3",    
+    "thumbnail":"/images/th-6.jpg"
+  },
+  {
+    "title": "DragonFM",
+    "genre": "Pop",
+    "streamUrl":"https://streams.radio.co/sd1bcd1376/listen#.mp3",    
+    "thumbnail":"/images/th-7.jpg"
+  },
+  {
+    "title": "Perspective Radio",
+    "genre": "Pop",
+    "streamUrl":"https://streams.radio.co/sd1bcd1376/listen#.mp3",    
+    "thumbnail":"/images/th-8.jpg"
+  },
+  {
+    "title": "Hindsight Radio",
+    "genre": "Pop",
+    "streamUrl":"https://www.dropbox.com/scl/fi/ronmvvgz07ro8lmtl8x3n/trap-saphire.mp3?rlkey=3ynzhs42aapucrgs1oe4w9ffw&st=wgteyv8k&raw=1",    
+    "thumbnail":"/images/th-9.jpg"
+  }
+]
