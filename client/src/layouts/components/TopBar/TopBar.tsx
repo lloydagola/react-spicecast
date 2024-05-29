@@ -41,19 +41,21 @@ export function TopBar({ inViewport, handleDrawerToggle }: any) {
           >
             {/* <IconButton /> */}
           </IconButton>
-          <ListItemIcon><StreamIcon sx={{ color: '#fff', fontSize: '3rem' }} /></ListItemIcon>          
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            marginRight='80px'
-            fontSize={36}
-            fontWeight={900}
-            sx={{
-              textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)'
-            }}>
-            Spice Cast
-          </Typography>
+          <ListItemIcon><StreamIcon sx={{ color: '#fff', fontSize: '3rem' }} /></ListItemIcon>  
+          <NavLink to='/' style={{color:'#fff', textDecoration:'none'}}>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              marginRight='80px'
+              fontSize={36}
+              fontWeight={900}
+              sx={{
+                textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)'
+              }}>
+              Spice Cast
+            </Typography>
+          </NavLink>        
           <Box display='flex'>
             <List sx={{ display: 'flex', flexDirection: 'row' }}>
               {['Post', 'Categories', 'Events', 'Radio'].map((text, index) => (
