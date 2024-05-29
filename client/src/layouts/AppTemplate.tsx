@@ -8,7 +8,7 @@ export default function AppTemplate(): JSX.Element {
   const [isClosing, setIsClosing] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const handleDrawerToggle = () => {
+  const handleDrawerToggle = ():void => {
     if (!isClosing) {
       setMobileOpen(!mobileOpen);
     }
