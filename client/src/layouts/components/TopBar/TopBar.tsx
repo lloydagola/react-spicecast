@@ -65,8 +65,8 @@ export function TopBar({ inViewport }: TTopBarProps): JSX.Element {
           <Box display='flex'>
             <List sx={{ display: 'flex', flexDirection: 'row' }}>
               {['Post', 'Categories', 'Events', 'Radio'].map((text, index) => (
-                <NavLink to='/podcasts' style={{color:'#fff', textDecoration:'none'}}>
-                  <ListItem key={index}>
+                <NavLink to='/podcasts' style={{color:'#fff', textDecoration:'none'}}  key={index}>
+                  <ListItem>
                       <ListItemButton>                        
                         <ListItemIcon>
                           {text === 'Post' ? <AddIcon sx={{ color: '#fff', }} /> :

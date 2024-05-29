@@ -37,8 +37,8 @@ export default function SidebarLeft(): JSX.Element {
             <Divider />
             <List>
                 {['Feed', 'New Shows'].map((text, index) => (
-                    <Link to={`/podcasts`} style={{color:'#fff', textDecoration:'none'}}>
-                        <ListItem key={index} >
+                    <Link to={`/podcasts`} style={{color:'#fff', textDecoration:'none'}} key={index}>
+                        <ListItem  >
                             <ListItemButton>
                                 <ListItemIcon>
                                 
