@@ -1,12 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-export default function useInViewPort<T extends HTMLElement>(ref: React.RefObject<T>, options?: IntersectionObserverInit) {
+export default function useInViewPort<T extends HTMLElement>(options?: IntersectionObserverInit) {
   const [inViewport, setInViewport] = useState(false);
+  
+  const targetRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       setInViewport(entry.isIntersecting);
     }, options);
-    const currentRef = ref.current;
+    const currentRef = targetRef.current;
     if (currentRef) {
       observer.observe(currentRef);
     }
@@ -15,7 +18,7 @@ export default function useInViewPort<T extends HTMLElement>(ref: React.RefObjec
         observer.unobserve(currentRef);
       }
     };
-  }, [options, ref]);
-  return inViewport;
+  }, [options]);
+  return {inViewport, targetRef};
 }
 ;
