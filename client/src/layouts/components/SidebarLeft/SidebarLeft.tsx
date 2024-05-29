@@ -20,6 +20,7 @@ import WhatshotSharpIcon from '@mui/icons-material/WhatshotSharp';
 import { drawerWidth } from 'src/utils/constants';
 import { Profile } from 'src/components//Profile/Profile';
 import useInViewPort from 'src/hooks/useInViewPort';
+import { Link } from 'react-router-dom';
 
 type TNavTypes = {
     setIsClosing: Dispatch<SetStateAction<boolean>>;
@@ -38,16 +39,19 @@ export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }:
             <Divider />
             <List>
                 {['Feed', 'New Shows'].map((text, index) => (
-                    <ListItem key={index} >
-                        <ListItemButton>
-                            <ListItemIcon>
-                               
-                               {text === 'Feed' ? <AutoAwesomeMotionOutlinedIcon  sx={{color:'#fff'}}/> : <ExploreOutlinedIcon  sx={{color:'#fff'}}/>}
+                    <Link to={`/podcasts`} style={{color:'#fff', textDecoration:'none'}}>
+                        <ListItem key={index} >
+                            <ListItemButton>
+                                <ListItemIcon>
                                 
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
+                                {text === 'Feed' ? <AutoAwesomeMotionOutlinedIcon  sx={{color:'#fff'}}/> : <ExploreOutlinedIcon  sx={{color:'#fff'}}/>}
+                                    
+                                </ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItemButton>
+                        </ListItem>
+                        
+                    </Link>
                 ))}
             </List>
             <Divider sx={{color:'#fff'}}/>

@@ -14,7 +14,7 @@ import CategoryIcon from '@mui/icons-material/Category';
 import IconButton from '@mui/material/IconButton';
 import StreamIcon from '@mui/icons-material/Stream';
 import { drawerWidth } from 'src/utils/constants';
-
+import { NavLink } from 'react-router-dom';
 
 export function TopBar({ inViewport, handleDrawerToggle }: any) {
   return (
@@ -30,6 +30,7 @@ export function TopBar({ inViewport, handleDrawerToggle }: any) {
           transition: '.2s ease-in-out'
         }}
       >
+        {/* <NavLink to={`/podcasts`} style={{color:'#fff', textDecoration:'none'}}>yoyo</NavLink> */}
         <Toolbar sx={{ justifyContent: 'center' }}>
           <IconButton
             color="inherit"
@@ -40,7 +41,7 @@ export function TopBar({ inViewport, handleDrawerToggle }: any) {
           >
             {/* <IconButton /> */}
           </IconButton>
-          <ListItemIcon><StreamIcon sx={{ color: '#fff', fontSize: '3rem' }} /></ListItemIcon>
+          <ListItemIcon><StreamIcon sx={{ color: '#fff', fontSize: '3rem' }} /></ListItemIcon>          
           <Typography
             variant="h6"
             noWrap
@@ -56,17 +57,19 @@ export function TopBar({ inViewport, handleDrawerToggle }: any) {
           <Box display='flex'>
             <List sx={{ display: 'flex', flexDirection: 'row' }}>
               {['Post', 'Categories', 'Events', 'Radio'].map((text, index) => (
-                <ListItem key={index}>
-                  <ListItemButton>
-                    <ListItemIcon>
-                      {text === 'Post' ? <AddIcon sx={{ color: '#fff', }} /> :
-                        text === 'Categories' ? <CategoryIcon sx={{ color: '#fff' }} /> :
-                          text === 'Events' ? <LocalActivityIcon sx={{ color: '#fff' }} /> :
-                            <RadioIcon sx={{ color: '#fff' }} />}
-                    </ListItemIcon>
-                    <Typography fontSize={22} fontWeight={600} sx={{ textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)' }}>{text}</Typography>
-                  </ListItemButton>
-                </ListItem>
+                <NavLink to='/podcasts' style={{color:'#fff', textDecoration:'none'}}>
+                  <ListItem key={index}>
+                      <ListItemButton>                        
+                        <ListItemIcon>
+                          {text === 'Post' ? <AddIcon sx={{ color: '#fff', }} /> :
+                            text === 'Categories' ? <CategoryIcon sx={{ color: '#fff' }} /> :
+                              text === 'Events' ? <LocalActivityIcon sx={{ color: '#fff' }} /> :
+                                <RadioIcon sx={{ color: '#fff' }} />}
+                        </ListItemIcon>
+                        <Typography fontSize={22} fontWeight={600} sx={{ textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)' }}>{text}</Typography>            
+                      </ListItemButton>
+                    </ListItem>
+                </NavLink>
               ))}
             </List>
           </Box>
