@@ -1,5 +1,5 @@
 
-import { useContext } from 'react';
+import { useEffect, useState } from 'react';
 
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -7,13 +7,30 @@ import Typography from '@mui/material/Typography';
 
 import RadioStation from 'src/components/RadioStation/RadioStation';
 
-import { AudioContext } from 'src/contexts/AudioContext';
 import { TRadioStation } from 'src/types/types';
+import { API_ENDPOINT_URL } from 'src/utils/apiUtils';
 
 
 export default function RadioStations (): JSX.Element{
 
-    const {audioData:{radioStations}} = useContext(AudioContext);
+    const [radioStations, setRadioStations] = useState([]);
+
+    useEffect(() => {
+        try {
+            (async function(){
+              const res = await fetch(`${API_ENDPOINT_URL}/radioStations/test`);
+              const radioStationData = await res.json();
+      
+              setRadioStations(radioStationData);
+            })();            
+        } catch (error) {
+            /**
+             * @todo: handle error
+             */
+            console.log(error);            
+        };
+    }, []);
+    
 
     const radioStationStyles = {
         backgroundImage:"url('/images/hero-11.jpg')",

@@ -82,18 +82,14 @@ export default function AudioPlayer(): JSX.Element {
         }
     };
 
-    const isFirstRender = useRef(true);
 
     
 
     useEffect(() => {
         player.current?.load();
-        !isFirstRender && player.current?.play();
+        isPlaying && player.current?.play();
 
-         return () => {
-            isFirstRender.current = false;
-        };
-    }, [streamUrl]);
+    }, [streamUrl, isPlaying]);
 
     useEffect(() => {
         if (isPlaying) {
@@ -119,8 +115,6 @@ export default function AudioPlayer(): JSX.Element {
             };
         }
     }, [progressValue]);
-
-    console.log({something: isFirstRender.current})
 
     return <StyledAudioPlayer id="audio-player">
         <audio ref={player}>
