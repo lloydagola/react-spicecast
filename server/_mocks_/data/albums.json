@@ -1,0 +1,83 @@
+[
+ 
+  {
+    "title": "The Only One",
+    "artists": ["David Orchard"],
+    "thumbnail":"/images/album-1.jpg"
+  },
+  {
+    "title": "Who Deserved to Stay",
+    "artists": ["Kenny Bell"],
+    "thumbnail":"/images/album-2.jpg"
+  },
+  {
+    "title": "Family Portrait Revisited",
+    "artists": ["Kermit Beller"],
+    "thumbnail":"/images/album-3.jpg"
+  },
+  {
+    "title": "Kool Aid",
+    "artists": ["Lauren Starr"],
+    "thumbnail":"/images/album-4.jpg"
+  },
+  {
+    "title": "Still Waiting",
+    "artists": ["Tammy Curezd"],
+    "thumbnail":"/images/album-5.jpg"
+  },
+  {
+    "title": "Still Waiting",
+    "artists": ["Yana Bolder"],
+    "thumbnail":"/images/album-6.jpg"
+  },
+  {
+    "title": "Still Waiting",
+    "artists": ["Tony Hefner "],
+    "thumbnail":"/images/album-7.jpg"
+  },
+  {
+    "title": "Still Waiting",
+    "artists": ["Esther French "],
+    "thumbnail":"/images/album-8.jpg"
+  },
+  {
+    "title": "Still Waiting",
+    "artists": ["Tamara Lafleur "],
+    "thumbnail":"/images/album-9.jpg"
+  },
+  {
+    "title": "Still Waiting",
+    "artists": ["Mark Radioboy "],
+    "thumbnail":"/images/album-10.jpg"
+  },
+  {
+    "title": "Still Waiting",
+    "artists": ["Joost Dj "],
+    "thumbnail":"/images/album-11.jpg"
+  },
+  {
+    "title": "Still Waiting",
+    "artists": ["Tom De Blanche "],
+    "thumbnail":"/images/album-12.jpg"
+  },
+  {
+    "title": "Still Waiting",
+    "artists": ["Francesco Mervin"],
+    "thumbnail":"/images/album-13.jpg"
+  },
+  {
+    "title": "Still Waiting",
+    "artists": ["Melissa Lancaster"],
+    "thumbnail":"/images/album-14.jpg"
+  },
+  {
+    "title": "Still Waiting",
+    "artists": ["Paul Snap"],
+    "thumbnail":"/images/album-15.jpg"
+  },
+   {
+    "title": "Still Waiting",
+    "artists": ["Lloyd Agola"],
+    "thumbnail":"/images/album-16.jpg"
+  }
+]

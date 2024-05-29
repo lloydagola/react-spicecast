@@ -1,7 +1,7 @@
 const express = require("express");
 const { check, validationResult } = require("express-validator");
 const Podcast = require("../models/podcast");
-const test = require("./podcasts.json");
+const test = require("../_mocks_/data/podcasts.json");
 
 const router = express.Router();
 
