@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { ReactNode, useRef, useState } from 'react';
 
 import Box from '@mui/material/Box';
 
@@ -12,7 +12,7 @@ import { drawerWidth } from 'src/utils/constants';
 import SidebarLeft from './components/SidebarLeft/SidebarLeft';
 import SidebarRight from './components/SidebarRight/SidebarRight';
 
-export default function MainLayout({children}:any) {
+export default function MainLayout({children}:{children:ReactNode}) {
   const [isClosing, setIsClosing] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
