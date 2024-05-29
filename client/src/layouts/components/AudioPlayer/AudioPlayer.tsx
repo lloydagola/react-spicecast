@@ -82,18 +82,14 @@ export default function AudioPlayer(): JSX.Element {
         }
     };
 
-    const isFirstRender = useRef(true);
 
     
 
     useEffect(() => {
         player.current?.load();
-        !isFirstRender && player.current?.play();
+        isPlaying && player.current?.play();
 
-         return () => {
-            isFirstRender.current = false;
-        };
-    }, [streamUrl]);
+    }, [streamUrl, isPlaying]);
 
     useEffect(() => {
         if (isPlaying) {
