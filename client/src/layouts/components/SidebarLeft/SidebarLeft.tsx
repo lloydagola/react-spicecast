@@ -25,7 +25,7 @@ import useDrawer from 'src/hooks/useDrawer';
 
 
 export default function SidebarLeft(): JSX.Element {
-    const {setIsClosing,mobileOpen,setMobileOpen, handleDrawerToggle} = useDrawer();
+    const {setIsClosing,mobileOpen,setMobileOpen} = useDrawer();
 
     const {inViewport, targetRef} = useInViewPort({threshold: 0.25});
 
