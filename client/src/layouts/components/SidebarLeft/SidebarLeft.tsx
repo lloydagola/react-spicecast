@@ -17,7 +17,7 @@ import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBullet
 import UpdateOutlinedIcon from '@mui/icons-material/UpdateOutlined';
 import WhatshotSharpIcon from '@mui/icons-material/WhatshotSharp';
 
-import { drawerWidth } from 'src/layouts/Main';
+import { drawerWidth } from 'src/utils/constants';
 import { Profile } from 'src/components//Profile/Profile';
 import useInViewPort from 'src/hooks/useInViewPort';
 
