@@ -5,19 +5,12 @@ import useInViewPort from '../hooks/useInViewPort';
 
 
 export default function AppTemplate(): JSX.Element {
-  const [isClosing, setIsClosing] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
 
-  const handleDrawerToggle = ():void => {
-    if (!isClosing) {
-      setMobileOpen(!mobileOpen);
-    }
-  };
 
   const {inViewport} = useInViewPort({ threshold: 0.1 });
   return (
     <>
-      <TopBar inViewport={inViewport} handleDrawerToggle={handleDrawerToggle} />
+      <TopBar inViewport={inViewport} />
       <Outlet />
     </>
   );

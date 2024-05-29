@@ -16,13 +16,15 @@ import IconButton from '@mui/material/IconButton';
 import StreamIcon from '@mui/icons-material/Stream';
 
 import { drawerWidth } from 'src/utils/constants';
+import useDrawer from 'src/hooks/useDrawer';
 
 type TTopBarProps = {
   inViewport:boolean;
-   handleDrawerToggle: () => void; 
 }
 
-export function TopBar({ inViewport, handleDrawerToggle }: TTopBarProps): JSX.Element {
+export function TopBar({ inViewport }: TTopBarProps): JSX.Element {
+  const {handleDrawerToggle} = useDrawer();
+
   return (
     <>
       <CssBaseline />

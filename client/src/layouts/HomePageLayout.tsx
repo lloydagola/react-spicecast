@@ -12,7 +12,7 @@ export default function HomePageLayout({children, inViewport,targetRef,setIsClos
     <Box sx={{ display: 'flex', flexDirection:'column',color:'#fff', 'header': {boxShadow: inViewport ? '1px solid #fff' : 'unset'} }} > 
       <Hero />    
       <Box ref={targetRef} sx={{ display: 'flex', backgroundColor: '#000', color: '#fff', zIndex: '1' }}>
-        <SidebarLeft setIsClosing={setIsClosing} mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} />
+        <SidebarLeft />
         {children}
         <SidebarRight drawerWidth={drawerWidth} />
       </Box>

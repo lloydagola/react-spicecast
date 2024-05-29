@@ -21,15 +21,14 @@ import { drawerWidth } from 'src/utils/constants';
 import { Profile } from 'src/components//Profile/Profile';
 import useInViewPort from 'src/hooks/useInViewPort';
 import { Link } from 'react-router-dom';
+import useDrawer from 'src/hooks/useDrawer';
 
-type TNavTypes = {
-    setIsClosing: Dispatch<SetStateAction<boolean>>;
-    setMobileOpen: Dispatch<SetStateAction<boolean>>;
-    mobileOpen: boolean;
-};
 
-export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }: TNavTypes): JSX.Element {
+export default function SidebarLeft(): JSX.Element {
+    const {setIsClosing,mobileOpen,setMobileOpen, handleDrawerToggle} = useDrawer();
+
     const {inViewport, targetRef} = useInViewPort({threshold: 0.25});
+
 
 
     const drawer = (
