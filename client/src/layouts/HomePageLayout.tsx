@@ -14,7 +14,7 @@ export default function HomePageLayout({children, inViewport,targetRef,setIsClos
       <Box ref={targetRef} sx={{ display: 'flex', backgroundColor: '#000', color: '#fff', zIndex: '1' }}>
         <SidebarLeft />
         {children}
-        <SidebarRight drawerWidth={drawerWidth} />
+        <SidebarRight/>
       </Box>
     </Box>
   );
