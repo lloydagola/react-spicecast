@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-export default function useInViewPort<T extends HTMLElement>(options?: IntersectionObserverInit) {
+export default function useInViewPort(options?: IntersectionObserverInit) {
   const [inViewport, setInViewport] = useState(false);
   
   const targetRef = useRef<HTMLDivElement>(null);

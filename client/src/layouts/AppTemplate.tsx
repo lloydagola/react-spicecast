@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { TopBar } from './components/TopBar/TopBar';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import useInViewPort from '../hooks/useInViewPort';
 
 
@@ -14,8 +14,7 @@ export default function AppTemplate(): JSX.Element {
     }
   };
 
-  const targetRef = useRef<HTMLDivElement>(null);
-  const inViewport = useInViewPort(targetRef, { threshold: 0.1 });
+  const {inViewport} = useInViewPort({ threshold: 0.1 });
   return (
     <>
       <TopBar inViewport={inViewport} handleDrawerToggle={handleDrawerToggle} />
