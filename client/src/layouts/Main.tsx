@@ -19,7 +19,7 @@ import StreamIcon from '@mui/icons-material/Stream';
 
 
 import SidebarLeft from 'src/layouts/components/SidebarLeft/SidebarLeft';
-import Body  from 'src/layouts/components/Body/Body';
+import Body  from 'src/layouts/components/Home/Home';
 import SidebarRight from 'src/layouts/components/SidebarRight/SidebarRight';
 import AudioPlayer from 'src/layouts/components/AudioPlayer/AudioPlayer';
 
