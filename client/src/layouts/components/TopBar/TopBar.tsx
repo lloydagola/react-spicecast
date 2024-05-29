@@ -17,7 +17,7 @@ import StreamIcon from '@mui/icons-material/Stream';
 
 import { drawerWidth } from 'src/utils/constants';
 
-export function TopBar({ inViewport, handleDrawerToggle }: any) {
+export function TopBar({ inViewport, handleDrawerToggle }: any): JSX.Element {
   return (
     <>
       <CssBaseline />
