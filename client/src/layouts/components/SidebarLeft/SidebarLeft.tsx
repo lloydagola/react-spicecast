@@ -88,7 +88,7 @@ export default function SidebarLeft(): JSX.Element {
             <Divider />
             <List>
                 {['Feed', 'New Shows'].map((text, index) => (
-                    <Link to={`/podcasts`} style={{color:'#fff', textDecoration:'none'}} key={index}>
+                    <Link to={`/`} style={{color:'#fff', textDecoration:'none'}} key={index}>
                         <ListItem  >
                             <ListItemButton>
                                 <ListItemIcon>
@@ -160,6 +160,7 @@ export default function SidebarLeft(): JSX.Element {
             variant="temporary"
             open={mobileOpen}
             onTransitionEnd={handleDrawerTransitionEnd}
+            onClick={handleDrawerClose}
             onClose={handleDrawerClose}
             ModalProps={{
                 keepMounted: true, // Better open performance on mobile.
