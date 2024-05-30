@@ -4,8 +4,7 @@ import Hero from 'src/components/Hero/Hero';
 import SidebarLeft from './components/SidebarLeft/SidebarLeft';
 import SidebarRight from './components/SidebarRight/SidebarRight';
 
-export default function HomePageLayout({children, inViewport,targetRef,setIsClosing,mobileOpen,setMobileOpen }:any) {
-
+export default function HomePageLayout({children, targetRef }:any) {
   
   return (
     <Box sx={{ display: 'flex', flexDirection:'column',color:'#fff'}} > 
