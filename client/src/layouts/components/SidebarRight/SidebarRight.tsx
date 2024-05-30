@@ -10,7 +10,9 @@ import RadioIcon from '@mui/icons-material/Radio';
 import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 import CategoryIcon from '@mui/icons-material/Category';
 
-export default function SidebarRight({drawerWidth}:{drawerWidth:number}) {
+import { drawerWidth } from 'src/utils/constants';
+
+export default function SidebarRight() {
   return (
     <Box display='flex' width={drawerWidth} borderLeft='1px solid #222' sx={{backgroundColor:'#000', marginTop: {md: 12}}}>
             <List sx={{display:'flex', flexDirection:'column'}}>

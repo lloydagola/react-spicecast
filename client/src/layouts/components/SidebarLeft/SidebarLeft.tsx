@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useRef } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
@@ -17,19 +17,18 @@ import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBullet
 import UpdateOutlinedIcon from '@mui/icons-material/UpdateOutlined';
 import WhatshotSharpIcon from '@mui/icons-material/WhatshotSharp';
 
-import { drawerWidth } from 'src/layouts/Main';
+import { drawerWidth } from 'src/utils/constants';
 import { Profile } from 'src/components//Profile/Profile';
 import useInViewPort from 'src/hooks/useInViewPort';
+import { Link } from 'react-router-dom';
+import useDrawer from 'src/hooks/useDrawer';
 
-type TNavTypes = {
-    setIsClosing: Dispatch<SetStateAction<boolean>>;
-    setMobileOpen: Dispatch<SetStateAction<boolean>>;
-    mobileOpen: boolean;
-};
 
-export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }: TNavTypes): JSX.Element {
-    const sidebarRef = useRef<HTMLDivElement>(null);
-    const isInView = useInViewPort(sidebarRef, {threshold: 0.25});
+export default function SidebarLeft(): JSX.Element {
+    const {setIsClosing,mobileOpen,setMobileOpen} = useDrawer();
+
+    const {inViewport, targetRef} = useInViewPort({threshold: 0.25});
+
 
 
     const drawer = (
@@ -38,16 +37,19 @@ export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }:
             <Divider />
             <List>
                 {['Feed', 'New Shows'].map((text, index) => (
-                    <ListItem key={index} >
-                        <ListItemButton>
-                            <ListItemIcon>
-                               
-                               {text === 'Feed' ? <AutoAwesomeMotionOutlinedIcon  sx={{color:'#fff'}}/> : <ExploreOutlinedIcon  sx={{color:'#fff'}}/>}
+                    <Link to={`/podcasts`} style={{color:'#fff', textDecoration:'none'}} key={index}>
+                        <ListItem  >
+                            <ListItemButton>
+                                <ListItemIcon>
                                 
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
+                                {text === 'Feed' ? <AutoAwesomeMotionOutlinedIcon  sx={{color:'#fff'}}/> : <ExploreOutlinedIcon  sx={{color:'#fff'}}/>}
+                                    
+                                </ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItemButton>
+                        </ListItem>
+                        
+                    </Link>
                 ))}
             </List>
             <Divider sx={{color:'#fff'}}/>
@@ -95,7 +97,7 @@ export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }:
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }}}
         aria-label="mailbox folders"
-        ref={sidebarRef}
+        ref={targetRef}
         
     >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -119,7 +121,7 @@ export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }:
             variant="permanent"
             sx={{
                 display: { xs: 'none', sm: 'block' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, paddingTop:'60px', backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222', position:isInView ? 'fixed' : 'unset' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, paddingTop:'60px', backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222', position:inViewport ? 'fixed' : 'unset' },
             }}
             open
         >
