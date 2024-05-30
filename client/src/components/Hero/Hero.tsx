@@ -3,11 +3,10 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import Typography from '@mui/material/Typography';
 
 import StreamIcon from '@mui/icons-material/Stream';
+import styled from '@emotion/styled';
 
-export default function Hero() {
-
-  const heroStyles = {
-    width: '100vw',
+const StyledHeroSection = styled(Box)((theme)=>({
+  width: '100vw',
     height: '100vh',
     display: 'flex',
     flexDirection: 'column',
@@ -20,16 +19,30 @@ export default function Hero() {
     },
     '& img:nth-child(1)':{
       width:'70%',
+
+      '@media (max-width: 480px)': {
+        width:'80%',
+      }
     },
     '& img:nth-child(2)':{
       width:'100%',
       position: 'fixed',
-      top:0
+      top:0,
+
+       '@media (max-width: 480px)': {
+        width:'60%',
+      }
     },
+}))
+
+export default function Hero() {
+
+  const heroStyles = {
+    
   };
 
   return (
-    <Box component='section' sx={heroStyles}>
+    <StyledHeroSection component='section'>
       <img src='./images/hero-14.png' alt='foreground' />
       <img src='./images/hero-12.png' alt='foreground' />
       <Box position='absolute' textAlign='center'>
@@ -37,8 +50,8 @@ export default function Hero() {
         <Typography 
           variant='h1' 
           fontWeight={900} 
-          fontSize={140} 
-          sx={{ textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)' }}>
+          //fontSize={140} 
+          sx={{ textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)', fontSize: '12rem' }}>
             SpiceCast
         </Typography>
         <Typography 
@@ -49,6 +62,6 @@ export default function Hero() {
             The Spice To Life
         </Typography>
       </Box>
-    </Box>
+    </StyledHeroSection>
   );
 }
