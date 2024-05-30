@@ -14,7 +14,7 @@ export const AppContext = createContext<any>(null);
 
 function AppContextProvider({children}: any){
       const [isClosing, setIsClosing] = useState(false);
-      const [mobileOpen, setMobileOpen] = useState(true);
+      const [mobileOpen, setMobileOpen] = useState(false);
 
   return <AppContext.Provider value={{mobileOpen, setMobileOpen}}>
     {children}
