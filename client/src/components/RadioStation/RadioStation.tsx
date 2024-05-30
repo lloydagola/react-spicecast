@@ -31,7 +31,7 @@ const radioStationStyles = {
 
 export default function RadioStation ({radioStation}:TRadioStationProps): JSX.Element{
 
-    return <Grid item sm={12} md={3} height="200px" alignItems='center' overflow='hidden' position='relative' sx={radioStationStyles}> 
+    return <Grid item height="200px" alignItems='center' overflow='hidden' position='relative' sx={radioStationStyles}> 
             <Box className="image-view" overflow='hidden' position='relative' height='100%'>
                 <Box position='absolute' zIndex={100} mt={4} ml={1} >
                     <Typography variant='h4' fontSize={26} fontWeight={900} textOverflow='ellipsis' overflow='hidden'>{radioStation.title}</Typography>                    
