@@ -20,12 +20,12 @@ import WhatshotSharpIcon from '@mui/icons-material/WhatshotSharp';
 import { drawerWidth } from 'src/utils/constants';
 import { Profile } from 'src/components//Profile/Profile';
 import useInViewPort from 'src/hooks/useInViewPort';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AppContext } from 'src/contexts/AppContext';
 
 
 export default function SidebarLeft(): JSX.Element {
-  const {setMobileOpen, mobileOpen} = useContext(AppContext);
+  const {setMobileOpen, mobileOpen, setIsClosing} = useContext(AppContext);
 
     const {inViewport, targetRef} = useInViewPort({threshold: 0.25});
 
@@ -82,15 +82,68 @@ export default function SidebarLeft(): JSX.Element {
         </Box>
     );
 
+    const mobileDrawer = (
+        <Box pt={5} >
+            <Toolbar><Profile/></Toolbar>
+            <Divider />
+            <List>
+                {['Feed', 'New Shows'].map((text, index) => (
+                    <Link to={`/podcasts`} style={{color:'#fff', textDecoration:'none'}} key={index}>
+                        <ListItem  >
+                            <ListItemButton>
+                                <ListItemIcon>
+                                
+                                {text === 'Feed' ? <AutoAwesomeMotionOutlinedIcon  sx={{color:'#fff'}}/> : <ExploreOutlinedIcon  sx={{color:'#fff'}}/>}
+                                    
+                                </ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItemButton>
+                        </ListItem>
+                        
+                    </Link>
+                ))}
+            </List>
+            <Divider sx={{color:'#fff'}}/>
+            <List>
+                {['Albums', 'Podcasts', 'Events', 'RadioStations'].map((text, index) => (
+                    <NavLink to={`/${text.toLocaleLowerCase()}`} style={{color:'#fff', textDecoration:'none'}}  key={index}>
+                        <ListItem key={index} >
+                            <ListItemButton>
+                                <ListItemIcon>
+                                {
+                                    text === 'Albums' ? <FavoriteBorderOutlinedIcon  sx={{color:'#fff'}} /> 
+                                    : text==='Podcasts' ? <HistoryOutlinedIcon  sx={{color:'#fff'}}/> 
+                                    : text==='Events' ? <UpdateOutlinedIcon  sx={{color:'#fff'}}/> 
+                                    : <FormatListBulletedOutlinedIcon  sx={{color:'#fff'}} />
+                                    }
+                                </ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItemButton>
+                        </ListItem>
+                    </NavLink>
+                ))}
+            </List>
+            <Divider color='#fff' sx={{color:'#fff'}}/>
+           <ListItem >
+                        <ListItemButton>
+                            <ListItemIcon>
+                               <WhatshotSharpIcon sx={{color:'#fff'}}/>
+                            </ListItemIcon>
+                            <ListItemText primary="Trending" />
+                        </ListItemButton>
+            </ListItem>
+        </Box>
+    );
+
     // Remove this const when copying and pasting into your project.
     //const container = window !== undefined ? () => window().document.body : undefined;
     const handleDrawerClose = () => {
-        //setIsClosing(true);
+        setIsClosing(true);
         setMobileOpen(false);
     };
 
     const handleDrawerTransitionEnd = () => {
-        //setIsClosing(false);
+        setIsClosing(false);
     };     
         
 
@@ -116,7 +169,7 @@ export default function SidebarLeft(): JSX.Element {
                 '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222' },                
             }}
         >
-            {drawer}
+            {mobileDrawer}
         </Drawer>
         <Drawer
             variant="permanent"

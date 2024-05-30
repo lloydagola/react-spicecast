@@ -3,6 +3,7 @@ import { createContext, useState } from 'react';
 type TAppContext = {
   mobileOpen: any;
   setMobileOpen: any;
+  setIsClosing: any;
 };
 
 export const AppContext = createContext<any>(null);
@@ -14,7 +15,7 @@ export function AppContextProvider({ children }: any) {
     setMobileOpen(!mobileOpen)
   }
 
-  return <AppContext.Provider value={{ mobileOpen, setMobileOpen }}>
+  return <AppContext.Provider value={{ mobileOpen, setMobileOpen, setIsClosing }}>
     {children}
   </AppContext.Provider>;
 }
