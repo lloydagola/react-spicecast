@@ -44,7 +44,7 @@ export default function RadioStation ({radioStation}:TRadioStationProps): JSX.El
                     zIndex='1' 
                     sx={{backgroundColor:'rgba(0, 0, 0, 0.4)', transition: '.5s ease-in-out'}} 
                 />
-                <img src = {radioStation.thumbnail} alt="podcast thumbnail" style={{transition:'transform .5s'}}/>                                            
+                <img src = {radioStation.thumbnail} alt="podcast thumbnail" style={{transition:'transform .5s', width:'100%'}}/>                                            
             </Box>  
 
             <PlaylistView track={radioStation}/>  
