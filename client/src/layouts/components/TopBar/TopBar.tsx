@@ -64,13 +64,13 @@ export function TopBar({ inViewport }: TTopBarProps): JSX.Element {
           </NavLink>        
           <Box display='flex'>
             <List sx={{ display: 'flex', flexDirection: 'row' }}>
-              {['Post', 'Categories', 'Events', 'Radio'].map((text, index) => (
-                <NavLink to='/podcasts' style={{color:'#fff', textDecoration:'none'}}  key={index}>
+              {['Albums', 'Podcasts', 'Events', 'RadioStations'].map((text, index) => (
+                <NavLink to={`/${text.toLocaleLowerCase()}`} style={{color:'#fff', textDecoration:'none'}}  key={index}>
                   <ListItem>
                       <ListItemButton>                        
                         <ListItemIcon>
-                          {text === 'Post' ? <AddIcon sx={{ color: '#fff', }} /> :
-                            text === 'Categories' ? <CategoryIcon sx={{ color: '#fff' }} /> :
+                          {text === 'Albums' ? <AddIcon sx={{ color: '#fff', }} /> :
+                            text === 'Podcasts' ? <CategoryIcon sx={{ color: '#fff' }} /> :
                               text === 'Events' ? <LocalActivityIcon sx={{ color: '#fff' }} /> :
                                 <RadioIcon sx={{ color: '#fff' }} />}
                         </ListItemIcon>
