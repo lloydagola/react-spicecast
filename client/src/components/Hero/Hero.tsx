@@ -7,12 +7,19 @@ import styled from '@emotion/styled';
 
 const StyledHeroSection = styled(Box)((theme)=>({
   width: '100vw',
+  height: '34vh',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: '#FDD832',
+
+  '@media (min-width:480px)': {
     height: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FDD832',
+  },
+
+
+
     'img': {
       position: 'absolute',
       zIndex: '0'
@@ -22,6 +29,7 @@ const StyledHeroSection = styled(Box)((theme)=>({
 
       '@media (max-width: 480px)': {
         width:'80%',
+        top:'12%',
       }
     },
     '& img:nth-child(2)':{
@@ -33,6 +41,29 @@ const StyledHeroSection = styled(Box)((theme)=>({
         width:'60%',
       }
     },
+    'svg':{
+      fontSize: '3rem',
+
+      '@media (min-width: 480px)':{
+        fontSize: '8rem',
+      },
+    },
+    'h1':{
+      fontWeight: '900',
+      fontSize:'10rem',
+
+      '@media (max-width: 480px)':{
+        fontSize: '2.4rem',
+      },
+    },
+    'h2':{
+      fontWeight: '400',
+      fontSize:'6rem',
+      
+      '@media (max-width: 480px)':{
+        fontSize: '1.5rem',
+      },
+    }
 }))
 
 export default function Hero() {
@@ -49,16 +80,12 @@ export default function Hero() {
         <ListItemIcon><StreamIcon sx={{color:'#fff',  fontSize:'8rem' }}/></ListItemIcon> 
         <Typography 
           variant='h1' 
-          fontWeight={900} 
-          //fontSize={140} 
-          sx={{ textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)', fontSize: '12rem' }}>
+          >
             SpiceCast
         </Typography>
         <Typography 
           variant='h2' 
-          fontWeight={400} 
-          fontSize={80} 
-          sx={{ textShadow: '2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)' }}>
+          >
             The Spice To Life
         </Typography>
       </Box>
