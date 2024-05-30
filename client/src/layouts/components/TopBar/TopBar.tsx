@@ -8,10 +8,10 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import AddIcon from '@mui/icons-material/Add';
+import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import RadioIcon from '@mui/icons-material/Radio';
 import LocalActivityIcon from '@mui/icons-material/LocalActivity';
-import CategoryIcon from '@mui/icons-material/Category';
+import PodcastsIcon from '@mui/icons-material/Podcasts';
 import IconButton from '@mui/material/IconButton';
 import StreamIcon from '@mui/icons-material/Stream';
 
@@ -69,8 +69,8 @@ export function TopBar({ inViewport }: TTopBarProps): JSX.Element {
                   <ListItem>
                       <ListItemButton>                        
                         <ListItemIcon>
-                          {text === 'Albums' ? <AddIcon sx={{ color: '#fff', }} /> :
-                            text === 'Podcasts' ? <CategoryIcon sx={{ color: '#fff' }} /> :
+                          {text === 'Albums' ? <LibraryMusicIcon sx={{ color: '#fff', }} /> :
+                            text === 'Podcasts' ? <PodcastsIcon sx={{ color: '#fff' }} /> :
                               text === 'Events' ? <LocalActivityIcon sx={{ color: '#fff' }} /> :
                                 <RadioIcon sx={{ color: '#fff' }} />}
                         </ListItemIcon>
