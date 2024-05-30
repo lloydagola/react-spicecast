@@ -6,6 +6,7 @@ import StopIcon from '@mui/icons-material/Stop';
 import PauseIcon from '@mui/icons-material/Pause';
 import { StyledAudioPlayer, StyledTrackTitle, StyledPlayerControls } from './AudioPlayer.styles';
 import { AudioContext } from 'src/contexts/AudioContext';
+import useDrawer from 'src/hooks/useDrawer';
 
 
 export default function AudioPlayer(): JSX.Element {
@@ -17,6 +18,8 @@ export default function AudioPlayer(): JSX.Element {
     const [trackDuration, setTrackDuration] = useState('00:00');
 
     const { audioData: { audioState: { isPlaying, title, streamUrl, thumbnail } }, handlePlay, handleStop, handlePause } = useContext(AudioContext);
+
+    const {mobileOpen} = useDrawer();
 
 
     const updateProgressBar = (): number => {
@@ -122,6 +125,7 @@ export default function AudioPlayer(): JSX.Element {
             <code>audio</code> element.
             <source src={streamUrl} type="audio/mpeg" />
         </audio>
+        {String(mobileOpen)}
         <img src={thumbnail || './images/th-15.jpg'} alt='thumb' />
         <StyledTrackTitle>
             <h4>{title}</h4>

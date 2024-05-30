@@ -17,9 +17,10 @@ import StreamIcon from '@mui/icons-material/Stream';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import { drawerWidth } from 'src/utils/constants';
-import useDrawer from 'src/hooks/useDrawer';
 import useScrollPosition from 'src/hooks/useScrollPosition';
 import styled from '@emotion/styled';
+import { useContext } from 'react';
+import { AppContext } from 'src/App';
 
 const StyledDevice  = styled(Box)(({theme})=>({
   display:'none',
@@ -30,7 +31,7 @@ const StyledDevice  = styled(Box)(({theme})=>({
 
 
 export function TopBar(): JSX.Element {
-  const {handleDrawerToggle} = useDrawer();
+  const {setMobileOpen, mobileOpen} = useContext(AppContext);
 
   const scrollPosition = useScrollPosition();
   const inViewport = scrollPosition > 240;
@@ -54,7 +55,7 @@ export function TopBar(): JSX.Element {
               color="inherit"
               aria-label="open drawer"
               edge="start"
-              onClick={handleDrawerToggle}
+              onClick={()=>setMobileOpen(!mobileOpen)}
               sx={{ ml:2, mr: 2, width:'max-content'}}
             >
                 <MenuIcon sx={{fontWeight:900, fontSize:'2.5rem' }}/>

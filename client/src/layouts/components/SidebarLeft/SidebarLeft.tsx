@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from 'react';
+import { useContext, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
@@ -22,10 +22,11 @@ import { Profile } from 'src/components//Profile/Profile';
 import useInViewPort from 'src/hooks/useInViewPort';
 import { Link } from 'react-router-dom';
 import useDrawer from 'src/hooks/useDrawer';
+import { AppContext } from 'src/App';
 
 
 export default function SidebarLeft(): JSX.Element {
-    const {setIsClosing,mobileOpen,setMobileOpen} = useDrawer();
+  const {setMobileOpen, mobileOpen} = useContext(AppContext);
 
     const {inViewport, targetRef} = useInViewPort({threshold: 0.25});
 
@@ -85,13 +86,20 @@ export default function SidebarLeft(): JSX.Element {
     // Remove this const when copying and pasting into your project.
     //const container = window !== undefined ? () => window().document.body : undefined;
     const handleDrawerClose = () => {
-        setIsClosing(true);
+        //setIsClosing(true);
         setMobileOpen(false);
     };
 
     const handleDrawerTransitionEnd = () => {
-        setIsClosing(false);
-    };       
+        //setIsClosing(false);
+    };     
+    
+    useEffect(() => {
+      console.log(mobileOpen)
+    
+      
+    }, [mobileOpen])
+    
 
     return <Box
         component="nav"
@@ -111,7 +119,7 @@ export default function SidebarLeft(): JSX.Element {
                 keepMounted: true, // Better open performance on mobile.
             }}
             sx={{
-                display: { xs: 'block', sm: 'none' },
+                display: { xs: 'block', sm: 'block' },
                 '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222' },                
             }}
         >
@@ -127,6 +135,5 @@ export default function SidebarLeft(): JSX.Element {
         >
             {drawer}
         </Drawer>
-    </Box>;
-
+    </Box>
 }
