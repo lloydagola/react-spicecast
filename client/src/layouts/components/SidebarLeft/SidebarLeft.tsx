@@ -92,13 +92,7 @@ export default function SidebarLeft(): JSX.Element {
     const handleDrawerTransitionEnd = () => {
         //setIsClosing(false);
     };     
-    
-    useEffect(() => {
-      console.log(mobileOpen)
-    
-      
-    }, [mobileOpen])
-    
+        
 
     return <Box
         component="nav"
