@@ -4,17 +4,25 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-
 import AddIcon from '@mui/icons-material/Add';
 import RadioIcon from '@mui/icons-material/Radio';
 import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 import CategoryIcon from '@mui/icons-material/Category';
+import styled from '@emotion/styled';
 
 import { drawerWidth } from 'src/utils/constants';
 
+const StyledSidebarRight = styled(Box)(({theme})=> ({
+  width:drawerWidth,
+  display: 'flex',
+  backgroundColor:'#000', 
+  marginTop: '80px',
+  borderLeft:'1px solid #222'
+}));
+
 export default function SidebarRight() {
   return (
-    <Box display='flex' width={drawerWidth} borderLeft='1px solid #222' sx={{backgroundColor:'#000', marginTop: {md: 12}}}>
+    <StyledSidebarRight>
             <List sx={{display:'flex', flexDirection:'column'}}>
                   {['Post', 'Categories', 'Events', 'Radio'].map((text, index) => (
                       <ListItem key={index} >
@@ -32,6 +40,6 @@ export default function SidebarRight() {
                       </ListItem>
                   ))}
               </List> 
-          </Box>
+          </StyledSidebarRight>
   )
 }
