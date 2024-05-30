@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box';
 
 import Hero from 'src/components/Hero/Hero';
-import { drawerWidth } from 'src/utils/constants';
 import SidebarLeft from './components/SidebarLeft/SidebarLeft';
 import SidebarRight from './components/SidebarRight/SidebarRight';
 
@@ -9,7 +8,7 @@ export default function HomePageLayout({children, inViewport,targetRef,setIsClos
 
   
   return (
-    <Box sx={{ display: 'flex', flexDirection:'column',color:'#fff', 'header': {boxShadow: inViewport ? '1px solid #fff' : 'unset'} }} > 
+    <Box sx={{ display: 'flex', flexDirection:'column',color:'#fff'}} > 
       <Hero />    
       <Box ref={targetRef} sx={{ display: 'flex', backgroundColor: '#000', color: '#fff', zIndex: '1' }}>
         <SidebarLeft />

@@ -13,8 +13,8 @@ export default function MainLayout({children }:TMainLayoutProps) {
   
   
   return (
-    <Box sx={{ display: 'flex', flexDirection:'column',color:'#fff', 'header': {boxShadow:'1px solid #fff'} }} >     
-      <TopBar inViewport={true}/>     
+    <Box sx={{ display: 'flex', flexDirection:'column',color:'#fff' }} >     
+      <TopBar/>     
       <Box sx={{ display: 'flex', backgroundColor: '#000', color: '#fff', zIndex: '1' }}>
         <SidebarLeft />
         {children}

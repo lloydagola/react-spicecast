@@ -17,13 +17,14 @@ import StreamIcon from '@mui/icons-material/Stream';
 
 import { drawerWidth } from 'src/utils/constants';
 import useDrawer from 'src/hooks/useDrawer';
+import useScrollPosition from 'src/hooks/useScrollPosition';
 
-type TTopBarProps = {
-  inViewport:boolean;
-}
 
-export function TopBar({ inViewport }: TTopBarProps): JSX.Element {
+export function TopBar(): JSX.Element {
   const {handleDrawerToggle} = useDrawer();
+
+  const scrollPosition = useScrollPosition();
+  const inViewport = scrollPosition > 240;
 
   return (
     <>
@@ -35,7 +36,8 @@ export function TopBar({ inViewport }: TTopBarProps): JSX.Element {
           ml: { sm: `${drawerWidth}px` },
           zIndex: { md: '100000' },
           backgroundColor: inViewport ? 'rgba(0,0,0,0.9)' : 'rgba(0,0,0,0)',
-          transition: '.2s ease-in-out'
+          transition: '.2s ease-in-out',
+          boxShadow: inViewport ? '1px solid #fff' : 'unset'
         }}
       >
         <Toolbar sx={{ justifyContent: 'center' }}>
