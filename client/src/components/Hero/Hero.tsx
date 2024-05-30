@@ -23,7 +23,8 @@ export default function Hero() {
     },
     '& img:nth-child(2)':{
       width:'100%',
-      position: 'fixed'
+      position: 'fixed',
+      top:0
     },
   };
 
