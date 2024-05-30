@@ -21,8 +21,7 @@ import { drawerWidth } from 'src/utils/constants';
 import { Profile } from 'src/components//Profile/Profile';
 import useInViewPort from 'src/hooks/useInViewPort';
 import { Link } from 'react-router-dom';
-import useDrawer from 'src/hooks/useDrawer';
-import { AppContext } from 'src/App';
+import { AppContext } from 'src/contexts/AppContext';
 
 
 export default function SidebarLeft(): JSX.Element {

@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useReducer, useState } from "react";
+import { ReactNode, createContext, useReducer } from "react";
 import { TAudioContext, TAudioData } from 'src/types/types';
 
 import radioStations from 'src/_mocks_/data/radioStations.json';

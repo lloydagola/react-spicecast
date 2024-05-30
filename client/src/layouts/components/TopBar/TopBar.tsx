@@ -20,7 +20,7 @@ import { drawerWidth } from 'src/utils/constants';
 import useScrollPosition from 'src/hooks/useScrollPosition';
 import styled from '@emotion/styled';
 import { useContext } from 'react';
-import { AppContext } from 'src/App';
+import { AppContext } from 'src/contexts/AppContext';
 
 const StyledDevice  = styled(Box)(({theme})=>({
   display:'none',
