@@ -7,7 +7,7 @@ import styled from '@emotion/styled';
 
 const StyledHeroSection = styled(Box)((theme)=>({
   width: '100vw',
-  height: '34vh',
+  height: '28vh',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -29,7 +29,7 @@ const StyledHeroSection = styled(Box)((theme)=>({
 
       '@media (max-width: 480px)': {
         width:'80%',
-        top:'12%',
+        top:'7%',
       }
     },
     '& img:nth-child(2)':{
@@ -38,7 +38,6 @@ const StyledHeroSection = styled(Box)((theme)=>({
       top:0,
 
        '@media (max-width: 480px)': {
-        width:'60%',
       }
     },
     'svg':{
