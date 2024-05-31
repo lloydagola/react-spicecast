@@ -7,6 +7,14 @@ import MainLayout from 'src/layouts/MainLayout';
 import { drawerWidth } from 'src/utils/constants';
 import Typography from '@mui/material/Typography';
 
+function TrackRow({title, artist}:{title:string, artist:string}){
+
+    return <Box pb={4} borderBottom='1px solid #111' sx={{cursor:'pointer', padding:'12px 16px', '&:hover':{backgroundColor:'#111'}}}> 
+                            <Typography>{title}</Typography>
+                            <Typography fontWeight={900}>{artist}</Typography>
+                        </Box>
+};
+
 const MusicInMyMind = () => {
   return (
     <Box>
@@ -40,26 +48,11 @@ const MusicInMyMind = () => {
                         <Button variant='outlined'>Buy from Beatport</Button>
                     </Grid>
                     <Box pt={4}>
-                        <Box pb={4} borderBottom='1px solid #111' sx={{cursor:'pointer', padding:'12px 16px', '&:hover':{backgroundColor:'#111'}}}> 
-                        <Typography>MUSIC IN MY MIND (ORIGINAL MIX)</Typography>
-                        <Typography fontWeight={900}>Lloyd Agola</Typography>
-                        </Box>
-                        <Box pb={4} borderBottom='1px solid #111' sx={{cursor:'pointer', padding:'12px 16px', '&:hover':{backgroundColor:'#111'}}}> 
-                        <Typography>PANDA BOY (ORIGINAL MIX)</Typography>
-                        <Typography fontWeight={900}>Lloyd Agola</Typography>
-                        </Box>
-                        <Box pb={4} borderBottom='1px solid #111' sx={{cursor:'pointer', padding:'12px 16px', '&:hover':{backgroundColor:'#111'}}}> 
-                        <Typography>FUNKY WORLD (ORIGINAL MIX)</Typography>
-                        <Typography fontWeight={900}>Lloyd Agola</Typography>
-                        </Box>
-                        <Box pb={4} borderBottom='1px solid #111' sx={{cursor:'pointer', padding:'12px 16px', '&:hover':{backgroundColor:'#111'}}}> 
-                        <p>SONIK (ORIGINAL MIX)</p>
-                        <Typography fontWeight={900}>Lloyd Agola</Typography>
-                        </Box>
-                        <Box pb={4} borderBottom='1px solid #111' sx={{cursor:'pointer', padding:'12px 16px', '&:hover':{backgroundColor:'#111'}}}> 
-                        <Typography>SONIK (MIMI RMX)</Typography>
-                        <Typography fontWeight={900}>Lloyd Agola</Typography>
-                        </Box>
+                        <TrackRow title="MUSIC IN MY MIND (ORIGINAL MIX)" artist="Lloyd Agola"/>
+                        <TrackRow title="PANDA BOY (ORIGINAL MIX)" artist="Lloyd Agola"/>
+                        <TrackRow title="SONIK (ORIGINAL MIX)" artist="Lloyd Agola"/>
+                        <TrackRow title="FUNKY WORLD (ORIGINAL MIX)" artist="Lloyd Agola"/>
+                        <TrackRow title="SONIK (MIMI RMX)" artist="Lloyd Agola"/>
                     </Box>
                 </Box>
                 <Box  pt={4} pb={4}>
