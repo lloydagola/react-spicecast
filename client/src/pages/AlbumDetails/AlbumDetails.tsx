@@ -130,7 +130,7 @@ const MusicInMyMind = () => {
                 </Box>
             </Grid>
             <Box component='div'>
-                <Typography>COPYRIGHT <a href="http://quantumthemes.com">QUANTUM THEMES</a></Typography>
+                <Typography>COPYRIGHT <a href="http://lloydagola.online">LLOYD AGOLA</a></Typography>
             </Box>
         </Box>
     </Box>
