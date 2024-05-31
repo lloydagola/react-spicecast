@@ -8,18 +8,24 @@ import { drawerWidth } from 'src/utils/constants';
 const MusicInMyMind = () => {
   return (
     <Box>
-        <Box component='section'   pl={24} pr={24}>
+        <Box component='section' display='flex' alignItems='center' justifyContent='center' height='30vh' 
+        sx={{backgroundImage:"url('/images/album-4.jpg')", backgroundSize:'cover', backgroundRepeat:'no-repeat', backgroundAttachment:'fixed'}}>
             <h1>MUSIC IN MY MIND EP</h1>
         </Box>
-        <Grid container  pl={24} pr={24}>
-            <Grid item lg={4} pr="32px" justifyContent='right'>
+        <Grid container  p='64px 128px' >
+            <Grid item xs={12} lg={4} pr="32px" justifyContent='right'>
                 <Box component='div' display='flex' flexDirection='column' justifyContent='right'>
                     <p>Robokid Sonic Records • #RKID492 • November 5, 2016</p>
-                    <img src="https://placehold.co/300x300" alt="Album Cover" />
+                    <img src="/images/album-4.jpg" alt="Album Cover" />
+                     <div>
+                        <button>EDM</button>
+                        <button>House</button>
+                        <button>Tech House</button>
+                    </div>
                 </Box>      
             </Grid>
-            <Grid item lg={8} pr="32px">
-                <div>
+            <Grid item xs={12} lg={8} pr="32px">
+                <Box borderBottom='4px solid #fff' borderTop='4px solid #fff' pt={4} pb={4}>
                     <div>
                         <button>Add to cart</button>
                         <button>Buy from Beatport</button>
@@ -46,8 +52,8 @@ const MusicInMyMind = () => {
                         <button>2$</button>
                         </div>
                     </div>
-                </div>
-                <div>
+                </Box>
+                <Box  pt={4} pb={4}>
                     <p>
                     <span>Sonik</span> is the final original track on Music In My Mind EP, and seems to find a medium in-between <span>Funky World</span>.
                     </p>
@@ -57,9 +63,9 @@ const MusicInMyMind = () => {
                     <p>
                     <span>Sonik</span> is the best track on the EP, a hugely energetic track that leaves one hoping for more Knife Party collaborations.
                     </p>
-                </div>
+                </Box>
                 <div>
-                    <iframe title='video' src="https://www.youtube.com/embed/VIDEO_ID" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Heqb3W8Jw_E?si=vC6MY65iHzIYOvTz" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
                 </div>
             </Grid>            
         </Grid>
@@ -67,10 +73,10 @@ const MusicInMyMind = () => {
             <Box sx={{backgroundColor:'#3E0663'}}>
                     <h2>YOU MAY ALSO LIKE</h2>
                     <Grid display='grid' gridTemplateColumns='repeat(4, 1fr)' gap={2} padding={16}>
-                        <img src="https://placehold.co/150x150" alt="Album 1" style={{width: '100%'}}/>
-                        <img src="https://placehold.co/150x150" alt="Album 2" style={{width: '100%'}}/>
-                        <img src="https://placehold.co/150x150" alt="Album 3" style={{width: '100%'}}/>
-                        <img src="https://placehold.co/150x150" alt="Album 4" style={{width: '100%'}}/>
+                        <img src="/images/album-1.jpg" alt="Album 1" style={{width: '100%'}}/>
+                        <img src="/images/album-2.jpg" alt="Album 2" style={{width: '100%'}}/>
+                        <img src="/images/album-3.jpg" alt="Album 3" style={{width: '100%'}}/>
+                        <img src="/images/album-5.jpg" alt="Album 4" style={{width: '100%'}}/>
                     </Grid>
             </Box>           
             <Grid display='grid' gridTemplateColumns='repeat(4, 1fr)' sx={{backgroundColor:'#061328'}} padding={16}>
