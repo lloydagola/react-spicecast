@@ -91,41 +91,41 @@ const MusicInMyMind = () => {
                 <Box component='div'>
                     <Typography variant='h5'>LATEST RELEASES</Typography>
                     <ul>
-                    <li>RAINBOW EP - deep / edm / house</li>
-                    <li>JUST YOU EP - edm / electro / tech-house</li>
-                    <li>LET'S DANCE EP - edm / electro / house</li>
-                    <li>IN THE END EP - deep / edm / electro</li>
-                    <li>THE RAINBOW EP - edm / electro / house</li>
+                        <li>RAINBOW EP - deep / edm / house</li>
+                        <li>JUST YOU EP - edm / electro / tech-house</li>
+                        <li>LET'S DANCE EP - edm / electro / house</li>
+                        <li>IN THE END EP - deep / edm / electro</li>
+                        <li>THE RAINBOW EP - edm / electro / house</li>
                     </ul>
                 </Box>
                 <Box component='div'>
                     <Typography variant='h5'>CHARTS</Typography>
                     <ul>
-                    <li>MIAMI 2018 CHART - Dance / House / Sortie Chart</li>
-                    <li>LONDON WEEK CHART - Dance Monthly Chart Official</li>
-                    <li>TOP DANCE 2018 - Dance / Jazz / Love Music / Sortie</li>
-                    <li>MIAMI 2018 CHART - Electro / House / Sortie Chart</li>
-                    <li>MUSIC FOR DANCE CHART - Dance House / Love Music / Sortie</li>
+                        <li>MIAMI 2018 CHART - Dance / House / Sortie Chart</li>
+                        <li>LONDON WEEK CHART - Dance Monthly Chart Official</li>
+                        <li>TOP DANCE 2018 - Dance / Jazz / Love Music / Sortie</li>
+                        <li>MIAMI 2018 CHART - Electro / House / Sortie Chart</li>
+                        <li>MUSIC FOR DANCE CHART - Dance House / Love Music / Sortie</li>
                     </ul>
                 </Box>
                 <Box component='div'>
                     <Typography variant='h5'>GIGS</Typography>
                     <ul>
-                    <li>SPRING BREAK CAMP 2018 - Festival</li>
-                    <li>NEON DESERT 2018 - Festival</li>
-                    <li>EDC FESTIVAL - Festival</li>
-                    <li>CLUB OPENING - Club</li>
-                    <li>LOVE OPEN AIR - Festival</li>
+                        <li>SPRING BREAK CAMP 2018 - Festival</li>
+                        <li>NEON DESERT 2018 - Festival</li>
+                        <li>EDC FESTIVAL - Festival</li>
+                        <li>CLUB OPENING - Club</li>
+                        <li>LOVE OPEN AIR - Festival</li>
                     </ul>
                 </Box>
                 <Box component='div'>
                     <Typography variant='h5'>Search</Typography>
                     <ul>
-                    <li>SPRING BREAK CAMP 2018 - Festival</li>
-                    <li>NEON DESERT 2018 - Festival</li>
-                    <li>EDC FESTIVAL - Festival</li>
-                    <li>CLUB OPENING - Club</li>
-                    <li>LOVE OPEN AIR - Festival</li>
+                        <li>SPRING BREAK CAMP 2018 - Festival</li>
+                        <li>NEON DESERT 2018 - Festival</li>
+                        <li>EDC FESTIVAL - Festival</li>
+                        <li>CLUB OPENING - Club</li>
+                        <li>LOVE OPEN AIR - Festival</li>
                     </ul>
                 </Box>
             </Grid>
