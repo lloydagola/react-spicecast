@@ -31,8 +31,8 @@ const radioStationStyles = {
 
 export default function RadioStation ({radioStation}:TRadioStationProps): JSX.Element{
 
-    return <Grid item sm={12} md={3} height="200px" alignItems='center' overflow='hidden' position='relative' sx={radioStationStyles}> 
-            <Box className="image-view" overflow='hidden' position='relative' height='100%'>
+    return <Grid item alignItems='center' overflow='hidden' position='relative' sx={radioStationStyles}> 
+            <Box className="image-view" overflow='hidden' position='relative' height='250px'>
                 <Box position='absolute' zIndex={100} mt={4} ml={1} >
                     <Typography variant='h4' fontSize={26} fontWeight={900} textOverflow='ellipsis' overflow='hidden'>{radioStation.title}</Typography>                    
                 </Box> 
@@ -44,7 +44,7 @@ export default function RadioStation ({radioStation}:TRadioStationProps): JSX.El
                     zIndex='1' 
                     sx={{backgroundColor:'rgba(0, 0, 0, 0.4)', transition: '.5s ease-in-out'}} 
                 />
-                <img src = {radioStation.thumbnail} alt="podcast thumbnail" style={{transition:'transform .5s'}}/>                                            
+                <img src = {radioStation.thumbnail} alt="podcast thumbnail" style={{transition:'transform .5s', width:'100%'}}/>                                            
             </Box>  
 
             <PlaylistView track={radioStation}/>  

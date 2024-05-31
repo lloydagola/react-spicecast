@@ -39,7 +39,7 @@ export default function RadioStations (): JSX.Element{
 
     return <Box component='section' pt='60px' pb='60px' sx={radioStationStyles}>
                 <Typography variant='h2' color='white' m='32px'>Radio Stations</Typography>
-                <Grid container gap={1} justifyContent='center' mb='60px'>
+                <Grid container gap={1} justifyContent='center' mb='60px' sx={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(200px, 400px))'}}>
                     {
                         radioStations
                         .map((radioStation:TRadioStation, index:number) =><RadioStation key={index} radioStation={radioStation}/>)

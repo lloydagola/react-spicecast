@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useRef } from 'react';
+import { useContext, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
@@ -17,19 +17,18 @@ import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBullet
 import UpdateOutlinedIcon from '@mui/icons-material/UpdateOutlined';
 import WhatshotSharpIcon from '@mui/icons-material/WhatshotSharp';
 
-import { drawerWidth } from 'src/layouts/Main';
+import { drawerWidth } from 'src/utils/constants';
 import { Profile } from 'src/components//Profile/Profile';
 import useInViewPort from 'src/hooks/useInViewPort';
+import { Link, NavLink } from 'react-router-dom';
+import { AppContext } from 'src/contexts/AppContext';
 
-type TNavTypes = {
-    setIsClosing: Dispatch<SetStateAction<boolean>>;
-    setMobileOpen: Dispatch<SetStateAction<boolean>>;
-    mobileOpen: boolean;
-};
 
-export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }: TNavTypes): JSX.Element {
-    const sidebarRef = useRef<HTMLDivElement>(null);
-    const isInView = useInViewPort(sidebarRef, {threshold: 0.25});
+export default function SidebarLeft(): JSX.Element {
+  const {setMobileOpen, mobileOpen, setIsClosing} = useContext(AppContext);
+
+    const {inViewport, targetRef} = useInViewPort({threshold: 0.25});
+
 
 
     const drawer = (
@@ -38,16 +37,19 @@ export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }:
             <Divider />
             <List>
                 {['Feed', 'New Shows'].map((text, index) => (
-                    <ListItem key={index} >
-                        <ListItemButton>
-                            <ListItemIcon>
-                               
-                               {text === 'Feed' ? <AutoAwesomeMotionOutlinedIcon  sx={{color:'#fff'}}/> : <ExploreOutlinedIcon  sx={{color:'#fff'}}/>}
+                    <Link to={`/podcasts`} style={{color:'#fff', textDecoration:'none'}} key={index}>
+                        <ListItem  >
+                            <ListItemButton>
+                                <ListItemIcon>
                                 
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
+                                {text === 'Feed' ? <AutoAwesomeMotionOutlinedIcon  sx={{color:'#fff'}}/> : <ExploreOutlinedIcon  sx={{color:'#fff'}}/>}
+                                    
+                                </ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItemButton>
+                        </ListItem>
+                        
+                    </Link>
                 ))}
             </List>
             <Divider sx={{color:'#fff'}}/>
@@ -80,6 +82,59 @@ export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }:
         </Box>
     );
 
+    const mobileDrawer = (
+        <Box pt={5} >
+            <Toolbar><Profile/></Toolbar>
+            <Divider />
+            <List>
+                {['Feed', 'New Shows'].map((text, index) => (
+                    <Link to={`/`} style={{color:'#fff', textDecoration:'none'}} key={index}>
+                        <ListItem  >
+                            <ListItemButton>
+                                <ListItemIcon>
+                                
+                                {text === 'Feed' ? <AutoAwesomeMotionOutlinedIcon  sx={{color:'#fff'}}/> : <ExploreOutlinedIcon  sx={{color:'#fff'}}/>}
+                                    
+                                </ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItemButton>
+                        </ListItem>
+                        
+                    </Link>
+                ))}
+            </List>
+            <Divider sx={{color:'#fff'}}/>
+            <List>
+                {['Albums', 'Podcasts', 'Events', 'RadioStations'].map((text, index) => (
+                    <NavLink to={`/${text.toLocaleLowerCase()}`} style={{color:'#fff', textDecoration:'none'}}  key={index}>
+                        <ListItem key={index} >
+                            <ListItemButton>
+                                <ListItemIcon>
+                                {
+                                    text === 'Albums' ? <FavoriteBorderOutlinedIcon  sx={{color:'#fff'}} /> 
+                                    : text==='Podcasts' ? <HistoryOutlinedIcon  sx={{color:'#fff'}}/> 
+                                    : text==='Events' ? <UpdateOutlinedIcon  sx={{color:'#fff'}}/> 
+                                    : <FormatListBulletedOutlinedIcon  sx={{color:'#fff'}} />
+                                    }
+                                </ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItemButton>
+                        </ListItem>
+                    </NavLink>
+                ))}
+            </List>
+            <Divider color='#fff' sx={{color:'#fff'}}/>
+           <ListItem >
+                        <ListItemButton>
+                            <ListItemIcon>
+                               <WhatshotSharpIcon sx={{color:'#fff'}}/>
+                            </ListItemIcon>
+                            <ListItemText primary="Trending" />
+                        </ListItemButton>
+            </ListItem>
+        </Box>
+    );
+
     // Remove this const when copying and pasting into your project.
     //const container = window !== undefined ? () => window().document.body : undefined;
     const handleDrawerClose = () => {
@@ -89,13 +144,14 @@ export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }:
 
     const handleDrawerTransitionEnd = () => {
         setIsClosing(false);
-    };       
+    };     
+        
 
     return <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 }}}
         aria-label="mailbox folders"
-        ref={sidebarRef}
+        ref={targetRef}
         
     >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -104,27 +160,27 @@ export default function SidebarLeft({ setIsClosing, setMobileOpen, mobileOpen }:
             variant="temporary"
             open={mobileOpen}
             onTransitionEnd={handleDrawerTransitionEnd}
+            onClick={handleDrawerClose}
             onClose={handleDrawerClose}
             ModalProps={{
                 keepMounted: true, // Better open performance on mobile.
             }}
             sx={{
-                display: { xs: 'block', sm: 'none' },
+                display: { xs: 'block', sm: 'block' },
                 '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222' },                
             }}
         >
-            {drawer}
+            {mobileDrawer}
         </Drawer>
         <Drawer
             variant="permanent"
             sx={{
                 display: { xs: 'none', sm: 'block' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, paddingTop:'60px', backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222', position:isInView ? 'fixed' : 'unset' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, paddingTop:'60px', backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222', position:inViewport ? 'fixed' : 'unset' },
             }}
             open
         >
             {drawer}
         </Drawer>
-    </Box>;
-
+    </Box>
 }
