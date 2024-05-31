@@ -19,7 +19,7 @@ const MusicInMyMind = () => {
             <img src="/images/album-1.jpg" alt="album art" style={{position:'fixed', zIndex:0, width:'100%'}}/>
             <h1>MUSIC IN MY MIND EP</h1>
         </Box>
-        <Grid container  p='64px 128px' position='relative' zIndex='2' sx={{backgroundColor:'#000'}}>
+        <Grid container  p='64px 128px' position='relative' sx={{backgroundColor:'#000'}}>
             <Grid item xs={12} lg={4} pr="32px" justifyContent='right'>
                 <Box component='div' display='flex' flexDirection='column' justifyContent='right'>
                     <p>Robokid Sonic Records • #RKID492 • November 5, 2016</p>
@@ -76,9 +76,9 @@ const MusicInMyMind = () => {
                 </div>
             </Grid>            
         </Grid>
-        <Box component='section'  position='relative' zIndex='2'>
+        <Box component='section'  position='relative'>
             <Box sx={{backgroundColor:'#3E0663'}}>
-                    <h2>YOU MAY ALSO LIKE</h2>
+                    <h2 style={{marginTop:0, padding:'32px'}}>YOU MAY ALSO LIKE</h2>
                     <Grid display='grid' gridTemplateColumns='repeat(4, 1fr)' gap={2} padding={16}>
                         <img src="/images/album-1.jpg" alt="Album 1" style={{width: '100%'}}/>
                         <img src="/images/album-2.jpg" alt="Album 2" style={{width: '100%'}}/>
