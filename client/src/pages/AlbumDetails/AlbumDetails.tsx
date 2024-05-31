@@ -63,13 +63,13 @@ const MusicInMyMind = () => {
                 </Box>
                 <Box  pt={4} pb={4}>
                     <Typography style={{textAlign:'justify'}}>
-                    <Box component='span'>Sonik</Box> is the final original track on Music In My Mind EP, and seems to find a medium in-between <span>Funky World</span>.
+                        <Box component='span'>Sonik</Box> is the final original track on Music In My Mind EP, and seems to find a medium in-between <span>Funky World</span>.
                     </Typography>
                     <Typography>
-                    The track opens with loose staccato beats and synths before the incredibly catchy lead sample comes in, <span>non stop, we take it up / put to the pedal to the floor we take it up / more noise wake them up / from the back to the front we wake them up</span>. The sample carries strong Daft Punk elements to its altering pitch and tone as the song progresses. <span>Kranke</span> features groove-EDM producer Tom Stars, and his influences can be heard nicely meshing with Knife Party’s.
+                        The track opens with loose staccato beats and synths before the incredibly catchy lead sample comes in, <span>non stop, we take it up / put to the pedal to the floor we take it up / more noise wake them up / from the back to the front we wake them up</span>. The sample carries strong Daft Punk elements to its altering pitch and tone as the song progresses. <span>Kranke</span> features groove-EDM producer Tom Stars, and his influences can be heard nicely meshing with Knife Party’s.
                     </Typography>
                     <Typography>
-                    <Box component='span'>Sonik</Box> is the best track on the EP, a hugely energetic track that leaves one hoping for more Knife Party collaborations.
+                        <Box component='span'>Sonik</Box> is the best track on the EP, a hugely energetic track that leaves one hoping for more Knife Party collaborations.
                     </Typography>
                 </Box>
                 <Box>
