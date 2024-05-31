@@ -1,6 +1,7 @@
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
 import MainLayout from 'src/layouts/MainLayout';
 
 
@@ -9,10 +10,15 @@ import Typography from '@mui/material/Typography';
 
 function TrackRow({title, artist}:{title:string, artist:string}){
 
-    return <Box pb={4} borderBottom='1px solid #111' sx={{cursor:'pointer', padding:'12px 16px', '&:hover':{backgroundColor:'#111'}}}> 
-                            <Typography>{title}</Typography>
-                            <Typography fontWeight={900}>{artist}</Typography>
-                        </Box>
+    return <Box pb={4} borderBottom='1px solid #111' sx={{cursor:'pointer', padding:'12px 16px', '&:hover':{backgroundColor:'#111'}}} display='flex'>
+                <Box display='flex' flexDirection='column' flex={1}>
+                    <Typography>{title}</Typography>
+                    <Typography fontWeight={900}>{artist}</Typography>
+                </Box> 
+                <Box display='flex' flexDirection='column'>
+                    <PlayCircleOutlinedIcon sx={{ color: '#fff', fontSize: '2rem' }} />
+                </Box> 
+            </Box>
 };
 
 const MusicInMyMind = () => {
