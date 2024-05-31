@@ -32,7 +32,7 @@ const MusicInMyMind = () => {
                 height:'100%', 
                 width:'100%',
             }}/>
-            <img src="/images/album-1.jpg" alt="album art" style={{position:'fixed', zIndex:0, width:'100%'}}/>
+            <img src="/images/album-4.jpg" alt="album art" style={{position:'fixed', zIndex:0, width:'100%'}}/>
             <Typography variant='h2' zIndex={3} fontWeight={900}>MUSIC IN MY MIND EP</Typography>
         </Box>
         <Grid container  p='64px 128px' position='relative' sx={{backgroundColor:'#000'}}>
