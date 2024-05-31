@@ -1,9 +1,11 @@
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import MainLayout from 'src/layouts/MainLayout';
 
 
 import { drawerWidth } from 'src/utils/constants';
+import Typography from '@mui/material/Typography';
 
 const MusicInMyMind = () => {
   return (
@@ -20,48 +22,48 @@ const MusicInMyMind = () => {
             <h1>MUSIC IN MY MIND EP</h1>
         </Box>
         <Grid container  p='64px 128px' position='relative' sx={{backgroundColor:'#000'}}>
-            <Grid item xs={12} lg={4} pr="32px" justifyContent='right'>
+            <Grid item xs={12} lg={3} pr="32px" justifyContent='right'>
                 <Box component='div' display='flex' flexDirection='column' justifyContent='right'>
-                    <p>Robokid Sonic Records • #RKID492 • November 5, 2016</p>
                     <img src="/images/album-4.jpg" alt="Album Cover" />
-                     <div>
-                        <button>EDM</button>
-                        <button>House</button>
-                        <button>Tech House</button>
-                    </div>
+                    <Typography pt={4}>Robokid Sonic Records • #RKID492 • November 5, 2016</Typography>
+                     <Grid container pt={2} gap={1}>
+                        <Button variant='outlined'>EDM</Button>
+                        <Button variant='outlined'>House</Button>
+                        <Button variant='outlined'>Tech House</Button>
+                    </Grid>
                 </Box>      
             </Grid>
-            <Grid item xs={12} lg={8} pr="32px"  position='relative' zIndex='2'>
+            <Grid item xs={12} lg={9} pr="32px"  position='relative' zIndex='2'>
                 <Box borderBottom='4px solid #fff' borderTop='4px solid #fff' pt={4} pb={4}>
-                    <div>
-                        <button>Add to cart</button>
-                        <button>Buy from Beatport</button>
-                    </div>
-                    <div>
-                        <div>
-                        <p>MUSIC IN MY MIND (ORIGINAL MIX)</p>
-                        <button>Beatport</button>
-                        </div>
-                        <div>
-                        <p>PANDA BOY (ORIGINAL MIX)</p>
-                        <button>1,50$</button>
-                        </div>
-                        <div>
-                        <p>FUNKY WORLD (ORIGINAL MIX)</p>
-                        <button>1,50$</button>
-                        </div>
-                        <div>
+                    <Grid container gap={1}>
+                        <Button variant='outlined'>Add to cart</Button>
+                        <Button variant='outlined'>Buy from Beatport</Button>
+                    </Grid>
+                    <Box pt={4}>
+                        <Box pb={4} borderBottom='1px solid #111' sx={{cursor:'pointer', padding:'12px 16px', '&:hover':{backgroundColor:'#111'}}}> 
+                        <Typography>MUSIC IN MY MIND (ORIGINAL MIX)</Typography>
+                        <Typography fontWeight={900}>Lloyd Agola</Typography>
+                        </Box>
+                        <Box pb={4} borderBottom='1px solid #111' sx={{cursor:'pointer', padding:'12px 16px', '&:hover':{backgroundColor:'#111'}}}> 
+                        <Typography>PANDA BOY (ORIGINAL MIX)</Typography>
+                        <Typography fontWeight={900}>Lloyd Agola</Typography>
+                        </Box>
+                        <Box pb={4} borderBottom='1px solid #111' sx={{cursor:'pointer', padding:'12px 16px', '&:hover':{backgroundColor:'#111'}}}> 
+                        <Typography>FUNKY WORLD (ORIGINAL MIX)</Typography>
+                        <Typography fontWeight={900}>Lloyd Agola</Typography>
+                        </Box>
+                        <Box pb={4} borderBottom='1px solid #111' sx={{cursor:'pointer', padding:'12px 16px', '&:hover':{backgroundColor:'#111'}}}> 
                         <p>SONIK (ORIGINAL MIX)</p>
-                        <button>iTunes</button>
-                        </div>
-                        <div>
-                        <p>SONIK (MIMI RMX)</p>
-                        <button>2$</button>
-                        </div>
-                    </div>
+                        <Typography fontWeight={900}>Lloyd Agola</Typography>
+                        </Box>
+                        <Box pb={4} borderBottom='1px solid #111' sx={{cursor:'pointer', padding:'12px 16px', '&:hover':{backgroundColor:'#111'}}}> 
+                        <Typography>SONIK (MIMI RMX)</Typography>
+                        <Typography fontWeight={900}>Lloyd Agola</Typography>
+                        </Box>
+                    </Box>
                 </Box>
                 <Box  pt={4} pb={4}>
-                    <p>
+                    <p style={{textAlign:'justify'}}>
                     <span>Sonik</span> is the final original track on Music In My Mind EP, and seems to find a medium in-between <span>Funky World</span>.
                     </p>
                     <p>
