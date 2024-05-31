@@ -12,6 +12,6 @@ export default function PodcastPage(): JSX.Element {
                 sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` }, marginTop: {md: 12} }}
             >            
                 <Podcasts/>
-            </Box>;
+            </Box>
     </MainLayout>
 }

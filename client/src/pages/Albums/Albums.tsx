@@ -12,6 +12,6 @@ export default function AlbumPage(): JSX.Element {
                 sx={{ flexGrow: 1, width: { sm: `calc(100% - ${drawerWidth}px)` }, marginTop: {md: 12} }}
             >            
                 <Albums/>
-            </Box>;
+            </Box>
     </MainLayout>
 }
