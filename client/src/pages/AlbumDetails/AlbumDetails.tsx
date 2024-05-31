@@ -13,11 +13,9 @@ const MusicInMyMind = () => {
         </Box>
         <Grid container>
                 <Grid item lg={4}>
-                    <Box component='section'>
-                        <div>
+                        <Box component='div'>
                             <img src="https://placehold.co/300x300" alt="Album Cover" />
                             <p>Robokid Sonic Records • #RKID492 • November 5, 2016</p>
-                        </div>
                     </Box>      
                 </Grid>
                 <Grid item lg={8}>
