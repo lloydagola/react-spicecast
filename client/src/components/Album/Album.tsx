@@ -17,6 +17,10 @@ const StyledAlbumGrid = styled(Grid)(({theme}) => ({
     overflow: "hidden",
     position: "relative",
 
+    a:{
+        textDecoration:'none',
+    },
+
     img : { 
         transition: "transform .5s",
         width: "100%",
@@ -26,7 +30,6 @@ const StyledAlbumGrid = styled(Grid)(({theme}) => ({
         textOverflow: "ellipsis",
         width: "calc(100%)",
         overflow: "hidden",
-        margin: "6px 0 0 0",
         color:"#fff",
     },
 
