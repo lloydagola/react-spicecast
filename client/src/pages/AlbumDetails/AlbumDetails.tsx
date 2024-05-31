@@ -15,7 +15,7 @@ function TrackRow({title, artist}:{title:string, artist:string}){
                     <Typography>{title}</Typography>
                     <Typography fontWeight={900}>{artist}</Typography>
                 </Box> 
-                <Box display='flex' flexDirection='column'>
+                <Box display='flex' flexDirection='column' justifyContent='center'>
                     <PlayCircleOutlinedIcon sx={{ color: '#fff', fontSize: '2rem' }} />
                 </Box> 
             </Box>
@@ -40,7 +40,7 @@ const MusicInMyMind = () => {
                 <Box component='div' display='flex' flexDirection='column' justifyContent='right'>
                     <img src="/images/album-4.jpg" alt="Album Cover" />
                     <Typography pt={4}>Robokid Sonic Records • #RKID492 • November 5, 2016</Typography>
-                     <Grid container pt={2} gap={1}>
+                     <Grid container pt={1} gap={.5}>
                         <Button variant='outlined'>EDM</Button>
                         <Button variant='outlined'>House</Button>
                         <Button variant='outlined'>Tech House</Button>
@@ -49,9 +49,9 @@ const MusicInMyMind = () => {
             </Grid>
             <Grid item xs={12} lg={9} pr="32px"  position='relative' zIndex='2'>
                 <Box borderBottom='4px solid #fff' borderTop='4px solid #fff' pt={4} pb={4}>
-                    <Grid container gap={1}>
-                        <Button variant='outlined'>Add to cart</Button>
-                        <Button variant='outlined'>Buy from Beatport</Button>
+                    <Grid container gap={.5}>
+                        <Button variant='outlined'>Play All</Button>
+                        <Button variant='outlined'>Save As Playlist</Button>
                     </Grid>
                     <Box pt={4}>
                         <TrackRow title="MUSIC IN MY MIND (ORIGINAL MIX)" artist="Lloyd Agola"/>
