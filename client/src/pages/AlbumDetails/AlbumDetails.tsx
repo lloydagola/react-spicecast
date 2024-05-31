@@ -62,19 +62,19 @@ const MusicInMyMind = () => {
                     </Box>
                 </Box>
                 <Box  pt={4} pb={4}>
-                    <p style={{textAlign:'justify'}}>
-                    <span>Sonik</span> is the final original track on Music In My Mind EP, and seems to find a medium in-between <span>Funky World</span>.
-                    </p>
-                    <p>
+                    <Typography style={{textAlign:'justify'}}>
+                    <Box component='span'>Sonik</Box> is the final original track on Music In My Mind EP, and seems to find a medium in-between <span>Funky World</span>.
+                    </Typography>
+                    <Typography>
                     The track opens with loose staccato beats and synths before the incredibly catchy lead sample comes in, <span>non stop, we take it up / put to the pedal to the floor we take it up / more noise wake them up / from the back to the front we wake them up</span>. The sample carries strong Daft Punk elements to its altering pitch and tone as the song progresses. <span>Kranke</span> features groove-EDM producer Tom Stars, and his influences can be heard nicely meshing with Knife Party’s.
-                    </p>
-                    <p>
+                    </Typography>
+                    <Typography>
                     <span>Sonik</span> is the best track on the EP, a hugely energetic track that leaves one hoping for more Knife Party collaborations.
-                    </p>
+                    </Typography>
                 </Box>
-                <div>
+                <Box>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Heqb3W8Jw_E?si=vC6MY65iHzIYOvTz" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
-                </div>
+                </Box>
             </Grid>            
         </Grid>
         <Box component='section'  position='relative'>
@@ -89,7 +89,7 @@ const MusicInMyMind = () => {
             </Box>           
             <Grid display='grid' gridTemplateColumns='repeat(4, 1fr)' sx={{backgroundColor:'#061328'}} padding={16}>
                 <Box component='div'>
-                    <h3>LATEST RELEASES</h3>
+                    <Typography variant='h5'>LATEST RELEASES</Typography>
                     <ul>
                     <li>RAINBOW EP - deep / edm / house</li>
                     <li>JUST YOU EP - edm / electro / tech-house</li>
@@ -99,7 +99,7 @@ const MusicInMyMind = () => {
                     </ul>
                 </Box>
                 <Box component='div'>
-                    <h3>CHARTS</h3>
+                    <Typography variant='h5'>CHARTS</Typography>
                     <ul>
                     <li>MIAMI 2018 CHART - Dance / House / Sortie Chart</li>
                     <li>LONDON WEEK CHART - Dance Monthly Chart Official</li>
@@ -109,7 +109,7 @@ const MusicInMyMind = () => {
                     </ul>
                 </Box>
                 <Box component='div'>
-                    <h3>GIGS</h3>
+                    <Typography variant='h5'>GIGS</Typography>
                     <ul>
                     <li>SPRING BREAK CAMP 2018 - Festival</li>
                     <li>NEON DESERT 2018 - Festival</li>
@@ -119,7 +119,7 @@ const MusicInMyMind = () => {
                     </ul>
                 </Box>
                 <Box component='div'>
-                    <h3>Search</h3>
+                    <Typography variant='h5'>Search</Typography>
                     <ul>
                     <li>SPRING BREAK CAMP 2018 - Festival</li>
                     <li>NEON DESERT 2018 - Festival</li>
