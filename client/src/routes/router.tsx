@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
       { path: '/podcasts', element: (<Podcasts />) },
       { path: '/radioStations', element: (<RadioStations />) },
       { path: '/albums', element: (<Albums />) },
-      { path: '/album/:id', element: (<AlbumDetails />) },
+      { path: '/albums/:id', element: (<AlbumDetails />) },
     ]
   },
 ]);

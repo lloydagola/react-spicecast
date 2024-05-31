@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { TAlbum } from "src/types/types";
+import { NavLink } from "react-router-dom";
 
 
 type TAlbumPropTypes = {
@@ -70,14 +71,16 @@ const StyledAlbumGrid = styled(Grid)(({theme}) => ({
 export default function Album({album}:TAlbumPropTypes)  {
 
     return <StyledAlbumGrid item flexDirection="column" > 
-                <Box overflow="hidden" height="260px">
-                    <Box className="album-filter"/>
-                    <img src={album.thumbnail} alt='album thumbnail'/> 
-                </Box>         
-                <Box sx={{backgroundColor:'#111'}}>
-                    <Typography variant="h5">{album.title}</Typography>
-                    <Typography>{album.artists.join(", ")}</Typography>
-                    <Box className="horizontal-line"/>                                            
-                </Box>  
+                <NavLink to='/albums/1'>
+                    <Box overflow="hidden" height="260px">
+                        <Box className="album-filter"/>
+                        <img src={album.thumbnail} alt='album thumbnail'/> 
+                    </Box>         
+                    <Box sx={{backgroundColor:'#111'}}>
+                        <Typography variant="h5">{album.title}</Typography>
+                        <Typography>{album.artists.join(", ")}</Typography>
+                        <Box className="horizontal-line"/>                                            
+                    </Box>  
+                </NavLink>
             </StyledAlbumGrid>
 }
