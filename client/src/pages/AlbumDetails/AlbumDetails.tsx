@@ -25,15 +25,15 @@ const MusicInMyMind = () => {
   return (
     <Box>
         <Box component='section' display='flex' alignItems='center' justifyContent='center' height='30vh' overflow='hidden' position='relative'>
-            <div style={{
+            <Box style={{
                 position:'absolute', 
                 background: "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0, 1))", 
-                zIndex:3,
+                zIndex:2,
                 height:'100%', 
                 width:'100%',
             }}/>
             <img src="/images/album-1.jpg" alt="album art" style={{position:'fixed', zIndex:0, width:'100%'}}/>
-            <h1>MUSIC IN MY MIND EP</h1>
+            <Typography variant='h2' zIndex={3} fontWeight={900}>MUSIC IN MY MIND EP</Typography>
         </Box>
         <Grid container  p='64px 128px' position='relative' sx={{backgroundColor:'#000'}}>
             <Grid item xs={12} lg={3} pr="32px" justifyContent='right'>
@@ -69,7 +69,7 @@ const MusicInMyMind = () => {
                     The track opens with loose staccato beats and synths before the incredibly catchy lead sample comes in, <span>non stop, we take it up / put to the pedal to the floor we take it up / more noise wake them up / from the back to the front we wake them up</span>. The sample carries strong Daft Punk elements to its altering pitch and tone as the song progresses. <span>Kranke</span> features groove-EDM producer Tom Stars, and his influences can be heard nicely meshing with Knife Party’s.
                     </Typography>
                     <Typography>
-                    <span>Sonik</span> is the best track on the EP, a hugely energetic track that leaves one hoping for more Knife Party collaborations.
+                    <Box component='span'>Sonik</Box> is the best track on the EP, a hugely energetic track that leaves one hoping for more Knife Party collaborations.
                     </Typography>
                 </Box>
                 <Box>
@@ -79,7 +79,7 @@ const MusicInMyMind = () => {
         </Grid>
         <Box component='section'  position='relative'>
             <Box sx={{backgroundColor:'#3E0663'}}>
-                    <h2 style={{marginTop:0, padding:'32px'}}>YOU MAY ALSO LIKE</h2>
+                    <Typography variant='h5' style={{marginTop:0, padding:'32px'}}>YOU MAY ALSO LIKE</Typography>
                     <Grid display='grid' gridTemplateColumns='repeat(4, 1fr)' gap={2} padding={16}>
                         <img src="/images/album-1.jpg" alt="Album 1" style={{width: '100%'}}/>
                         <img src="/images/album-2.jpg" alt="Album 2" style={{width: '100%'}}/>
@@ -130,7 +130,7 @@ const MusicInMyMind = () => {
                 </Box>
             </Grid>
             <Box component='div'>
-            <p>COPYRIGHT <a href="http://quantumthemes.com">QUANTUM THEMES</a></p>
+                <Typography>COPYRIGHT <a href="http://quantumthemes.com">QUANTUM THEMES</a></Typography>
             </Box>
         </Box>
     </Box>
