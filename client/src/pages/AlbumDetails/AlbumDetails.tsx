@@ -7,11 +7,11 @@ import { drawerWidth } from 'src/utils/constants';
 
 const MusicInMyMind = () => {
   return (
-    <Box  pl={24} pr={24}>
-        <Box component='section'>
+    <Box>
+        <Box component='section'   pl={24} pr={24}>
             <h1>MUSIC IN MY MIND EP</h1>
         </Box>
-        <Grid container>
+        <Grid container  pl={24} pr={24}>
             <Grid item lg={4} pr="32px" justifyContent='right'>
                 <Box component='div' display='flex' flexDirection='column' justifyContent='right'>
                     <p>Robokid Sonic Records • #RKID492 • November 5, 2016</p>
@@ -62,63 +62,63 @@ const MusicInMyMind = () => {
                     <iframe title='video' src="https://www.youtube.com/embed/VIDEO_ID" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
             </Grid>            
-            <Box component='section'>
+        </Grid>
+        <Box component='section'>
+            <Box sx={{backgroundColor:'#3E0663'}}>
                     <h2>YOU MAY ALSO LIKE</h2>
-                    <Grid display='grid' gridTemplateColumns='repeat(4, 1fr)' gap={2}>
+                    <Grid display='grid' gridTemplateColumns='repeat(4, 1fr)' gap={2} padding={16}>
                         <img src="https://placehold.co/150x150" alt="Album 1" style={{width: '100%'}}/>
                         <img src="https://placehold.co/150x150" alt="Album 2" style={{width: '100%'}}/>
                         <img src="https://placehold.co/150x150" alt="Album 3" style={{width: '100%'}}/>
                         <img src="https://placehold.co/150x150" alt="Album 4" style={{width: '100%'}}/>
                     </Grid>
-                <Box component='div'>
-                    <Grid display='grid' gridTemplateColumns='repeat(4, 1fr)'>
-                        <Box component='div'>
-                            <h3>LATEST RELEASES</h3>
-                            <ul>
-                            <li>RAINBOW EP - deep / edm / house</li>
-                            <li>JUST YOU EP - edm / electro / tech-house</li>
-                            <li>LET'S DANCE EP - edm / electro / house</li>
-                            <li>IN THE END EP - deep / edm / electro</li>
-                            <li>THE RAINBOW EP - edm / electro / house</li>
-                            </ul>
-                        </Box>
-                        <Box component='div'>
-                            <h3>CHARTS</h3>
-                            <ul>
-                            <li>MIAMI 2018 CHART - Dance / House / Sortie Chart</li>
-                            <li>LONDON WEEK CHART - Dance Monthly Chart Official</li>
-                            <li>TOP DANCE 2018 - Dance / Jazz / Love Music / Sortie</li>
-                            <li>MIAMI 2018 CHART - Electro / House / Sortie Chart</li>
-                            <li>MUSIC FOR DANCE CHART - Dance House / Love Music / Sortie</li>
-                            </ul>
-                        </Box>
-                        <Box component='div'>
-                            <h3>GIGS</h3>
-                            <ul>
-                            <li>SPRING BREAK CAMP 2018 - Festival</li>
-                            <li>NEON DESERT 2018 - Festival</li>
-                            <li>EDC FESTIVAL - Festival</li>
-                            <li>CLUB OPENING - Club</li>
-                            <li>LOVE OPEN AIR - Festival</li>
-                            </ul>
-                        </Box>
-                        <Box component='div'>
-                            <h3>Search</h3>
-                            <ul>
-                            <li>SPRING BREAK CAMP 2018 - Festival</li>
-                            <li>NEON DESERT 2018 - Festival</li>
-                            <li>EDC FESTIVAL - Festival</li>
-                            <li>CLUB OPENING - Club</li>
-                            <li>LOVE OPEN AIR - Festival</li>
-                            </ul>
-                        </Box>
-                    </Grid>
-                    <Box component='div'>
-                    <p>COPYRIGHT <a href="http://quantumthemes.com">QUANTUM THEMES</a></p>
-                    </Box>
-                </Box>
             </Box>           
-        </Grid>
+            <Grid display='grid' gridTemplateColumns='repeat(4, 1fr)' sx={{backgroundColor:'#061328'}} padding={16}>
+                <Box component='div'>
+                    <h3>LATEST RELEASES</h3>
+                    <ul>
+                    <li>RAINBOW EP - deep / edm / house</li>
+                    <li>JUST YOU EP - edm / electro / tech-house</li>
+                    <li>LET'S DANCE EP - edm / electro / house</li>
+                    <li>IN THE END EP - deep / edm / electro</li>
+                    <li>THE RAINBOW EP - edm / electro / house</li>
+                    </ul>
+                </Box>
+                <Box component='div'>
+                    <h3>CHARTS</h3>
+                    <ul>
+                    <li>MIAMI 2018 CHART - Dance / House / Sortie Chart</li>
+                    <li>LONDON WEEK CHART - Dance Monthly Chart Official</li>
+                    <li>TOP DANCE 2018 - Dance / Jazz / Love Music / Sortie</li>
+                    <li>MIAMI 2018 CHART - Electro / House / Sortie Chart</li>
+                    <li>MUSIC FOR DANCE CHART - Dance House / Love Music / Sortie</li>
+                    </ul>
+                </Box>
+                <Box component='div'>
+                    <h3>GIGS</h3>
+                    <ul>
+                    <li>SPRING BREAK CAMP 2018 - Festival</li>
+                    <li>NEON DESERT 2018 - Festival</li>
+                    <li>EDC FESTIVAL - Festival</li>
+                    <li>CLUB OPENING - Club</li>
+                    <li>LOVE OPEN AIR - Festival</li>
+                    </ul>
+                </Box>
+                <Box component='div'>
+                    <h3>Search</h3>
+                    <ul>
+                    <li>SPRING BREAK CAMP 2018 - Festival</li>
+                    <li>NEON DESERT 2018 - Festival</li>
+                    <li>EDC FESTIVAL - Festival</li>
+                    <li>CLUB OPENING - Club</li>
+                    <li>LOVE OPEN AIR - Festival</li>
+                    </ul>
+                </Box>
+            </Grid>
+            <Box component='div'>
+            <p>COPYRIGHT <a href="http://quantumthemes.com">QUANTUM THEMES</a></p>
+            </Box>
+        </Box>
     </Box>
   );
 };
