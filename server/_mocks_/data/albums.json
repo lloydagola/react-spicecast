@@ -7,15 +7,16 @@
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
-          "contributingArtists": ["TKDJS"],
+          "artist": "TKDJS",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "TKDJS",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -30,15 +31,16 @@
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
-          "contributingArtists": ["Kenny Bell"],
+          "artist": "Kenny Bell",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Kenny Bell",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -53,15 +55,16 @@
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
-          "contributingArtists": ["Kermit Beller"],
+          "artist": "Kermit Beller",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Kermit Beller",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -72,18 +75,20 @@
     {
       "thumbnail": "/images/album-4.jpg",
       "title": "Kool Aid",
-      "artist": ["Lauren Starr"],
+      "artist": "Lauren Starr",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Lauren Starr",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Lauren Starr",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -98,15 +103,16 @@
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
-          "contributingArtists": ["Mord Fustang"],
+          "artist": "Mord Fustang",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Mord Fustang",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -121,15 +127,16 @@
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
-          "contributingArtists": ["Yana Bolder"],
+          "artist": "Yana Bolder",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Yana Bolder",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -139,18 +146,22 @@
     },
     {
       "title": "Come Closer",
-      "artist": ["Patrick Hagenaar"],
+      "artist": "Patrick Hagenaar",
+      "contributingArtists": [],
       "thumbnail": "/images/album-7.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
+          "artist": "Patrick Hagenaar",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Patrick Hagenaar",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -161,19 +172,20 @@
     {
       "title": "SNBRN",
       "thumbnail": "/images/album-8.jpg",
-      "artist": "Esther French ",
+      "artist": "Esther French",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
-          "contributingArtists": ["Esther French "],
+          "artist": "Esther French",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Esther French",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -184,19 +196,20 @@
     {
       "title": "Monstrous Basshouse",
       "thumbnail": "/images/album-9.jpg",
-      "artist": "Tamara Lafleur ",
+      "artist": "Tamara Lafleur",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
-          "contributingArtists": ["Tamara Lafleur "],
+          "artist": "Tamara Lafleur",
+          "contributingArtists": ["Tamara Lafleur"],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Tamara Lafleur",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -211,15 +224,16 @@
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
-          "contributingArtists": ["Renegade Mastah"],
+          "artist": "Renegade Mastah",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Renegade Mastah",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -230,19 +244,20 @@
     {
       "title": "Undercover Beats",
       "thumbnail": "/images/album-11.jpg",
-      "artist": "Joost Dj ",
+      "artist": "Joost Dj",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
-          "contributingArtists": ["Joost Dj "],
+          "artist": "Joost Dj",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Joost Dj",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -257,15 +272,16 @@
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
-          "contributingArtists": ["Lloyd Agola"],
+          "artist": "Lloyd Agola",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Lloyd Agola",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -280,15 +296,16 @@
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
-          "contributingArtists": ["Zedd"],
+          "artist": "Zedd",
+          "contributingArtists": ["Lloyd Agola"],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Zedd",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -303,15 +320,16 @@
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
-          "contributingArtists": ["Melissa Lancaster"],
+          "artist": "Melissa Lancaster",
+          "contributingArtists": ["Lloyd Agola"],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Melissa Lancaster",
+          "contributingArtists": ["Lloyd Agola"],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -326,15 +344,16 @@
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
-          "contributingArtists": ["Paul Snap"],
+          "artist": "Paul Snap",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Paul Snap",
+          "contributingArtists": [],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -349,15 +368,16 @@
       "tracks": [
         {
           "title": "HiLoFM",
-          "artist": ["Lloyd Agola"],
-          "contributingArtists": ["Lloyd Agola"],
+          "artist": "Lloyd Agola",
+          "contributingArtists": ["Xilent", "1788-L"],
           "genres": ["Pop"],
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": ["Lloyd Agola"],
+          "artist": "Lloyd Agola",
+          "contributingArtists": ["Xilent", "1788-L"],
           "genres": ["Pop"],
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"

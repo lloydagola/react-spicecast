@@ -86,7 +86,11 @@ function HeroSection({
   );
 }
 
-function TrackRow({ track: { title, artist } }: { track: TTrack }) {
+function TrackRow({
+  track: { title, artist, contributingArtists = [] },
+}: {
+  track: TTrack;
+}) {
   return (
     <Box
       pb={4}
@@ -106,6 +110,18 @@ function TrackRow({ track: { title, artist } }: { track: TTrack }) {
         <Box display="flex" flexDirection="column">
           <Typography>{title}</Typography>
           <Typography fontWeight={900}>{artist}</Typography>
+          {contributingArtists.length < 1 ? (
+            ""
+          ) : (
+            <Typography>
+              <b>Featuring: </b>
+              {contributingArtists?.map((contributingArtist, index) => {
+                return contributingArtist.length > 2
+                  ? contributingArtist + ", "
+                  : contributingArtist;
+              })}
+            </Typography>
+          )}
         </Box>
       </Box>
       <FavoriteBorderIcon
