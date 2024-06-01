@@ -13,6 +13,7 @@ import { useState, useEffect } from "react";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 import Album from "src/components/Album/Album";
 import { useParams } from "react-router-dom";
+import { TAlbum, TTrack } from "src/types/types";
 
 //p='64px 128px' position='relative' sx={{backgroundColor:'#000'}}
 const StyledContentGrid = styled(Grid)(({ theme }) => ({
@@ -37,9 +38,11 @@ const StyledMainContent = styled(Grid)(({ theme }) => ({
 const StyledRecommendationsSection = styled(Box)(({ theme }) => ({}));
 
 function HeroSection({
-  album: { title = "", thumbnail = "" },
+  title = "",
+  thumbnail = "",
 }: {
-  album: any;
+  title: string;
+  thumbnail: string;
 }): JSX.Element {
   return (
     <Box
@@ -83,7 +86,7 @@ function HeroSection({
   );
 }
 
-function TrackRow({ track: { title, artist } }: { track: any }) {
+function TrackRow({ track: { title, artist } }: { track: TTrack }) {
   return (
     <Box
       pb={4}
@@ -113,7 +116,7 @@ function TrackRow({ track: { title, artist } }: { track: any }) {
   );
 }
 
-function AlbumArt({ album: { thumbnail } }: { album: any }): JSX.Element {
+function AlbumArt({ thumbnail }: { thumbnail: string }): JSX.Element {
   return (
     <Grid item xs={12} lg={3} pr="32px" justifyContent="right">
       <Box display="flex" flexDirection="column" justifyContent="right">
@@ -131,7 +134,7 @@ function AlbumArt({ album: { thumbnail } }: { album: any }): JSX.Element {
   );
 }
 
-function MainContent({ album }: { album: any }): JSX.Element {
+function MainContent({ album }: { album: TAlbum }): JSX.Element {
   return (
     <StyledMainContent
       item
@@ -142,29 +145,35 @@ function MainContent({ album }: { album: any }): JSX.Element {
       zIndex="2"
     >
       <Box
-        borderBottom="4px solid #fff"
-        borderTop="4px solid #fff"
+        borderBottom="2px solid #fff"
+        borderTop="2px solid #fff"
         pt={4}
         pb={4}
       >
-        <Grid container gap={0.5}>
-          <Button variant="outlined">Play All</Button>
-          <Button variant="outlined">Save As Playlist</Button>
-        </Grid>
-        <TrackList album={album} />
+        {!album ? (
+          <Typography variant="h1">Loading...</Typography>
+        ) : (
+          <>
+            <Grid container gap={0.5}>
+              <Button variant="outlined">Play All</Button>
+              <Button variant="outlined">Save As Playlist</Button>
+            </Grid>
+            <TrackList tracks={album.tracks || []} />
+          </>
+        )}
       </Box>
       <AlbumDescription />
     </StyledMainContent>
   );
 }
 
-function TrackList({ album: { tracks } }: { album: any }): JSX.Element {
+function TrackList({ tracks }: { tracks: TTrack[] }): JSX.Element {
   return (
     <Box pt={4}>
       {!tracks ? (
         <Typography variant="h1">No Tracks</Typography>
       ) : (
-        tracks.map((track: any) => <TrackRow track={track} />)
+        tracks.map((track: TTrack) => <TrackRow track={track} />)
       )}
     </Box>
   );
@@ -320,7 +329,7 @@ function RecommendedSection(): JSX.Element {
 function AlbumContent(): JSX.Element {
   const { id } = useParams();
 
-  const [album, setAlbum] = useState([]);
+  const [album, setAlbum] = useState<TAlbum | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -341,12 +350,18 @@ function AlbumContent(): JSX.Element {
 
   return (
     <>
-      <HeroSection album={album} />
-      <StyledContentGrid container>
-        <AlbumArt album={album} />
-        <MainContent album={album} />
-      </StyledContentGrid>
-      <RecommendedSection />
+      {!album ? (
+        <Typography variant="h2">Loading...</Typography>
+      ) : (
+        <>
+          <HeroSection title={album.title} thumbnail={album.thumbnail} />
+          <StyledContentGrid container>
+            <AlbumArt thumbnail={album.thumbnail} />
+            <MainContent album={album} />
+          </StyledContentGrid>
+          <RecommendedSection />
+        </>
+      )}
     </>
   );
 }

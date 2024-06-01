@@ -7,11 +7,10 @@ export type TPodcast = {
 
 export type TAlbum = {
     title: string;
-    artist: string[];
-    contributingArtists: string[];
-    tracks?: any[];
+    artist: string;
+    tracks?: TTrack[];
     thumbnail: string;
-    genre?:string;
+    genres:string[];
 };
 
 export type TRadioStation = {
@@ -20,6 +19,15 @@ export type TRadioStation = {
     genre?: string;
     thumbnail?: string;
 };
+
+export type TTrack = {
+    title: string;
+    artist: string,
+    contributingArtists?: string[],
+    genres: string[],
+    streamUrl: string;
+    thumbnail: string;
+}
 
 
 type TAudioType = "podcast" | "album" | "radioStation";
