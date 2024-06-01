@@ -7,7 +7,7 @@ const test = require("../_mocks_/data/albums.json");
 const router = express.Router();
 
 router.get("/test", (req, res) => {
-  res.status(200).send(test);
+  res.status(200).send(test.data);
 });
 router.get("/", (req, res) => {
   console.log({ test });
