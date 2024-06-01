@@ -8,6 +8,7 @@ export type TPodcast = {
 export type TAlbum = {
     title: string;
     artists: string[];
+    tracks?: any[];
     thumbnail: string;
     genre?:string;
 };
