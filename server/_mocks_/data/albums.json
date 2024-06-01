@@ -1,20 +1,21 @@
 {
   "data": [
     {
-      "title": "The Only One",
-      "artists": ["David Orchard"],
+      "title": "TKDJS",
+      "artist": "TKDJS",
+      "contributingArtists": ["TKDJS"],
       "thumbnail": "/images/album-1.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -23,19 +24,20 @@
     },
     {
       "title": "Who Deserved to Stay",
-      "artists": ["Kenny Bell"],
+      "artist": "Kenny Bell",
+      "contributingArtists": ["Kenny Bell"],
       "thumbnail": "/images/album-2.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -43,20 +45,21 @@
       ]
     },
     {
-      "title": "Family Portrait Revisited",
-      "artists": ["Kermit Beller"],
+      "title": "Hey",
+      "artist": "Kermit Beller",
+      "contributingArtists": ["Kermit Beller"],
       "thumbnail": "/images/album-3.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -65,19 +68,19 @@
     },
     {
       "title": "Kool Aid",
-      "artists": ["Lauren Starr"],
+      "artist": ["Lauren Starr"],
       "thumbnail": "/images/album-4.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -85,20 +88,21 @@
       ]
     },
     {
-      "title": "Still Waiting",
-      "artists": ["Tammy Curezd"],
+      "title": "Mord Fustang",
+      "artist": "Mord Fustang",
+      "contributingArtists": ["Mord Fustang"],
       "thumbnail": "/images/album-5.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -106,20 +110,21 @@
       ]
     },
     {
-      "title": "Still Waiting",
-      "artists": ["Yana Bolder"],
+      "title": "Crayon Pop",
+      "artist": "Yana Bolder",
+      "contributingArtists": ["Yana Bolder"],
       "thumbnail": "/images/album-6.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -127,8 +132,8 @@
       ]
     },
     {
-      "title": "Still Waiting",
-      "artists": ["Tony Hefner "],
+      "title": "Come Closer",
+      "artist": ["Patrick Hagenaar"],
       "thumbnail": "/images/album-7.jpg",
       "tracks": [
         {
@@ -139,7 +144,7 @@
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -147,20 +152,21 @@
       ]
     },
     {
-      "title": "Still Waiting",
-      "artists": ["Esther French "],
+      "title": "SNBRN",
+      "artist": "Esther French ",
+      "contributingArtists": ["Esther French "],
       "thumbnail": "/images/album-8.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -168,20 +174,21 @@
       ]
     },
     {
-      "title": "Still Waiting",
-      "artists": ["Tamara Lafleur "],
+      "title": "Monstrous Basshouse",
+      "artist": "Tamara Lafleur ",
+      "contributingArtists": ["Tamara Lafleur "],
       "thumbnail": "/images/album-9.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -189,20 +196,21 @@
       ]
     },
     {
-      "title": "Still Waiting",
-      "artists": ["Mark Radioboy "],
+      "title": "HI-LO",
+      "artist": "Renegade Mastah",
+      "contributingArtists": ["Renegade Mastah"],
       "thumbnail": "/images/album-10.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -210,20 +218,21 @@
       ]
     },
     {
-      "title": "Still Waiting",
-      "artists": ["Joost Dj "],
+      "title": "Undercover Beats",
+      "artist": "Joost Dj ",
+      "contributingArtists": ["Joost Dj "],
       "thumbnail": "/images/album-11.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -232,19 +241,20 @@
     },
     {
       "title": "Still Waiting",
-      "artists": ["Tom De Blanche "],
+      "artist": "Lloyd Agola",
+      "contributingArtists": ["Lloyd Agola"],
       "thumbnail": "/images/album-12.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -252,20 +262,21 @@
       ]
     },
     {
-      "title": "Still Waiting",
-      "artists": ["Francesco Mervin"],
+      "title": "Zedd",
+      "artist": "Zedd",
+      "contributingArtists": ["Zedd"],
       "thumbnail": "/images/album-13.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -273,20 +284,21 @@
       ]
     },
     {
-      "title": "Still Waiting",
-      "artists": ["Melissa Lancaster"],
+      "title": "Glitch City",
+      "artist": "Melissa Lancaster",
+      "contributingArtists": ["Melissa Lancaster"],
       "thumbnail": "/images/album-14.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -294,20 +306,21 @@
       ]
     },
     {
-      "title": "Still Waiting",
-      "artists": ["Paul Snap"],
+      "title": "Hoff",
+      "artist": "Paul Snap",
+      "contributingArtists": ["Paul Snap"],
       "thumbnail": "/images/album-15.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"
@@ -315,20 +328,21 @@
       ]
     },
     {
-      "title": "Still Waiting",
-      "artists": ["Lloyd Agola"],
+      "title": "Infinity",
+      "artist": "Lloyd Agola",
+      "contributingArtists": ["Lloyd Agola"],
       "thumbnail": "/images/album-16.jpg",
       "tracks": [
         {
           "title": "HiLoFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artists": ["Lloyd Agola"],
+          "artist": ["Lloyd Agola"],
           "genre": "Pop",
           "streamUrl": "http://208.64.184.36/sf1033",
           "thumbnail": "/images/th-2.jpg"

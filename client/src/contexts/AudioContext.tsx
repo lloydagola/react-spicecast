@@ -1,10 +1,6 @@
 import { ReactNode, createContext, useReducer } from "react";
 import { TAudioContext, TAudioData } from "src/types/types";
 
-import radioStations from "src/_mocks_/data/radioStations.json";
-import albums from "src/_mocks_/data/albums.json";
-import podcasts from "src/_mocks_/data/podcasts.json";
-
 enum EAudio {
   PLAY = "PLAY",
   STOP = "STOP",
@@ -20,9 +16,9 @@ const initialAudioData = {
     thumbnail: "/images/th-2.jpg",
     duration: "",
   },
-  radioStations,
-  podcasts,
-  albums,
+  radioStations: [],
+  podcasts: [],
+  albums: [],
 };
 
 const initialState = {
