@@ -15,7 +15,6 @@ import Album from "src/components/Album/Album";
 import { useParams } from "react-router-dom";
 import { TAlbum, TTrack } from "src/types/types";
 
-//p='64px 128px' position='relative' sx={{backgroundColor:'#000'}}
 const StyledContentGrid = styled(Grid)(({ theme }) => ({
   position: "relative",
   backgroundColor: "#000",
@@ -276,7 +275,7 @@ function RecommendedSection(): JSX.Element {
           display="grid"
           gridTemplateColumns="repeat(auto-fill, minmax(200px, 300px))"
           gap={2}
-          padding={{ xs: "16px 16px", md: "48px 128px" }}
+          padding={{ xs: "16px 16px", md: "48px 32px" }}
           justifyContent="center"
         >
           {albums.map((album, index) => (
