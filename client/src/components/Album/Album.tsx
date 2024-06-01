@@ -79,7 +79,7 @@ export default function Album({ album, id }: TAlbumPropTypes) {
         </Box>
         <Box sx={{ backgroundColor: "#111" }} p={1}>
           <Typography variant="h5">{album.title}</Typography>
-          <Typography>{album.artists.join(", ")}</Typography>
+          <Typography>{album.artist}</Typography>
           <Box className="horizontal-line" />
         </Box>
       </NavLink>
