@@ -97,7 +97,6 @@ function AudioContextProvider({
   const [audioData, dispatch] = useReducer(audioReducer, initialAudioData);
 
   function handlePlay(track: any): void {
-    console.log("dispatched PLAY...");
     dispatch({ type: EAudio.PLAY, data: track });
   }
   function handlePause(): void {
