@@ -12,6 +12,7 @@ import styled from "@emotion/styled";
 import { useState, useEffect } from "react";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 import Album from "src/components/Album/Album";
+import { useParams } from "react-router-dom";
 
 //p='64px 128px' position='relative' sx={{backgroundColor:'#000'}}
 const StyledContentGrid = styled(Grid)(({ theme }) => ({
@@ -35,7 +36,11 @@ const StyledMainContent = styled(Grid)(({ theme }) => ({
 
 const StyledRecommendationsSection = styled(Box)(({ theme }) => ({}));
 
-function HeroSection(): JSX.Element {
+function HeroSection({
+  album: { title = "", thumbnail = "" },
+}: {
+  album: any;
+}): JSX.Element {
   return (
     <Box
       component="section"
@@ -55,19 +60,30 @@ function HeroSection(): JSX.Element {
           width: "100%",
         }}
       />
-      <img
-        src="/images/album-4.jpg"
-        alt="album art"
-        style={{ position: "fixed", zIndex: 0, width: "100%", margin: "auto" }}
-      />
-      <Typography variant="h2" zIndex={3} fontWeight={900}>
-        MUSIC IN MY MIND EP
-      </Typography>
+      {!title || !thumbnail ? (
+        <Typography variant="h1">Loading...</Typography>
+      ) : (
+        <>
+          <img
+            src={thumbnail}
+            alt="album art"
+            style={{
+              position: "fixed",
+              zIndex: 0,
+              width: "100%",
+              margin: "auto",
+            }}
+          />
+          <Typography variant="h2" zIndex={3} fontWeight={900}>
+            {title}
+          </Typography>
+        </>
+      )}
     </Box>
   );
 }
 
-function TrackRow({ title, artist }: { title: string; artist: string }) {
+function TrackRow({ track: { title, artist } }: { track: any }) {
   return (
     <Box
       pb={4}
@@ -97,15 +113,11 @@ function TrackRow({ title, artist }: { title: string; artist: string }) {
   );
 }
 
-function AlbumArt(): JSX.Element {
+function AlbumArt({ album: { thumbnail } }: { album: any }): JSX.Element {
   return (
     <Grid item xs={12} lg={3} pr="32px" justifyContent="right">
       <Box display="flex" flexDirection="column" justifyContent="right">
-        <img
-          src="/images/album-4.jpg"
-          alt="Album Cover"
-          style={{ width: "100%" }}
-        />
+        <img src={thumbnail} alt="Album Cover" style={{ width: "100%" }} />
         <Typography pt={4}>
           Robokid Sonic Records • #RKID492 • November 5, 2016
         </Typography>
@@ -119,7 +131,7 @@ function AlbumArt(): JSX.Element {
   );
 }
 
-function MainContent(): JSX.Element {
+function MainContent({ album }: { album: any }): JSX.Element {
   return (
     <StyledMainContent
       item
@@ -139,21 +151,21 @@ function MainContent(): JSX.Element {
           <Button variant="outlined">Play All</Button>
           <Button variant="outlined">Save As Playlist</Button>
         </Grid>
-        <TrackList />
+        <TrackList album={album} />
       </Box>
       <AlbumDescription />
     </StyledMainContent>
   );
 }
 
-function TrackList(): JSX.Element {
+function TrackList({ album: { tracks } }: { album: any }): JSX.Element {
   return (
     <Box pt={4}>
-      <TrackRow title="MUSIC IN MY MIND (ORIGINAL MIX)" artist="Lloyd Agola" />
-      <TrackRow title="PANDA BOY (ORIGINAL MIX)" artist="Lloyd Agola" />
-      <TrackRow title="SONIK (ORIGINAL MIX)" artist="Lloyd Agola" />
-      <TrackRow title="FUNKY WORLD (ORIGINAL MIX)" artist="Lloyd Agola" />
-      <TrackRow title="SONIK (MIMI RMX)" artist="Lloyd Agola" />
+      {!tracks ? (
+        <Typography variant="h1">No Tracks</Typography>
+      ) : (
+        tracks.map((track: any) => <TrackRow track={track} />)
+      )}
     </Box>
   );
 }
@@ -236,8 +248,8 @@ function RecommendedSection(): JSX.Element {
           padding={{ xs: "16px 16px", md: "48px 128px" }}
           justifyContent="center"
         >
-          {albums.map((album) => (
-            <Album album={album} />
+          {albums.map((album, index) => (
+            <Album album={album} key={index} id={index} />
           ))}
         </Grid>
       </Box>
@@ -306,12 +318,33 @@ function RecommendedSection(): JSX.Element {
 }
 
 function AlbumContent(): JSX.Element {
+  const { id } = useParams();
+
+  const [album, setAlbum] = useState([]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    try {
+      (async function () {
+        console.log("fetching...");
+        const response = await fetch(`${API_ENDPOINT_URL}/albums/test/${id}`);
+        const AlbumData = await response.json();
+        setAlbum(AlbumData);
+      })();
+    } catch (error) {
+      console.log("an error occurred", error);
+      /**
+       * @todos : handle error
+       */
+    }
+  }, [id]);
+
   return (
     <>
-      <HeroSection />
+      <HeroSection album={album} />
       <StyledContentGrid container>
-        <AlbumArt />
-        <MainContent />
+        <AlbumArt album={album} />
+        <MainContent album={album} />
       </StyledContentGrid>
       <RecommendedSection />
     </>

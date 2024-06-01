@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 
 type TAlbumPropTypes = {
   album: TAlbum;
+  id: number;
 };
 
 const StyledAlbumGrid = styled(Grid)(({ theme }) => ({
@@ -68,10 +69,10 @@ const StyledAlbumGrid = styled(Grid)(({ theme }) => ({
   },
 }));
 
-export default function Album({ album }: TAlbumPropTypes) {
+export default function Album({ album, id }: TAlbumPropTypes) {
   return (
     <StyledAlbumGrid item flexDirection="column">
-      <NavLink to="/albums/1">
+      <NavLink to={`/albums/${id}`}>
         <Box overflow="hidden" height="260px">
           <Box className="album-filter" />
           <img src={album.thumbnail} alt="album thumbnail" />

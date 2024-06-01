@@ -7,14 +7,27 @@ const test = require("../_mocks_/data/albums.json");
 const router = express.Router();
 
 router.get("/test", (req, res) => {
-  console.log(req.query);
-
   const { start = 0, end } = req.query;
   if (!end) {
     return res.status(200).send(test.data.slice(start));
   }
   res.status(200).send(test.data.slice(start, end));
 });
+
+router.get("/test/:id", (req, res) => {
+  if (!req.params) {
+    return res.status(200).send(test.data[0]);
+  }
+  try {
+    res.status(200).send(test.data[req.params.id]);
+  } catch (error) {
+    console.log("an error occurred", error);
+    /**
+     * @todo:handle error
+     */
+  }
+});
+
 router.get("/", (req, res) => {
   console.log({ test });
   albums

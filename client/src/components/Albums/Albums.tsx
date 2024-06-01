@@ -47,7 +47,7 @@ export default function Albums(): JSX.Element {
         }}
       >
         {albums.map((album, index) => (
-          <Album key={index} album={album} />
+          <Album key={index} id={index} album={album} />
         ))}
       </Grid>
     </Box>
