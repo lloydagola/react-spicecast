@@ -58,11 +58,13 @@ function HeroSection():JSX.Element{
 function TrackRow({title, artist}:{title:string, artist:string}){
 
     return <Box pb={4} borderBottom='1px solid #111' alignItems='center' sx={{cursor:'pointer', padding:'12px 16px', '&:hover':{backgroundColor:'#111'}}} display='flex'>
-                <PlayCircleOutlinedIcon sx={{ color: '#fff', fontSize: '2rem',  marginRight:'16px'  }} />
-                <Box display='flex' flexDirection='column' flex={1}>
-                    <Typography>{title}</Typography>
-                    <Typography fontWeight={900}>{artist}</Typography>
-                </Box> 
+                <Box display='flex' flex={1} alignItems='center'>
+                    <PlayCircleOutlinedIcon sx={{ color: '#fff', fontSize: '2rem',  marginRight:'16px'  }} />
+                    <Box display='flex' flexDirection='column'>
+                        <Typography>{title}</Typography>
+                        <Typography fontWeight={900}>{artist}</Typography>
+                    </Box> 
+                </Box>
                 <FavoriteBorderIcon sx={{ color: '#fff', fontSize: '1.4rem', marginRight:'16px' }} />
                 <MoreVertIcon sx={{ color: '#fff', fontSize: '1.4rem' }} />
             </Box>
