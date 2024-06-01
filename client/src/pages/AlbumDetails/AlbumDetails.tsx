@@ -121,16 +121,18 @@ function TrackRow({
       }}
       display="flex"
     >
-      <Box display="flex" flex={1} alignItems="center" onClick={togglePlay}>
+      <Box display="flex" flex={1} alignItems="center">
         {playState === EAudioState.PLAYING && nowPlaying === title ? (
           <PauseIcon
             fontSize="large"
             sx={{ color: "#fff", fontSize: "2rem", marginRight: "16px" }}
+            onClick={() => handlePause && handlePause()}
           />
         ) : (
           <PlayCircleOutlinedIcon
             fontSize="large"
             sx={{ color: "#fff", fontSize: "2rem", marginRight: "16px" }}
+            onClick={() => handlePlay({ title, thumbnail, streamUrl })}
           />
         )}
 
@@ -142,17 +144,12 @@ function TrackRow({
           ) : (
             <Typography>
               <b>Featuring: </b>
-              {contributingArtists?.map((contributingArtist, index) => {
-                console.log(
-                  contributingArtists.length,
-                  index + 1,
-                  contributingArtists.length > 1
-                );
-                return contributingArtists.length > 1 &&
-                  contributingArtists.length > index + 1
+              {contributingArtists?.map((contributingArtist, index) =>
+                contributingArtists.length > 1 &&
+                contributingArtists.length > index + 1
                   ? contributingArtist + ", "
-                  : contributingArtist;
-              })}
+                  : contributingArtist
+              )}
             </Typography>
           )}
         </Box>
@@ -222,7 +219,9 @@ function TrackList({ tracks }: { tracks: TTrack[] }): JSX.Element {
       {!tracks ? (
         <Typography variant="h1">No Tracks</Typography>
       ) : (
-        tracks.map((track: TTrack) => <TrackRow track={track} />)
+        tracks.map((track: TTrack, index: number) => (
+          <TrackRow key={index} track={track} />
+        ))
       )}
     </Box>
   );
@@ -391,7 +390,6 @@ function AlbumContent(): JSX.Element {
     window.scrollTo(0, 0);
     try {
       (async function () {
-        console.log("fetching...");
         const response = await fetch(`${API_ENDPOINT_URL}/albums/test/${id}`);
         const AlbumData = await response.json();
         setAlbum(AlbumData);

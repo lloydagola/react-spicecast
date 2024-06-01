@@ -119,8 +119,10 @@ export default function AudioPlayer(): JSX.Element {
     if (playState === EAudioState.PLAYING) {
       player.current?.play();
       return;
+    } else if (playState === EAudioState.PAUSED) {
+      player.current?.pause();
+      return;
     }
-    player.current?.pause();
   }, [playState]);
 
   useEffect(() => {
