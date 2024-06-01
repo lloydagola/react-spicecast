@@ -5,85 +5,83 @@ import Typography from "@mui/material/Typography";
 import { TAlbum } from "src/types/types";
 import { NavLink } from "react-router-dom";
 
-
 type TAlbumPropTypes = {
-    album:TAlbum
+  album: TAlbum;
 };
 
-const StyledAlbumGrid = styled(Grid)(({theme}) => ({
-    display: "flex",
-    flexirection: "column",
-    cursor: "pointer",
+const StyledAlbumGrid = styled(Grid)(({ theme }) => ({
+  display: "flex",
+  flexirection: "column",
+  cursor: "pointer",
+  overflow: "hidden",
+  position: "relative",
+
+  a: {
+    textDecoration: "none",
+  },
+
+  img: {
+    transition: "transform .5s",
+    width: "100%",
+  },
+
+  h5: {
+    textOverflow: "ellipsis",
+    width: "calc(100%)",
     overflow: "hidden",
-    position: "relative",
+    color: "#fff",
+  },
 
-    a:{
-        textDecoration:'none',
-    },
+  p: {
+    margin: "0 0 12px 0",
+    color: "#fff",
+  },
 
-    img : { 
-        transition: "transform .5s",
-        width: "100%",
-    },
+  ".album-filter": {
+    height: "260px",
+    width: "100%",
+    position: "absolute",
+    zIndex: "5",
+    opacity: "0",
+    backgroundColor: "tomato",
+    transition: ".2s ease-in",
+  },
 
-    h5 : {
-        textOverflow: "ellipsis",
-        width: "calc(100%)",
-        overflow: "hidden",
-        color:"#fff",
-    },
+  ".horizontal-line": {
+    width: "32px",
+    transition: ".2s",
+    backgroundColor: "white",
+    height: "4px",
+  },
 
-    p : {
-        margin: "0 0 12px 0",
-        color:"#fff",
-    },
+  "&:hover .horizontal-line": {
+    width: "60px",
+  },
 
-    ".album-filter" : {
-        height: "260px",
-        width: "100%",
-        position: "absolute",
-        zIndex: "5",
-        opacity: "0",
-        backgroundColor:"tomato",
-        transition: ".2s ease-in",
-    },
+  "&:hover img": {
+    transform: "scale(1.2)",
+  },
 
-    ".horizontal-line" : {
-        width: "32px",
-        transition: ".2s",
-        backgroundColor: "white",
-        height: "4px",
-    },
-
-    "&:hover .horizontal-line" : {
-        width: "60px"
-    },
-
-    "&:hover img" : {
-        transform: "scale(1.2)",         
-    } ,
-
-    "&:hover .album-filter" : {
-        opacity: ".5",
-        transition: ".2s ease-in",
-    }
+  "&:hover .album-filter": {
+    opacity: ".5",
+    transition: ".2s ease-in",
+  },
 }));
 
-
-
-export default function Album({album}:TAlbumPropTypes)  {
-
-    return <StyledAlbumGrid item flexDirection="column" > 
-                <NavLink to='/albums/1'>
-                    <Box overflow="hidden" height="260px">
-                        <Box className="album-filter"/>
-                        <img src={album.thumbnail} alt='album thumbnail'/> 
-                    </Box>         
-                    <Box sx={{backgroundColor:'#111'}}>
-                        <Typography variant="h5">{album.title}</Typography>
-                        <Typography>{album.artists.join(", ")}</Typography>
-                        <Box className="horizontal-line"/>                                            
-                    </Box>  
-                </NavLink>
-            </StyledAlbumGrid>
+export default function Album({ album }: TAlbumPropTypes) {
+  return (
+    <StyledAlbumGrid item flexDirection="column">
+      <NavLink to="/albums/1">
+        <Box overflow="hidden" height="260px">
+          <Box className="album-filter" />
+          <img src={album.thumbnail} alt="album thumbnail" />
+        </Box>
+        <Box sx={{ backgroundColor: "#111" }} p={1}>
+          <Typography variant="h5">{album.title}</Typography>
+          <Typography>{album.artists.join(", ")}</Typography>
+          <Box className="horizontal-line" />
+        </Box>
+      </NavLink>
+    </StyledAlbumGrid>
+  );
 }
