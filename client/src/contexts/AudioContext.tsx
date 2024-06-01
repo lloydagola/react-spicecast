@@ -7,9 +7,16 @@ enum EAudio {
   PAUSE = "PAUSE",
 }
 
+export enum EAudioState {
+  PLAYING = "PLAYING",
+  PAUSED = "PAUSED",
+  STOPPED = "STOPPED",
+}
+
 const initialAudioData = {
   audioState: {
     trackType: "radioStation",
+    playState: EAudioState.STOPPED,
     isPlaying: false,
     title: "LunarFM",
     streamUrl: "http://208.64.184.36/sf1033",
@@ -25,6 +32,7 @@ const initialState = {
   audioData: {
     audioState: {
       trackType: "radioStation",
+      playState: EAudioState.STOPPED,
       isPlaying: false,
       title: "LunarFM",
       streamUrl: "http://208.64.184.36/sf1033",
@@ -47,7 +55,7 @@ function audioReducer(prevState: TAudioData, action: any): TAudioData {
         ...prevState,
         audioState: {
           ...prevState.audioState,
-          isPlaying: true,
+          playState: EAudioState.PLAYING,
           title: action.data.title,
           streamUrl: action.data.streamUrl,
           thumbnail: action.data.thumbnail,
@@ -56,13 +64,21 @@ function audioReducer(prevState: TAudioData, action: any): TAudioData {
 
       return candidate;
     }
-    case EAudio.PAUSE:
+    case EAudio.PAUSE: {
+      return {
+        ...prevState,
+        audioState: {
+          ...prevState.audioState,
+          playState: EAudioState.PAUSED,
+        },
+      };
+    }
     case EAudio.STOP: {
       return {
         ...prevState,
         audioState: {
           ...prevState.audioState,
-          isPlaying: false,
+          playState: EAudioState.STOPPED,
         },
       };
     }
@@ -81,6 +97,7 @@ function AudioContextProvider({
   const [audioData, dispatch] = useReducer(audioReducer, initialAudioData);
 
   function handlePlay(track: any): void {
+    console.log("dispatched PLAY...");
     dispatch({ type: EAudio.PLAY, data: track });
   }
   function handlePause(): void {

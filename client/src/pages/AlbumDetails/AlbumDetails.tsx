@@ -1,19 +1,22 @@
+import { useState, useEffect, useContext } from "react";
+import { useParams } from "react-router-dom";
+
+import styled from "@emotion/styled";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import PlayCircleOutlinedIcon from "@mui/icons-material/PlayCircleOutlined";
+import PauseIcon from "@mui/icons-material/Pause";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import MainLayout from "src/layouts/MainLayout";
-
-import { drawerWidth } from "src/utils/constants";
 import Typography from "@mui/material/Typography";
-import styled from "@emotion/styled";
-import { useState, useEffect } from "react";
-import { API_ENDPOINT_URL } from "src/utils/apiUtils";
+
+import { AudioContext, EAudioState } from "src/contexts/AudioContext";
+import MainLayout from "src/layouts/MainLayout";
 import Album from "src/components/Album/Album";
-import { useParams } from "react-router-dom";
+import { drawerWidth } from "src/utils/constants";
 import { TAlbum, TTrack } from "src/types/types";
+import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 
 const StyledContentGrid = styled(Grid)(({ theme }) => ({
   position: "relative",
@@ -86,10 +89,26 @@ function HeroSection({
 }
 
 function TrackRow({
-  track: { title, artist, contributingArtists = [] },
+  track: { title, artist, thumbnail, streamUrl, contributingArtists = [] },
 }: {
   track: TTrack;
 }) {
+  const {
+    audioData: {
+      audioState: { playState, title: nowPlaying },
+    },
+    handlePlay,
+    handlePause,
+  } = useContext(AudioContext);
+
+  function togglePlay() {
+    if (playState === EAudioState.PLAYING && handlePause) {
+      handlePause();
+      return;
+    }
+    handlePlay({ title, thumbnail, streamUrl });
+  }
+
   return (
     <Box
       pb={4}
@@ -102,10 +121,19 @@ function TrackRow({
       }}
       display="flex"
     >
-      <Box display="flex" flex={1} alignItems="center">
-        <PlayCircleOutlinedIcon
-          sx={{ color: "#fff", fontSize: "2rem", marginRight: "16px" }}
-        />
+      <Box display="flex" flex={1} alignItems="center" onClick={togglePlay}>
+        {playState === EAudioState.PLAYING && nowPlaying === title ? (
+          <PauseIcon
+            fontSize="large"
+            sx={{ color: "#fff", fontSize: "2rem", marginRight: "16px" }}
+          />
+        ) : (
+          <PlayCircleOutlinedIcon
+            fontSize="large"
+            sx={{ color: "#fff", fontSize: "2rem", marginRight: "16px" }}
+          />
+        )}
+
         <Box display="flex" flexDirection="column">
           <Typography>{title}</Typography>
           <Typography fontWeight={900}>{artist}</Typography>
@@ -351,6 +379,13 @@ function AlbumContent(): JSX.Element {
   const { id } = useParams();
 
   const [album, setAlbum] = useState<TAlbum | null>(null);
+  const {
+    audioData: {
+      audioState: { playState, title },
+    },
+    handlePlay,
+    handlePause,
+  } = useContext(AudioContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);

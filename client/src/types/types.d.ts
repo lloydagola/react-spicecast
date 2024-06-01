@@ -35,6 +35,7 @@ type TAudioType = "podcast" | "album" | "radioStation";
 type TAudioState = {
     trackType: string;
     isPlaying: boolean;
+    playState: string;
     title: string;
     streamUrl: string;
     thumbnail?: string;
@@ -53,4 +54,5 @@ export type TAudioContext = {
     handlePlay: (track?:any) => void;
     handlePause?: () => void;
     handleStop?: () => void;
+    togglePlay?:() => void;
 }
