@@ -1,83 +1,389 @@
-[
- 
-  {
-    "title": "The Only One",
-    "artists": ["David Orchard"],
-    "thumbnail":"/images/album-1.jpg"
-  },
-  {
-    "title": "Who Deserved to Stay",
-    "artists": ["Kenny Bell"],
-    "thumbnail":"/images/album-2.jpg"
-  },
-  {
-    "title": "Family Portrait Revisited",
-    "artists": ["Kermit Beller"],
-    "thumbnail":"/images/album-3.jpg"
-  },
-  {
-    "title": "Kool Aid",
-    "artists": ["Lauren Starr"],
-    "thumbnail":"/images/album-4.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artists": ["Tammy Curezd"],
-    "thumbnail":"/images/album-5.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artists": ["Yana Bolder"],
-    "thumbnail":"/images/album-6.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artists": ["Tony Hefner "],
-    "thumbnail":"/images/album-7.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artists": ["Esther French "],
-    "thumbnail":"/images/album-8.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artists": ["Tamara Lafleur "],
-    "thumbnail":"/images/album-9.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artists": ["Mark Radioboy "],
-    "thumbnail":"/images/album-10.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artists": ["Joost Dj "],
-    "thumbnail":"/images/album-11.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artists": ["Tom De Blanche "],
-    "thumbnail":"/images/album-12.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artists": ["Francesco Mervin"],
-    "thumbnail":"/images/album-13.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artists": ["Melissa Lancaster"],
-    "thumbnail":"/images/album-14.jpg"
-  },
-  {
-    "title": "Still Waiting",
-    "artists": ["Paul Snap"],
-    "thumbnail":"/images/album-15.jpg"
-  },
-   {
-    "title": "Still Waiting",
-    "artists": ["Lloyd Agola"],
-    "thumbnail":"/images/album-16.jpg"
-  }
-]
+{
+  "data": [
+    {
+      "title": "TKDJS",
+      "thumbnail": "/images/album-1.jpg",
+      "artist": "TKDJS",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "TKDJS",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "TKDJS",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "title": "Who Deserved to Stay",
+      "thumbnail": "/images/album-2.jpg",
+      "artist": "Kenny Bell",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Kenny Bell",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "Kenny Bell",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "title": "Hey",
+      "thumbnail": "/images/album-3.jpg",
+      "artist": "Kermit Beller",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Kermit Beller",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "Kermit Beller",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "thumbnail": "/images/album-4.jpg",
+      "title": "Kool Aid",
+      "artist": "Lauren Starr",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Lauren Starr",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "Lauren Starr",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "title": "Mord Fustang",
+      "thumbnail": "/images/album-5.jpg",
+      "artist": "Mord Fustang",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Mord Fustang",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "Mord Fustang",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "title": "Crayon Pop",
+      "thumbnail": "/images/album-6.jpg",
+      "artist": "Yana Bolder",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Yana Bolder",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "Yana Bolder",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "title": "Come Closer",
+      "artist": "Patrick Hagenaar",
+      "contributingArtists": [],
+      "thumbnail": "/images/album-7.jpg",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Patrick Hagenaar",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "Patrick Hagenaar",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "title": "SNBRN",
+      "thumbnail": "/images/album-8.jpg",
+      "artist": "Esther French",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Esther French",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "Esther French",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "title": "Monstrous Basshouse",
+      "thumbnail": "/images/album-9.jpg",
+      "artist": "Tamara Lafleur",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Tamara Lafleur",
+          "contributingArtists": ["Tamara Lafleur"],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "Tamara Lafleur",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "title": "HI-LO",
+      "thumbnail": "/images/album-10.jpg",
+      "artist": "Renegade Mastah",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Renegade Mastah",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "Renegade Mastah",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "title": "Undercover Beats",
+      "thumbnail": "/images/album-11.jpg",
+      "artist": "Joost Dj",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Joost Dj",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "Joost Dj",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "title": "Still Waiting",
+      "thumbnail": "/images/album-12.jpg",
+      "artist": "Lloyd Agola",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Lloyd Agola",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "Lloyd Agola",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "title": "Zedd",
+      "thumbnail": "/images/album-13.jpg",
+      "artist": "Zedd",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Zedd",
+          "contributingArtists": ["Lloyd Agola"],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "Zedd",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "title": "Glitch City",
+      "thumbnail": "/images/album-14.jpg",
+      "artist": "Melissa Lancaster",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Melissa Lancaster",
+          "contributingArtists": ["Lloyd Agola"],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "Melissa Lancaster",
+          "contributingArtists": ["Lloyd Agola", "Dia Lupa", "BioMance"],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "title": "Hoff",
+      "thumbnail": "/images/album-15.jpg",
+      "artist": "Paul Snap",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Paul Snap",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "LunarFM",
+          "artist": "Paul Snap",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "http://208.64.184.36/sf1033",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    },
+    {
+      "title": "Infinity",
+      "thumbnail": "/images/album-16.jpg",
+      "artist": "Lloyd Agola",
+      "tracks": [
+        {
+          "title": "HiLoFM",
+          "artist": "Lloyd Agola",
+          "contributingArtists": ["Louder", "Relative Emergence"],
+          "genres": ["Pop"],
+          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "thumbnail": "/images/th-1.jpg"
+        },
+        {
+          "title": "Saphire",
+          "artist": "Lloyd Agola",
+          "contributingArtists": [],
+          "genres": ["Pop"],
+          "streamUrl": "https://www.dropbox.com/scl/fi/ronmvvgz07ro8lmtl8x3n/trap-saphire.mp3?rlkey=3ynzhs42aapucrgs1oe4w9ffw&st=wgteyv8k&raw=1",
+          "thumbnail": "/images/th-2.jpg"
+        }
+      ],
+      "genres": ["pop"]
+    }
+  ]
+}
