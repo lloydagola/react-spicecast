@@ -116,7 +116,13 @@ function TrackRow({
             <Typography>
               <b>Featuring: </b>
               {contributingArtists?.map((contributingArtist, index) => {
-                return contributingArtist.length > 2
+                console.log(
+                  contributingArtists.length,
+                  index + 1,
+                  contributingArtists.length > 1
+                );
+                return contributingArtists.length > 1 &&
+                  contributingArtists.length > index + 1
                   ? contributingArtist + ", "
                   : contributingArtist;
               })}
