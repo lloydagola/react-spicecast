@@ -9,6 +9,9 @@ import MainLayout from "src/layouts/MainLayout";
 import { drawerWidth } from "src/utils/constants";
 import Typography from "@mui/material/Typography";
 import styled from "@emotion/styled";
+import { useState, useEffect } from "react";
+import { API_ENDPOINT_URL } from "src/utils/apiUtils";
+import Album from "src/components/Album/Album";
 
 //p='64px 128px' position='relative' sx={{backgroundColor:'#000'}}
 const StyledContentGrid = styled(Grid)(({ theme }) => ({
@@ -31,8 +34,6 @@ const StyledMainContent = styled(Grid)(({ theme }) => ({
 }));
 
 const StyledRecommendationsSection = styled(Box)(({ theme }) => ({}));
-
-const StyledTrackList = styled(Box)(({ theme }) => ({}));
 
 function HeroSection(): JSX.Element {
   return (
@@ -147,13 +148,13 @@ function MainContent(): JSX.Element {
 
 function TrackList(): JSX.Element {
   return (
-    <StyledTrackList pt={4}>
+    <Box pt={4}>
       <TrackRow title="MUSIC IN MY MIND (ORIGINAL MIX)" artist="Lloyd Agola" />
       <TrackRow title="PANDA BOY (ORIGINAL MIX)" artist="Lloyd Agola" />
       <TrackRow title="SONIK (ORIGINAL MIX)" artist="Lloyd Agola" />
       <TrackRow title="FUNKY WORLD (ORIGINAL MIX)" artist="Lloyd Agola" />
       <TrackRow title="SONIK (MIMI RMX)" artist="Lloyd Agola" />
-    </StyledTrackList>
+    </Box>
   );
 }
 
@@ -199,6 +200,25 @@ function AlbumDescription(): JSX.Element {
 }
 
 function RecommendedSection(): JSX.Element {
+  const [albums, setAlbums] = useState([]);
+
+  useEffect(() => {
+    try {
+      (async function () {
+        const res = await fetch(
+          `${API_ENDPOINT_URL}/albums/test?start=0&end=4`
+        );
+        const albumData = await res.json();
+        setAlbums(albumData);
+      })();
+    } catch (error) {
+      /**
+       * @todo: handle error
+       */
+      console.log(error);
+    }
+  }, []);
+
   return (
     <StyledRecommendationsSection component="section" position="relative">
       <Box sx={{ backgroundColor: "#3E0663" }}>
@@ -216,26 +236,9 @@ function RecommendedSection(): JSX.Element {
           padding={{ xs: "16px 16px", md: "48px 128px" }}
           justifyContent="center"
         >
-          <img
-            src="/images/album-1.jpg"
-            alt="Album 1"
-            style={{ width: "100%" }}
-          />
-          <img
-            src="/images/album-2.jpg"
-            alt="Album 2"
-            style={{ width: "100%" }}
-          />
-          <img
-            src="/images/album-3.jpg"
-            alt="Album 3"
-            style={{ width: "100%" }}
-          />
-          <img
-            src="/images/album-5.jpg"
-            alt="Album 4"
-            style={{ width: "100%" }}
-          />
+          {albums.map((album) => (
+            <Album album={album} />
+          ))}
         </Grid>
       </Box>
       <Grid

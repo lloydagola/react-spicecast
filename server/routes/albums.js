@@ -7,7 +7,13 @@ const test = require("../_mocks_/data/albums.json");
 const router = express.Router();
 
 router.get("/test", (req, res) => {
-  res.status(200).send(test.data);
+  console.log(req.query);
+
+  const { start = 0, end } = req.query;
+  if (!end) {
+    return res.status(200).send(test.data.slice(start));
+  }
+  res.status(200).send(test.data.slice(start, end));
 });
 router.get("/", (req, res) => {
   console.log({ test });
