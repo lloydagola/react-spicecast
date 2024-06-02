@@ -41,10 +41,10 @@ app.use("/api/genres", genreRouter);
 app.use("/api/hosts", hostRouter);
 
 //set static folder
-app.use(express.static(path.join(__dirname, "client", "/build")));
+app.use(express.static(path.join(__dirname, "/build")));
 app.use(express.static(path.join(__dirname, "/public")));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 module.exports = app;
