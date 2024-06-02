@@ -15,11 +15,11 @@ const contributingArtistRouter = require("./routes/contributingArtists");
 const genreRouter = require("./routes/genres");
 const hostRouter = require("./routes/hosts");
 
-const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/spicecast", { useNewUrlParser: true });
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error:"));
-db.once("open", () => console.log("database connected..."));
+//const mongoose = require("mongoose");
+//mongoose.connect("mongodb://localhost/spicecast", { useNewUrlParser: true });
+//const db = mongoose.connection;
+//db.on("error", console.error.bind(console, "connection error:"));
+//db.once("open", () => console.log("database connected..."));
 
 const app = express();
 
