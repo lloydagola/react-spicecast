@@ -7,9 +7,10 @@ export type TPodcast = {
 
 export type TAlbum = {
     title: string;
-    artists: string[];
+    artist: string;
+    tracks?: TTrack[];
     thumbnail: string;
-    genre?:string;
+    genres:string[];
 };
 
 export type TRadioStation = {
@@ -19,12 +20,22 @@ export type TRadioStation = {
     thumbnail?: string;
 };
 
+export type TTrack = {
+    title: string;
+    artist: string,
+    contributingArtists?: string[],
+    genres: string[],
+    streamUrl: string;
+    thumbnail: string;
+}
+
 
 type TAudioType = "podcast" | "album" | "radioStation";
 
 type TAudioState = {
     trackType: string;
     isPlaying: boolean;
+    playState: string;
     title: string;
     streamUrl: string;
     thumbnail?: string;
@@ -43,4 +54,5 @@ export type TAudioContext = {
     handlePlay: (track?:any) => void;
     handlePause?: () => void;
     handleStop?: () => void;
+    togglePlay?:() => void;
 }

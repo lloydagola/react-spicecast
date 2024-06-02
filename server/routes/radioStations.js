@@ -6,7 +6,7 @@ const radioStations = require("../_mocks_/data/radioStations.json");
 const router = express.Router();
 
 router.get("/test", (request, response) => {
-  response.status(200).send(radioStations);
+  response.status(200).send(radioStations.data);
 });
 
 module.exports = router;

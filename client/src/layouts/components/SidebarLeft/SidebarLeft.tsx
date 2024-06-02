@@ -167,7 +167,7 @@ export default function SidebarLeft(): JSX.Element {
             }}
             sx={{
                 display: { xs: 'block', sm: 'block' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222' },                
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor:'#000', color:'#fff', borderRight:'1px solid #111' },                
             }}
         >
             {mobileDrawer}
@@ -176,7 +176,7 @@ export default function SidebarLeft(): JSX.Element {
             variant="permanent"
             sx={{
                 display: { xs: 'none', sm: 'block' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, paddingTop:'60px', backgroundColor:'#000', color:'#fff', borderRight:'1px solid #222', position:inViewport ? 'fixed' : 'unset' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, paddingTop:'60px', backgroundColor:'#000', color:'#fff', borderRight:'1px solid #111', position:inViewport ? 'fixed' : 'unset' },
             }}
             open
         >

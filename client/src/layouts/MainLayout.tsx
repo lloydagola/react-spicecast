@@ -4,7 +4,7 @@ import SidebarLeft from './components/SidebarLeft/SidebarLeft';
 import SidebarRight from './components/SidebarRight/SidebarRight';
 
 type TMainLayoutProps = {
-  children: ReactNode[];
+  children: ReactNode[] | ReactNode;
  
 }
 

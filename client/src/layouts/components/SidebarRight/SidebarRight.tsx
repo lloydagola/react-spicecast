@@ -16,8 +16,9 @@ const StyledSidebarRight = styled(Box)(({theme})=> ({
   display: 'none',
   width:drawerWidth,
   backgroundColor:'#000', 
-  marginTop: '80px',
-  borderLeft:'1px solid #222',
+  zIndex:'3',
+  paddingTop: '80px',
+  borderLeft:'1px solid #111',
   '@media (min-width:480px)': {
     display: 'flex'
   },
