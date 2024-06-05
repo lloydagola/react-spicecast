@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  LunarFM:
+    container_name: LunarFM
+    image: nodejs
+    build: .
+    restart: on-failure
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "4000:4000"
+
+    networks:
+      - app-network
+
+
+networks:
+  app-network:
+    external: true
