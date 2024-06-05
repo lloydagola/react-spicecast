@@ -75,7 +75,7 @@ export default function Album({ album, id }: TAlbumPropTypes) {
       <NavLink to={`/albums/${id}`}>
         <Box overflow="hidden" height="260px">
           <Box className="album-filter" />
-          <img src={album.thumbnail} alt="album thumbnail" />
+          <img src={album.thumbnail} alt="album thumbnail" loading="lazy" />
         </Box>
         <Box sx={{ backgroundColor: "#111" }} p={1}>
           <Typography variant="h5">{album.title}</Typography>
