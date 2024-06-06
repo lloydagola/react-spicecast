@@ -154,7 +154,7 @@ const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
   },
 }));
 
-function PlaylistSection(): JSX.Element {
+function EpisodeList(): JSX.Element {
   function createData(
     number: number,
     title: string,
@@ -233,6 +233,7 @@ function PodcastDetails(): JSX.Element {
           width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
           minHeight: "100vh",
           marginTop: { md: 12 },
+          marginBottom: { md: 12 },
         }}
       >
         <Box>
@@ -245,7 +246,7 @@ function PodcastDetails(): JSX.Element {
           hosts={["David Orchard"]}
           thumbnail="/images/hero-0.jpg"
         />
-        <PlaylistSection />
+        <EpisodeList />
       </Box>
     </MainLayout>
   );
