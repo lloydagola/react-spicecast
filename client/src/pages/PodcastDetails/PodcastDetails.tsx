@@ -69,6 +69,8 @@ function HeroSection({
               margin: "auto",
               borderRadius: "32px",
               width: "100%",
+              height: "600px",
+              objectFit: "cover",
             }}
           />
           <Box
@@ -87,6 +89,8 @@ function HeroSection({
               zIndex={3}
               fontSize="8rem"
               fontWeight={600}
+              lineHeight={0.9}
+              width={800}
             >
               {title}
             </Typography>
