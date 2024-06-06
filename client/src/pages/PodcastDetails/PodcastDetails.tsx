@@ -108,9 +108,9 @@ function HeroSection({
                 color="error"
                 sx={{
                   margin: "16px",
-                  padding: "16px",
+                  padding: "12px",
                   width: "160px",
-                  borderRadius: "16px",
+                  borderRadius: "32px",
                 }}
               >
                 <PlayArrowIcon
@@ -124,9 +124,9 @@ function HeroSection({
                 color="warning"
                 sx={{
                   margin: "16px",
-                  padding: "16px",
+                  padding: "12px",
                   width: "160px",
-                  borderRadius: "16px",
+                  borderRadius: "32px",
                 }}
               >
                 <AddToPhotosIcon
