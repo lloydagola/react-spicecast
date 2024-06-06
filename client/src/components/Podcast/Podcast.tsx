@@ -11,6 +11,7 @@ import { TPodcast } from "src/types/types";
 
 type TPodcastProps = {
   podcast: TPodcast;
+  index: number;
 };
 
 const podcastStyles = {
@@ -29,9 +30,12 @@ const podcastStyles = {
   },
 };
 
-export default function Podcast({ podcast }: TPodcastProps): JSX.Element {
+export default function Podcast({
+  podcast,
+  index,
+}: TPodcastProps): JSX.Element {
   return (
-    <Link to="/podcasts/1">
+    <Link to={`/podcasts/${index}`}>
       <Grid
         container
         height="240px"

@@ -1,4 +1,5 @@
-import React from "react";
+import { ReactNode, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Box from "@mui/material/Box";
 import MainLayout from "src/layouts/MainLayout";
 import Typography from "@mui/material/Typography";
@@ -13,15 +14,13 @@ import TableRow from "@mui/material/TableRow";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import styled from "@emotion/styled";
+import { API_ENDPOINT_URL } from "src/utils/apiUtils";
+import { TEpisode, TPodcast } from "src/types/types";
 
 function HeroSection({
-  title = "",
-  hosts = [""],
-  thumbnail = "",
+  podcast: { title, thumbnail, hosts },
 }: {
-  title: string;
-  hosts: string[];
-  thumbnail: string;
+  podcast: TPodcast;
 }): JSX.Element {
   return (
     <Box
@@ -73,7 +72,7 @@ function HeroSection({
             <Typography
               variant="h2"
               zIndex={3}
-              fontSize="8rem"
+              fontSize="6rem"
               fontWeight={600}
               lineHeight={0.9}
               width={800}
@@ -136,94 +135,99 @@ const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
   },
 }));
 
-function EpisodeList(): JSX.Element {
-  function createData(
-    number: number,
-    title: string,
-    hosts: string[],
-    time: string,
-    date: string
-  ) {
-    return { number, title, hosts, time, date };
-  }
-
-  const rows = [
-    createData(0, "Frozen yoghurt", ["David Orchard"], "45:12", "06/06/2024"),
-    createData(
-      1,
-      "Ice cream sandwich",
-      ["David Orchard"],
-      "45:12",
-      "06/06/2024"
-    ),
-    createData(
-      2,
-      "Eclair",
-      ["David Orchard", "Lozario Jimenez"],
-      "45:12",
-      "06/06/2024"
-    ),
-    createData(3, "Cupcake", ["David Orchard"], "45:12", "06/06/2024"),
-    createData(4, "Gingerbread", ["David Orchard"], "45:12", "06/06/2024"),
-  ];
-
+function EpisodeList({ episodes }: { episodes: TEpisode[] }): JSX.Element {
   return (
-    <Box width={{ md: "1080px" }} m="auto">
-      <Typography variant="h2" fontSize="3rem" fontWeight={600} mt={12} mb={4}>
-        Playlist
-      </Typography>
-      <StyledTableContainer sx={{ backgroundColor: "#000", color: "#fff" }}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell align="left">#</TableCell>
-              <TableCell align="left">Title</TableCell>
-              <TableCell align="left">Hosts</TableCell>
-              <TableCell align="left">Time</TableCell>
-              <TableCell align="left">Date Posted</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((row) => (
-              <TableRow
-                key={row.title}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell align="left">{row.number}</TableCell>
-                <TableCell align="left">{row.title}</TableCell>
-                <TableCell align="left">{row.hosts.join(", ")}</TableCell>
-                <TableCell align="left">{row.time}</TableCell>
-                <TableCell align="left">{row.date}</TableCell>
+    <>
+      <Box width={{ md: "1080px" }} m="auto">
+        <Typography
+          variant="h2"
+          fontSize="3rem"
+          fontWeight={600}
+          mt={12}
+          mb={4}
+        >
+          Playlist
+        </Typography>
+        <StyledTableContainer sx={{ backgroundColor: "#000", color: "#fff" }}>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell align="left">#</TableCell>
+                <TableCell align="left">Title</TableCell>
+                <TableCell align="left">Date Posted</TableCell>
+                <TableCell align="left">Tags</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </StyledTableContainer>
-    </Box>
+            </TableHead>
+            <TableBody>
+              {episodes.map(
+                (episode: TEpisode, index: number): ReactNode => (
+                  <TableRow
+                    key={index}
+                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                  >
+                    <TableCell align="left">{index}</TableCell>
+                    <TableCell align="left">{episode.title}</TableCell>
+                    <TableCell align="left">{episode.date}</TableCell>
+                    <TableCell align="left">
+                      {episode.tags?.join(", ")}
+                    </TableCell>
+                  </TableRow>
+                )
+              )}
+            </TableBody>
+          </Table>
+        </StyledTableContainer>
+      </Box>
+    </>
   );
 }
 
 function PodcastDetails(): JSX.Element {
+  const { id } = useParams();
+  const [podcast, setPodcast] = useState<TPodcast | null>(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    try {
+      (async function () {
+        const response = await fetch(`${API_ENDPOINT_URL}/podcasts/test/${id}`);
+        const podcastData = await response.json();
+        setPodcast(podcastData);
+      })();
+    } catch (error) {
+      console.log(
+        "an error occurred while attempting to fetch the podcast...",
+        error
+      );
+      /**
+       * @todos : handle error
+       */
+    }
+  }, [id]);
+
   return (
-    <MainLayout>
-      <Box
-        component="section"
-        sx={{
-          flexGrow: 1,
-          width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
-          minHeight: "100vh",
-          marginTop: { md: 24 },
-          marginBottom: { md: 12 },
-        }}
-      >
-        <HeroSection
-          title="The Only One"
-          hosts={["David Orchard"]}
-          thumbnail="/images/hero-0.jpg"
-        />
-        <EpisodeList />
-      </Box>
-    </MainLayout>
+    <>
+      {!podcast ? (
+        <Typography variant="h2">Loading...</Typography>
+      ) : (
+        <MainLayout>
+          <Box
+            component="section"
+            sx={{
+              flexGrow: 1,
+              width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
+              minHeight: "100vh",
+              marginTop: { md: 24 },
+              marginBottom: { md: 12 },
+            }}
+          >
+            <HeroSection podcast={podcast} />
+            <EpisodeList episodes={podcast.episodes} />
+          </Box>
+        </MainLayout>
+      )}
+      ;
+    </>
   );
 }
 
