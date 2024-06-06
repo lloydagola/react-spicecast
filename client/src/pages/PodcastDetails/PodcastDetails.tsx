@@ -30,9 +30,11 @@ function _HeroSection(): JSX.Element {
 
 function HeroSection({
   title = "",
+  hosts = [""],
   thumbnail = "",
 }: {
   title: string;
+  hosts: string[];
   thumbnail: string;
 }): JSX.Element {
   return (
@@ -77,13 +79,13 @@ function HeroSection({
             flexDirection="column"
             p={{ xs: "16px", md: "64px" }}
           >
-            <Typography variant="h4" zIndex={3} fontSize="5rem">
-              {title}
+            <Typography zIndex={3} fontSize="3rem" fontWeight={600}>
+              {hosts.join(", ")}
             </Typography>
             <Typography
               variant="h2"
               zIndex={3}
-              fontSize="12rem"
+              fontSize="8rem"
               fontWeight={600}
             >
               {title}
@@ -195,7 +197,11 @@ function PodcastDetails(): JSX.Element {
             Trending
           </Typography>
         </Box>
-        <HeroSection title="Hello" thumbnail="/images/hero-0.jpg" />
+        <HeroSection
+          title="The Only One"
+          hosts={["David Orchard"]}
+          thumbnail="/images/hero-0.jpg"
+        />
         {/* <PlaylistSection /> */}
       </Box>
     </MainLayout>
