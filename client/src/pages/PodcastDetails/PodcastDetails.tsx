@@ -208,7 +208,7 @@ function PodcastDetails(): JSX.Element {
           flexGrow: 1,
           width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
           minHeight: "100vh",
-          marginTop: { md: 12 },
+          marginTop: { md: 24 },
           marginBottom: { md: 12 },
         }}
       >
