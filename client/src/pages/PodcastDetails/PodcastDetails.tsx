@@ -6,6 +6,14 @@ import Button from "@mui/material/Button";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import AddToPhotosIcon from "@mui/icons-material/AddToPhotos";
 import { rightDrawerWidth } from "src/utils/constants";
+import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table";
+import TableHead from "@mui/material/TableHead";
+import TableContainer from "@mui/material/TableContainer";
+import TableRow from "@mui/material/TableRow";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import styled from "@emotion/styled";
 
 function _HeroSection(): JSX.Element {
   return (
@@ -43,7 +51,7 @@ function HeroSection({
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      width={1080}
+      width={{ md: "1080px" }}
       m="auto"
       overflow="hidden"
       position="relative"
@@ -135,51 +143,75 @@ function HeroSection({
   );
 }
 
+const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
+  th: {
+    color: "#fff",
+  },
+  td: {
+    color: "#fff",
+    borderBottom: "none",
+    padding: "24px",
+  },
+}));
+
 function PlaylistSection(): JSX.Element {
+  function createData(
+    number: number,
+    title: string,
+    hosts: string[],
+    time: string,
+    genre: string[]
+  ) {
+    return { number, title, hosts, time, genre };
+  }
+
+  const rows = [
+    createData(0, "Frozen yoghurt", ["David Orchard"], "45:12", ["Sports"]),
+    createData(1, "Ice cream sandwich", ["David Orchard"], "45:12", [
+      "Crime",
+      "News",
+    ]),
+    createData(2, "Eclair", ["David Orchard", "Lozario Jimenez"], "45:12", [
+      "Sports",
+    ]),
+    createData(3, "Cupcake", ["David Orchard"], "45:12", ["Sports"]),
+    createData(4, "Gingerbread", ["David Orchard"], "45:12", ["Sports"]),
+  ];
+
   return (
-    <Box>
-      <h3>Playlist</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>/images/album-1.jpg</th>
-            <th>Title</th>
-            <th>Artist</th>
-            <th>Time</th>
-            <th>Album</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>01</td>
-            <td>Sleep 4Ever</td>
-            <td>Blackbear</td>
-            <td>4:12</td>
-            <td>HoneyWorks</td>
-          </tr>
-          <tr>
-            <td>02</td>
-            <td>Time is Ticking Out</td>
-            <td>The Cranberries</td>
-            <td>4:20</td>
-            <td>Wake up and Smell the Coffee</td>
-          </tr>
-          <tr>
-            <td>03</td>
-            <td>If I were u</td>
-            <td>Lauv</td>
-            <td>3:12</td>
-            <td>The Ecstatic</td>
-          </tr>
-          <tr>
-            <td>04</td>
-            <td>One Minute More</td>
-            <td>Gun Kelly</td>
-            <td>2:56</td>
-            <td>Supercell</td>
-          </tr>
-        </tbody>
-      </table>
+    <Box width={{ md: "1080px" }} m="auto">
+      <Typography variant="h2" fontSize="3rem" fontWeight={600}>
+        Playlist
+      </Typography>
+      <StyledTableContainer sx={{ backgroundColor: "#000", color: "#fff" }}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>#</TableCell>
+              <TableCell align="left">Title</TableCell>
+              <TableCell align="left">Hosts</TableCell>
+              <TableCell align="left">Time</TableCell>
+              <TableCell align="left">Title</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow
+                key={row.title}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              >
+                <TableCell component="th" scope="row">
+                  {row.number}
+                </TableCell>
+                <TableCell align="left">{row.title}</TableCell>
+                <TableCell align="left">{row.hosts.join(", ")}</TableCell>
+                <TableCell align="left">{row.time}</TableCell>
+                <TableCell align="left">{row.genre.join(", ")}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </StyledTableContainer>
     </Box>
   );
 }
@@ -206,7 +238,7 @@ function PodcastDetails(): JSX.Element {
           hosts={["David Orchard"]}
           thumbnail="/images/hero-0.jpg"
         />
-        {/* <PlaylistSection /> */}
+        <PlaylistSection />
       </Box>
     </MainLayout>
   );
