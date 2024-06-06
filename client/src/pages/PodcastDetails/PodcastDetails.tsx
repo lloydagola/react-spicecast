@@ -149,7 +149,7 @@ function EpisodeList({ episodes }: { episodes: TEpisode[] }): JSX.Element {
               }}
             >
               <Grid item xs={12} md={1}>
-                {index}
+                {index + 1}
               </Grid>
               <Grid item xs={12} md={5}>
                 {episode.title}
