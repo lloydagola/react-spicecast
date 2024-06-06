@@ -17,6 +17,18 @@ import styled from "@emotion/styled";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 import { TEpisode, TPodcast } from "src/types/types";
 
+const StyledHeroImage = styled.img(({ theme }) => ({
+  width: "80%",
+  zIndex: 0,
+  margin: "auto",
+  borderRadius: "32px",
+  objectFit: "cover",
+  "@media (min-width:480px)": {
+    height: "600px",
+    width: "100%",
+  },
+}));
+
 function HeroSection({
   podcast: { title, thumbnail, hosts },
 }: {
@@ -46,25 +58,14 @@ function HeroSection({
         <Typography variant="h1">Loading...</Typography>
       ) : (
         <>
-          <img
-            src={thumbnail}
-            alt="album art"
-            style={{
-              zIndex: 0,
-              margin: "auto",
-              borderRadius: "32px",
-              width: "100%",
-              height: "600px",
-              objectFit: "cover",
-            }}
-          />
+          <StyledHeroImage src={thumbnail} alt="album art" />
           <Box
             position="absolute"
             width="100%"
             zIndex={3}
             display="flex"
             flexDirection="column"
-            p={{ xs: "16px", md: "64px" }}
+            p={{ xs: "16px 48px", md: "64px" }}
           >
             <Typography zIndex={3} fontSize="2rem" fontWeight={600}>
               {hosts.join(", ")}
@@ -72,7 +73,7 @@ function HeroSection({
             <Typography
               variant="h2"
               zIndex={3}
-              fontSize="6rem"
+              fontSize={{ xs: "2.5rem", md: "6rem" }}
               fontWeight={600}
               lineHeight={0.9}
               width={800}
@@ -86,7 +87,7 @@ function HeroSection({
                 sx={{
                   margin: "16px",
                   padding: "12px",
-                  width: "160px",
+                  width: { sm: "160px", md: "160px" },
                   borderRadius: "32px",
                 }}
               >
@@ -102,7 +103,7 @@ function HeroSection({
                 sx={{
                   margin: "16px",
                   padding: "12px",
-                  width: "160px",
+                  width: { sm: "160px", md: "160px" },
                   borderRadius: "32px",
                 }}
               >
@@ -217,7 +218,7 @@ function PodcastDetails(): JSX.Element {
               flexGrow: 1,
               width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
               minHeight: "100vh",
-              marginTop: { md: 24 },
+              paddingTop: { xs: "64px", md: "24px" },
               marginBottom: { md: 12 },
             }}
           >
