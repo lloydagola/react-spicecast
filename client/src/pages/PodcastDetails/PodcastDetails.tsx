@@ -6,7 +6,6 @@ import Button from "@mui/material/Button";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import AddToPhotosIcon from "@mui/icons-material/AddToPhotos";
 import { rightDrawerWidth } from "src/utils/constants";
-import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableHead from "@mui/material/TableHead";
 import TableContainer from "@mui/material/TableContainer";
@@ -14,27 +13,6 @@ import TableRow from "@mui/material/TableRow";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import styled from "@emotion/styled";
-
-function _HeroSection(): JSX.Element {
-  return (
-    <Box>
-      <img
-        src="/images/hero-0.jpg"
-        alt="Artist"
-        style={{ borderRadius: "24px" }}
-      />
-
-      <Box position="absolute" zIndex={3}>
-        <p>Artist</p>
-        <h3>Top all over the world</h3>
-        <Box>
-          <button>Play</button>
-          <button>Follow</button>
-        </Box>
-      </Box>
-    </Box>
-  );
-}
 
 function HeroSection({
   title = "",
@@ -234,11 +212,6 @@ function PodcastDetails(): JSX.Element {
           marginBottom: { md: 12 },
         }}
       >
-        <Box>
-          <Typography variant="h2" fontSize="3rem" fontWeight={600}>
-            Trending
-          </Typography>
-        </Box>
         <HeroSection
           title="The Only One"
           hosts={["David Orchard"]}
