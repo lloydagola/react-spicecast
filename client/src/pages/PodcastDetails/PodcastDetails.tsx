@@ -160,22 +160,29 @@ function PlaylistSection(): JSX.Element {
     title: string,
     hosts: string[],
     time: string,
-    genre: string[]
+    date: string
   ) {
-    return { number, title, hosts, time, genre };
+    return { number, title, hosts, time, date };
   }
 
   const rows = [
-    createData(0, "Frozen yoghurt", ["David Orchard"], "45:12", ["Sports"]),
-    createData(1, "Ice cream sandwich", ["David Orchard"], "45:12", [
-      "Crime",
-      "News",
-    ]),
-    createData(2, "Eclair", ["David Orchard", "Lozario Jimenez"], "45:12", [
-      "Sports",
-    ]),
-    createData(3, "Cupcake", ["David Orchard"], "45:12", ["Sports"]),
-    createData(4, "Gingerbread", ["David Orchard"], "45:12", ["Sports"]),
+    createData(0, "Frozen yoghurt", ["David Orchard"], "45:12", "06/06/2024"),
+    createData(
+      1,
+      "Ice cream sandwich",
+      ["David Orchard"],
+      "45:12",
+      "06/06/2024"
+    ),
+    createData(
+      2,
+      "Eclair",
+      ["David Orchard", "Lozario Jimenez"],
+      "45:12",
+      "06/06/2024"
+    ),
+    createData(3, "Cupcake", ["David Orchard"], "45:12", "06/06/2024"),
+    createData(4, "Gingerbread", ["David Orchard"], "45:12", "06/06/2024"),
   ];
 
   return (
@@ -191,7 +198,7 @@ function PlaylistSection(): JSX.Element {
               <TableCell align="left">Title</TableCell>
               <TableCell align="left">Hosts</TableCell>
               <TableCell align="left">Time</TableCell>
-              <TableCell align="left">Title</TableCell>
+              <TableCell align="left">Date Posted</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -206,7 +213,7 @@ function PlaylistSection(): JSX.Element {
                 <TableCell align="left">{row.title}</TableCell>
                 <TableCell align="left">{row.hosts.join(", ")}</TableCell>
                 <TableCell align="left">{row.time}</TableCell>
-                <TableCell align="left">{row.genre.join(", ")}</TableCell>
+                <TableCell align="left">{row.date}</TableCell>
               </TableRow>
             ))}
           </TableBody>
