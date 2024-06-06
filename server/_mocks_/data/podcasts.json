@@ -145,7 +145,21 @@
       "hosts": ["Joost Dj "],
       "episodes": [
         {
-          "title": "Shady Dealings",
+          "title": "Shady Dealings 3",
+
+          "tags": ["#tags"],
+          "date": "6/6/2024",
+          "streamUrl": "http://208.64.184.36/sf1033"
+        },
+        {
+          "title": "Shady Dealings 2",
+
+          "tags": ["#tags"],
+          "date": "6/6/2024",
+          "streamUrl": "http://208.64.184.36/sf1033"
+        },
+        {
+          "title": "Shady Dealings 1",
 
           "tags": ["#tags"],
           "date": "6/6/2024",
