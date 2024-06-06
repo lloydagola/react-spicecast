@@ -194,7 +194,7 @@ function EpisodeList(): JSX.Element {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>#</TableCell>
+              <TableCell align="left">#</TableCell>
               <TableCell align="left">Title</TableCell>
               <TableCell align="left">Hosts</TableCell>
               <TableCell align="left">Time</TableCell>
@@ -207,9 +207,7 @@ function EpisodeList(): JSX.Element {
                 key={row.title}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
-                <TableCell component="th" scope="row">
-                  {row.number}
-                </TableCell>
+                <TableCell align="left">{row.number}</TableCell>
                 <TableCell align="left">{row.title}</TableCell>
                 <TableCell align="left">{row.hosts.join(", ")}</TableCell>
                 <TableCell align="left">{row.time}</TableCell>
