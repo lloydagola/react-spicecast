@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "@emotion/styled";
 import Grid from "@mui/material/Grid";
@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import AddToPhotosIcon from "@mui/icons-material/AddToPhotos";
+import { AudioContext } from "src/contexts/AudioContext";
 import { rightDrawerWidth } from "src/utils/constants";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 import { TEpisode, TPodcast } from "src/types/types";
@@ -25,9 +26,11 @@ const StyledHeroImage = styled.img(({ theme }) => ({
 }));
 
 function HeroSection({
-  podcast: { title, thumbnail, hosts },
+  podcast,
+  handlePlay,
 }: {
   podcast: TPodcast;
+  handlePlay: (track?: any) => void;
 }): JSX.Element {
   return (
     <Box
@@ -49,11 +52,11 @@ function HeroSection({
           width: "100%",
         }}
       />
-      {!title || !thumbnail ? (
+      {!podcast.title || !podcast.thumbnail ? (
         <Typography variant="h1">Loading...</Typography>
       ) : (
         <>
-          <StyledHeroImage src={thumbnail} alt="album art" />
+          <StyledHeroImage src={podcast.thumbnail} alt="album art" />
           <Box
             position="absolute"
             width="100%"
@@ -63,7 +66,7 @@ function HeroSection({
             p={{ xs: "16px 48px", md: "64px" }}
           >
             <Typography zIndex={3} fontSize="2rem" fontWeight={600}>
-              {hosts.join(", ")}
+              {podcast.hosts.join(", ")}
             </Typography>
             <Typography
               variant="h2"
@@ -73,7 +76,7 @@ function HeroSection({
               lineHeight={0.9}
               width={800}
             >
-              {title}
+              {podcast.title}
             </Typography>
             <Box zIndex={10}>
               <Button
@@ -85,6 +88,12 @@ function HeroSection({
                   width: { sm: "160px", md: "160px" },
                   borderRadius: "32px",
                 }}
+                onClick={() =>
+                  handlePlay({
+                    ...podcast.episodes[0],
+                    thumbnail: podcast.thumbnail,
+                  })
+                }
               >
                 <PlayArrowIcon
                   fontSize="large"
@@ -116,7 +125,15 @@ function HeroSection({
   );
 }
 
-function EpisodeList({ episodes }: { episodes: TEpisode[] }): JSX.Element {
+function EpisodeList({
+  episodes,
+  thumbnail,
+  handlePlay,
+}: {
+  episodes: TEpisode[];
+  thumbnail: string;
+  handlePlay: (track?: any) => void;
+}): JSX.Element {
   return (
     <>
       <Box width={{ md: "1080px" }} m="auto">
@@ -147,6 +164,7 @@ function EpisodeList({ episodes }: { episodes: TEpisode[] }): JSX.Element {
                   borderBottom: "1px solid #444",
                 },
               }}
+              onClick={() => handlePlay({ ...episode, thumbnail })}
             >
               <Grid item xs={12} md={1}>
                 {index + 1}
@@ -171,6 +189,8 @@ function EpisodeList({ episodes }: { episodes: TEpisode[] }): JSX.Element {
 function PodcastDetails(): JSX.Element {
   const { id } = useParams();
   const [podcast, setPodcast] = useState<TPodcast | null>(null);
+
+  const { handlePlay } = useContext(AudioContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -207,8 +227,12 @@ function PodcastDetails(): JSX.Element {
               marginBottom: { md: 12 },
             }}
           >
-            <HeroSection podcast={podcast} />
-            <EpisodeList episodes={podcast.episodes} />
+            <HeroSection podcast={podcast} handlePlay={handlePlay} />
+            <EpisodeList
+              episodes={podcast.episodes}
+              handlePlay={handlePlay}
+              thumbnail={podcast.thumbnail}
+            />
           </Box>
         </MainLayout>
       )}
