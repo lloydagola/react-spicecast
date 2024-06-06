@@ -157,7 +157,13 @@ function EpisodeList({ episodes }: { episodes: TEpisode[] }): JSX.Element {
               key={index}
               p={{ xs: "16px", md: "40px" }}
               sx={{
-                borderBottom: "1px solid #444",
+                borderBottom: "1px solid #111",
+                cursor: "pointer",
+                transition: ".2s ease-in-out",
+                "&:hover": {
+                  backgroundColor: "#111",
+                  transition: ".2s ease-in-out",
+                },
                 "&:last-child td, &:last-child th": {
                   borderBottom: "1px solid #444",
                 },
