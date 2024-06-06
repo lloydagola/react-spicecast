@@ -180,7 +180,7 @@ function PlaylistSection(): JSX.Element {
 
   return (
     <Box width={{ md: "1080px" }} m="auto">
-      <Typography variant="h2" fontSize="3rem" fontWeight={600}>
+      <Typography variant="h2" fontSize="3rem" fontWeight={600} mt={12} mb={4}>
         Playlist
       </Typography>
       <StyledTableContainer sx={{ backgroundColor: "#000", color: "#fff" }}>
