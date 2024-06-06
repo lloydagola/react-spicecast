@@ -89,7 +89,7 @@ function HeroSection({
             flexDirection="column"
             p={{ xs: "16px", md: "64px" }}
           >
-            <Typography zIndex={3} fontSize="3rem" fontWeight={600}>
+            <Typography zIndex={3} fontSize="2rem" fontWeight={600}>
               {hosts.join(", ")}
             </Typography>
             <Typography
