@@ -1,5 +1,7 @@
 import { ReactNode, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import styled from "@emotion/styled";
+import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import MainLayout from "src/layouts/MainLayout";
 import Typography from "@mui/material/Typography";
@@ -7,16 +9,8 @@ import Button from "@mui/material/Button";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import AddToPhotosIcon from "@mui/icons-material/AddToPhotos";
 import { rightDrawerWidth } from "src/utils/constants";
-import Table from "@mui/material/Table";
-import TableHead from "@mui/material/TableHead";
-import TableContainer from "@mui/material/TableContainer";
-import TableRow from "@mui/material/TableRow";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import styled from "@emotion/styled";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 import { TEpisode, TPodcast } from "src/types/types";
-import Grid from "@mui/material/Grid";
 
 const StyledHeroImage = styled.img(({ theme }) => ({
   width: "80%",
@@ -121,21 +115,6 @@ function HeroSection({
     </Box>
   );
 }
-
-const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
-  th: {
-    color: "#fff",
-    fontSize: "1rem",
-    fontWeight: "500",
-  },
-  td: {
-    color: "#fff",
-    borderBottom: "none",
-    padding: "24px",
-    fontSize: "1rem",
-    fontWeight: "500",
-  },
-}));
 
 function EpisodeList({ episodes }: { episodes: TEpisode[] }): JSX.Element {
   return (
