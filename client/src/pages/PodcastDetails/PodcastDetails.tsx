@@ -124,11 +124,15 @@ function HeroSection({
 const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
   th: {
     color: "#fff",
+    fontSize: "1rem",
+    fontWeight: "500",
   },
   td: {
     color: "#fff",
     borderBottom: "none",
     padding: "24px",
+    fontSize: "1rem",
+    fontWeight: "500",
   },
 }));
 
