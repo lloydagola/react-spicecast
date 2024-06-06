@@ -71,17 +71,13 @@ function HeroSection({
           />
           <Box
             position="absolute"
+            width="100%"
             zIndex={3}
             display="flex"
             flexDirection="column"
             p={{ xs: "16px", md: "64px" }}
           >
-            <Typography
-              variant="h4"
-              zIndex={3}
-              fontSize="5rem"
-              fontWeight={600}
-            >
+            <Typography variant="h4" zIndex={3} fontSize="5rem">
               {title}
             </Typography>
             <Typography
