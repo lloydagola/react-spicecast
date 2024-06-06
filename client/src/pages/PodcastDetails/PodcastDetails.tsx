@@ -16,6 +16,7 @@ import TableCell from "@mui/material/TableCell";
 import styled from "@emotion/styled";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 import { TEpisode, TPodcast } from "src/types/types";
+import Grid from "@mui/material/Grid";
 
 const StyledHeroImage = styled.img(({ theme }) => ({
   width: "80%",
@@ -149,35 +150,34 @@ function EpisodeList({ episodes }: { episodes: TEpisode[] }): JSX.Element {
         >
           Playlist
         </Typography>
-        <StyledTableContainer sx={{ backgroundColor: "#000", color: "#fff" }}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell align="left">#</TableCell>
-                <TableCell align="left">Title</TableCell>
-                <TableCell align="left">Date Posted</TableCell>
-                <TableCell align="left">Tags</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {episodes.map(
-                (episode: TEpisode, index: number): ReactNode => (
-                  <TableRow
-                    key={index}
-                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  >
-                    <TableCell align="left">{index}</TableCell>
-                    <TableCell align="left">{episode.title}</TableCell>
-                    <TableCell align="left">{episode.date}</TableCell>
-                    <TableCell align="left">
-                      {episode.tags?.join(", ")}
-                    </TableCell>
-                  </TableRow>
-                )
-              )}
-            </TableBody>
-          </Table>
-        </StyledTableContainer>
+        {episodes.map(
+          (episode: TEpisode, index: number): ReactNode => (
+            <Grid
+              container
+              key={index}
+              p={{ xs: "16px", md: "40px" }}
+              sx={{
+                borderBottom: "1px solid #444",
+                "&:last-child td, &:last-child th": {
+                  borderBottom: "1px solid #444",
+                },
+              }}
+            >
+              <Grid item xs={12} md={1}>
+                {index}
+              </Grid>
+              <Grid item xs={12} md={5}>
+                {episode.title}
+              </Grid>
+              <Grid item xs={12} md={3}>
+                {episode.date}
+              </Grid>
+              <Grid item xs={12} md={3}>
+                {episode.tags?.join(", ")}
+              </Grid>
+            </Grid>
+          )
+        )}
       </Box>
     </>
   );
