@@ -17,6 +17,20 @@ router.get("/", (request, response) => {
     .catch((error) => response.status(400).send(error));
 });
 
+router.get("/test/:id", (req, res) => {
+  if (!req.params) {
+    return res.status(200).send(test.data[0]);
+  }
+  try {
+    res.status(200).send(test.data[req.params.id]);
+  } catch (error) {
+    console.log("an error occurred", error);
+    /**
+     * @todo:handle error
+     */
+  }
+});
+
 router.get("/:_id", (request, response) => {
   console.log(request.params._id);
 
