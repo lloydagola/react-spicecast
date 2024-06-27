@@ -223,7 +223,7 @@ function PodcastDetails(): JSX.Element {
               flexGrow: 1,
               width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
               minHeight: "100vh",
-              paddingTop: { xs: "64px", md: "24px" },
+              paddingTop: { xs: "64px", md: "24px", lg: "160px" },
               marginBottom: { md: 12 },
             }}
           >
