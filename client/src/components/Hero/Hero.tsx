@@ -46,18 +46,24 @@ const StyledHeroSection = styled(Box)((theme) => ({
   },
   h1: {
     fontWeight: "900",
-    fontSize: "10rem",
+    fontSize: "4rem",
 
-    "@media (max-width: 480px)": {
-      fontSize: "2.4rem",
+    "@media (min-width: 480px)": {
+      fontSize: "6rem",
+    },
+    "@media (min-width: 1080px)": {
+      fontSize: "10rem",
     },
   },
   h2: {
     fontWeight: "400",
-    fontSize: "6rem",
+    fontSize: "2rem",
 
-    "@media (max-width: 480px)": {
-      fontSize: "1.5rem",
+    "@media (min-width: 480px)": {
+      fontSize: "4rem",
+    },
+    "@media (min-width: 1080px)": {
+      fontSize: "6rem",
     },
   },
 }));
