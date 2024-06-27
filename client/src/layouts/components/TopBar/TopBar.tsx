@@ -41,7 +41,6 @@ export function TopBar(): JSX.Element {
       <AppBar
         position="fixed"
         sx={{
-          width: { sm: `calc(100% - ${rightDrawerWidth}px)`, md: "100%" },
           ml: { sm: `${rightDrawerWidth}px` },
           display: { lg: "none" },
           zIndex: { md: "100000" },
@@ -64,7 +63,8 @@ export function TopBar(): JSX.Element {
         <AppBar
           position="fixed"
           sx={{
-            width: { sm: `calc(100% - ${rightDrawerWidth}px)`, md: "100%" },
+            display: { sm: "none", lg: "flex" },
+            width: { sm: `ca1lc(100% - ${rightDrawerWidth}px)`, md: "100%" },
             ml: { sm: `${rightDrawerWidth}px` },
             zIndex: { md: "100000" },
             backgroundColor: inViewport ? "rgba(0,0,0,0.9)" : "rgba(0,0,0,0)",
