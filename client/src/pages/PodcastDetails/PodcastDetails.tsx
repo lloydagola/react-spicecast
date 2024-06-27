@@ -47,6 +47,7 @@ function HeroSection({
         style={{
           position: "absolute",
           background: "rgba(0, 0, 0, 0.5)",
+          backdropFilter: "blur(1px)",
           zIndex: 2,
           height: "100%",
           width: "100%",
@@ -103,7 +104,7 @@ function HeroSection({
               </Button>
               <Button
                 variant="outlined"
-                color="warning"
+                color="inherit"
                 sx={{
                   margin: "16px",
                   padding: "12px",
