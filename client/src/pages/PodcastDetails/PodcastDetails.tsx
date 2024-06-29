@@ -172,12 +172,12 @@ function EpisodeList({
               <Grid item xs={1} md={1}>
                 {index + 1}
               </Grid>
-              <Grid item xs={10} md={4}>
+              <Grid item xs={8} md={4}>
                 <Typography variant="h4" fontSize={16} fontWeight={600} pb={2}>
                   {episode.title}
                 </Typography>
               </Grid>
-              <Grid item xs={5} md={3}>
+              <Grid item xs={3} md={3}>
                 <Typography>{episode.date}</Typography>
               </Grid>
               <Grid item xs={5} md={3}>
