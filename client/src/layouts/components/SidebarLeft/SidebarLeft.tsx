@@ -190,7 +190,7 @@ export default function SidebarLeft(): JSX.Element {
           keepMounted: true, // Better open performance on mobile.
         }}
         sx={{
-          display: { xs: "block", sm: "block" },
+          display: { xs: "block" },
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             width: leftDrawerWidth,
@@ -205,7 +205,7 @@ export default function SidebarLeft(): JSX.Element {
       <Drawer
         variant="permanent"
         sx={{
-          display: { xs: "none", sm: "block" },
+          display: { xs: "none", lg: "block" },
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             width: leftDrawerWidth,
