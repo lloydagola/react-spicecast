@@ -35,7 +35,7 @@ export default function PlaylistView({ track }: { track?: any }) {
         alignItems="center"
         p="4px"
       >
-        {playState === EAudioState.PLAYING && track.title === title ? (
+        {playState === EAudioState.PLAYING && track?.title === title ? (
           <PauseIcon
             fontSize="large"
             sx={{ color: "#222" }}
