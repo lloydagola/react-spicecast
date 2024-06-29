@@ -14,14 +14,18 @@ import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 import { TEpisode, TPodcast } from "src/types/types";
 
 const StyledHeroImage = styled.img(({ theme }) => ({
-  width: "80%",
+  width: "88%",
   zIndex: 0,
   margin: "auto",
   borderRadius: "32px",
   objectFit: "cover",
   "@media (min-width:480px)": {
+    height: "500px",
+    width: "92%",
+  },
+  "@media (min-width:1080px)": {
     height: "600px",
-    width: "100%",
+    width: "96%",
   },
 }));
 
@@ -38,7 +42,6 @@ function HeroSection({
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      width={{ md: "1080px" }}
       m="auto"
       overflow="hidden"
       position="relative"
@@ -64,7 +67,7 @@ function HeroSection({
             zIndex={3}
             display="flex"
             flexDirection="column"
-            p={{ xs: "16px 48px", md: "64px" }}
+            p={{ xs: "16px 48px", lg: "64px" }}
           >
             <Typography zIndex={3} fontSize="2rem" fontWeight={600}>
               {podcast.hosts.join(", ")}
@@ -137,7 +140,7 @@ function EpisodeList({
 }): JSX.Element {
   return (
     <>
-      <Box width={{ md: "1080px" }} m="auto">
+      <Box m="auto">
         <Typography
           variant="h2"
           fontSize="3rem"
@@ -153,7 +156,6 @@ function EpisodeList({
             <Grid
               container
               key={index}
-              m={2}
               p={{ xs: "16px", md: "40px" }}
               sx={{
                 borderBottom: "1px solid #111",
@@ -169,18 +171,18 @@ function EpisodeList({
               }}
               onClick={() => handlePlay({ ...episode, thumbnail })}
             >
-              <Grid item xs={1} md={1}>
+              <Grid item xs={1} sm={1}>
                 {index + 1}
               </Grid>
-              <Grid item xs={8} md={4}>
+              <Grid item xs={8} sm={4}>
                 <Typography variant="h4" fontSize={16} fontWeight={600} pb={2}>
                   {episode.title}
                 </Typography>
               </Grid>
-              <Grid item xs={3} md={3}>
+              <Grid item xs={3} sm={3}>
                 <Typography>{episode.date}</Typography>
               </Grid>
-              <Grid item xs={5} md={3}>
+              <Grid item xs={5} sm={3}>
                 {episode.tags?.join(", ")}
               </Grid>
             </Grid>
@@ -226,9 +228,9 @@ function PodcastDetails(): JSX.Element {
             component="section"
             sx={{
               flexGrow: 1,
-              width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
+              width: { sm: `calc(100% - ${rightDrawerWidth}px)`, lg: "100%" },
               minHeight: "100vh",
-              paddingTop: { xs: "64px", md: "24px", lg: "160px" },
+              paddingTop: { xs: "64px", lg: "160px" },
               marginBottom: { md: 12 },
             }}
           >

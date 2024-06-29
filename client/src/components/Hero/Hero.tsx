@@ -15,6 +15,10 @@ const StyledHeroSection = styled(Box)((theme) => ({
   backgroundColor: "#FDD832",
 
   "@media (min-width:480px)": {
+    height: "40vh",
+  },
+
+  "@media (min-width:1080px)": {
     height: "100vh",
   },
 

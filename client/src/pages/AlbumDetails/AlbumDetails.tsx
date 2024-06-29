@@ -18,6 +18,13 @@ import { rightDrawerWidth } from "src/utils/constants";
 import { TAlbum, TTrack } from "src/types/types";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 
+const StyledAlbumImg = styled.img(() => ({
+  display: "none",
+  "@media(min-width:1080px)": {
+    display: "flex",
+  },
+}));
+
 const StyledContentGrid = styled(Grid)(({ theme }) => ({
   position: "relative",
   backgroundColor: "#000",
@@ -166,7 +173,11 @@ function AlbumArt({ thumbnail }: { thumbnail: string }): JSX.Element {
   return (
     <Grid item xs={12} lg={3} pr="32px" justifyContent="right">
       <Box display="flex" flexDirection="column" justifyContent="right">
-        <img src={thumbnail} alt="Album Cover" style={{ width: "100%" }} />
+        <StyledAlbumImg
+          src={thumbnail}
+          alt="Album Cover"
+          style={{ width: "100%" }}
+        />
         <Typography pt={4}>
           Robokid Sonic Records • #RKID492 • November 5, 2016
         </Typography>
