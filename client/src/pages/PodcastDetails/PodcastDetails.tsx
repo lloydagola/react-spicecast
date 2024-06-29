@@ -84,10 +84,10 @@ function HeroSection({
                 variant="contained"
                 color="error"
                 sx={{
-                  margin: "16px",
-                  padding: "12px",
-                  width: { sm: "160px", md: "160px" },
-                  borderRadius: "32px",
+                  margin: { xs: "8px", md: "16px" },
+                  padding: { xs: "8px", md: "12px" },
+                  width: { xs: "100px", md: "160px" },
+                  borderRadius: "28px",
                 }}
                 onClick={() =>
                   handlePlay({
@@ -106,10 +106,10 @@ function HeroSection({
                 variant="outlined"
                 color="inherit"
                 sx={{
-                  margin: "16px",
-                  padding: "12px",
-                  width: { sm: "160px", md: "160px" },
-                  borderRadius: "32px",
+                  margin: { xs: "8px", md: "16px" },
+                  padding: { xs: "8px", md: "12px" },
+                  width: { xs: "140px", md: "160px" },
+                  borderRadius: "28px",
                 }}
               >
                 <AddToPhotosIcon
