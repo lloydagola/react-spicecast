@@ -143,6 +143,7 @@ function EpisodeList({
           fontSize="3rem"
           fontWeight={600}
           mt={12}
+          ml={4}
           mb={4}
         >
           Playlist
@@ -152,6 +153,7 @@ function EpisodeList({
             <Grid
               container
               key={index}
+              m={2}
               p={{ xs: "16px", md: "40px" }}
               sx={{
                 borderBottom: "1px solid #111",
@@ -167,16 +169,18 @@ function EpisodeList({
               }}
               onClick={() => handlePlay({ ...episode, thumbnail })}
             >
-              <Grid item xs={12} md={1}>
+              <Grid item xs={1} md={1}>
                 {index + 1}
               </Grid>
-              <Grid item xs={12} md={5}>
-                {episode.title}
+              <Grid item xs={10} md={4}>
+                <Typography variant="h4" fontSize={16} fontWeight={600} pb={2}>
+                  {episode.title}
+                </Typography>
               </Grid>
-              <Grid item xs={12} md={3}>
-                {episode.date}
+              <Grid item xs={5} md={3}>
+                <Typography>{episode.date}</Typography>
               </Grid>
-              <Grid item xs={12} md={3}>
+              <Grid item xs={5} md={3}>
                 {episode.tags?.join(", ")}
               </Grid>
             </Grid>
