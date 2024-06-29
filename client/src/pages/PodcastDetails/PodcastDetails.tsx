@@ -84,10 +84,10 @@ function HeroSection({
                 variant="contained"
                 color="error"
                 sx={{
-                  margin: "16px",
-                  padding: "12px",
-                  width: { sm: "160px", md: "160px" },
-                  borderRadius: "32px",
+                  margin: { xs: "8px", md: "16px" },
+                  padding: { xs: "8px", md: "12px" },
+                  width: { xs: "100px", md: "160px" },
+                  borderRadius: "28px",
                 }}
                 onClick={() =>
                   handlePlay({
@@ -106,10 +106,10 @@ function HeroSection({
                 variant="outlined"
                 color="inherit"
                 sx={{
-                  margin: "16px",
-                  padding: "12px",
-                  width: { sm: "160px", md: "160px" },
-                  borderRadius: "32px",
+                  margin: { xs: "8px", md: "16px" },
+                  padding: { xs: "8px", md: "12px" },
+                  width: { xs: "140px", md: "160px" },
+                  borderRadius: "28px",
                 }}
               >
                 <AddToPhotosIcon
@@ -143,6 +143,7 @@ function EpisodeList({
           fontSize="3rem"
           fontWeight={600}
           mt={12}
+          ml={4}
           mb={4}
         >
           Playlist
@@ -152,6 +153,7 @@ function EpisodeList({
             <Grid
               container
               key={index}
+              m={2}
               p={{ xs: "16px", md: "40px" }}
               sx={{
                 borderBottom: "1px solid #111",
@@ -167,16 +169,18 @@ function EpisodeList({
               }}
               onClick={() => handlePlay({ ...episode, thumbnail })}
             >
-              <Grid item xs={12} md={1}>
+              <Grid item xs={1} md={1}>
                 {index + 1}
               </Grid>
-              <Grid item xs={12} md={5}>
-                {episode.title}
+              <Grid item xs={8} md={4}>
+                <Typography variant="h4" fontSize={16} fontWeight={600} pb={2}>
+                  {episode.title}
+                </Typography>
               </Grid>
-              <Grid item xs={12} md={3}>
-                {episode.date}
+              <Grid item xs={3} md={3}>
+                <Typography>{episode.date}</Typography>
               </Grid>
-              <Grid item xs={12} md={3}>
+              <Grid item xs={5} md={3}>
                 {episode.tags?.join(", ")}
               </Grid>
             </Grid>
