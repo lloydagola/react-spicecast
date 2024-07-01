@@ -13,45 +13,333 @@
       "thumbnail": "/images/th-2.jpg"
     },
     {
-      "title": "SpiceFM",
+      "title": "9128 Live",
       "genre": "Pop",
-      "streamUrl": "/music/chill.mp3",
+      "streamUrl": "http://streams.radio.co:80/s0aa1e6f4a/listen",
       "thumbnail": "/images/th-3.jpg"
     },
     {
-      "title": "Kool Aid Radio",
-      "genre": "Pop",
-      "streamUrl": "/music/hearts.mp3",
+      "title": "AM-Ambient",
+      "genre": "Chill",
+      "streamUrl": "http://radio.stereoscenic.com/ama-h",
       "thumbnail": "/images/th-4.jpg"
     },
     {
-      "title": "Rebel Radio",
+      "title": "Afterhours FM",
       "genre": "Pop",
-      "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+      "streamUrl": "http://nl.ah.fm:8000/live",
       "thumbnail": "/images/th-5.jpg"
     },
     {
-      "title": "FlyLo Radio",
-      "genre": "Pop",
-      "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+      "title": "AmbientSleepingPill",
+      "genre": "Chill",
+      "streamUrl": "http://radio.stereoscenic.com/asp-h",
       "thumbnail": "/images/th-6.jpg"
     },
     {
-      "title": "DragonFM",
-      "genre": "Pop",
-      "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+      "title": "Bad Radio",
+      "genre": "Trap",
+      "streamUrl": "https://s2.radio.co/s2b2b68744/listen",
       "thumbnail": "/images/th-7.jpg"
     },
     {
-      "title": "Perspective Radio",
-      "genre": "Pop",
-      "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+      "title": "Bluemars-Cryosleep",
+      "genre": "Chill",
+      "streamUrl": "http://50.116.12.253:8000/cryosleep",
       "thumbnail": "/images/th-8.jpg"
     },
     {
-      "title": "Hindsight Radio",
+      "title": "Bluemars-VoicesFromWithin",
+      "genre": "Native",
+      "streamUrl": "http://50.116.12.253:8000/voicesfromwithin",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "Bluemars",
+      "genre": "Native",
+      "streamUrl": "http://50.116.12.253:8000/bluemars",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "CPR-News-Colorado",
+      "genre": "News",
+      "streamUrl": "http://stream2.cprnetwork.org:8000/cpr1_lo",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "Dogglounge",
+      "genre": "Deep house",
+      "streamUrl": "https://securestreams4.autopo.st:1853/;stream.mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "Dublab",
+      "genre": "Dubstep",
+      "streamUrl": "https://dublab.out.airtime.pro/dublab_a",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "FIP",
+      "genre": "Dubstep",
+      "streamUrl": "http://51.158.104.58/fip-midfi.mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "Frisky-Chill",
+      "genre": "Chill",
+      "streamUrl": "https://chill.friskyradio.com",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "Frisky-Deep",
+      "genre": "Deep house",
+      "streamUrl": "https://deep.friskyradio.com",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "Frisky",
+      "genre": "House",
+      "streamUrl": "https://stream.friskyradio.com",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "HirschmilchChillout",
+      "genre": "Chill",
+      "streamUrl": "http://144.76.106.52:7000/chillout.mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "KAFM-WesternCO-Public",
+      "genre": "Rock",
+      "streamUrl": "https://audio-edge-2a8hd.sfo.he.radiomast.io/10822f41-b0b3-4430-809f-9c22cf5c990f",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "KCHUNG",
+      "genre": "Folk",
+      "streamUrl": "https://kchungradio.out.airtime.pro/kchungradio_a",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "KEXP-Seattle",
       "genre": "Pop",
-      "streamUrl": "https://www.dropbox.com/scl/fi/ronmvvgz07ro8lmtl8x3n/trap-saphire.mp3?rlkey=3ynzhs42aapucrgs1oe4w9ffw&st=wgteyv8k&raw=1",
+      "streamUrl": "http://live-aacplus-64.kexp.org/kexp64.aac",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "KRCC-ColoradoPublic",
+      "genre": "Talk",
+      "streamUrl": "https://streams.krcc.org/krcc_mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "KXLU-SoCalLoyolaMarymount",
+      "genre": "Rock",
+      "streamUrl": "http://kxlu.streamguys1.com/kxlu-hi",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "NTS1",
+      "genre": "Rock",
+      "streamUrl": "http://stream-relay-geo.ntslive.net/stream",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "NTS2",
+      "genre": "Deep house",
+      "streamUrl": "http://stream-relay-geo.ntslive.net/stream2",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "Nectarine",
+      "genre": "Pop",
+      "streamUrl": "http://nectarine.ers35.net:8000/necta192.mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "NightwavePlaza",
+      "genre": "Pop",
+      "streamUrl": "http://radio.plaza.one/mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "RadioParadise-Global",
+      "genre": "Folk",
+      "streamUrl": "http://stream.radioparadise.com/global-96.ogg",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "RadioParadise-MainMix",
+      "genre": "Rock",
+      "streamUrl": "http://stream.radioparadise.com/rp_192m.ogg",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "ShonenBeachFM",
+      "genre": "Pop",
+      "streamUrl": "http://shonanbeachfm.out.airtime.pro:8000/shonanbeachfm_a",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "SleepbotEnvironmental",
+      "genre": "Chill",
+      "streamUrl": "http://sc13.shoutcaststreaming.us:8218/seb",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "SomaFM-DEFCON",
+      "genre": "Chill",
+      "streamUrl": "http://ice4.somafm.com/defcon-128-mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "SomaFM-DeepSpaceOne",
+      "genre": "Chill",
+      "streamUrl": "http://ice4.somafm.com/deepspaceone-128-mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "SomaFM-DroneZone",
+      "genre": "Chill",
+      "streamUrl": "http://ice1.somafm.com/dronezone-128-mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "SomaFM-GrooveSalad",
+      "genre": "Chill",
+      "streamUrl": "http://ice5.somafm.com/groovesalad-128-mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "SomaFM-IllinoisStreetLounge",
+      "genre": "Classic",
+      "streamUrl": "http://ice5.somafm.com/illstreet-128-mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "SomaFM-Lush",
+      "genre": "Classic",
+      "streamUrl": "http://ice3.somafm.com/lush-128-mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "SomaFM-SF10-33",
+      "genre": "Chill",
+      "streamUrl": "http://ice5.somafm.com/sf1033-128-mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "SomaFM-SpaceStation",
+      "genre": "Chill",
+      "streamUrl": "http://ice5.somafm.com/spacestation-128-mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "SomaFM-SynphaeraRadio",
+      "genre": "Ambient",
+      "streamUrl": "http://ice5.somafm.com/synphaera-128-mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "SomaFM-n5MD",
+      "genre": "Chill",
+      "streamUrl": "http://ice5.somafm.com/n5md-128-mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "Subcity",
+      "genre": "Chill",
+      "streamUrl": "https://stream.subcity.org/listen",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "VOA-InternationalEdition",
+      "genre": "Pop",
+      "streamUrl": "https://n0e.radiojar.com/t2n88q0st5quv?rj-ttl=5&rj-tok=AAABhrUKWWEA8aHPczl8xzd0RA",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "LAPD - South Bureau",
+      "genre": "Broadcast",
+      "streamUrl": "http://relay.broadcastify.com:80/y0xmgnpj5631qzv",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "Austin & Travis County Fire & EMS",
+      "genre": "Broadcast",
+      "streamUrl": "http://relay.broadcastify.com/mdcb4k7xjf9q6zp",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "Baltimore City Police",
+      "genre": "Broadcast",
+      "streamUrl": "http://relay.broadcastify.com/nmqzfs8w7pbyhtg",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "Boston Police",
+      "genre": "Broadcast",
+      "streamUrl": "http://relay.broadcastify.com/",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "Boston Police",
+      "genre": "Broadcast",
+      "streamUrl": "http://relay.broadcastify.com/",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "WXYC 89.3",
+      "genre": "College radio",
+      "streamUrl": "https://audio-mp3.ibiblio.org/wxyc.mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "KALX 90.7",
+      "genre": "College radio",
+      "streamUrl": "https://stream.kalx.berkeley.edu:8443/kalx-128.mp3",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "WUCF 89.9",
+      "genre": "College radio",
+      "streamUrl": "https://peridot.streamguys1.com:7835/WUCF",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "WSBF 88.1",
+      "genre": "College radio",
+      "streamUrl": "https://wsbf.net/stream/high",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "WERS 88.9",
+      "genre": "College radio",
+      "streamUrl": "https://24413.live.streamtheworld.com/WERSFM_SC",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "KMZQ",
+      "genre": "Talk",
+      "streamUrl": "http://22973.live.streamtheworld.com/KMZQAMAAC_SC",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "KQLL",
+      "genre": "Oldies",
+      "streamUrl": "http://ice8.securenetsystems.net/KQLL",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "KVEG",
+      "genre": "Hip-hop",
+      "streamUrl": "https://radio-locator.com/cgi-bin/url?bc=y&call=KVEG&service=FM",
+      "thumbnail": "/images/th-9.jpg"
+    },
+    {
+      "title": "KSPC-Claremont",
+      "genre": "Talk",
+      "streamUrl": "http://andromeda.shoutca.st:8419/stream192",
       "thumbnail": "/images/th-9.jpg"
     }
   ]
