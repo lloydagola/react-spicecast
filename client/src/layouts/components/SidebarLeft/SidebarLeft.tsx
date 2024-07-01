@@ -37,7 +37,7 @@ export default function SidebarLeft(): JSX.Element {
       <List>
         {["Feed", "New Shows"].map((text, index) => (
           <Link
-            to={`/podcasts`}
+            to={`/`}
             style={{ color: "#fff", textDecoration: "none" }}
             key={index}
           >
