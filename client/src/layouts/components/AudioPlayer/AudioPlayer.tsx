@@ -81,15 +81,19 @@ export default function AudioPlayer(): JSX.Element {
   };
 
   const play = (): void => {
-    if (!player.current?.paused || playState === EAudioState.PLAYING) {
-      player.current?.pause();
-      handlePause && handlePause();
-    } else {
-      handlePlay({
-        title,
-        streamUrl,
-        thumbnail,
-      });
+    try {
+      if (!player.current?.paused || playState === EAudioState.PLAYING) {
+        player.current?.pause();
+        handlePause && handlePause();
+      } else {
+        handlePlay({
+          title,
+          streamUrl,
+          thumbnail,
+        });
+      }
+    } catch (error) {
+      console.log("something play...");
     }
   };
 
@@ -110,35 +114,70 @@ export default function AudioPlayer(): JSX.Element {
     }
   };
 
+  function playSomething() {
+    console.log("playboi", player.current?.currentSrc);
+    try {
+      player.current?.load();
+      playState === EAudioState.PLAYING && player.current?.play();
+    } catch (error) {
+      console.log("something happened2...");
+    }
+  }
+
   useEffect(() => {
-    player.current?.load();
-    playState === EAudioState.PLAYING && player.current?.play();
+    let ignore = false;
+
+    if (ignore) return;
+
+    playSomething();
+
+    return () => {
+      ignore = true;
+    };
   }, [streamUrl, playState]);
 
   useEffect(() => {
-    if (playState === EAudioState.PLAYING) {
-      player.current?.play();
-      return;
-    } else if (playState === EAudioState.PAUSED) {
-      player.current?.pause();
-      return;
+    let ignore = false;
+    try {
+      if (!ignore && playState === EAudioState.PLAYING) {
+        player.current?.play();
+        return;
+      } else if (playState === EAudioState.PAUSED) {
+        player.current?.pause();
+        return;
+      }
+    } catch (error) {
+      console.log("something happened...");
     }
+    return () => {
+      ignore = true;
+    };
   }, [playState]);
 
   useEffect(() => {
-    if (player.current) {
-      player.current.onloadedmetadata = () => {
-        if (player.current) {
-          setTrackDuration(calculateTotalValue(player.current.duration));
-        }
-      };
-      player.current.ontimeupdate = (e) => {
-        if (player.current) {
-          setCurrentTime(calculateCurrentValue(player.current.currentTime));
-          setProgressValue(updateProgressBar());
-        }
-      };
+    let ignore = false;
+
+    try {
+      if (!ignore && player.current) {
+        player.current.onloadedmetadata = () => {
+          if (player.current) {
+            setTrackDuration(calculateTotalValue(player.current.duration));
+          }
+        };
+        player.current.ontimeupdate = (e) => {
+          if (player.current) {
+            setCurrentTime(calculateCurrentValue(player.current.currentTime));
+            setProgressValue(updateProgressBar());
+          }
+        };
+      }
+    } catch (error) {
+      console.log("something happened here...");
     }
+
+    return () => {
+      ignore = true;
+    };
   }, [progressValue]);
 
   return (
