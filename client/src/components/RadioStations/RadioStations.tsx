@@ -9,7 +9,13 @@ import RadioStation from "src/components/RadioStation/RadioStation";
 import { TRadioStation } from "src/types/types";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 
-export default function RadioStations(): JSX.Element {
+export default function RadioStations({
+  start,
+  end,
+}: {
+  start: number;
+  end: number;
+}): JSX.Element {
   const [radioStations, setRadioStations] = useState([]);
 
   useEffect(() => {
@@ -18,7 +24,12 @@ export default function RadioStations(): JSX.Element {
         const res = await fetch(`${API_ENDPOINT_URL}/radioStations/test`);
         const radioStationData = await res.json();
 
-        setRadioStations(radioStationData);
+        console.log("useEffect...");
+
+        if (isNaN(start) || isNaN(end)) {
+          setRadioStations(radioStationData);
+        }
+        setRadioStations(radioStationData.slice(start, end));
       })();
     } catch (error) {
       /**
