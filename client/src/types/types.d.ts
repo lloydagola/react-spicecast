@@ -6,6 +6,13 @@ export type TPodcast = {
     genre?:string;
 };
 
+export type TEvent = {
+    title: string;
+    date:any;
+    thumbnail: string;
+    genres?:string;
+};
+
 export type TEpisode = {
     title: string;
     tags?: string[],
