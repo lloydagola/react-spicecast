@@ -38,7 +38,7 @@ export default function Podcast({
     <Link to={`/podcasts/${index}`}>
       <Grid
         container
-        height="240px"
+        height="280px"
         alignItems="center"
         overflow="hidden"
         position="relative"
