@@ -8,6 +8,7 @@ const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const podcastRouter = require("./routes/podcasts");
 const radioStationRouter = require("./routes/radioStations");
+const eventsRouter = require("./routes/events");
 const episodeRouter = require("./routes/episodes");
 const albumRouter = require("./routes/albums");
 const trackRouter = require("./routes/tracks");
@@ -33,6 +34,7 @@ app.use("/api", indexRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/podcasts", podcastRouter);
 app.use("/api/radioStations", radioStationRouter);
+app.use("/api/events", eventsRouter);
 app.use("/api/episodes", episodeRouter);
 app.use("/api/albums", albumRouter);
 app.use("/api/tracks", trackRouter);
@@ -44,6 +46,7 @@ app.use("/api/hosts", hostRouter);
 app.use(express.static(path.join(__dirname, "/build")));
 app.use(express.static(path.join(__dirname, "/public")));
 app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build"));
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
