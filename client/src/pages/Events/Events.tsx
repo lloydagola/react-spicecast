@@ -53,14 +53,30 @@ export default function Events() {
       >
         <Box component="section" mb="60px">
           <Typography variant="h2" color="white" m="32px">
-            Events
+            New Events
           </Typography>
           <Grid container m="auto" gap={1} justifyContent="center">
             {loading && <div>loading...</div>}
             {events?.length > 1 &&
-              events.map((event, index) => (
-                <Event event={event} index={index} key={index} />
-              ))}
+              events
+                .slice(0, 14)
+                .map((event, index) => (
+                  <Event event={event} index={index} key={index} />
+                ))}
+          </Grid>
+        </Box>
+        <Box component="section" mb="60px">
+          <Typography variant="h2" color="white" m="32px">
+            Past Events
+          </Typography>
+          <Grid container m="auto" gap={1} justifyContent="center">
+            {loading && <div>loading...</div>}
+            {events?.length > 1 &&
+              events
+                .slice(15, 24)
+                .map((event, index) => (
+                  <Event event={event} index={index} key={index} />
+                ))}
           </Grid>
         </Box>
       </Box>
