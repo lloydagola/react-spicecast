@@ -56,9 +56,9 @@ function audioReducer(prevState: TAudioData, action: any): TAudioData {
         audioState: {
           ...prevState.audioState,
           playState: EAudioState.PLAYING,
-          title: action.data.title,
-          streamUrl: action.data.streamUrl,
-          thumbnail: action.data.thumbnail,
+          title: action?.data.title,
+          streamUrl: action?.data.streamUrl,
+          thumbnail: action?.data.thumbnail,
         },
       };
 

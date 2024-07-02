@@ -18,7 +18,7 @@ export default function Home(): JSX.Element {
         }}
       >
         <Albums />
-        <RadioStations />
+        <RadioStations start={0} end={9} />
         <Podcasts />
       </Box>
     </HomePageLayout>

@@ -84,7 +84,7 @@ export default function RadioStation({
         position="absolute"
         zIndex="100"
       >
-        <Typography mt={2}>Lily Claw | Emma Watts</Typography>
+        <Typography mt={2}>{radioStation.genre}</Typography>
         <Box
           className="horizontal-line podcast-horizontal-line white-background"
           mt={2}
