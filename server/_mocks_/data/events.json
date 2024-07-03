@@ -3,139 +3,116 @@
     {
       "title": "HiLoFM",
       "genre": "Pop",
-      "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
       "thumbnail": "/images/events/event-1.jpg"
     },
     {
       "title": "LunarFM",
       "genre": "Pop",
-      "streamUrl": "http://208.64.184.36/sf1033",
       "thumbnail": "/images/events/event-2.jpg"
     },
     {
       "title": "9128 Live",
       "genre": "Pop",
-      "streamUrl": "http://streams.radio.co:80/s0aa1e6f4a/listen",
       "thumbnail": "/images/events/event-3.jpg"
     },
     {
       "title": "AM-Ambient",
       "genre": "Chill",
-      "streamUrl": "http://radio.stereoscenic.com/ama-h",
       "thumbnail": "/images/events/event-4.jpg"
     },
     {
       "title": "Afterhours FM",
       "genre": "Pop",
-      "streamUrl": "http://nl.ah.fm:8000/live",
       "thumbnail": "/images/events/event-5.jpg"
     },
     {
       "title": "AmbientSleepingPill",
       "genre": "Chill",
-      "streamUrl": "http://radio.stereoscenic.com/asp-h",
       "thumbnail": "/images/events/event-6.jpg"
     },
     {
       "title": "Bad Radio",
       "genre": "Trap",
-      "streamUrl": "https://s2.radio.co/s2b2b68744/listen",
       "thumbnail": "/images/events/event-7.jpg"
     },
     {
       "title": "Bluemars-Cryosleep",
       "genre": "Chill",
-      "streamUrl": "http://50.116.12.253:8000/cryosleep",
       "thumbnail": "/images/events/event-8.jpg"
     },
     {
       "title": "Bluemars-VoicesFromWithin",
       "genre": "Native",
-      "streamUrl": "http://50.116.12.253:8000/voicesfromwithin",
       "thumbnail": "/images/events/event-9.jpg"
     },
     {
       "title": "HiLoFM",
       "genre": "Pop",
-      "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
       "thumbnail": "/images/events/event-10.jpg"
     },
     {
       "title": "LunarFM",
       "genre": "Pop",
-      "streamUrl": "http://208.64.184.36/sf1033",
       "thumbnail": "/images/events/event-11.jpg"
     },
     {
       "title": "LunarFM",
       "genre": "Pop",
-      "streamUrl": "http://208.64.184.36/sf1033",
       "thumbnail": "/images/events/event-12.jpg"
     },
     {
       "title": "9128 Live",
       "genre": "Pop",
-      "streamUrl": "http://streams.radio.co:80/s0aa1e6f4a/listen",
       "thumbnail": "/images/events/event-13.jpg"
     },
     {
       "title": "AM-Ambient",
       "genre": "Chill",
-      "streamUrl": "http://radio.stereoscenic.com/ama-h",
       "thumbnail": "/images/events/event-14.jpg"
     },
     {
       "title": "Afterhours FM",
       "genre": "Pop",
-      "streamUrl": "http://nl.ah.fm:8000/live",
       "thumbnail": "/images/events/event-15.jpg"
     },
     {
       "title": "AmbientSleepingPill",
       "genre": "Chill",
-      "streamUrl": "http://radio.stereoscenic.com/asp-h",
       "thumbnail": "/images/events/event-16.jpg"
     },
     {
       "title": "Bad Radio",
       "genre": "Trap",
-      "streamUrl": "https://s2.radio.co/s2b2b68744/listen",
       "thumbnail": "/images/events/event-17.jpg"
     },
     {
       "title": "Bluemars-Cryosleep",
       "genre": "Chill",
-      "streamUrl": "http://50.116.12.253:8000/cryosleep",
       "thumbnail": "/images/events/event-18.jpg"
     },
     {
       "title": "Bluemars-VoicesFromWithin",
       "genre": "Native",
-      "streamUrl": "http://50.116.12.253:8000/voicesfromwithin",
       "thumbnail": "/images/events/event-19.jpg"
     },
     {
       "title": "Afterhours FM",
       "genre": "Pop",
-      "streamUrl": "http://nl.ah.fm:8000/live",
       "thumbnail": "/images/events/event-20.jpg"
     },
     {
       "title": "AmbientSleepingPill",
       "genre": "Chill",
-      "streamUrl": "http://radio.stereoscenic.com/asp-h",
       "thumbnail": "/images/events/event-21.jpg"
     },
     {
       "title": "Bad Radio",
       "genre": "Trap",
-      "streamUrl": "https://s2.radio.co/s2b2b68744/listen",
       "thumbnail": "/images/events/event-22.jpg"
     },
     {
       "title": "Bluemars-Cryosleep",
       "genre": "Chill",
-      "streamUrl": "http://50.116.12.253:8000/cryosleep",
       "thumbnail": "/images/events/event-23.jpg"
     }
   ]
