@@ -52,8 +52,8 @@ export default function Events() {
         }}
       >
         <Box component="section" mb="60px">
-          <Typography variant="h2" color="white" m="32px">
-            Upcoming Events
+          <Typography variant="h4" color="white" m="32px">
+            Upcoming
           </Typography>
           <Grid container m="auto" gap={1} justifyContent="center">
             {loading && <div>loading...</div>}
@@ -66,8 +66,8 @@ export default function Events() {
           </Grid>
         </Box>
         <Box component="section" mb="60px">
-          <Typography variant="h2" color="white" m="32px">
-            Photo Albums
+          <Typography variant="h4" color="white" m="32px">
+            Gallery
           </Typography>
           <Grid container m="auto" gap={1} justifyContent="center">
             {loading && <div>loading...</div>}
