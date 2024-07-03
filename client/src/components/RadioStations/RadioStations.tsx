@@ -13,8 +13,8 @@ export default function RadioStations({
   start,
   end,
 }: {
-  start: number;
-  end: number;
+  start?: number | undefined;
+  end?: number | undefined;
 }): JSX.Element {
   const [radioStations, setRadioStations] = useState([]);
 
@@ -26,7 +26,7 @@ export default function RadioStations({
 
         console.log("useEffect...");
 
-        if (isNaN(start) || isNaN(end)) {
+        if (!start || !end) {
           setRadioStations(radioStationData);
         }
         setRadioStations(radioStationData.slice(start, end));
