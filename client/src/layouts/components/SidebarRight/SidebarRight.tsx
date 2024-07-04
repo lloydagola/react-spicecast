@@ -1,21 +1,11 @@
 import Box from "@mui/material/Box";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import styled from "@emotion/styled";
-import AddIcon from "@mui/icons-material/Add";
-import RadioIcon from "@mui/icons-material/Radio";
-import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
-import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import LocalActivityIcon from "@mui/icons-material/LocalActivity";
-import CategoryIcon from "@mui/icons-material/Category";
-
-import { rightDrawerWidth } from "src/utils/constants";
 import Grid from "@mui/material/Grid";
 import { Typography } from "@mui/material";
+import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+
+import { rightDrawerWidth } from "src/utils/constants";
 
 const StyledSidebarRight = styled(Box)(({ theme }) => ({
   display: "none",
