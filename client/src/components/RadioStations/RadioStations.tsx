@@ -45,7 +45,6 @@ export default function RadioStations({
     backgroundAttachment: "fixed",
     backgroundSize: "cover",
     position: "relative",
-    minHeight: "100%",
   };
 
   return (
