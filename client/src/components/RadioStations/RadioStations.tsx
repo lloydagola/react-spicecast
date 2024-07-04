@@ -44,20 +44,25 @@ export default function RadioStations({
     backgroundImage: "url('/images/backgrounds/background-2.jpg')",
     backgroundAttachment: "fixed",
     backgroundSize: "cover",
-    minHeight: "1080px",
   };
 
   return (
     <Box
       component="section"
-      pt="60px"
-      pb="60px"
       borderTop="1px solid #111"
       borderBottom="1px solid #111"
       sx={radioStationStyles}
     >
+      <Box
+        height="100%"
+        width="100%"
+        position="absolute"
+        sx={{
+          background: "linear-gradient(rgba(0, 0, 0, 0) -100%, rgb(0, 0, 0))",
+        }}
+      />
       <Typography variant="h2" color="white" m="32px">
-        Radio Stations
+        Live Radio
       </Typography>
 
       <Grid
