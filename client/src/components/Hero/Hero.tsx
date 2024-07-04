@@ -73,8 +73,6 @@ const StyledHeroSection = styled(Box)((theme) => ({
 }));
 
 export default function Hero() {
-  const heroStyles = {};
-
   return (
     <StyledHeroSection component="section">
       <img src="./images/hero-14.png" alt="foreground" loading="lazy" />
