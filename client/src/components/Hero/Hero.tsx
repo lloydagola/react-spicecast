@@ -25,6 +25,7 @@ const StyledHeroSection = styled(Box)((theme) => ({
   img: {
     position: "absolute",
     zIndex: "0",
+    borderRadius: "32px",
   },
   "& img:nth-child(1)": {
     width: "70%",
