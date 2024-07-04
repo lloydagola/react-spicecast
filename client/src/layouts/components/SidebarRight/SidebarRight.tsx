@@ -23,24 +23,6 @@ const StyledSidebarRight = styled(Box)(({ theme }) => ({
 function TrackList({ title }: { title: string }): JSX.Element {
   const songs = [
     {
-      title: "Saphire",
-      artist: "Lloyd Agola",
-      thumbnail: "/images/album-1.jpg",
-      genres: ["electro", "trap", "house"],
-    },
-    {
-      title: "Cold Lights",
-      artist: "Lloyd Agola",
-      thumbnail: "/images/album-1.jpg",
-      genres: ["electro", "trap", "house"],
-    },
-    {
-      title: "Simon Says",
-      artist: "Lloyd Agola",
-      thumbnail: "/images/album-2.jpg",
-      genres: ["electro", "trap", "house"],
-    },
-    {
       title: "Open",
       artist: "Lloyd Agola",
       thumbnail: "/images/album-3.jpg",
