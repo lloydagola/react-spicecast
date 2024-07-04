@@ -23,43 +23,6 @@ interface TabPanelProps {
   index: number;
   value: number;
 }
-{
-  /* <div>
-  <h2 class="text-xl font-bold mb-4">EVENT DETAILS</h2>
-  <div class="border-t border-muted mb-4"></div>
-  <div class="space-y-4">
-    <div class="flex justify-between">
-      <span class="font-semibold">Date:</span>
-      <span>September 19, 2022 1:00 am</span>
-    </div>
-    <div class="border-t border-muted"></div>
-    <div class="flex justify-between">
-      <span class="font-semibold">Location:</span>
-      <span>Ministry Of Sound</span>
-    </div>
-    <div class="border-t border-muted"></div>
-    <div class="flex justify-between">
-      <span class="font-semibold">Address:</span>
-      <span>103 Gaunt St London UK</span>
-    </div>
-    <div class="border-t border-muted"></div>
-    <div class="flex justify-between">
-      <span class="font-semibold">Phone:</span>
-      <a href="tel:+442077408600" class="text-primary">+44 20 7740 8600</a>
-    </div>
-    <div class="border-t border-muted"></div>
-    <div class="flex justify-between">
-      <span class="font-semibold">Website:</span>
-      <a href="http://club.ministryofsound.com" class="text-primary">http://club.ministryofsound.com</a>
-    </div>
-    <div class="border-t border-muted"></div>
-    <div class="flex justify-between">
-      <span class="font-semibold">Facebook event:</span>
-      <a href="http://facebook.com" class="text-primary">http://facebook.com</a>
-    </div>
-  </div>
-</div> */
-}
 
 function Details(): JSX.Element {
   return (
