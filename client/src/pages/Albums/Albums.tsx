@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Albums from "src/components/Albums/Albums";
 import MainLayout from "src/layouts/MainLayout";
 
-import { rightDrawerWidth } from "src/utils/constants";
+import { MIN_HEIGHT, rightDrawerWidth } from "src/utils/constants";
 
 export default function AlbumPage(): JSX.Element {
   return (
@@ -12,7 +12,7 @@ export default function AlbumPage(): JSX.Element {
         sx={{
           flexGrow: 1,
           width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
-          minHeight: "1920px",
+          minHeight: MIN_HEIGHT,
           marginTop: { md: 12 },
         }}
       >

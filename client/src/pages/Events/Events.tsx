@@ -3,7 +3,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import Event from "src/components/Event/Event";
 import MainLayout from "src/layouts/MainLayout";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
-import { rightDrawerWidth } from "src/utils/constants";
+import { MIN_HEIGHT, rightDrawerWidth } from "src/utils/constants";
 
 type TError = {
   status: Boolean;
@@ -49,7 +49,7 @@ export default function Events() {
           flexGrow: 1,
           width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
           marginTop: { md: 12 },
-          minHeight: "1920px",
+          minHeight: MIN_HEIGHT,
         }}
       >
         <Box component="section" mb="60px">

@@ -15,7 +15,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 import MainLayout from "src/layouts/MainLayout";
-import { rightDrawerWidth } from "src/utils/constants";
+import { MIN_HEIGHT, rightDrawerWidth } from "src/utils/constants";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 
 interface TabPanelProps {
@@ -316,7 +316,7 @@ export default function EventDetails(): JSX.Element {
         sx={{
           flexGrow: 1,
           width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
-          minHeight: "1920px",
+          minHeight: MIN_HEIGHT,
           marginBottom: { md: 12 },
           backgroundAttachment: "fixed",
         }}

@@ -14,7 +14,7 @@ import Typography from "@mui/material/Typography";
 import { AudioContext, EAudioState } from "src/contexts/AudioContext";
 import MainLayout from "src/layouts/MainLayout";
 import Album from "src/components/Album/Album";
-import { rightDrawerWidth } from "src/utils/constants";
+import { MIN_HEIGHT, rightDrawerWidth } from "src/utils/constants";
 import { TAlbum, TTrack } from "src/types/types";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 
@@ -436,7 +436,7 @@ export default function AlbumDetails(): JSX.Element {
           flexGrow: 1,
           width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
           marginTop: { md: 12 },
-          minHeight: "1920px",
+          minHeight: MIN_HEIGHT,
         }}
       >
         <AlbumContent />

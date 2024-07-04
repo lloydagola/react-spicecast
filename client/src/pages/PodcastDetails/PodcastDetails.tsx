@@ -10,7 +10,7 @@ import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
 import AddToPhotosIcon from "@mui/icons-material/AddToPhotos";
 import { AudioContext, EAudioState } from "src/contexts/AudioContext";
-import { rightDrawerWidth } from "src/utils/constants";
+import { MIN_HEIGHT, rightDrawerWidth } from "src/utils/constants";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 import { TEpisode, TPodcast } from "src/types/types";
 
@@ -265,7 +265,7 @@ function PodcastDetails(): JSX.Element {
             sx={{
               flexGrow: 1,
               width: { sm: `calc(100% - ${rightDrawerWidth}px)`, lg: "100%" },
-              minHeight: "1920px",
+              minHeight: MIN_HEIGHT,
               paddingTop: { xs: "64px", lg: "160px" },
               marginBottom: { md: 12 },
             }}
