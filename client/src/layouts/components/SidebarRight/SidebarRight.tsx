@@ -99,8 +99,8 @@ function TrackList({ title }: { title: string }): JSX.Element {
       <Typography variant="h4" fontWeight={600}>
         {title}
       </Typography>
-      {songs.map(({ title, artist, thumbnail, genres }) => (
-        <Grid container sx={{ borderBottom: "1px solid #222" }}>
+      {songs.map(({ title, artist, thumbnail }) => (
+        <Grid container pt={1} pb={1} sx={{ borderBottom: "1px solid #222" }}>
           <Grid item display="grid" justifyItems="center" alignItems="center">
             <PlayCircleOutlineIcon
               fontSize="large"
@@ -112,6 +112,9 @@ function TrackList({ title }: { title: string }): JSX.Element {
               loading="lazy"
               alt={title}
               src={thumbnail}
+              style={{
+                borderRadius: "8px",
+              }}
             />
           </Grid>
           <Grid item xs={8} pl={2} flex={1} display="grid" alignItems="center">
@@ -137,10 +140,10 @@ function TrackList({ title }: { title: string }): JSX.Element {
           alt="featured song"
           src="/images/album-9.jpg"
         />
-      </Grid>
-      <Grid width="100%" p={2} style={{ backgroundColor: "#111" }}>
-        <Typography fontWeight={600}>Monstrous Basshouse</Typography>
-        <Typography>Lloyd Agola</Typography>
+        <Grid width="100%" p={2} style={{ backgroundColor: "#111" }}>
+          <Typography fontWeight={600}>Monstrous Basshouse</Typography>
+          <Typography>Lloyd Agola</Typography>
+        </Grid>
       </Grid>
     </Grid>
   );

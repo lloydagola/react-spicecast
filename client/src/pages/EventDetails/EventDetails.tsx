@@ -182,7 +182,15 @@ function EventInfo(): JSX.Element {
   };
   //paddingTop: { xs: "64px", lg: "160px" },
   return (
-    <Box height="100%">
+    <Box
+      sx={{
+        border: "1px solid #444",
+        marginTop: "60px",
+        borderRadius: "16px",
+        width: "calc(100% - 32px)",
+        overflow: "hidden",
+      }}
+    >
       <Tabs
         value={value}
         onChange={handleChange}
@@ -334,8 +342,14 @@ export default function EventDetails(): JSX.Element {
                   src={event?.thumbnail}
                   alt="event thumbnail"
                   loading="lazy"
+                  style={{
+                    borderRadius: "16px",
+                  }}
                 />
-                <Button variant="contained" sx={{ margin: "16px" }}>
+                <Button
+                  variant="contained"
+                  sx={{ margin: "16px", borderRadius: "16px" }}
+                >
                   Buy Ticket
                 </Button>
                 <Box display="flex" flexDirection="row" justifyContent="center">

@@ -15,6 +15,7 @@ type TRadioStationProps = {
 
 const radioStationStyles = {
   cursor: "pointer",
+  borderRadius: "16px",
   "&: hover": {
     img: {
       transform: "scale(1.2)",
