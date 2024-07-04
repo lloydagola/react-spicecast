@@ -316,7 +316,7 @@ export default function EventDetails(): JSX.Element {
         sx={{
           flexGrow: 1,
           width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
-          minHeight: "100vh",
+          minHeight: "1920px",
           marginBottom: { md: 12 },
           backgroundAttachment: "fixed",
         }}

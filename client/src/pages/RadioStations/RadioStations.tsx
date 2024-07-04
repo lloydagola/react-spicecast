@@ -13,6 +13,7 @@ export default function RadioStationsPage(): JSX.Element {
           flexGrow: 1,
           width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
           marginTop: { md: 12 },
+          minHeight: "1920px",
         }}
       >
         <RadioStations />

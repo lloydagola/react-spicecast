@@ -49,6 +49,7 @@ export default function Events() {
           flexGrow: 1,
           width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
           marginTop: { md: 12 },
+          minHeight: "1920px",
         }}
       >
         <Box component="section" mb="60px">
