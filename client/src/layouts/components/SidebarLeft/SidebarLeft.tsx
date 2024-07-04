@@ -174,7 +174,11 @@ export default function SidebarLeft(): JSX.Element {
   return (
     <Box
       component="nav"
-      sx={{ width: { lg: leftDrawerWidth }, flexShrink: { sm: 0 } }}
+      sx={{
+        width: { lg: leftDrawerWidth },
+        flexShrink: { sm: 0 },
+        borderRight: "1px solid #111",
+      }}
       aria-label="mailbox folders"
       ref={targetRef}
     >

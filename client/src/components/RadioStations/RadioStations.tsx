@@ -45,7 +45,13 @@ export default function RadioStations({
   };
 
   return (
-    <Box component="section" pt="60px" pb="60px" sx={radioStationStyles}>
+    <Box
+      component="section"
+      pt="60px"
+      pb="60px"
+      borderTop="1px solid #111"
+      borderBottom="1px solid #111"
+    >
       <Typography variant="h2" color="white" m="32px">
         Radio Stations
       </Typography>
