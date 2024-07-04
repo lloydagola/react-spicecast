@@ -42,6 +42,7 @@ export default function Podcast({
       <Grid
         container
         height="280px"
+        borderRadius="16px"
         alignItems="center"
         overflow="hidden"
         position="relative"

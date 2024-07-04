@@ -81,7 +81,7 @@ export function TopBar(): JSX.Element {
                 variant="h6"
                 noWrap
                 component="div"
-                marginRight="80px"
+                marginRight="50px"
                 fontSize={36}
                 fontWeight={900}
                 sx={{
@@ -89,7 +89,7 @@ export function TopBar(): JSX.Element {
                     "2px 2px 5px rgba(0,0,0,0.3), 5px 5px 70px rgba(255, 255, 255, 0.5)",
                 }}
               >
-                Spice Cast
+                LunarFM
               </Typography>
             </NavLink>
             <List sx={{ display: "flex", flexDirection: "row" }}>

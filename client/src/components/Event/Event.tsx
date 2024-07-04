@@ -50,7 +50,11 @@ export default function Event({ event, index }: TEventProps): JSX.Element {
           <img
             src={event.thumbnail}
             alt="event thumbnail"
-            style={{ height: "100%", transition: "transform .5s" }}
+            style={{
+              height: "100%",
+              transition: "transform .5s",
+              borderRadius: "16px",
+            }}
             loading="lazy"
           />
         </Box>

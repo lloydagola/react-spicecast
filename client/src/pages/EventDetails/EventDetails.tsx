@@ -15,7 +15,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 import MainLayout from "src/layouts/MainLayout";
-import { rightDrawerWidth } from "src/utils/constants";
+import { MIN_HEIGHT, rightDrawerWidth } from "src/utils/constants";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 
 interface TabPanelProps {
@@ -128,7 +128,6 @@ function CustomTabPanel(props: TabPanelProps) {
 
   return (
     <Box
-      sx={{ backgroundColor: "#111" }}
       role="tabpanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
@@ -182,7 +181,15 @@ function EventInfo(): JSX.Element {
   };
   //paddingTop: { xs: "64px", lg: "160px" },
   return (
-    <Box height="100%">
+    <Box
+      sx={{
+        border: "1px solid #444",
+        marginTop: "60px",
+        borderRadius: "16px",
+        width: "calc(100% - 32px)",
+        overflow: "hidden",
+      }}
+    >
       <Tabs
         value={value}
         onChange={handleChange}
@@ -308,8 +315,8 @@ export default function EventDetails(): JSX.Element {
         component="section"
         sx={{
           flexGrow: 1,
-          width: { sm: `calc(100% - ${rightDrawerWidth}px)`, lg: "100%" },
-          minHeight: "100vh",
+          width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
+          minHeight: MIN_HEIGHT,
           marginBottom: { md: 12 },
           backgroundAttachment: "fixed",
         }}
@@ -334,8 +341,14 @@ export default function EventDetails(): JSX.Element {
                   src={event?.thumbnail}
                   alt="event thumbnail"
                   loading="lazy"
+                  style={{
+                    borderRadius: "16px",
+                  }}
                 />
-                <Button variant="contained" sx={{ margin: "16px" }}>
+                <Button
+                  variant="contained"
+                  sx={{ margin: "16px", borderRadius: "16px" }}
+                >
                   Buy Ticket
                 </Button>
                 <Box display="flex" flexDirection="row" justifyContent="center">

@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -15,6 +14,7 @@ type TRadioStationProps = {
 
 const radioStationStyles = {
   cursor: "pointer",
+  borderRadius: "16px",
   "&: hover": {
     img: {
       transform: "scale(1.2)",

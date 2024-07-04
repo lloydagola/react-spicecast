@@ -10,6 +10,7 @@ import {
   StyledPlayerControls,
 } from "./AudioPlayer.styles";
 import { AudioContext, EAudioState } from "src/contexts/AudioContext";
+import { Typography } from "@mui/material";
 
 export default function AudioPlayer(): JSX.Element {
   const player = useRef<HTMLAudioElement>(null);
@@ -114,22 +115,19 @@ export default function AudioPlayer(): JSX.Element {
     }
   };
 
-  function playSomething() {
-    console.log("playboi", player.current?.currentSrc);
-    try {
-      player.current?.load();
-      playState === EAudioState.PLAYING && player.current?.play();
-    } catch (error) {
-      console.log("something happened2...");
-    }
-  }
-
   useEffect(() => {
     let ignore = false;
 
     if (ignore) return;
 
-    playSomething();
+    (function () {
+      try {
+        player.current?.load();
+        playState === EAudioState.PLAYING && player.current?.play();
+      } catch (error) {
+        console.log("something happened2...");
+      }
+    })();
 
     return () => {
       ignore = true;
@@ -180,6 +178,8 @@ export default function AudioPlayer(): JSX.Element {
     };
   }, [progressValue]);
 
+  const isLiveStream = trackDuration.includes("Infinity");
+
   return (
     <StyledAudioPlayer id="audio-player">
       <audio ref={player}>
@@ -189,7 +189,7 @@ export default function AudioPlayer(): JSX.Element {
       </audio>
       <img src={thumbnail || "./images/th-15.jpg"} alt="thumb" />
       <StyledTrackTitle>
-        <h4>{title}</h4>
+        <Typography fontWeight={600}>{title}</Typography>
       </StyledTrackTitle>
       <StyledPlayerControls>
         {playState === EAudioState.PLAYING ? (
@@ -209,7 +209,7 @@ export default function AudioPlayer(): JSX.Element {
         ref={progressBarRef}
         onClick={seek}
       />
-      <p>{trackDuration}</p>
+      <p>{isLiveStream ? "" : trackDuration}</p>
     </StyledAudioPlayer>
   );
 }

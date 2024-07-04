@@ -8,6 +8,7 @@ import RadioStation from "src/components/RadioStation/RadioStation";
 
 import { TRadioStation } from "src/types/types";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
+import { MIN_HEIGHT } from "src/utils/constants";
 
 export default function RadioStations({
   start,
@@ -40,15 +41,25 @@ export default function RadioStations({
   }, []);
 
   const radioStationStyles = {
-    backgroundImage: "url('/images/hero-11.jpg')",
+    backgroundImage: "url('/images/backgrounds/background-2.jpg')",
     backgroundAttachment: "fixed",
+    backgroundSize: "cover",
+    minHeight: "1080px",
   };
 
   return (
-    <Box component="section" pt="60px" pb="60px" sx={radioStationStyles}>
+    <Box
+      component="section"
+      pt="60px"
+      pb="60px"
+      borderTop="1px solid #111"
+      borderBottom="1px solid #111"
+      sx={radioStationStyles}
+    >
       <Typography variant="h2" color="white" m="32px">
         Radio Stations
       </Typography>
+
       <Grid
         container
         gap={1}

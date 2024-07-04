@@ -3,22 +3,22 @@
     {
       "title": "TKDJS",
       "thumbnail": "/images/album-1.jpg",
-      "artist": "TKDJS",
+      "artist": "Lloyd Agola",
       "tracks": [
         {
-          "title": "HiLoFM",
+          "title": "Saphire",
           "artist": "TKDJS",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "streamUrl": "https://www.dropbox.com/scl/fi/ronmvvgz07ro8lmtl8x3n/trap-saphire.mp3?rlkey=3ynzhs42aapucrgs1oe4w9ffw&st=f22epcuo&raw=1",
           "thumbnail": "/images/th-1.jpg"
         },
         {
-          "title": "LunarFM",
-          "artist": "TKDJS",
+          "title": "Cold Lights",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "http://208.64.184.36/sf1033",
+          "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=8byp2wxw&raw=1",
           "thumbnail": "/images/th-2.jpg"
         }
       ],
@@ -27,22 +27,22 @@
     {
       "title": "Who Deserved to Stay",
       "thumbnail": "/images/album-2.jpg",
-      "artist": "Kenny Bell",
+      "artist": "Lloyd Agola",
       "tracks": [
         {
-          "title": "HiLoFM",
-          "artist": "Kenny Bell",
+          "title": "Simon Says",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "streamUrl": "https://www.dropbox.com/scl/fi/tmk4smb7hwrxflf1gvmx1/indie-simon-sez.mp3?rlkey=7takycfxq5amqng4ovccgtowy&st=lop51s4v&raw=1",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": "Kenny Bell",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "http://208.64.184.36/sf1033",
+          "streamUrl": "https://www.dropbox.com/scl/fi/qrvvjdxs6dwa5rfu99kkr/pop-open-simo-instrumental.mp3?rlkey=4gxgf8a6l6pszfoocxl5yv2r0&st=wb0bpile&raw=1",
           "thumbnail": "/images/th-2.jpg"
         }
       ],
@@ -51,22 +51,22 @@
     {
       "title": "Hey",
       "thumbnail": "/images/album-3.jpg",
-      "artist": "Kermit Beller",
+      "artist": "Lloyd Agola",
       "tracks": [
         {
-          "title": "HiLoFM",
-          "artist": "Kermit Beller",
+          "title": "Open",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "streamUrl": "https://www.dropbox.com/scl/fi/qrvvjdxs6dwa5rfu99kkr/pop-open-simo-instrumental.mp3?rlkey=4gxgf8a6l6pszfoocxl5yv2r0&st=wb0bpile&raw=1",
           "thumbnail": "/images/th-1.jpg"
         },
         {
-          "title": "LunarFM",
-          "artist": "Kermit Beller",
+          "title": "Open Vox",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "http://208.64.184.36/sf1033",
+          "streamUrl": "https://www.dropbox.com/scl/fi/gdi57na5xblloo69yxknd/pop-open-simo-vocal-example.mp3?rlkey=ufad72aqswwkl06z2zubrkj3v&st=1o52kpbh&raw=1",
           "thumbnail": "/images/th-2.jpg"
         }
       ],
@@ -75,46 +75,46 @@
     {
       "thumbnail": "/images/album-4.jpg",
       "title": "Kool Aid",
-      "artist": "Lauren Starr",
+      "artist": "Lloyd Agola",
       "tracks": [
         {
-          "title": "HiLoFM",
-          "artist": "Lauren Starr",
+          "title": "Reggio",
+          "artist": "Lloyd Agola x Ramisha",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "streamUrl": "https://www.dropbox.com/scl/fi/q82oic5mtjwkv37cyjgnd/Ramisha-x-Xytor-Reggio-style.mp3?rlkey=f635yx8k0qu3nw9351n98s21s&st=9hyz8e93&raw=1",
           "thumbnail": "/images/th-1.jpg"
         },
         {
-          "title": "LunarFM",
-          "artist": "Lauren Starr",
+          "title": "Breathe",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "http://208.64.184.36/sf1033",
+          "streamUrl": "https://www.dropbox.com/scl/fi/hh7a8np1md30fdzj68ppg/xytor-breathe.mp3?rlkey=blshjkz1akffyetlouiy51nko&st=fg1mpt1p&raw=1",
           "thumbnail": "/images/th-2.jpg"
         }
       ],
       "genres": ["pop"]
     },
     {
-      "title": "Mord Fustang",
+      "title": "Ambiguous",
       "thumbnail": "/images/album-5.jpg",
-      "artist": "Mord Fustang",
+      "artist": "Lloyd Agola",
       "tracks": [
         {
-          "title": "HiLoFM",
-          "artist": "Mord Fustang",
+          "title": "Cashmere Cat",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "streamUrl": "https://www.dropbox.com/scl/fi/nu4bl41icn56kab4mbh1c/xytor-Cashmere-Cat.mp3?rlkey=7hj73vnuus43rlfzrm1ap76tk&st=9m1qdssa&raw=1",
           "thumbnail": "/images/th-1.jpg"
         },
         {
-          "title": "LunarFM",
-          "artist": "Mord Fustang",
+          "title": "Focus",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "http://208.64.184.36/sf1033",
+          "streamUrl": "https://www.dropbox.com/scl/fi/5khd3zr5ltq37mxo1tq39/xytor-focus.mp3?rlkey=5tyvcjmn4eu4t83jjv2kcm2g1&st=cfipyi1e&raw=1",
           "thumbnail": "/images/th-2.jpg"
         }
       ],
@@ -123,22 +123,22 @@
     {
       "title": "Crayon Pop",
       "thumbnail": "/images/album-6.jpg",
-      "artist": "Yana Bolder",
+      "artist": "Lloyd Agola",
       "tracks": [
         {
-          "title": "HiLoFM",
-          "artist": "Yana Bolder",
+          "title": "Hearts",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "streamUrl": "https://www.dropbox.com/scl/fi/if992py9wvv9lk2c67g5b/xytor-hearts.mp3?rlkey=hxxdmffrf7cudw03f1l3f7e4m&st=d70n1199&raw=1",
           "thumbnail": "/images/th-1.jpg"
         },
         {
-          "title": "LunarFM",
-          "artist": "Yana Bolder",
+          "title": "I will be here",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "http://208.64.184.36/sf1033",
+          "streamUrl": "https://www.dropbox.com/scl/fi/2b0gj6o7oxyrgmhglj8o9/xytor-I-will-be-here-Tiesto-Wolfgang-gartner-Xytor-remix.mp3?rlkey=46da0xoliuo7zpc51xk0dllkh&st=4u7dsu4h&raw=1",
           "thumbnail": "/images/th-2.jpg"
         }
       ],
@@ -146,24 +146,24 @@
     },
     {
       "title": "Come Closer",
-      "artist": "Patrick Hagenaar",
+      "artist": "Lloyd Agola",
       "contributingArtists": [],
       "thumbnail": "/images/album-7.jpg",
       "tracks": [
         {
-          "title": "HiLoFM",
-          "artist": "Patrick Hagenaar",
+          "title": "In my head",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "streamUrl": "https://www.dropbox.com/scl/fi/cwnliitd27jf0kixnuk61/xytor-in-my-head.mp3?rlkey=yz6jt0w7oghi6z7zi7id3ldqv&st=p1g6ksxc&raw=1",
           "thumbnail": "/images/th-1.jpg"
         },
         {
-          "title": "LunarFM",
-          "artist": "Patrick Hagenaar",
+          "title": "Kids",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "http://208.64.184.36/sf1033",
+          "streamUrl": "https://www.dropbox.com/scl/fi/bbsbmkwgr1zzmb4853l7i/xytor-kids.mp3?rlkey=5ychqufnpu4hqlp32yp8k2sf5&st=pmf60ie9&raw=1",
           "thumbnail": "/images/th-2.jpg"
         }
       ],
@@ -172,22 +172,22 @@
     {
       "title": "SNBRN",
       "thumbnail": "/images/album-8.jpg",
-      "artist": "Esther French",
+      "artist": "Lloyd Agola",
       "tracks": [
         {
-          "title": "HiLoFM",
-          "artist": "Esther French",
+          "title": "Neon Dreams",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "streamUrl": "https://www.dropbox.com/scl/fi/1znb8qg7d8buificj4u4j/xytor-neon-dreams.mp3?rlkey=1r0g8feaheoi9y5f6ux5jzylg&st=lggyu4s4&raw=1",
           "thumbnail": "/images/th-1.jpg"
         },
         {
-          "title": "LunarFM",
-          "artist": "Esther French",
+          "title": "Pointless",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "http://208.64.184.36/sf1033",
+          "streamUrl": "https://www.dropbox.com/scl/fi/sq86833e53u1sh93ti3se/xytor-pointless.mp3?rlkey=04c7e2gcwn60gnkcmpbqbynp9&st=zgyy55qb&raw=1",
           "thumbnail": "/images/th-2.jpg"
         }
       ],
@@ -196,22 +196,22 @@
     {
       "title": "Monstrous Basshouse",
       "thumbnail": "/images/album-9.jpg",
-      "artist": "Tamara Lafleur",
+      "artist": "Lloyd Agola",
       "tracks": [
         {
-          "title": "HiLoFM",
-          "artist": "Tamara Lafleur",
-          "contributingArtists": ["Tamara Lafleur"],
+          "title": "Sleepwalker",
+          "artist": "Lloyd Agola",
+          "contributingArtists": ["Lloyd Agola"],
           "genres": ["Pop"],
-          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "streamUrl": "https://www.dropbox.com/scl/fi/wlnsw6nuzke85gz9hzdce/xytor-sleepwalker.mp3?rlkey=hlxxqtypgdfxcfoyzvhevlux9&st=60odbw2g&raw=1",
           "thumbnail": "/images/th-1.jpg"
         },
         {
-          "title": "LunarFM",
-          "artist": "Tamara Lafleur",
+          "title": "Still Waiting",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "http://208.64.184.36/sf1033",
+          "streamUrl": "https://www.dropbox.com/scl/fi/ezu3meg7vtgcxpdkqhnvr/xytor-still-waiting.mp3?rlkey=63g8dw0qmb88nq06s9nl41e4k&st=ndo23yci&raw=1",
           "thumbnail": "/images/th-2.jpg"
         }
       ],
@@ -220,22 +220,22 @@
     {
       "title": "HI-LO",
       "thumbnail": "/images/album-10.jpg",
-      "artist": "Renegade Mastah",
+      "artist": "Lloyd Agola",
       "tracks": [
         {
-          "title": "HiLoFM",
-          "artist": "Renegade Mastah",
+          "title": "Varient",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "https://streams.radio.co/sd1bcd1376/listen#.mp3",
+          "streamUrl": "https://www.dropbox.com/scl/fi/dczstgre72s9unk7idfmp/xytor-varient.mp3?rlkey=esv1btow6esrclhfbmm0758cy&st=ma80p7wm&raw=1",
           "thumbnail": "/images/th-1.jpg"
         },
         {
           "title": "LunarFM",
-          "artist": "Renegade Mastah",
+          "artist": "Lloyd Agola",
           "contributingArtists": [],
           "genres": ["Pop"],
-          "streamUrl": "http://208.64.184.36/sf1033",
+          "streamUrl": "https://www.dropbox.com/scl/fi/9n8iwx5ezf175pfi92bqq/xytor-still-waiting-wandering-venus.mp3?rlkey=i9gvs1y9yohtt0rtyvvnwyvcy&st=xct7bupk&raw=1",
           "thumbnail": "/images/th-2.jpg"
         }
       ],

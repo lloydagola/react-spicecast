@@ -25,6 +25,7 @@ const StyledHeroSection = styled(Box)((theme) => ({
   img: {
     position: "absolute",
     zIndex: "0",
+    borderRadius: "32px",
   },
   "& img:nth-child(1)": {
     width: "70%",
@@ -73,8 +74,6 @@ const StyledHeroSection = styled(Box)((theme) => ({
 }));
 
 export default function Hero() {
-  const heroStyles = {};
-
   return (
     <StyledHeroSection component="section">
       <img src="./images/hero-14.png" alt="foreground" loading="lazy" />
@@ -83,8 +82,8 @@ export default function Hero() {
         <ListItemIcon>
           <StreamIcon sx={{ color: "#fff", fontSize: "8rem" }} />
         </ListItemIcon>
-        <Typography variant="h1">SpiceCast</Typography>
-        <Typography variant="h2">The Spice To Life</Typography>
+        <Typography variant="h1">LunarFM</Typography>
+        <Typography variant="h2">It's outta this world</Typography>
       </Box>
     </StyledHeroSection>
   );
