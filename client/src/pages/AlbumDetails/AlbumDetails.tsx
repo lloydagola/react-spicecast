@@ -14,7 +14,7 @@ import Typography from "@mui/material/Typography";
 import { AudioContext, EAudioState } from "src/contexts/AudioContext";
 import MainLayout from "src/layouts/MainLayout";
 import Album from "src/components/Album/Album";
-import { rightDrawerWidth } from "src/utils/constants";
+import { MIN_HEIGHT, rightDrawerWidth } from "src/utils/constants";
 import { TAlbum, TTrack } from "src/types/types";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 
@@ -22,6 +22,7 @@ const StyledAlbumImg = styled.img(() => ({
   display: "none",
   "@media(min-width:1080px)": {
     display: "flex",
+    borderRadius: "16px",
   },
 }));
 
@@ -201,12 +202,7 @@ function MainContent({ album }: { album: TAlbum }): JSX.Element {
       position="relative"
       zIndex="2"
     >
-      <Box
-        borderBottom="2px solid #fff"
-        borderTop="2px solid #fff"
-        pt={4}
-        pb={4}
-      >
+      <Box borderBottom="2px solid #fff" pt={4} pb={4}>
         {!album ? (
           <Typography variant="h1">Loading...</Typography>
         ) : (
@@ -440,6 +436,7 @@ export default function AlbumDetails(): JSX.Element {
           flexGrow: 1,
           width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
           marginTop: { md: 12 },
+          minHeight: MIN_HEIGHT,
         }}
       >
         <AlbumContent />
