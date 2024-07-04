@@ -10,6 +10,7 @@ import {
   StyledPlayerControls,
 } from "./AudioPlayer.styles";
 import { AudioContext, EAudioState } from "src/contexts/AudioContext";
+import { Typography } from "@mui/material";
 
 export default function AudioPlayer(): JSX.Element {
   const player = useRef<HTMLAudioElement>(null);
@@ -190,7 +191,7 @@ export default function AudioPlayer(): JSX.Element {
       </audio>
       <img src={thumbnail || "./images/th-15.jpg"} alt="thumb" />
       <StyledTrackTitle>
-        <h4>{title}</h4>
+        <Typography fontWeight={600}>{title}</Typography>
       </StyledTrackTitle>
       <StyledPlayerControls>
         {playState === EAudioState.PLAYING ? (
