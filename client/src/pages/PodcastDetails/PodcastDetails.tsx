@@ -162,6 +162,7 @@ function EpisodeList({
               key={index}
               p={{ xs: "16px", md: "40px" }}
               sx={{
+                alignItems: "center",
                 borderBottom: "1px solid #111",
                 cursor: "pointer",
                 transition: ".2s ease-in-out",
@@ -204,7 +205,7 @@ function EpisodeList({
                 {index + 1}
               </Grid>
               <Grid item xs={8} sm={4}>
-                <Typography variant="h4" fontSize={16} fontWeight={600} pb={2}>
+                <Typography variant="h4" fontSize={16} fontWeight={600}>
                   {episode.title}
                 </Typography>
               </Grid>
