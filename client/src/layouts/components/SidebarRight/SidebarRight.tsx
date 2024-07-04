@@ -117,23 +117,6 @@ function TrackList({ title }: { title: string }): JSX.Element {
           <Grid item xs={8} pl={2} flex={1} display="grid" alignItems="center">
             <Typography fontWeight={600}>{title}</Typography>
             <Typography>{artist}</Typography>
-            <Typography>
-              {genres.slice(0, 3).map((genre: string, index: number) => (
-                <Box
-                  component="span"
-                  key={index}
-                  style={{
-                    backgroundColor: "#FFDE00",
-                    color: "#333",
-                    marginLeft: "4px",
-                    padding: "4px",
-                    borderRadius: "6px",
-                  }}
-                >
-                  {genre}
-                </Box>
-              ))}
-            </Typography>
           </Grid>
           <Grid item display="grid" justifyItems="center" alignItems="center">
             <FavoriteBorderIcon
@@ -143,7 +126,47 @@ function TrackList({ title }: { title: string }): JSX.Element {
           </Grid>
         </Grid>
       ))}
+      <Tags />
+      <Grid item display="grid">
+        <Typography variant="h4" fontWeight={600}>
+          New Release
+        </Typography>
+        <img
+          width="100%"
+          loading="lazy"
+          alt="featured song"
+          src="/images/album-9.jpg"
+        />
+      </Grid>
+      <Grid width="100%" p={2} style={{ backgroundColor: "#111" }}>
+        <Typography fontWeight={600}>Monstrous Basshouse</Typography>
+        <Typography>Lloyd Agola</Typography>
+      </Grid>
     </Grid>
+  );
+}
+
+function Tags(): JSX.Element {
+  const tags = ["electro", "trap", "house", "acoustic"];
+
+  return (
+    <Box m="60px 8px">
+      {tags.map((tag: string, index: number) => (
+        <Box
+          component="span"
+          key={index}
+          style={{
+            backgroundColor: "#FFDE00",
+            color: "#333",
+            marginLeft: "4px",
+            padding: "12px",
+            borderRadius: "24px",
+          }}
+        >
+          {tag}
+        </Box>
+      ))}
+    </Box>
   );
 }
 
