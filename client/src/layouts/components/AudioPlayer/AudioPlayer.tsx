@@ -115,21 +115,19 @@ export default function AudioPlayer(): JSX.Element {
     }
   };
 
-  function playSomething() {
-    try {
-      player.current?.load();
-      playState === EAudioState.PLAYING && player.current?.play();
-    } catch (error) {
-      console.log("something happened2...");
-    }
-  }
-
   useEffect(() => {
     let ignore = false;
 
     if (ignore) return;
 
-    playSomething();
+    (function () {
+      try {
+        player.current?.load();
+        playState === EAudioState.PLAYING && player.current?.play();
+      } catch (error) {
+        console.log("something happened2...");
+      }
+    })();
 
     return () => {
       ignore = true;
