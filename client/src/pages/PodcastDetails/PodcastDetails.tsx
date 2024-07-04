@@ -6,9 +6,10 @@ import Box from "@mui/material/Box";
 import MainLayout from "src/layouts/MainLayout";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
+import PauseCircleOutlineIcon from "@mui/icons-material/PauseCircleOutline";
 import AddToPhotosIcon from "@mui/icons-material/AddToPhotos";
-import { AudioContext } from "src/contexts/AudioContext";
+import { AudioContext, EAudioState } from "src/contexts/AudioContext";
 import { rightDrawerWidth } from "src/utils/constants";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 import { TEpisode, TPodcast } from "src/types/types";
@@ -99,10 +100,7 @@ function HeroSection({
                   })
                 }
               >
-                <PlayArrowIcon
-                  fontSize="large"
-                  onClick={() => console.log("playing podcast...")}
-                />
+                <PlayCircleOutlineIcon fontSize="large" />
                 <Typography flex={1}>Play</Typography>
               </Button>
               <Button
@@ -132,11 +130,17 @@ function HeroSection({
 function EpisodeList({
   episodes,
   thumbnail,
+  playState,
+  nowPlaying,
   handlePlay,
+  handlePause,
 }: {
   episodes: TEpisode[];
   thumbnail: string;
+  playState: string;
+  nowPlaying: string;
   handlePlay: (track?: any) => void;
+  handlePause: any;
 }): JSX.Element {
   return (
     <>
@@ -169,8 +173,33 @@ function EpisodeList({
                   borderBottom: "1px solid #444",
                 },
               }}
-              onClick={() => handlePlay({ ...episode, thumbnail })}
+              onClick={() =>
+                playState === EAudioState.PLAYING &&
+                nowPlaying === episode.title
+                  ? handlePause()
+                  : handlePlay({ ...episode, thumbnail })
+              }
             >
+              {playState === EAudioState.PLAYING &&
+              nowPlaying === episode.title ? (
+                <PauseCircleOutlineIcon
+                  fontSize="large"
+                  sx={{
+                    color: "#fff",
+                    fontSize: "2rem",
+                    marginRight: "16px",
+                  }}
+                />
+              ) : (
+                <PlayCircleOutlineIcon
+                  fontSize="large"
+                  sx={{
+                    color: "#fff",
+                    fontSize: "2rem",
+                    marginRight: "16px",
+                  }}
+                />
+              )}
               <Grid item xs={1} sm={1}>
                 {index + 1}
               </Grid>
@@ -197,7 +226,13 @@ function PodcastDetails(): JSX.Element {
   const { id } = useParams();
   const [podcast, setPodcast] = useState<TPodcast | null>(null);
 
-  const { handlePlay } = useContext(AudioContext);
+  const {
+    audioData: {
+      audioState: { playState, title: nowPlaying },
+    },
+    handlePlay,
+    handlePause,
+  } = useContext(AudioContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -237,8 +272,11 @@ function PodcastDetails(): JSX.Element {
             <HeroSection podcast={podcast} handlePlay={handlePlay} />
             <EpisodeList
               episodes={podcast.episodes}
-              handlePlay={handlePlay}
               thumbnail={podcast.thumbnail}
+              playState={playState}
+              nowPlaying={nowPlaying}
+              handlePlay={handlePlay}
+              handlePause={handlePause}
             />
           </Box>
         </MainLayout>
