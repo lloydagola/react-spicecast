@@ -83,8 +83,8 @@ export default function Hero() {
         <ListItemIcon>
           <StreamIcon sx={{ color: "#fff", fontSize: "8rem" }} />
         </ListItemIcon>
-        <Typography variant="h1">SpiceCast</Typography>
-        <Typography variant="h2">The Spice To Life</Typography>
+        <Typography variant="h1">LunarFM</Typography>
+        <Typography variant="h2">It's outta this world</Typography>
       </Box>
     </StyledHeroSection>
   );
