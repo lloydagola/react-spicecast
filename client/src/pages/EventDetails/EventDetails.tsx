@@ -148,11 +148,19 @@ function HeroSection({ title }: { title: string }): JSX.Element {
       justifyContent="center"
       height="50vh"
       sx={{
-        backgroundImage: "url(/images/background.jpg)",
+        backgroundImage: "url(/images/backgrounds/background-2.jpg)",
         backgroundAttachment: "fixed",
         backgroundSize: "contained",
       }}
     >
+      <Box
+        height="50vh"
+        width="100%"
+        position="absolute"
+        sx={{
+          background: "linear-gradient(rgba(0, 0, 0, 0) -100%, rgb(0, 0, 0))",
+        }}
+      />
       <Typography
         variant="h2"
         fontSize="8rem"
