@@ -202,12 +202,7 @@ function MainContent({ album }: { album: TAlbum }): JSX.Element {
       position="relative"
       zIndex="2"
     >
-      <Box
-        borderBottom="2px solid #fff"
-        borderTop="2px solid #fff"
-        pt={4}
-        pb={4}
-      >
+      <Box borderBottom="2px solid #fff" pt={4} pb={4}>
         {!album ? (
           <Typography variant="h1">Loading...</Typography>
         ) : (
