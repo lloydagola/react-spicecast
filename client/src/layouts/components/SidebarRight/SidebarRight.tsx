@@ -104,13 +104,25 @@ function TrackList({ title }: { title: string }): JSX.Element {
       <Tags />
       <Grid item display="grid">
         <Typography variant="h4" fontWeight={600}>
-          New Release
+          New Releases
         </Typography>
         <img
           width="100%"
           loading="lazy"
           alt="featured song"
           src="/images/album-9.jpg"
+        />
+        <Grid width="100%" p={2} style={{ backgroundColor: "#111" }}>
+          <Typography fontWeight={600}>Monstrous Basshouse</Typography>
+          <Typography>Lloyd Agola</Typography>
+        </Grid>
+      </Grid>
+      <Grid item display="grid">
+        <img
+          width="100%"
+          loading="lazy"
+          alt="featured song"
+          src="/images/album-8.jpg"
         />
         <Grid width="100%" p={2} style={{ backgroundColor: "#111" }}>
           <Typography fontWeight={600}>Monstrous Basshouse</Typography>
