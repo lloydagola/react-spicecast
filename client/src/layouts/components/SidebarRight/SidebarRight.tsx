@@ -22,7 +22,7 @@ const StyledSidebarRight = styled(Box)(({ theme }) => ({
   width: rightDrawerWidth,
   backgroundColor: "#000",
   zIndex: "3",
-  padding: "80px 16px",
+  padding: "80px 24px",
   borderLeft: "1px solid #111",
   "@media (min-width:1080px)": {
     display: "flex",
@@ -100,7 +100,7 @@ function TrackList({ title }: { title: string }): JSX.Element {
         {title}
       </Typography>
       {songs.map(({ title, artist, thumbnail, genres }) => (
-        <Grid container>
+        <Grid container sx={{ borderBottom: "1px solid #222" }}>
           <Grid item display="grid" justifyItems="center" alignItems="center">
             <PlayCircleOutlineIcon
               fontSize="large"
