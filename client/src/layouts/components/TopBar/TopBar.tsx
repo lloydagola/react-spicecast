@@ -81,7 +81,7 @@ export function TopBar(): JSX.Element {
                 variant="h6"
                 noWrap
                 component="div"
-                marginRight="80px"
+                marginRight="50px"
                 fontSize={36}
                 fontWeight={900}
                 sx={{
