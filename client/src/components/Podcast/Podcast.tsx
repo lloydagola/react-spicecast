@@ -1,10 +1,13 @@
-import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
+
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
+
 import PlaylistView from "../PlaylistView/PlaylistView";
 
 import { TPodcast } from "src/types/types";
