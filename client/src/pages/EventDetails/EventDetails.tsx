@@ -308,7 +308,7 @@ export default function EventDetails(): JSX.Element {
         component="section"
         sx={{
           flexGrow: 1,
-          width: { sm: `calc(100% - ${rightDrawerWidth}px)`, lg: "100%" },
+          width: { sm: `calc(100% - ${rightDrawerWidth}px)` },
           minHeight: "100vh",
           marginBottom: { md: 12 },
           backgroundAttachment: "fixed",
