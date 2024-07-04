@@ -66,7 +66,7 @@ function Details(): JSX.Element {
     <Box width="100%">
       <Grid container borderBottom="1px solid #333" p={4}>
         <Grid xs={12} md={3} item>
-          Date
+          <Typography fontWeight={600}> Date</Typography>
         </Grid>
         <Grid xs={12} md={8} item>
           September 19, 2022 1:00 am
@@ -74,7 +74,7 @@ function Details(): JSX.Element {
       </Grid>
       <Grid container borderBottom="1px solid #333" p={4}>
         <Grid xs={12} md={3} item>
-          Location
+          <Typography fontWeight={600}> Location</Typography>
         </Grid>
         <Grid xs={12} md={8} item>
           Ministry Of Sound
@@ -82,7 +82,7 @@ function Details(): JSX.Element {
       </Grid>
       <Grid container borderBottom="1px solid #333" p={4}>
         <Grid xs={12} md={3} item>
-          Address
+          <Typography fontWeight={600}> Address</Typography>
         </Grid>
         <Grid xs={12} md={8} item>
           103 Gaunt St London UK
@@ -90,7 +90,7 @@ function Details(): JSX.Element {
       </Grid>
       <Grid container borderBottom="1px solid #333" p={4}>
         <Grid xs={12} md={3} item>
-          Phone
+          <Typography fontWeight={600}> Phone</Typography>
         </Grid>
         <Grid xs={12} md={8} item>
           +44 20 7740 8600
@@ -98,7 +98,7 @@ function Details(): JSX.Element {
       </Grid>
       <Grid container borderBottom="1px solid #333" p={4}>
         <Grid xs={12} md={3} item>
-          Website
+          <Typography fontWeight={600}> Website</Typography>
         </Grid>
         <Grid xs={12} md={8} item>
           http://club.ministryofsound.com
@@ -354,7 +354,7 @@ export default function EventDetails(): JSX.Element {
         {event ? (
           <>
             <HeroSection title={event.title} />
-            <Grid container pb={16}>
+            <Grid container mb={16}>
               <Grid
                 item
                 xs={12}
