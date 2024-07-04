@@ -115,7 +115,6 @@ export default function AudioPlayer(): JSX.Element {
   };
 
   function playSomething() {
-    console.log("playboi", player.current?.currentSrc);
     try {
       player.current?.load();
       playState === EAudioState.PLAYING && player.current?.play();
@@ -180,6 +179,8 @@ export default function AudioPlayer(): JSX.Element {
     };
   }, [progressValue]);
 
+  const isLiveStream = trackDuration.includes("Infinity");
+
   return (
     <StyledAudioPlayer id="audio-player">
       <audio ref={player}>
@@ -209,7 +210,7 @@ export default function AudioPlayer(): JSX.Element {
         ref={progressBarRef}
         onClick={seek}
       />
-      <p>{trackDuration}</p>
+      <p>{isLiveStream ? "" : trackDuration}</p>
     </StyledAudioPlayer>
   );
 }
