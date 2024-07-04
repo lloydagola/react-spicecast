@@ -22,6 +22,7 @@ const StyledAlbumImg = styled.img(() => ({
   display: "none",
   "@media(min-width:1080px)": {
     display: "flex",
+    borderRadius: "16px",
   },
 }));
 
