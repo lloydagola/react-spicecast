@@ -44,6 +44,7 @@ export default function RadioStations({
     backgroundImage: "url('/images/backgrounds/background-2.jpg')",
     backgroundAttachment: "fixed",
     backgroundSize: "cover",
+    position: "relative",
   };
 
   return (
