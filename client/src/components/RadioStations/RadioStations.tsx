@@ -40,8 +40,9 @@ export default function RadioStations({
   }, []);
 
   const radioStationStyles = {
-    backgroundImage: "url('/images/hero-11.jpg')",
+    backgroundImage: "url('/images/backgrounds/background-2.jpg')",
     backgroundAttachment: "fixed",
+    backgroundSize: "cover",
   };
 
   return (
@@ -51,10 +52,12 @@ export default function RadioStations({
       pb="60px"
       borderTop="1px solid #111"
       borderBottom="1px solid #111"
+      sx={radioStationStyles}
     >
       <Typography variant="h2" color="white" m="32px">
         Radio Stations
       </Typography>
+
       <Grid
         container
         gap={1}
