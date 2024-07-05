@@ -9,7 +9,6 @@ import RadioStation from "src/components/RadioStation/RadioStation";
 import { TRadioStation } from "src/types/types";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 import { MIN_HEIGHT } from "src/utils/constants";
-import { MIN_HEIGHT } from "src/utils/constants";
 
 export default function RadioStations({
   start,
@@ -42,7 +41,6 @@ export default function RadioStations({
   }, []);
 
   const radioStationStyles = {
-    backgroundImage: "url('/images/backgrounds/background-2.jpg')",
     backgroundImage: "url('/images/backgrounds/background-2.jpg')",
     backgroundAttachment: "fixed",
     backgroundSize: "cover",
