@@ -4,11 +4,6 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import Grid from "@mui/material/Grid";
-import { Typography } from "@mui/material";
-import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-
 import { rightDrawerWidth } from "src/utils/constants";
 
 const StyledSidebarRight = styled(Box)(({ theme }) => ({
@@ -17,11 +12,9 @@ const StyledSidebarRight = styled(Box)(({ theme }) => ({
   backgroundColor: "#000",
   zIndex: "3",
   padding: "80px 24px",
-  padding: "80px 24px",
   borderLeft: "1px solid #111",
   "@media (min-width:1080px)": {
     display: "flex",
-    flexDirection: "column",
     flexDirection: "column",
   },
 }));
