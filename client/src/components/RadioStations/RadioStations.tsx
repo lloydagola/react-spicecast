@@ -22,7 +22,7 @@ export default function RadioStations({
   const [page, setPage] = useState(1);
   const itemsPerPage = 12;
 
-  function handlePageChange(event: ChangeEvent<unknown>, newPage: number) {
+  function handlePageChange(_: ChangeEvent<unknown>, newPage: number) {
     setPage(newPage);
     window.scrollTo(0, 0);
   }
