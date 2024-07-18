@@ -68,10 +68,10 @@ export default function RadioStation({
           }}
         />
         <img
+          loading="lazy"
           src={radioStation.thumbnail}
           alt="podcast thumbnail"
           style={{ transition: "transform .5s", width: "100%" }}
-          loading="lazy"
         />
       </Box>
 
