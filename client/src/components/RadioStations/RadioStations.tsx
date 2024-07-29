@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -9,6 +9,7 @@ import RadioStation from "src/components/RadioStation/RadioStation";
 import { TRadioStation } from "src/types/types";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 import { MIN_HEIGHT } from "src/utils/constants";
+import Pagination from "@mui/material/Pagination";
 
 export default function RadioStations({
   start,
@@ -18,6 +19,19 @@ export default function RadioStations({
   end?: number | undefined;
 }): JSX.Element {
   const [radioStations, setRadioStations] = useState([]);
+  const [page, setPage] = useState(1);
+  const itemsPerPage = 12;
+
+  function handlePageChange(_: ChangeEvent<unknown>, newPage: number) {
+    setPage(newPage);
+    window.scrollTo(0, 0);
+  }
+
+  const startIndex = (page - 1) * itemsPerPage;
+  const visibleItems = radioStations.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
 
   useEffect(() => {
     try {
@@ -76,10 +90,17 @@ export default function RadioStations({
           gridTemplateColumns: "repeat(auto-fit, minmax(200px, 350px))",
         }}
       >
-        {radioStations.map((radioStation: TRadioStation, index: number) => (
+        {visibleItems.map((radioStation: TRadioStation, index: number) => (
           <RadioStation key={index} radioStation={radioStation} />
         ))}
       </Grid>
+      <Pagination
+        count={Math.ceil(radioStations.length / itemsPerPage)}
+        page={page}
+        onChange={handlePageChange}
+        shape="rounded"
+        color="primary"
+      />
     </Box>
   );
 }
