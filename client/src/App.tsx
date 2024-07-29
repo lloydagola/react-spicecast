@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
 
@@ -12,7 +13,9 @@ function App() {
     <AppContextProvider>
       <ThemeProvider theme={theme}>
         <AudioContextProvider>
-          <RouterProvider router={router} />
+          <Suspense fallback={<h1>loading...</h1>}>
+            <RouterProvider router={router} />
+          </Suspense>
           <AudioPlayer />
         </AudioContextProvider>
       </ThemeProvider>
