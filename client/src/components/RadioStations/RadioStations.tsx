@@ -39,8 +39,6 @@ export default function RadioStations({
         const res = await fetch(`${API_ENDPOINT_URL}/radioStations/test`);
         const radioStationData = await res.json();
 
-        console.log("useEffect...");
-
         if (!start || !end) {
           setRadioStations(radioStationData);
         }
