@@ -1,3 +1,5 @@
+import initializeDB from "./data-access";
+
 const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
@@ -16,11 +18,7 @@ const contributingArtistRouter = require("./routes/contributingArtists");
 const genreRouter = require("./routes/genres");
 const hostRouter = require("./routes/hosts");
 
-const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/LunarFM", { useNewUrlParser: true });
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error:"));
-db.once("open", () => console.log("database connected..."));
+initializeDB();
 
 const app = express();
 
