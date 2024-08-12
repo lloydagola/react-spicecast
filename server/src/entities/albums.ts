@@ -15,7 +15,13 @@ export type TTrack = {
   thumbnail?: string;
 };
 
-function makeAlbum({ title, artist, thumbnail, genres, tracks }: TAlbum) {
+export default function makeAlbum({
+  title,
+  artist,
+  thumbnail,
+  genres,
+  tracks,
+}: TAlbum) {
   if (!title) throw new Error("Title is required");
   if (!artist) throw new Error("Artist is required");
   if (!thumbnail) throw new Error("Thumbnail is required");
@@ -29,5 +35,3 @@ function makeAlbum({ title, artist, thumbnail, genres, tracks }: TAlbum) {
     getGenres: () => genres,
   });
 }
-
-export default makeAlbum;
