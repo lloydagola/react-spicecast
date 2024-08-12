@@ -3,7 +3,6 @@ import makeExpressCallback from "../express-callback";
 import test from "../_mocks_/data/albums.json";
 
 const router = require("express").Router();
-//const { check, validationResult } = require("express-validator");
 
 router.get("/test", (req: any, res: any) => {
   const { start = 0, end } = req.query;
