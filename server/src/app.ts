@@ -16,11 +16,11 @@ const contributingArtistRouter = require("./routes/contributingArtists");
 const genreRouter = require("./routes/genres");
 const hostRouter = require("./routes/hosts");
 
-//const mongoose = require("mongoose");
-//mongoose.connect("mongodb://localhost/spicecast", { useNewUrlParser: true });
-//const db = mongoose.connection;
-//db.on("error", console.error.bind(console, "connection error:"));
-//db.once("open", () => console.log("database connected..."));
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost/LunarFM", { useNewUrlParser: true });
+const db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", () => console.log("database connected..."));
 
 const app = express();
 
@@ -29,7 +29,6 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-
 
 app.use("/api", indexRouter);
 app.use("/api/users", usersRouter);
@@ -46,7 +45,7 @@ app.use("/api/hosts", hostRouter);
 //set static folder
 app.use(express.static(path.join(__dirname, "/build")));
 app.use(express.static(path.join(__dirname, "/public")));
-app.get("*", (_:any, res:any) => {
+app.get("*", (_: any, res: any) => {
   res.sendFile(path.join(__dirname, "build"));
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
