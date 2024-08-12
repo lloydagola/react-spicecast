@@ -1,9 +1,16 @@
-const express = require("express");
-const track = require("../models/track");
-const album = require("../models/album");
+import express from "express";
+import tracksController from "../controllers/tracksController";
+import makeExpressCallback from "../express-callback";
 
 const router = express.Router();
 
+router.get("/", makeExpressCallback(tracksController.getTracks));
+router.get("/:id", makeExpressCallback(tracksController.getTracks));
+router.post("/", makeExpressCallback(tracksController.postTrack));
+router.put("/:id", makeExpressCallback(tracksController.updateTrack));
+router.delete("/:id", makeExpressCallback(tracksController.deleteTrack));
+
+/* 
 router.get("/",(req, res) => {
     track
     .find()
@@ -57,4 +64,4 @@ router.delete('/', (req, res)=> {
     .catch(error => res.status(400).send())
 });
 
-module.exports = router;
+ */ module.exports = router;
