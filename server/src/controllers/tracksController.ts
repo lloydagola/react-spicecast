@@ -2,15 +2,23 @@ import makeTrack from "../entities/track";
 import track from "../models/track";
 
 function getTracks() {
-  return track.find();
-  //.populate("album", ["title", "thumbnail"])
-  //.populate("contributingArtists", ["title", "thumbnail"]);
+  try {
+    return track.find();
+    //.populate("album", ["title", "thumbnail"])
+    //.populate("contributingArtists", ["title", "thumbnail"]);
+  } catch (error) {
+    console.log("Could not find the tracks...", error);
+  }
 }
 
 function getTrack({ params: { id } }: any) {
-  return track.findById(id);
-  //.populate("album", ["title", "thumbnail"])
-  //.populate("contributingArtists", ["title", "thumbnail"]);
+  try {
+    return track.findById(id);
+    //.populate("album", ["title", "thumbnail"])
+    //.populate("contributingArtists", ["title", "thumbnail"]);
+  } catch (error) {
+    console.log("Could not find the track...", error);
+  }
 }
 
 function postTrack({
@@ -67,8 +75,8 @@ function deleteTrack({ params: { id } }: any) {
 }
 
 export default Object.freeze({
-  getTracks,
   getTrack,
+  getTracks,
   postTrack,
   updateTrack,
   deleteTrack,

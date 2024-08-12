@@ -8,12 +8,12 @@ const cors = require("cors");
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
-const podcastRouter = require("./routes/podcasts");
+import podcastRouter from "./routes/podcasts";
 const radioStationRouter = require("./routes/radioStations");
 const eventsRouter = require("./routes/events");
 const episodeRouter = require("./routes/episodes");
-const albumRouter = require("./routes/albums");
-const trackRouter = require("./routes/tracks");
+import albumRouter from "./routes/albums";
+import trackRouter from "./routes/tracks";
 const contributingArtistRouter = require("./routes/contributingArtists");
 const genreRouter = require("./routes/genres");
 const hostRouter = require("./routes/hosts");

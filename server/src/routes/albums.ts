@@ -32,4 +32,4 @@ router.post("/", makeExpressCallback(albumsController.postAlbum));
 router.put("/:id", makeExpressCallback(albumsController.updateAlbum));
 router.delete("/:id", makeExpressCallback(albumsController.deleteAlbum));
 
-module.exports = router;
+export default router;
