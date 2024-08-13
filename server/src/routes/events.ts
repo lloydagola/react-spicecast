@@ -31,4 +31,4 @@ router.post("/", makeExpressCallback(eventsController.postEvent));
 router.put("/", makeExpressCallback(eventsController.updateEvent));
 router.delete("/", makeExpressCallback(eventsController.deleteEvent));
 
-module.exports = router;
+export default router;

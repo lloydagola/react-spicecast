@@ -13,4 +13,4 @@ router.get("/test", (_: any, response: any) => {
 
 router.get("/", makeExpressCallback(radioStationsController.getRadioStations));
 
-module.exports = router;
+export default router;
