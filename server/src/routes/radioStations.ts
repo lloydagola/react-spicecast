@@ -1,13 +1,13 @@
+import express from "express";
 import radioStationsController from "../controllers/radioStationsController";
 import makeExpressCallback from "../express-callback";
 
-const express = require("express");
+import radioStations from "../_mocks_/data/radioStations.json";
 //const { check, validationResult } = require("express-validator");
-const radioStations = require("../_mocks_/data/radioStations.json");
 
 const router = express.Router();
 
-router.get("/test", (request: any, response: any) => {
+router.get("/test", (_: any, response: any) => {
   response.status(200).send(radioStations.data);
 });
 
