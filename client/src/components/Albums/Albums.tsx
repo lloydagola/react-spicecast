@@ -13,9 +13,10 @@ export default function Albums(): JSX.Element {
   useEffect(() => {
     try {
       (async function () {
-        const res = await fetch(`${API_ENDPOINT_URL}/albums/test`);
+        const res = await fetch(`${API_ENDPOINT_URL}/albums`);
         const albumData = await res.json();
-        setAlbums(albumData);
+        if (!albumData) setAlbums([]);
+        setAlbums(albumData.data);
       })();
     } catch (error) {
       /**
@@ -47,7 +48,7 @@ export default function Albums(): JSX.Element {
         }}
       >
         {albums.map((album, index) => (
-          <Album key={index} id={index} album={album} />
+          <Album key={index} album={album} />
         ))}
       </Grid>
     </Box>

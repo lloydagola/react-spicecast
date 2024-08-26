@@ -14,7 +14,7 @@ import eventsRouter from "./routes/events";
 const episodeRouter = require("./routes/episodes");
 import albumRouter from "./routes/albums";
 import trackRouter from "./routes/tracks";
-const contributingArtistRouter = require("./routes/contributingArtists");
+import artists from "./routes/artists";
 const genreRouter = require("./routes/genres");
 const hostRouter = require("./routes/hosts");
 
@@ -36,7 +36,7 @@ app.use("/api/events", eventsRouter);
 app.use("/api/episodes", episodeRouter);
 app.use("/api/albums", albumRouter);
 app.use("/api/tracks", trackRouter);
-app.use("/api/artists", contributingArtistRouter);
+app.use("/api/artist", artists);
 app.use("/api/genres", genreRouter);
 app.use("/api/hosts", hostRouter);
 

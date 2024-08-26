@@ -1,17 +1,22 @@
 import { Request } from "express";
 import album from "../models/album";
 
-function getAlbum({ params: { id } }: Request) {
+async function getAlbum({ params: { id } }: Request): Promise<any> {
   try {
-    return album.findById(id);
+    const albumData = await album.findById(id).populate("tracks");
+    if (!albumData) {
+      return Promise.reject(new Error("Album not found"));
+    }
+    return albumData;
   } catch (error) {
-    console.log("Could not fetch the Albums...");
+    console.error("Could not fetch the Album...", error);
+    return Promise.reject(error);
   }
 }
 
 function getAlbums() {
   try {
-    return album.find();
+    return album.find().populate("artist");
   } catch (error) {
     console.log("Could not fetch the Albums...");
   }
@@ -42,11 +47,15 @@ function updateAlbum({ params: { id }, body: { attribute, value } }: Request) {
   if (!value) throw new Error("Value is required...");
   if (!id) throw new Error("Album ID is required...");
 
-  const updatedAlbum = album.findByIdAndUpdate(id, {
-    [attribute]: value,
-  });
+  try {
+    const updatedAlbum = album.findByIdAndUpdate(id, {
+      [attribute]: value,
+    });
 
-  return updatedAlbum;
+    return updatedAlbum;
+  } catch (error) {
+    console.log("An error ocurred while attempting to save the Album...");
+  }
 }
 
 function deleteAlbum({ params: { id } }: Request) {

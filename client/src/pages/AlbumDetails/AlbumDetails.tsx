@@ -313,7 +313,7 @@ function RecommendedSection(): JSX.Element {
           justifyContent="center"
         >
           {albums.map((album, index) => (
-            <Album album={album} key={index} id={index} />
+            <Album album={album} key={index} />
           ))}
         </Grid>
       </Box>
@@ -397,9 +397,9 @@ function AlbumContent(): JSX.Element {
     window.scrollTo(0, 0);
     try {
       (async function () {
-        const response = await fetch(`${API_ENDPOINT_URL}/albums/test/${id}`);
+        const response = await fetch(`${API_ENDPOINT_URL}/albums/${id}`);
         const AlbumData = await response.json();
-        setAlbum(AlbumData);
+        setAlbum(AlbumData.data);
       })();
     } catch (error) {
       console.log("an error occurred", error);

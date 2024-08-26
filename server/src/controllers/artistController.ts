@@ -19,15 +19,16 @@ function getArtists() {
 
 function postArtist({ body: artistInfo }: Request) {
   if (!artistInfo.title) throw new Error("Title is required");
-  if (!artistInfo.artist) throw new Error("Artist is required");
+  if (!artistInfo.genres) throw new Error("Genre is required");
   if (!artistInfo.thumbnail) throw new Error("Thumbnail is required");
 
   try {
+    console.log("trying...", artistInfo);
     const newArtist = new artist(artistInfo);
     newArtist.save();
 
-    if (!artist) throw new Error("Could not save the artist...");
-    return artistInfo;
+    if (!newArtist) throw new Error("Could not save the artist...");
+    return newArtist;
   } catch (error) {
     console.log("An error ocurred while attempting to post the artist");
   }
