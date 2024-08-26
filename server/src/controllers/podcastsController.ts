@@ -1,6 +1,7 @@
+import { Request } from "express";
 import podcast from "../models/podcast";
 
-function getPodcast({ params: { id } }: any) {
+function getPodcast({ params: { id } }: Request) {
   return podcast.findById(id);
 }
 function getPodcasts() {
@@ -8,7 +9,7 @@ function getPodcasts() {
 }
 function createPodcasts({
   body: { title, hosts, episodes, genres, thumbnail },
-}: any) {
+}: Request) {
   try {
     const newPodcast = new podcast({
       title,
@@ -24,7 +25,10 @@ function createPodcasts({
     console.log("An error ocurred when attempting to save the podcast", error);
   }
 }
-function updatePodcast({ params: { id }, body: { attribute, value } }: any) {
+function updatePodcast({
+  params: { id },
+  body: { attribute, value },
+}: Request) {
   try {
     if (!id) throw new Error("ID is required...");
     const updatedPodcast = podcast.findByIdAndUpdate(id, {
@@ -39,7 +43,7 @@ function updatePodcast({ params: { id }, body: { attribute, value } }: any) {
     console.log("An error ocurred while attempting to save the podcast", error);
   }
 }
-function deletePodcast({ params: { id } }: any) {
+function deletePodcast({ params: { id } }: Request) {
   try {
     if (!id) throw new Error("ID is required...");
     const deletedPodcast = podcast.findByIdAndDelete(id);

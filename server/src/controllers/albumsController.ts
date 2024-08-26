@@ -1,6 +1,7 @@
+import { Request } from "express";
 import album from "../models/album";
 
-function getAlbum({ params: { id } }: any) {
+function getAlbum({ params: { id } }: Request) {
   try {
     return album.findById(id);
   } catch (error) {
@@ -16,7 +17,7 @@ function getAlbums() {
   }
 }
 
-function postAlbum({ body: albumInfo }: any) {
+function postAlbum({ body: albumInfo }: Request) {
   if (!albumInfo.title) throw new Error("Title is required");
   if (!albumInfo.artist) throw new Error("Artist is required");
   if (!albumInfo.thumbnail) throw new Error("Thumbnail is required");
@@ -36,7 +37,7 @@ function postAlbum({ body: albumInfo }: any) {
   return new album(albumInfo).save();
 }
 
-function updateAlbum({ params: { id }, body: { attribute, value } }: any) {
+function updateAlbum({ params: { id }, body: { attribute, value } }: Request) {
   if (!attribute) throw new Error("Attribute is required...");
   if (!value) throw new Error("Value is required...");
   if (!id) throw new Error("Album ID is required...");
@@ -48,7 +49,7 @@ function updateAlbum({ params: { id }, body: { attribute, value } }: any) {
   return updatedAlbum;
 }
 
-function deleteAlbum({ params: { id } }: any) {
+function deleteAlbum({ params: { id } }: Request) {
   const deletedAlbum = album.findByIdAndDelete(id);
 
   return deletedAlbum;

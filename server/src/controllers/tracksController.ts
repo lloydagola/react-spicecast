@@ -1,3 +1,4 @@
+import { Request } from "express";
 import makeTrack from "../entities/track";
 import track from "../models/track";
 
@@ -11,7 +12,7 @@ function getTracks() {
   }
 }
 
-function getTrack({ params: { id } }: any) {
+function getTrack({ params: { id } }: Request) {
   try {
     return track.findById(id);
     //.populate("album", ["title", "thumbnail"])
@@ -23,7 +24,7 @@ function getTrack({ params: { id } }: any) {
 
 function postTrack({
   body: { title, genres, album, streamUrl, contributingArtists },
-}: any) {
+}: Request) {
   if (!title) throw new Error("Track title is required...");
   if (!genres || genres.length < 1) throw new Error("Generes are required...");
   if (!streamUrl) throw new Error("Stream url is required...");
@@ -55,7 +56,7 @@ function postTrack({
   }
 }
 
-function updateTrack({ params: { id }, body: { attribute, value } }: any) {
+function updateTrack({ params: { id }, body: { attribute, value } }: Request) {
   try {
     const updatedTrack = track.findByIdAndUpdate(id, { [attribute]: value });
     return updatedTrack;
@@ -64,7 +65,7 @@ function updateTrack({ params: { id }, body: { attribute, value } }: any) {
   }
 }
 
-function deleteTrack({ params: { id } }: any) {
+function deleteTrack({ params: { id } }: Request) {
   try {
     const deletedTrack = track.findByIdAndDelete(id);
 
