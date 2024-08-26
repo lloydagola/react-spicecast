@@ -1,5 +1,9 @@
-export default function makeExpressCallback(controller: any) {
-  return (req: any, res: any) => {
+import { Request, Response } from "express";
+
+type TController = (req: Request) => any;
+
+export default function makeExpressCallback(controller: TController) {
+  return (req: Request, res: Response) => {
     try {
       (async function () {
         const data = await controller(req);
