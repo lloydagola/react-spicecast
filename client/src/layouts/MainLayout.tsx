@@ -1,23 +1,28 @@
-import { ReactNode} from 'react';
-import Box from '@mui/material/Box';
-import SidebarLeft from './components/SidebarLeft/SidebarLeft';
-import SidebarRight from './components/SidebarRight/SidebarRight';
+import { ReactNode } from "react";
+import Box from "@mui/material/Box";
+import SidebarLeft from "./components/SidebarLeft/SidebarLeft";
+import SidebarRight from "./components/SidebarRight/SidebarRight";
 
 type TMainLayoutProps = {
   children: ReactNode[] | ReactNode;
- 
-}
+};
 
-export default function MainLayout({children }:TMainLayoutProps) {  
-  
+export default function MainLayout({ children }: TMainLayoutProps) {
   return (
-    <Box sx={{ display: 'flex', flexDirection:'column',color:'#fff' }} >             
-      <Box sx={{ display: 'flex', backgroundColor: '#000', color: '#fff', zIndex: '1' }}>
+    <Box sx={{ display: "flex", flexDirection: "column", color: "#fff" }}>
+      <Box
+        sx={{
+          display: "flex",
+          backgroundColor: "#000",
+          color: "#fff",
+          zIndex: "1",
+          minHeight: "300vh",
+        }}
+      >
         <SidebarLeft />
         {children}
-        <SidebarRight/>
+        <SidebarRight />
       </Box>
     </Box>
   );
 }
-                                                                                                                                                      
