@@ -31,7 +31,14 @@ export default function Podcasts(): JSX.Element {
       <Typography variant="h2" color="white" m="32px">
         Podcasts
       </Typography>
-      <Grid container m="auto" gap={1} justifyContent="center">
+      <Grid
+        container
+        m="auto"
+        sx={{
+          gridGap: "6px",
+        }}
+        justifyContent="center"
+      >
         {podcasts.map((podcast: TPodcast, index: number) => (
           <Grid item key={index}>
             <Podcast podcast={podcast} index={index} />

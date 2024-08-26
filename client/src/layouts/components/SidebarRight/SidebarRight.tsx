@@ -57,6 +57,30 @@ function TrackList({ title }: { title: string }): JSX.Element {
       thumbnail: "/images/album-8.jpg",
       genres: ["electro", "trap", "house"],
     },
+    {
+      title: "Focus",
+      artist: "Lloyd Agola",
+      thumbnail: "/images/album-5.jpg",
+      genres: ["electro", "trap", "house"],
+    },
+    {
+      title: "Hearts",
+      artist: "Lloyd Agola",
+      thumbnail: "/images/album-6.jpg",
+      genres: ["electro", "trap", "house"],
+    },
+    {
+      title: "In my head",
+      artist: "Lloyd Agola",
+      thumbnail: "/images/album-7.jpg",
+      genres: ["electro", "trap", "house"],
+    },
+    {
+      title: "Neon Dreams",
+      artist: "Lloyd Agola",
+      thumbnail: "/images/album-8.jpg",
+      genres: ["electro", "trap", "house"],
+    },
   ];
 
   return (
@@ -128,6 +152,18 @@ function TrackList({ title }: { title: string }): JSX.Element {
           <Typography>Lloyd Agola</Typography>
         </Grid>
       </Grid>
+      <Grid item display="grid">
+        <img
+          width="100%"
+          loading="lazy"
+          alt="featured song"
+          src="/images/album-8.jpg"
+        />
+        <Grid width="100%" p={2} style={{ backgroundColor: "#111" }}>
+          <Typography fontWeight={600}>Monstrous Basshouse</Typography>
+          <Typography>Lloyd Agola</Typography>
+        </Grid>
+      </Grid>
     </Grid>
   );
 }
@@ -161,7 +197,7 @@ export default function SidebarRight(): JSX.Element {
     <StyledSidebarRight>
       <TrackList title="Top Picks" />
       {/* <TrackList title="Trending Songs" /> */}
-      <TrackList title="Top Picks" />
+      {/* <TrackList title="Top Picks" /> */}
       {/* <TrackList title="Trending Songs" /> */}
     </StyledSidebarRight>
   );
