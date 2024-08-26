@@ -40,7 +40,7 @@ export default function Albums(): JSX.Element {
         container
         sx={{
           display: "grid",
-          gridGap: "4px",
+          gridGap: "6px",
           gridTemplateColumns: "repeat(auto-fill, 300px)",
           justifyContent: "center",
           margin: "auto",

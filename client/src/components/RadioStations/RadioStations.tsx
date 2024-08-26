@@ -80,11 +80,11 @@ export default function RadioStations({
 
       <Grid
         container
-        gap={1}
         justifyContent="center"
         mb="60px"
         sx={{
           display: "grid",
+          gridGap: "6px",
           gridTemplateColumns: "repeat(auto-fit, minmax(200px, 350px))",
         }}
       >
