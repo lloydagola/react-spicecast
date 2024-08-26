@@ -2,7 +2,11 @@ const dbName = "LunarFM";
 import mongoose from "mongoose";
 
 export default async function initializeDB() {
-  mongoose.connect(`mongodb://localhost/${dbName}`, { useNewUrlParser: true });
+  mongoose.connect(`mongodb://localhost/${dbName}`, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  });
   const db = mongoose.connection;
   db.on(
     "error",
