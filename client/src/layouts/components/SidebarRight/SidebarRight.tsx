@@ -54,7 +54,8 @@ function TrackList({ title }: { title: string }): JSX.Element {
     {
       title: "Neon Dreams",
       artist: "Lloyd Agola",
-      thumbnail: "/images/album-8.jpg",
+      thumbnail:
+        "https://blog.spoongraphics.co.uk/wp-content/uploads/2017/01/thumbnail-2.jpg",
       genres: ["electro", "trap", "house"],
     },
     {
@@ -145,10 +146,10 @@ function TrackList({ title }: { title: string }): JSX.Element {
           width="100%"
           loading="lazy"
           alt="featured song"
-          src="/images/album-8.jpg"
+          src="https://i.pinimg.com/736x/e8/bb/10/e8bb108d1aab76692f6db2af816b8dec.jpg"
         />
         <Grid width="100%" p={2} style={{ backgroundColor: "#111" }}>
-          <Typography fontWeight={600}>Monstrous Basshouse</Typography>
+          <Typography fontWeight={600}>Monstrous Basshousess</Typography>
           <Typography>Lloyd Agola</Typography>
         </Grid>
       </Grid>
@@ -157,7 +158,7 @@ function TrackList({ title }: { title: string }): JSX.Element {
           width="100%"
           loading="lazy"
           alt="featured song"
-          src="/images/album-8.jpg"
+          src="https://blog.spoongraphics.co.uk/wp-content/uploads/2017/01/thumbnail-2.jpg"
         />
         <Grid width="100%" p={2} style={{ backgroundColor: "#111" }}>
           <Typography fontWeight={600}>Monstrous Basshouse</Typography>
