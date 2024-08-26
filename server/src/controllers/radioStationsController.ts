@@ -1,3 +1,4 @@
+import { Request } from "express";
 import radioStation from "../models/radioStation";
 
 function getRadioStations() {
@@ -11,7 +12,7 @@ function getRadioStations() {
   }
 }
 
-function getRadioStation({ params: { id } }: any) {
+function getRadioStation({ params: { id } }: Request) {
   try {
     return radioStation.findById(id);
   } catch (error) {
@@ -24,7 +25,7 @@ function getRadioStation({ params: { id } }: any) {
 
 function postRadioStation({
   body: { title, artist, tracks, genres, thumbnail },
-}: any) {
+}: Request) {
   try {
     const newRadioStation = new radioStation({
       title,
@@ -45,13 +46,13 @@ function postRadioStation({
 function updateRadioStation({
   params: { id },
   body: { attribute, value },
-}: any) {
+}: Request) {
   try {
     radioStation.findByIdAndUpdate(id, { [attribute]: value });
   } catch (error) {}
 }
 
-function deleteRadioStation({ params: { id } }: any) {
+function deleteRadioStation({ params: { id } }: Request) {
   try {
     const deletedRadioStation = radioStation.findByIdAndDelete(id);
     return deletedRadioStation;
