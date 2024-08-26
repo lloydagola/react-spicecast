@@ -7,6 +7,7 @@ import eventsController from "../controllers/eventsController";
 const router = express.Router();
 
 router.get("/test", (request: any, response: any) => {
+  console.log({ request });
   response.status(200).send(events.data);
 });
 
