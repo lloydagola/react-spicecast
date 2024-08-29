@@ -1,8 +1,10 @@
+import { Request, Response } from "express";
 const router = require("express").Router();
+
 import episode from "../models/episode";
 import podcast from "../models/podcast";
 
-router.get("/", (_: any, res: any) => {
+router.get("/", (_: Request, res: Response) => {
   episode
     .find()
     .populate("podcast", "title")
@@ -16,12 +18,12 @@ router.get("/", (_: any, res: any) => {
     });
 });
 
-router.post("/", (req: any, res: any) => {
+router.post("/", (req: Request, res: Response) => {
   if (!req.body.podcast) {
     res.status(400).send("podcast is required...");
   }
 
-  podcast.findById(req.body.podcast).then((podcast: any) => {
+  podcast.findById(req?.body?.podcast).then((podcast: any) => {
     new episode({ ...req.body })
       .save()
       .then((savedEpisode: any) => {
@@ -35,7 +37,7 @@ router.post("/", (req: any, res: any) => {
   });
 });
 
-router.put("/", (req: any, res: any) => {
+router.put("/", (req: Request, res: Response) => {
   episode
     .findByIdAndUpdate(req.body._id, { [req.body.field]: req.body.data })
     .then((episode: any) => res.status(200).send(episode))
