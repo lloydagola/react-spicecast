@@ -10,10 +10,13 @@ services:
       - ./:/usr/src/app
     ports:
       - "4000:4000"
+    env_file: .env
+    environment:
+      - MONGO_USERNAME=$MONGO_USERNAME
+      - MONGO_PASSWORD=$MONGO_PASSWORD
 
     networks:
       - app-network
-
 
 networks:
   app-network:
