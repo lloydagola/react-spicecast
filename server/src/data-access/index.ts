@@ -16,7 +16,7 @@ const MONGODB_CONFIGURATION = {
   auth: {
     authSource: "admin",
     user: MONGO_USERNAME ?? "admin",
-    password: MONGO_PASSWORD ?? "admin",
+    password: MONGO_PASSWORD ?? "password",
   },
 };
 
@@ -29,4 +29,8 @@ export default async function initializeDB() {
     console.error.bind(console, "Error: unable to connect to the database")
   );
   db.once("open", () => console.log("database connected..."));
+  db.on("disconnect", () => {
+    console.log("Database disconnected. Attempting to reconnect...");
+    mongoose.connect(CONNECTION_STRING, MONGODB_CONFIGURATION);
+  });
 }
