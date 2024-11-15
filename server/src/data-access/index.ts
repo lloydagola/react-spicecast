@@ -1,18 +1,28 @@
 import mongoose from "mongoose";
 
-const PROTOCOL = "mongodb"
-const HOST = "mongo"
-const DB_NAME = "LunarFM"
-const PORT = 27017
-const CONNECTION_STRING = `${PROTOCOL}://${HOST}:${PORT}/${DB_NAME}`
+const PROTOCOL = "mongodb";
+const HOST = "mongo";
+const DB_NAME = "LunarFM";
+const PORT = 27017;
+const CONNECTION_STRING = `${PROTOCOL}://${HOST}:${PORT}/${DB_NAME}`;
+
+const { MONGO_USERNAME, MONGO_PASSWORD } = process.env;
+
+const MONGODB_CONFIGURATION = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
+  auth: {
+    authSource: "admin",
+    user: MONGO_USERNAME ?? "admin",
+    password: MONGO_PASSWORD ?? "admin",
+  },
+};
 
 export default async function initializeDB() {
-  console.log("connecting to:", CONNECTION_STRING)
-  mongoose.connect(CONNECTION_STRING, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-  });
+  console.log("connecting to:", CONNECTION_STRING);
+  mongoose.connect(CONNECTION_STRING, MONGODB_CONFIGURATION);
   const db = mongoose.connection;
   db.on(
     "error",
