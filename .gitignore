@@ -2,6 +2,7 @@
 
 /public/music
 /public/hosts
+*/dist
 
 # dependencies
 /client/node_modules
