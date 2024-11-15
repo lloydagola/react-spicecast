@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es5"
+  },
   "scripts": {
     "start": "node src/bin/www",
     "dev": "nodemon"
