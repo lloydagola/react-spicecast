@@ -6,21 +6,12 @@ import StreamIcon from "@mui/icons-material/Stream";
 import styled from "@emotion/styled";
 
 const StyledHeroSection = styled(Box)((theme) => ({
-  width: "100vw",
-  height: "28vh",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
   backgroundColor: "#FDD832",
-
-  "@media (min-width:480px)": {
-    height: "40vh",
-  },
-
-  "@media (min-width:1080px)": {
-    height: "100vh",
-  },
+  aspectRatio: "1.666667",
 
   img: {
     position: "absolute",
