@@ -1,5 +1,5 @@
-var express = require("express");
-var router = express.Router();
+import express from "express";
+const router = express.Router();
 
 /* GET home page. */
 router.get("/", function (req: any, res: any) {
@@ -7,4 +7,4 @@ router.get("/", function (req: any, res: any) {
   res.status(200).send("hello");
 });
 
-module.exports = router;
+export default router;

@@ -1,5 +1,7 @@
-const router = require("express").Router();
+import express from "express";
 import artistController from "../controllers/artistController";
+
+const router = express.Router();
 
 router.get("/:id", artistController.getArtist);
 router.get("/", artistController.getArtists);

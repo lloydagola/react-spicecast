@@ -1,22 +1,26 @@
+import express from "express";
+import path, { dirname } from "path";
+import cookieParser from "cookie-parser";
+import logger from "morgan";
+import cors from "cors";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 import initializeDB from "./data-access";
 
-const express = require("express");
-const path = require("path");
-const cookieParser = require("cookie-parser");
-const logger = require("morgan");
-const cors = require("cors");
-
-const indexRouter = require("./routes/index");
-const usersRouter = require("./routes/users");
+import indexRouter from "./routes/index";
+import usersRouter from "./routes/users";
 import podcastRouter from "./routes/podcasts";
 import radioStationRouter from "./routes/radioStations";
 import eventsRouter from "./routes/events";
-const episodeRouter = require("./routes/episodes");
+import episodeRouter from "./routes/episodes";
 import albumRouter from "./routes/albums";
 import trackRouter from "./routes/tracks";
 import artists from "./routes/artists";
-const genreRouter = require("./routes/genres");
-const hostRouter = require("./routes/hosts");
+import { fileURLToPath } from "url";
+//const genreRouter = require("./routes/genres");
+//const hostRouter = require("./routes/hosts");
 
 initializeDB();
 
@@ -37,8 +41,8 @@ app.use("/api/episodes", episodeRouter);
 app.use("/api/albums", albumRouter);
 app.use("/api/tracks", trackRouter);
 app.use("/api/artist", artists);
-app.use("/api/genres", genreRouter);
-app.use("/api/hosts", hostRouter);
+//app.use("/api/genres", genreRouter);
+//app.use("/api/hosts", hostRouter);
 
 //set static folder
 app.use(express.static(path.join(__dirname, "/build")));
@@ -48,4 +52,4 @@ app.get("*", (_: any, res: any) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-module.exports = app;
+export default app;

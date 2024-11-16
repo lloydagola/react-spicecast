@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 //const { check, validationResult } = require("express-validator");
 import makeExpressCallback from "../express-callback";
 import test from "../_mocks_/data/podcasts.json";

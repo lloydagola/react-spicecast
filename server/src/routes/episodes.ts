@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-const router = require("express").Router();
+import express, { Request, Response } from "express";
+const router = express.Router();
 
 import episode from "../models/episode";
 import podcast from "../models/podcast";
@@ -44,4 +44,4 @@ router.put("/", (req: Request, res: Response) => {
     .catch((error: any) => res.status(400).send(error));
 });
 
-module.exports = router;
+export default router;

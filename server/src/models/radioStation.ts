@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const radioStationSchema = new mongoose.Schema({
   title: { type: String, required: true },
