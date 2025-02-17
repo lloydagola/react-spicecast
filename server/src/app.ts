@@ -22,7 +22,11 @@ import { fileURLToPath } from "url";
 //const genreRouter = require("./routes/genres");
 //const hostRouter = require("./routes/hosts");
 
-initializeDB();
+try {
+  initializeDB();
+} catch (error) {
+  console.log({ error });
+}
 
 const app = express();
 
