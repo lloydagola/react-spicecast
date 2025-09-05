@@ -15,7 +15,7 @@ const MONGODB_CONFIGURATION = {
   useCreateIndex: true,
   auth: {
     authSource: "admin",
-    user: MONGO_USERNAME ?? "lloyd",
+    user: MONGO_USERNAME ?? "admin",
     password: MONGO_PASSWORD ?? "Gz*6L$8cYrz%8q1QQ",
   },
 };

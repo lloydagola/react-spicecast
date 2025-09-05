@@ -18,6 +18,8 @@ import { MIN_HEIGHT, rightDrawerWidth } from "src/utils/constants";
 import { TAlbum, TTrack } from "src/types/types";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 
+import albumsData from "src/_mocks_/data/albums.json";
+
 const StyledAlbumImg = styled.img(() => ({
   display: "none",
   "@media(min-width:1080px)": {
@@ -97,9 +99,13 @@ function HeroSection({
 }
 
 function TrackRow({
-  track: { title, artist, thumbnail, streamUrl, contributingArtists = [] },
+  track: { title, streamUrl, contributingArtists = [] },
+  artist,
+  thumbnail,
 }: {
   track: TTrack;
+  artist: string;
+  thumbnail: string;
 }) {
   const {
     audioData: {
@@ -145,8 +151,10 @@ function TrackRow({
         )}
 
         <Box display="flex" flexDirection="column">
-          <Typography>{title}</Typography>
-          <Typography fontWeight={900}>{artist}</Typography>
+          <Typography display="inline" fontWeight={900}>
+            {artist}
+          </Typography>
+          <Typography>{title}</Typography> -
           {contributingArtists.length < 1 ? (
             ""
           ) : (
@@ -211,54 +219,57 @@ function MainContent({ album }: { album: TAlbum }): JSX.Element {
               <Button variant="outlined">Play All</Button>
               <Button variant="outlined">Save As Playlist</Button>
             </Grid>
-            <TrackList tracks={album.tracks || []} />
+            <TrackList
+              tracks={album.tracks || []}
+              artist={album.artists[0].title || "Unknown Artist"}
+              thumbnail={
+                album.thumbnail ||
+                "https://www.vecteezy.com/vector-art/6056661-music-vector-icon-gramophone-record-symbols-and-musical-notes-isolated-on-a-white-background"
+              }
+            />
           </>
         )}
       </Box>
-      <AlbumDescription />
+      <AlbumDescription description={album.description} />
     </StyledMainContent>
   );
 }
 
-function TrackList({ tracks }: { tracks: TTrack[] }): JSX.Element {
+function TrackList({
+  tracks,
+  artist,
+  thumbnail,
+}: {
+  tracks: TTrack[];
+  artist: string;
+  thumbnail: string;
+}): JSX.Element {
   return (
     <Box pt={4}>
       {!tracks ? (
         <Typography variant="h1">No Tracks</Typography>
       ) : (
         tracks.map((track: TTrack, index: number) => (
-          <TrackRow key={index} track={track} />
+          <TrackRow
+            key={index}
+            track={track}
+            artist={artist}
+            thumbnail={thumbnail}
+          />
         ))
       )}
     </Box>
   );
 }
 
-function AlbumDescription(): JSX.Element {
+function AlbumDescription({
+  description,
+}: {
+  description: string;
+}): JSX.Element {
   return (
     <Box pt={4} pb={4}>
-      <Typography style={{ textAlign: "justify" }}>
-        <Box component="span">Sonik</Box> is the final original track on Music
-        In My Mind EP, and seems to find a medium in-between{" "}
-        <span>Funky World</span>.
-      </Typography>
-      <Typography>
-        The track opens with loose staccato beats and synths before the
-        incredibly catchy lead sample comes in,{" "}
-        <span>
-          non stop, we take it up / put to the pedal to the floor we take it up
-          / more noise wake them up / from the back to the front we wake them up
-        </span>
-        . The sample carries strong Daft Punk elements to its altering pitch and
-        tone as the song progresses. <span>Kranke</span> features groove-EDM
-        producer Tom Stars, and his influences can be heard nicely meshing with
-        Knife Party’s.
-      </Typography>
-      <Typography>
-        <Box component="span">Sonik</Box> is the best track on the EP, a hugely
-        energetic track that leaves one hoping for more Knife Party
-        collaborations.
-      </Typography>
+      <Typography style={{ textAlign: "justify" }}>{description}</Typography>
       <Box>
         <iframe
           style={{ width: "100%" }}
@@ -276,10 +287,14 @@ function AlbumDescription(): JSX.Element {
 }
 
 function RecommendedSection(): JSX.Element {
-  const [albums, setAlbums] = useState([]);
+  const [albums, setAlbums] = useState<any>([]);
 
   useEffect(() => {
     try {
+      if (process.env.REACT_APP_MOCK) {
+        setAlbums(albumsData);
+        return;
+      }
       (async function () {
         const res = await fetch(
           `${API_ENDPOINT_URL}/albums/test?start=0&end=4`
@@ -312,7 +327,7 @@ function RecommendedSection(): JSX.Element {
           padding={{ xs: "16px 16px", md: "48px 32px" }}
           justifyContent="center"
         >
-          {albums.map((album, index) => (
+          {albums.map((album: TAlbum, index: number) => (
             <Album album={album} key={index} />
           ))}
         </Grid>
@@ -384,7 +399,7 @@ function RecommendedSection(): JSX.Element {
 function AlbumContent(): JSX.Element {
   const { id } = useParams();
 
-  const [album, setAlbum] = useState<TAlbum | null>(null);
+  const [album, setAlbum] = useState<any>(null);
   const {
     audioData: {
       audioState: { playState, title },
@@ -396,6 +411,12 @@ function AlbumContent(): JSX.Element {
   useEffect(() => {
     window.scrollTo(0, 0);
     try {
+      if (process.env.REACT_APP_MOCK) {
+        if (id && albumsData[Number(id)]) {
+          setAlbum(albumsData[Number(id) - 1]);
+        }
+        return;
+      }
       (async function () {
         const response = await fetch(`${API_ENDPOINT_URL}/albums/${id}`);
         const AlbumData = await response.json();

@@ -1,83 +1,265 @@
 [
- 
   {
-    "title": "The Only One",
-    "artists": ["David Orchard"],
-    "thumbnail":"/images/album-1.jpg"
+    "title": "Celestial Reverie",
+    "artists": [{ "title": "David Orchard" }],
+    "thumbnail": "/images/album-1.jpg",
+    "_id": 1,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      },
+      {
+        "title": "Simon Sez",
+        "artist": "artist",
+        "contributingArtists": [],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/tmk4smb7hwrxflf1gvmx1/indie-simon-sez.mp3?rlkey=7takycfxq5amqng4ovccgtowy&st=4wrs8h4i&raw=1"
+      }
+    ],
+    "description": "Celestial Reverie is a transcendent journey through ambient soundscapes, blending ethereal synths and organic textures. David Orchard invites listeners to explore the cosmos of imagination, where each track evokes wonder and serenity."
   },
   {
-    "title": "Who Deserved to Stay",
-    "artists": ["Kenny Bell"],
-    "thumbnail":"/images/album-2.jpg"
+    "title": "Midnight Mosaic",
+    "artists": [{ "title": "Kenny Bell" }],
+    "thumbnail": "/images/album-2.jpg",
+    "_id": 2,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Midnight Mosaic weaves together soulful melodies and vibrant rhythms, painting a sonic portrait of city lights and nocturnal adventures. Kenny Bell's latest release is a celebration of urban life after dark."
   },
   {
-    "title": "Family Portrait Revisited",
-    "artists": ["Kermit Beller"],
-    "thumbnail":"/images/album-3.jpg"
+    "title": "Portraits in Motion",
+    "artists": [{ "title": "Kermit Beller" }],
+    "thumbnail": "/images/album-3.jpg",
+    "_id": 3,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Portraits in Motion captures fleeting moments with cinematic flair. Kermit Beller crafts each song as a moving snapshot, blending acoustic warmth and electronic pulses to tell stories of change and growth."
   },
   {
-    "title": "Kool Aid",
-    "artists": ["Lauren Starr"],
-    "thumbnail":"/images/album-4.jpg"
+    "title": "Neon Daydreams",
+    "artists": [{ "title": "Lauren Starr" }],
+    "thumbnail": "/images/album-4.jpg",
+    "_id": 4,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Neon Daydreams is a vibrant fusion of retro synths and modern pop, channeling the energy of city nights and hopeful mornings. Lauren Starr's infectious hooks and dreamy vocals make this album a celebration of possibility."
   },
   {
-    "title": "Still Waiting",
-    "artists": ["Tammy Curezd"],
-    "thumbnail":"/images/album-5.jpg"
+    "title": "Whispers in the Static",
+    "artists": [{ "title": "Tammy Curezd" }],
+    "thumbnail": "/images/album-5.jpg",
+    "_id": 5,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Whispers in the Static explores the beauty found in chaos, blending experimental electronics with haunting melodies. Tammy Curezd's evocative compositions invite listeners to find meaning in the noise."
   },
   {
-    "title": "Still Waiting",
-    "artists": ["Yana Bolder"],
-    "thumbnail":"/images/album-6.jpg"
+    "title": "Sunset Paradox",
+    "artists": [{ "title": "Yana Bolder" }],
+    "thumbnail": "/images/album-6.jpg",
+    "_id": 6,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Sunset Paradox is a sonic exploration of endings and new beginnings. Yana Bolder's lush arrangements and emotive vocals guide listeners through twilight reflections and dawn revelations."
   },
   {
-    "title": "Still Waiting",
-    "artists": ["Tony Hefner "],
-    "thumbnail":"/images/album-7.jpg"
+    "title": "Fragments of Infinity",
+    "artists": [{ "title": "Tony Hefner " }],
+    "thumbnail": "/images/album-7.jpg",
+    "_id": 7,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Fragments of Infinity is a mesmerizing blend of progressive rock and ambient electronica. Tony Hefner crafts expansive soundscapes that evoke the endless possibilities of the universe."
   },
   {
-    "title": "Still Waiting",
-    "artists": ["Esther French "],
-    "thumbnail":"/images/album-8.jpg"
+    "title": "Echoes in Amber",
+    "artists": [{ "title": "Esther French " }],
+    "thumbnail": "/images/album-8.jpg",
+    "_id": 8,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Echoes in Amber is a heartfelt collection of folk-inspired ballads, each shimmering with nostalgia and hope. Esther French's poetic lyrics and warm instrumentation create a timeless listening experience."
   },
   {
-    "title": "Still Waiting",
-    "artists": ["Tamara Lafleur "],
-    "thumbnail":"/images/album-9.jpg"
+    "title": "Velvet Horizons",
+    "artists": [{ "title": "Tamara Lafleur " }],
+    "thumbnail": "/images/album-9.jpg",
+    "_id": 9,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Velvet Horizons invites listeners to drift across lush sonic landscapes. Tamara Lafleur's smooth vocals and rich harmonies evoke the feeling of endless summer evenings and distant dreams."
   },
   {
-    "title": "Still Waiting",
-    "artists": ["Mark Radioboy "],
-    "thumbnail":"/images/album-10.jpg"
+    "title": "Radiant Shadows",
+    "artists": [{ "title": "Mark Radioboy " }],
+    "thumbnail": "/images/album-10.jpg",
+    "_id": 10,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Radiant Shadows is a bold exploration of contrast, where light meets darkness in dynamic electronic beats. Mark Radioboy's innovative production delivers a thrilling ride through emotional highs and lows."
   },
   {
-    "title": "Still Waiting",
-    "artists": ["Joost Dj "],
-    "thumbnail":"/images/album-11.jpg"
+    "title": "Pulse of the Unknown",
+    "artists": [{ "title": "Joost Dj " }],
+    "thumbnail": "/images/album-11.jpg",
+    "_id": 11,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Pulse of the Unknown pulses with energy and curiosity, blending dance rhythms with experimental sounds. Joost Dj's latest album is an invitation to embrace adventure and the thrill of discovery."
   },
   {
-    "title": "Still Waiting",
-    "artists": ["Tom De Blanche "],
-    "thumbnail":"/images/album-12.jpg"
+    "title": "Starlit Passage",
+    "artists": [{ "title": "Tom De Blanche " }],
+    "thumbnail": "/images/album-12.jpg",
+    "_id": 12,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Starlit Passage is a dreamy voyage through celestial melodies and gentle harmonies. Tom De Blanche's evocative compositions guide listeners on a journey beneath the night sky."
   },
   {
-    "title": "Still Waiting",
-    "artists": ["Francesco Mervin"],
-    "thumbnail":"/images/album-13.jpg"
+    "title": "Mirrors of Memory",
+    "artists": [{ "title": "Francesco Mervin" }],
+    "thumbnail": "/images/album-13.jpg",
+    "_id": 13,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Mirrors of Memory reflects on the past with poignant lyrics and intricate arrangements. Francesco Mervin's album is a deeply personal exploration of nostalgia, longing, and hope."
   },
   {
-    "title": "Still Waiting",
-    "artists": ["Melissa Lancaster"],
-    "thumbnail":"/images/album-14.jpg"
+    "title": "Serenade for the Lost",
+    "artists": [{ "title": "Melissa Lancaster" }],
+    "thumbnail": "/images/album-14.jpg",
+    "_id": 14,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Serenade for the Lost is a hauntingly beautiful tribute to those searching for meaning. Melissa Lancaster's emotive vocals and lush orchestration create an atmosphere of longing and redemption."
   },
   {
-    "title": "Still Waiting",
-    "artists": ["Paul Snap"],
-    "thumbnail":"/images/album-15.jpg"
+    "title": "Canvas of Silence",
+    "artists": [{ "title": "Paul Snap" }],
+    "thumbnail": "/images/album-15.jpg",
+    "_id": 15,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Canvas of Silence paints with sound, using minimalist arrangements and subtle textures. Paul Snap's introspective album invites listeners to find peace and clarity in quiet moments."
   },
-   {
-    "title": "Still Waiting",
-    "artists": ["Lloyd Agola"],
-    "thumbnail":"/images/album-16.jpg"
+  {
+    "title": "Echoes of Tomorrow",
+    "artists": [{ "title": "Lloyd Agola" }],
+    "thumbnail": "/images/album-16.jpg",
+    "_id": 16,
+    "tracks": [
+      {
+        "title": "Old Lights",
+        "artist": "artist",
+        "contributingArtists": ["efined"],
+        "genres": "string",
+        "streamUrl": "https://www.dropbox.com/scl/fi/vwi2vmhiiozf1bd3r5fnv/chill-cold-lights.mp3?rlkey=6hf0mjdkpedhlplh0zlmg1czx&st=4rfngqra&raw=1"
+      }
+    ],
+    "description": "Echoes of Tomorrow looks forward with optimism, blending futuristic synths and uplifting melodies. Lloyd Agola's visionary album inspires hope and excitement for what lies ahead."
   }
 ]

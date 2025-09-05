@@ -7,7 +7,7 @@ import cors from "cors";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-import initializeDB from "./data-access";
+//import initializeDB from "./data-access";
 
 import indexRouter from "./routes/index";
 import usersRouter from "./routes/users";
@@ -22,11 +22,11 @@ import { fileURLToPath } from "url";
 //const genreRouter = require("./routes/genres");
 //const hostRouter = require("./routes/hosts");
 
-try {
+/* try {
   initializeDB();
 } catch (error) {
   console.log({ error });
-}
+} */
 
 const app = express();
 

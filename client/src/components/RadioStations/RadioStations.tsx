@@ -11,6 +11,8 @@ import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 import { MIN_HEIGHT } from "src/utils/constants";
 import Pagination from "@mui/material/Pagination";
 
+import radioStationData from "src/_mocks_/data/radioStations.json";
+
 export default function RadioStations({
   start,
   end,
@@ -18,7 +20,7 @@ export default function RadioStations({
   start?: number | undefined;
   end?: number | undefined;
 }): JSX.Element {
-  const [radioStations, setRadioStations] = useState([]);
+  const [radioStations, setRadioStations] = useState<any>([]);
   const [page, setPage] = useState(1);
   const itemsPerPage = 12;
 
@@ -34,6 +36,12 @@ export default function RadioStations({
   );
 
   useEffect(() => {
+    if (process.env.REACT_APP_MOCK) {
+      setRadioStations(radioStationData);
+      console.log({ radioStationData });
+      return;
+    }
+
     try {
       (async function () {
         const res = await fetch(`${API_ENDPOINT_URL}/radioStations/test`);

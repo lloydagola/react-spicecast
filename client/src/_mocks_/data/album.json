@@ -1,0 +1,8 @@
+{
+  "title": "Still Waiting",
+  "artists": [{ "title": "Tony Hefner " }],
+  "thumbnail": "/images/album-7.jpg",
+  "tags": "string",
+  "streamUrl": "string",
+  "date": "string"
+}
