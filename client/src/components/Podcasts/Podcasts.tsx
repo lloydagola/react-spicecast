@@ -7,10 +7,17 @@ import Podcast from "../Podcast/Podcast";
 import { TPodcast } from "src/types/types";
 import { API_ENDPOINT_URL } from "src/utils/apiUtils";
 
+import podcastData from "src/_mocks_/data/albums.json";
+
 export default function Podcasts(): JSX.Element {
-  const [podcasts, setPodcasts] = useState([]);
+  const [podcasts, setPodcasts] = useState<any>([]);
 
   useEffect(() => {
+    if (process.env.REACT_APP_MOCK) {
+      setPodcasts(podcastData);
+      console.log({ podcasts });
+      return;
+    }
     try {
       (async function () {
         const response = await fetch(`${API_ENDPOINT_URL}/podcasts/test`);

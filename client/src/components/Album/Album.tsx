@@ -71,25 +71,27 @@ const StyledAlbumGrid = styled(Grid)(({ theme }) => ({
 
 export default function Album({ album }: TAlbumPropTypes) {
   return (
-    <StyledAlbumGrid item flexDirection="column">
-      <NavLink to={`/albums/${album._id}`}>
-        <Box overflow="hidden" height="260px">
-          <Box className="album-filter" />
-          <img
-            src={album.thumbnail}
-            alt="album thumbnail"
-            loading="lazy"
-            style={{
-              borderRadius: "16px",
-            }}
-          />
-        </Box>
-        <Box sx={{ backgroundColor: "#111" }} p={1}>
-          <Typography variant="h5">{album.title}</Typography>
-          <Typography>{album.artist.title}</Typography>
-          <Box className="horizontal-line" />
-        </Box>
-      </NavLink>
-    </StyledAlbumGrid>
+    album && (
+      <StyledAlbumGrid item flexDirection="column">
+        <NavLink to={`/albums/${album._id}`}>
+          <Box overflow="hidden" height="260px">
+            <Box className="album-filter" />
+            <img
+              src={album.thumbnail}
+              alt="album thumbnail"
+              loading="lazy"
+              style={{
+                borderRadius: "16px",
+              }}
+            />
+          </Box>
+          <Box sx={{ backgroundColor: "#111" }} p={1}>
+            <Typography variant="h5">{album.title && album.title}</Typography>
+            <Typography>{album.artists[0].title}</Typography>
+            <Box className="horizontal-line" />
+          </Box>
+        </NavLink>
+      </StyledAlbumGrid>
+    )
   );
 }

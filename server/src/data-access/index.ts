@@ -16,7 +16,7 @@ const MONGODB_CONFIGURATION = {
   auth: {
     authSource: "admin",
     user: MONGO_USERNAME ?? "admin",
-    password: MONGO_PASSWORD ?? "password",
+    password: MONGO_PASSWORD ?? "Gz*6L$8cYrz%8q1QQ",
   },
 };
 

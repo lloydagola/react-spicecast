@@ -30,9 +30,10 @@ export type TArtist = {
 export type TAlbum = {
   title: string;
   _id: string;
-  artist: TArtist;
+  artists: TArtist[];
   tracks?: TTrack[];
   thumbnail: string;
+  description: string;
   genres: string[];
 };
 
